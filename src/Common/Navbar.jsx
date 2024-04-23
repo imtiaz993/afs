@@ -18,16 +18,16 @@ const Navbar = () => {
       <div className="md:w-11/12 mx-auto">
         <div className="hidden lg:flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/">
+            <Link to="/">
               <img src="/assets/icons/navbar/nav-logo.svg" alt="" />
             </Link>
-            <select className="ml-12 outline-none cursor-pointer text-primary bg-transparent">
+            <select className="ml-12 outline-none cursor-pointer text-primary bg-transparent font-medium">
               <option>Solutions</option>
             </select>
-            <select className="ml-6 outline-none cursor-pointer text-primary bg-transparent">
+            <select className="ml-6 outline-none cursor-pointer text-primary bg-transparent font-medium">
               <option>Company</option>
             </select>
-            <select className="ml-6 outline-none cursor-pointer text-primary bg-transparent">
+            <select className="ml-6 outline-none cursor-pointer text-primary bg-transparent font-medium">
               <option>Resources</option>
             </select>
           </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden">
           <div className="flex justify-between">
-            <Link href="/">
+            <Link to="/">
               <img
                 className="w-3/4"
                 src="/assets/icons/navbar/nav-logo.svg"
@@ -69,7 +69,7 @@ const Navbar = () => {
             className={` ${showOptions ? "h-screen" : "h-0 overflow-hidden"}`}
           >
             <ul className="inline-flex flex-col mt-16">
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent">
+              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
                 <option
                   onClick={() => {
                     setShowOptions(!showOptions);
@@ -78,7 +78,7 @@ const Navbar = () => {
                   Solutions
                 </option>
               </select>
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent">
+              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
                 <option
                   onClick={() => {
                     setShowOptions(!showOptions);
@@ -87,7 +87,7 @@ const Navbar = () => {
                   Company
                 </option>
               </select>
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent">
+              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
                 <option
                   onClick={() => {
                     setShowOptions(!showOptions);

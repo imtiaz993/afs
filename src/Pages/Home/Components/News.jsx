@@ -8,7 +8,7 @@ const News = () => {
           Latest news & announcements
         </h1>
         <div className="flex items-center cursor-pointer">
-          <p className="text-brand-secondary mr-2 whitespace-nowrap">See all</p>
+          <p className="text-brand-secondary mr-2 whitespace-nowrap font-medium">See all</p>
           <img src="/assets/icons/home/arrow-right.svg" alt="" />
         </div>
       </div>
@@ -16,22 +16,22 @@ const News = () => {
         <div className="lg:w-1/2">
           <img className="bg-gray-700 w-full rounded-[4px]" src="/assets/images/home/news.png" alt="" />
           <div className="flex mt-6">
-            <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm font-light rounded-[4px]">
+            <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px]">
               Partnership
             </p>
             <div className="flex items-center ml-4">
-              <p className="text-xs font-light text-secondary">
+              <p className="text-xs  text-secondary">
                 April 01, 2024
               </p>
               <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-              <p className="text-xs font-light text-secondary">5 min read</p>
+              <p className="text-xs  text-secondary">5 min read</p>
             </div>
           </div>
           <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
             ACI Worldwide and AFS to drive payments modernization for banks and
             merchants in the Middle East
           </h1>
-          <p className="text-base sm:text-lg text-primary font-light overflow-hidden text-ellipsis line-clamp-2">
+          <p className="text-base sm:text-lg text-primary overflow-hidden text-ellipsis line-clamp-2">
             AFS–the leading digital payment solutions provider and fintech
             enabler in the Middle East and Africa–will utilize ACI Enterprise
             Payments Platform and ACI Payments OrchestrationPlatform todrive
@@ -41,22 +41,22 @@ const News = () => {
         <div className=" mt-16 lg:mt-0 lg:w-2/5">
           <div className="pb-8 mb-8 border-b border-default">
             <div className="flex">
-              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm font-light rounded-[4px]">
+              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px]">
                 Case studies
               </p>
               <div className="flex items-center ml-4">
-                <p className="text-xs font-light text-secondary">
+                <p className="text-xs  text-secondary">
                   March 05, 2024
                 </p>
                 <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                <p className="text-xs font-light text-secondary">5 min read</p>
+                <p className="text-xs  text-secondary">5 min read</p>
               </div>
             </div>
             <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
               AFS Transaction Index: Season-Opening Bahrain GP Delivers 66%
               Surge in Spends
             </h1>
-            <p className="text-base sm:text-lg text-primary font-light overflow-hidden whitespace-nowrap text-ellipsis">
+            <p className="text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
               This weekend’s action-packed season-opening Bahrain GP delivered
               an epic increase in spends. Data shared in the annualTransaction
               Index published byArab Financial Services (AFS), the Middle East
@@ -68,22 +68,22 @@ const News = () => {
           </div>
           <div className="pb-8 mb-8 border-b border-default">
             <div className="flex">
-              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm font-light rounded-[4px]">
+              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px]">
                 Partnership
               </p>
               <div className="flex items-center ml-4">
-                <p className="text-xs font-light text-secondary">
+                <p className="text-xs  text-secondary">
                   March 05, 2024
                 </p>
                 <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                <p className="text-xs font-light text-secondary">5 min read</p>
+                <p className="text-xs  text-secondary">5 min read</p>
               </div>
             </div>
             <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
               AFS enter strategic alliance with Xpence to innovate SME financial
               management in Bahrain
             </h1>
-            <p className="text-base sm:text-lg text-primary font-light overflow-hidden whitespace-nowrap text-ellipsis">
+            <p className="text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
               In a landmark move set to redefine financial management for small
               and medium enterprises (SMEs) in Bahrain,ArabFinancial Services
               (AFS), the Middle East and Africa region’s leading digital payment
@@ -93,22 +93,22 @@ const News = () => {
           </div>
           <div className="pb-8 mb-8 border-b border-default">
             <div className="flex">
-              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm font-light rounded-[4px]">
+              <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px]">
                 Partnership
               </p>
               <div className="flex items-center ml-4">
-                <p className="text-xs font-light text-secondary">
+                <p className="text-xs  text-secondary">
                   March 05, 2024
                 </p>
                 <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                <p className="text-xs font-light text-secondary">5 min read</p>
+                <p className="text-xs  text-secondary">5 min read</p>
               </div>
             </div>
             <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
               AFS conducts media workshop to showcase latest cloud-based
               restaurant-first solution
             </h1>
-            <p className="text-base sm:text-lg text-primary font-light overflow-hidden whitespace-nowrap text-ellipsis">
+            <p className="text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
               Arab Financial Services (AFS),the Middle East and Africa region’s
               leading digital payment solutions provider and fintech enabler,
               recently held a media workshop to showcase its latest cloud-based

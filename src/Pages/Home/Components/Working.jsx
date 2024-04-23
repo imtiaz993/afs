@@ -36,11 +36,11 @@ const Working = () => {
   ];
   return (
     <div className="w-11/12 mx-auto py-5 lg:py-24 md:px-10 lg:px-16">
-      <p className="mb-4 text-secondary font-light flex items-center">
+      <p className="mb-4 text-secondary flex items-center">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
         Working with us
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl font-light mb-16 max-w-[950px] leading-[120%]">
+      <h1 className="text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%]">
         Our innovative financial solutions deliver numerous benefits for banks
         and businesses, designed to ensure success for all partners.
       </h1>
@@ -77,7 +77,7 @@ const Working = () => {
               </div>
 
               <p
-                className={`text-secondary text-base md:text-lg font-light mt-4 overflow-hidden transition-all duration-500 ${
+                className={`text-secondary text-base md:text-lg mt-4 overflow-hidden transition-all duration-500 ${
                   activeAccordion === index ? "h-auto" : "h-0 hidden"
                 }`}
               >
