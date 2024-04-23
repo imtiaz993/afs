@@ -86,14 +86,10 @@ const Working = () => {
             </div>
           ))}
         </div>
-        <div
-          className="w-full min-h-[576px] lg:w-1/2 relative mb-5 lg:mb-0 rounded"
-          style={{
-            background: `url(${accordionContent[activeAccordion].image}) no-repeat center center`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        ></div>
+        <img
+          src={accordionContent[activeAccordion].image}
+          className="w-full h-full lg:w-1/2 relative mb-5 lg:mb-0 rounded"
+        />
       </div>
     </div>
   );
