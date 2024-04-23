@@ -19,7 +19,7 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-white font-light mb-2 mt-[272px]">
+              <h1 className="text-2xl md:text-[40px] text-white font-light mb-5 mt-[272px]">
                 For Banks
               </h1>
               <p className="text-base md:text-lg font-light text-white mb-4 max-w-[420px]">
@@ -28,7 +28,7 @@ const Solutions = () => {
                 solutions.
               </p>
               <div className="flex items-center flex-wrap">
-                <button className="text-center text-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
+                <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">
@@ -57,7 +57,7 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-primary font-light mb-2">
+              <h1 className="text-2xl md:text-[40px] text-primary font-light mb-5">
                 All Solutions
               </h1>
               <p className="text-base md:text-lg font-light text-primary mb-8 max-w-[425px]">
@@ -66,7 +66,7 @@ const Solutions = () => {
                 tailored to empower your business success.
               </p>
               <div className="">
-                <button className="text-center text-brand-secondary py-4 w-[118px] bg-transparent border border-brand-secondary font-medium rounded-sm mr-6">
+                <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-transparent border border-brand-secondary font-medium rounded-sm mr-6">
                   Explore
                 </button>
               </div>
@@ -83,7 +83,7 @@ const Solutions = () => {
                 backgroundSize: "contain",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-white font-light mb-2">
+              <h1 className="text-2xl md:text-[40px] text-white font-light mb-5">
                 For Consumers
               </h1>
               <p className="text-base md:text-lg font-light text-white mb-8 max-w-[420px]">
@@ -92,7 +92,7 @@ const Solutions = () => {
                 with BPay wallet.
               </p>
               <div className="">
-                <button className="text-center text-brand-secondary py-4 w-[118px] bg-white border border-brand-secondary font-medium rounded-sm mr-6">
+                <button className="transition-colors duration-500 text-center text-brand-secondary  hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white border border-brand-secondary font-medium rounded-sm mr-6">
                   Explore
                 </button>
               </div>
@@ -107,7 +107,7 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-white font-light mb-2">
+              <h1 className="text-2xl md:text-[40px] text-white font-light mb-5">
                 For Businesses
               </h1>
               <p className="text-base md:text-lg font-light text-white mb-4 max-w-[420px]">
@@ -116,7 +116,7 @@ const Solutions = () => {
                 business needs.
               </p>
               <div className="flex items-center flex-wrap mb-[272px]">
-                <button className="text-center text-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
+                <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">

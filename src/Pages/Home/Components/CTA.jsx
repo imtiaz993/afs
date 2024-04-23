@@ -5,13 +5,13 @@ const CTA = () => {
     <div className="md:w-11/12 mx-auto flex cta-home-gradient relative">
       <div className="w-full lg:max-w-[700px] py-10 lg:py-24 px-10 lg:pl-16 relative z-10 flex flex-col items-center lg:items-start">
         <h1 className="text-center lg:text-left text-2xl md:text-5xl font-light text-primary leading-[120%]">
-          Ready to <span className="text-brand-secondary">revolutionize</span> your
-          financial transactions?
+          Ready to <span className="text-brand-secondary">revolutionize</span>{" "}
+          your financial transactions?
         </h1>
         <p className="text-center lg:text-left text-lg md:text-2xl font-light text-brand-primary mt-4 mb-10">
           Experience the power of AFS today!
         </p>
-        <button className="text-center text-white py-4 w-44 bg-brand-secondary font-medium rounded-sm">
+        <button className="transition-colors duration-500 text-center text-white py-4 w-44 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
           Contact our team
         </button>
       </div>

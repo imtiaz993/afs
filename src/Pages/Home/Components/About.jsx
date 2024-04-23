@@ -24,7 +24,7 @@ const About = () => {
               our relentless commitment to harnessing the potential of digital
               payments.
             </p>
-            <button className="text-center text-brand-secondary py-4 w-52 border border-brand-secondary font-medium rounded-sm">
+            <button className="transition-colors duration-500 text-center text-brand-secondary py-4 w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm">
               Learn more about us
             </button>
           </div>

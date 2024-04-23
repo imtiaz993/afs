@@ -45,7 +45,7 @@ const Working = () => {
         and businesses, designed to ensure success for all partners.
       </h1>
       <div className="flex justify-between flex-col-reverse lg:flex-row">
-        <div className="lg:w-2/5">
+        <div className="lg:w-2/5 border-t border-default">
           {accordionContent.map((item, index) => (
             <div
               className="py-6 md:py-8 border-b border-default cursor-pointer"
@@ -93,36 +93,7 @@ const Working = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-        >
-          <div className="md:absolute top-6 left-6 bg-white p-6 max-w-[272px] flex flex-col items-center mx-auto md:mx-0 mt-6 md:mt-0 rounded-sm">
-            <img src="/assets/icons/home/check-lg.svg" alt="" />
-            <h1 className="text-primary text-base md:text-lg text-center font-medium mt-6">
-              Complete your payment securely
-            </h1>
-            <button className="text-center text-white bg-dark-neutral py-4 w-full mt-4 font-light">
-              Pay 40.000 <span className="text-[10px] font-light">BHD</span>
-            </button>
-          </div>
-          <div className="absolute bottom-6 left-6 flex flex-wrap">
-            {[
-              "Fraud protection",
-              "PCI DSS",
-              "3DS 2.0",
-              "Tokenization",
-              "Disputes management",
-            ].map((item, index) => (
-              <div
-                className="flex items-center bg-white py-3.5 px-3 mt-1.5 mr-1.5 rounded-sm"
-                key={index}
-              >
-                <img src="/assets/icons/home/check-green.svg" alt="" />
-                <p className="ml-2 font-light text-sm md:text-base mb-0.5 text-black">
-                  {item}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        ></div>
       </div>
     </div>
   );

@@ -12,12 +12,16 @@ const Hero = () => {
           day-to-day financial operations, tailored for banks, fintechs,
           businesses and consumers.
         </p>
-        <button className="text-center text-brand-secondary py-4 w-[185px] bg-white font-medium rounded-sm mt-10">
+        <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[185px] bg-white font-medium rounded-sm mt-10">
           Contact our team
         </button>
       </div>
       <div className="absolute top-0 right-0 bottom-0">
-        <img className="w-full h-full" src="/assets/images/home/hero.png" alt="" />
+        <img
+          className="w-full h-full"
+          src="/assets/images/home/hero.png"
+          alt=""
+        />
       </div>
     </div>
   );

@@ -9,9 +9,7 @@ const Footer = () => {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="flex flex-col">
-          <h1 className="mb-6 font-medium text-primary">
-            Solutions for banks
-          </h1>
+          <h1 className="mb-6 font-medium text-primary">Solutions for banks</h1>
           <Link className="mb-3 text-sm text-secondary" to="/">
             Card issuing & processing
           </Link>
@@ -106,7 +104,7 @@ const Footer = () => {
               className="font-normal py-3 px-4 max-w-72 border border-default outline-none"
               placeholder="Type your email"
             />
-            <button className="text-white py-3 max-w-72 bg-brand-secondary font-medium mt-2 rounded-sm">
+            <button className="text-white py-3 max-w-72 bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
               Subscribe
             </button>
           </div>
@@ -136,7 +134,11 @@ const Footer = () => {
                 />
               </a>
               <a href="#" className="mr-3">
-                <img className="w-6 h-6" src="/assets/icons/footer/X.svg" alt="" />
+                <img
+                  className="w-6 h-6"
+                  src="/assets/icons/footer/X.svg"
+                  alt=""
+                />
               </a>
               <a href="#" className="mr-3">
                 <img
