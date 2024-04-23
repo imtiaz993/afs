@@ -12,7 +12,7 @@ const Hero = () => {
           day-to-day financial operations, tailored for banks, fintechs,
           businesses and consumers.
         </p>
-        <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[185px] bg-white font-medium rounded-sm mt-10">
+        <button className="transition-colors duration-500 text-center text-brand-secondary border border-white hover:border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[185px] bg-white font-medium rounded-sm mt-10">
           Contact our team
         </button>
       </div>
