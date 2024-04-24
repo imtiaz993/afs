@@ -26,7 +26,7 @@ const Reviews = () => {
         >
           <SwiperSlide>
             <div>
-              <h1 className="text-xl md:text-3xl text-center lg:text-left font-light leading-[130%] text-white">
+              <h1 className="text-xl md:text-3xl text-center lg:text-left leading-[130%] text-white">
                 "Implementing AFS's card issuing and processing solution
                 transformed how we handle payments, making transactions not just
                 faster but also significantly more secure.{" "}
@@ -34,14 +34,14 @@ const Reviews = () => {
               <p className="font-medium text-center lg:text-left text-white mt-8">
                 Dr. Pallavi Menon
               </p>
-              <p className="font-light text-center lg:text-left text-brand-tertiary mt-2">
+              <p className="text-center lg:text-left text-brand-tertiary mt-2">
                 Chief Financial Officer
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <h1 className="text-xl md:text-3xl text-center lg:text-left font-light leading-[130%] text-white">
+              <h1 className="text-xl md:text-3xl text-center lg:text-left leading-[130%] text-white">
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
                 ipsam nostrum id reprehenderit, temporibus illum non voluptatem
                 itaque quas voluptatum?
@@ -49,7 +49,7 @@ const Reviews = () => {
               <p className="font-medium text-center lg:text-left text-white mt-8">
                 Dr. Pallavi Menon
               </p>
-              <p className="font-light text-center lg:text-left text-brand-tertiary mt-2">
+              <p className="text-center lg:text-left text-brand-tertiary mt-2">
                 Chief Financial Officer
               </p>
             </div>
@@ -96,7 +96,7 @@ const Reviews = () => {
           </div>
         </Swiper>
       </div>
-      <div className="lg:w-[45%] absolute top-0 right-0 bottom-0">
+      <div className="lg:w-[45%] absolute top-0 right-0 bottom-0 opacity-40 md:opacity-100">
         <img
           className="w-full h-full"
           src="/assets/images/home/testimonial.png"

@@ -4,6 +4,7 @@ import ScrollToTop from "../Common/ScrollToTop";
 import Navbar from "../Common/Navbar";
 import Footer from "../Common/Footer";
 import Home from "../Pages/Home";
+import About from "../Pages/About";
 
 const WebRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const WebRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>
