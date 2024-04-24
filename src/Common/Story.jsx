@@ -1,8 +1,8 @@
 import React from "react";
 
-const Story = () => {
+const Story = ({ bg }) => {
   return (
-    <div className="relative">
+    <div className={`relative ${bg ? "bg-subtle-neutral" : ""}`}>
       <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24 relative z-10">
         <p className="mb-4 text-secondary flex items-center">
           <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}

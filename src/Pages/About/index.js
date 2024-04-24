@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "./Components/Hero";
-import Story from "./Components/Story";
+import HeroWithImage from "../../Common/HeroWithImage";
+import Story from "../../Common/Story";
 import Commitment from "./Components/Commitment";
 import History from "./Components/History";
 import Team from "./Components/Team";
@@ -11,7 +11,13 @@ import Annnouncements from "./Components/Annnouncements";
 const About = () => {
   return (
     <>
-      <Hero />
+      <HeroWithImage
+        title={"About us"}
+        subtext={
+          "The region’s leading digital payment solutions provider and fintech enabler"
+        }
+        image={"/assets/images/about/hero.png"}
+      />
       <Story />
       <Commitment />
       <History />

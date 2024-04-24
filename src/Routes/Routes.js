@@ -5,6 +5,7 @@ import Navbar from "../Common/Navbar";
 import Footer from "../Common/Footer";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
+import InvestorRelations from "../Pages/InvestorRelations";
 
 const WebRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const WebRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/investor-relations" element={<InvestorRelations />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -6,7 +6,7 @@ import Solutions from "./Components/Solutions";
 import About from "./Components/About";
 import Reviews from "./Components/Reviews";
 import CTA from "./Components/CTA";
-import News from "./Components/News";
+import News from "../../Common/News";
 
 const Home = () => {
   return (
