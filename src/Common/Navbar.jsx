@@ -14,7 +14,7 @@ const Navbar = () => {
     }
   }, [showOptions]);
   return (
-    <div className="px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] bg-white shadow-[rgba(0,0,15,0.2)_0px_0px_4px_0px]">
+    <div className="px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]">
       <div className="md:w-11/12 mx-auto">
         <div className="hidden lg:flex justify-between items-center">
           <div className="flex items-center">
@@ -31,15 +31,19 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div className="lg:hidden">
+        <div className={`lg:hidden overflow-auto ${showOptions ?"h-[calc(100svh-32px)]": "h-auto"}`}>
           <div className="flex justify-between">
-            <Link to="/">
-              <img
-                className="w-3/4"
-                src="/assets/icons/navbar/nav-logo.svg"
-                alt=""
-              />
-            </Link>
+            <div>
+              {!showOptions && (
+                <Link to="/">
+                  <img
+                    className="w-full"
+                    src="/assets/icons/navbar/nav-logo.svg"
+                    alt=""
+                  />
+                </Link>
+              )}
+            </div>
             {!showOptions && (
               <img
                 onClick={() => {
@@ -59,39 +63,32 @@ const Navbar = () => {
               />
             )}
           </div>
+          {showOptions && (
+            <div className="flex justify-center items-center mt-10">
+              <Link to="/">
+                <img
+                  className=""
+                  src="/assets/icons/navbar/nav-logo.svg"
+                  alt=""
+                />
+              </Link>
+            </div>
+          )}
           <div
-            className={`flex flex-col justify-center items-center ${
-              showOptions ? "h-screen" : "h-0 overflow-hidden"
+            className={`flex flex-col justify-start items-center  ${
+              showOptions ? "h-auto mt-28 overflow-auto" : "h-0 overflow-hidden"
             }`}
           >
-            <ul className="inline-flex flex-col mt-[calc(-33px-4.17%)]">
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
-                <option
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                >
-                  Solutions
-                </option>
-              </select>
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
-                <option
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                >
-                  Company
-                </option>
-              </select>
-              <select className="mb-10 outline-none cursor-pointer text-primary bg-transparent font-medium">
-                <option
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                >
-                  Resources
-                </option>
-              </select>
+            <ul className="flex flex-col w-[185px] justify-center">
+              <div className="mb-6">
+                <Solutions />
+              </div>
+              <div className="mb-6">
+                <Company />
+              </div>
+              <div className="mb-6">
+                <Resources />
+              </div>
               <button
                 className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm"
                 onClick={() => {
@@ -132,14 +129,25 @@ const Solutions = () => {
 
   return (
     <div
-      className="ml-12 outline-none  bg-transparent relative"
+      className="lg:ml-12 outline-none bg-transparent relative"
       ref={solutionsDropdownRef}
       onMouseLeave={() => {
-        setSolutionsMenu(false);
+        if (window.innerWidth > 1024) {
+          setSolutionsMenu(false);
+        }
       }}
-      onMouseEnter={() => setSolutionsMenu(true)}
+      onMouseEnter={() => {
+        if (window.innerWidth > 1024) {
+          setSolutionsMenu(true);
+        }
+      }}
     >
-      <button className="flex items-center text-primary cursor-pointer">
+      <button
+        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
+        onClick={() => {
+          setSolutionsMenu(!solutionsMenu);
+        }}
+      >
         Solutions
         <img
           className={`ml-2 transition-all duration-200 ${
@@ -150,63 +158,66 @@ const Solutions = () => {
         />
       </button>
       {solutionsMenu && (
-        <div className="absolute top-6 text-secondary navbar-dropdown-shadow rounded-md">
-          <div className="p-6 bg-white text-dark flex justify-between w-[816px] rounded-md">
+        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+          <div className="lg:p-6 bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
-              <h1 className="font-medium text-primary"> Solutions for banks</h1>
-              <Link to="/" className="text-[15px] block mt-6">
+              <h1 className="text-base font-medium text-primary mt-6">
+                {" "}
+                Solutions for banks
+              </h1>
+              <Link to="/" className="text-[15px] block mt-4">
                 Card issuing & processing
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 Digital banking
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 {" "}
                 Open banking
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 Fraud & Risk management
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 Value added services
               </Link>
             </div>
 
             <div>
-              <h1 className="font-medium text-primary">
+              <h1 className="text-base font-medium text-primary mt-6">
                 Solutions for businesses
               </h1>
-              <Link to="/" className="text-[15px] block mt-6">
+              <Link to="/" className="text-[15px] block mt-4">
                 Payment gateway
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 POS terminals
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 SoftPOS
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 eShop
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 Merchant portal
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 HospitaLinkty
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 Food and beverage (F&B)
               </Link>
-              <Link to="/" className="text-[15px] block mt-3">
+              <Link to="/" className="text-[15px] block mt-4">
                 SME suite
               </Link>
             </div>
 
             <div>
-              <h1 className="font-medium text-primary">
+              <h1 className="text-base font-medium text-primary mt-6">
                 Solutions for consumer
               </h1>
-              <Link to="/" className="text-[15px] block mt-6">
+              <Link to="/" className="text-[15px] block mt-4">
                 BPay wallet
               </Link>
             </div>
@@ -239,14 +250,25 @@ const Company = () => {
 
   return (
     <div
-      className="ml-6 outline-none bg-transparent relative"
+      className="lg:ml-6 outline-none bg-transparent relative"
       ref={companyDropdownRef}
       onMouseLeave={() => {
-        setCompanyMenu(false);
+        if (window.innerWidth > 1024) {
+          setCompanyMenu(false);
+        }
       }}
-      onMouseEnter={() => setCompanyMenu(true)}
+      onMouseEnter={() => {
+        if (window.innerWidth > 1024) {
+          setCompanyMenu(true);
+        }
+      }}
     >
-      <button className="flex items-center text-primary cursor-pointer font-medium ">
+      <button
+        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium "
+        onClick={() => {
+          setCompanyMenu(!companyMenu);
+        }}
+      >
         Company
         <img
           className={`ml-2 transition-all duration-200 ${
@@ -257,22 +279,25 @@ const Company = () => {
         />
       </button>
       {companyMenu && (
-        <div className="absolute top-6 text-secondary navbar-dropdown-shadow rounded-md">
-          <div className="p-6 bg-white text-dark flex justify-between w-fit rounded-md">
+        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+          <div className="lg:p-6 bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
-              <Link to="/" className="text-[15px] whitespace-nowrap block">
+              <Link
+                to="/"
+                className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
+              >
                 About us
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Our partners
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Investor relations
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Careers
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Contact
               </Link>
             </div>
@@ -305,14 +330,25 @@ const Resources = () => {
 
   return (
     <div
-      className="ml-6 outline-none bg-transparent relative"
+      className="lg:ml-6 outline-none bg-transparent relative"
       ref={resourcesDropdownRef}
       onMouseLeave={() => {
-        setResourcesMenu(false);
+        if (window.innerWidth > 1024) {
+          setResourcesMenu(false);
+        }
       }}
-      onMouseEnter={() => setResourcesMenu(true)}
+      onMouseEnter={() => {
+        if (window.innerWidth > 1024) {
+          setResourcesMenu(true);
+        }
+      }}
     >
-      <button className="flex items-center text-primary cursor-pointer font-medium">
+      <button
+        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
+        onClick={() => {
+          setResourcesMenu(!resourcesMenu);
+        }}
+      >
         Resources
         <img
           className={`ml-2 transition-all duration-200 ${
@@ -323,19 +359,22 @@ const Resources = () => {
         />
       </button>
       {resourcesMenu && (
-        <div className="absolute top-6 text-secondary navbar-dropdown-shadow rounded-md">
-          <div className="p-6 bg-white text-dark flex justify-between w-fit rounded-md">
+        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+          <div className="lg:p-6 bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
-              <Link to="/" className="text-[15px] whitespace-nowrap block">
+              <Link
+                to="/"
+                className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
+              >
                 News & Announcements
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Become a vendor
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 ESG
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-3">
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Certifications
               </Link>
             </div>

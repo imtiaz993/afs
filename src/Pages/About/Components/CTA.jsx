@@ -13,7 +13,7 @@ const CTA = () => {
             and be part of a collaborative work culture that encourages
             professional growth, innovation, and creativity.
           </p>
-          <button className="transition-colors duration-500 text-center text-white py-4 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+          <button className="transition-colors duration-500 text-center text-white py-3 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
             View careers page
           </button>
         </div>

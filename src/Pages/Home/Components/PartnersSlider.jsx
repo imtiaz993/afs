@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const PartnersSlider = () => {
   return (
     <div className="md:w-11/12 mx-auto relative">
-      <Marquee gradient={true} gradientWidth={100}>
+      <Marquee gradient={true} gradientWidth={100} autoFill>
         <div className="flex items-center mt-10 mb-6">
           <img
             className="mr-2"

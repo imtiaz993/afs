@@ -180,10 +180,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-default flex justify-between flex-wrap text-sm mt-14 pt-10 text-secondary">
-          <p className="mt-2">
-            © 2024 Arab Financial Services. All rights reserved.
-          </p>
+        <div className="border-t border-default text-sm mt-14 pt-10 text-secondary">
           <div className="flex flex-wrap">
             <Link to="/" className="underline mr-4 mt-2 whitespace-nowrap">
               AFS legal statement
@@ -203,6 +200,15 @@ const Footer = () => {
             <Link to="/" className="underline mt-2 whitespace-nowrap">
               Merchant terms & conditions
             </Link>
+          </div>
+          <div>
+            <p className="mt-5 font-normal">
+              © 2024 Arab Financial Services. All rights reserved.
+            </p>
+            <p className="mt-1 text-xs">
+              Licensed as an Ancillary Service Provider by the Central Bank of
+              Bahrain
+            </p>
           </div>
         </div>
       </div>
