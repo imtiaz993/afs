@@ -202,10 +202,10 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <p className="mt-5 font-normal">
+            <p className="mt-6 font-normal text-sm">
               © 2024 Arab Financial Services. All rights reserved.
             </p>
-            <p className="mt-1 text-xs">
+            <p className="mt-1 text-xs text-tertiary">
               Licensed as an Ancillary Service Provider by the Central Bank of
               Bahrain
             </p>

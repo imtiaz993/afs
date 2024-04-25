@@ -13,8 +13,8 @@ const Resources = () => {
           statements.
         </h1>
         <div>
-          <div className="flex">
-            <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[252px] rounded mr-4">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded mb-4 md:mb-0 md:mr-4">
               <h1 className="text-lg md:text-2xl text-secondary">
                 Shareholders’ rights to participate and vote
               </h1>
@@ -25,7 +25,7 @@ const Resources = () => {
                 <img src="/assets/icons/home/arrow-right.svg" alt="" />
               </div>
             </div>
-            <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[252px] rounded">
+            <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded">
               <h1 className="text-lg md:text-2xl text-secondary">
                 AFS proxy form
               </h1>

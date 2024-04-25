@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AC from "./AC";
 
 const Working = () => {
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -34,6 +35,7 @@ const Working = () => {
       image: "/assets/images/home/accordion1.jpg",
     },
   ];
+
   return (
     <div className="w-11/12 mx-auto py-5 lg:py-24 md:px-10 lg:px-16">
       <p className="mb-4 text-secondary flex items-center">
@@ -47,49 +49,13 @@ const Working = () => {
       <div className="flex justify-between flex-col-reverse lg:flex-row">
         <div className="lg:w-2/5 border-t border-default">
           {accordionContent.map((item, index) => (
-            <div
-              className="py-6 md:py-8 border-b border-default cursor-pointer"
-              key={index}
-              onClick={() => {
-                setActiveAccordion(index);
-              }}
-            >
-              <div className="flex justify-between items-start select-none">
-                <h1 className="text-lg md:text-2xl text-primary">
-                  <span
-                    className={`mr-4 ${
-                      activeAccordion === index
-                        ? " text-brand-secondary"
-                        : "text-tertiary"
-                    }`}
-                  >
-                    {index < 10 ? "0" + (index + 1) : index + 1}
-                  </span>
-                  {item.title}
-                </h1>
-                <img
-                  className={`transition-all duration-200 ${
-                    activeAccordion === index ? "rotate-0" : "rotate-180"
-                  }`}
-                  src="/assets/icons/home/chevron.svg"
-                  alt=""
-                />
-              </div>
-
-              <p
-                className={`text-secondary text-base md:text-lg mt-4 overflow-hidden transition-all duration-500 ${
-                  activeAccordion === index ? "h-auto" : "h-0 hidden"
-                }`}
-              >
-                {item.text}
-              </p>
-              {activeAccordion === index && (
-                <img
-                  src={accordionContent[activeAccordion].image}
-                  className="w-full md:hidden h-full relative mt-5 rounded"
-                />
-              )}
-            </div>
+            <AC
+              item={item}
+              index={index}
+              activeAccordion={activeAccordion}
+              accordionContent={accordionContent}
+              setActiveAccordion={setActiveAccordion}
+            />
           ))}
         </div>
         <img

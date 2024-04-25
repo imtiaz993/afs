@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 
 const Navbar = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -13,6 +14,15 @@ const Navbar = () => {
       }
     }
   }, [showOptions]);
+
+  const openAnimation = useSpring({
+    from: { maxHeight: "44px" },
+    to: {
+      maxHeight: showOptions ? "1000px" : "44px",
+    },
+    config: { duration: "500" },
+  });
+
   return (
     <div className="px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]">
       <div className="md:w-11/12 mx-auto">
@@ -31,75 +41,79 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div className={`lg:hidden overflow-auto ${showOptions ?"h-[calc(100svh-32px)]": "h-auto"}`}>
-          <div className="flex justify-between">
-            <div>
+        <animated.div className="overflow-hidden" style={openAnimation}>
+          <div className={`lg:hidden h-[calc(100svh-32px)] overflow-auto`}>
+            <div className="flex justify-between">
+              <div>
+                {!showOptions && (
+                  <Link to="/">
+                    <img
+                      className="w-full"
+                      src="/assets/icons/navbar/nav-logo.svg"
+                      alt=""
+                    />
+                  </Link>
+                )}
+              </div>
               {!showOptions && (
+                <img
+                  onClick={() => {
+                    setShowOptions(!showOptions);
+                  }}
+                  src="/assets/icons/navbar/NavbarToggle.svg"
+                  alt=""
+                />
+              )}
+              {showOptions && (
+                <img
+                  onClick={() => {
+                    setShowOptions(!showOptions);
+                  }}
+                  src="/assets/icons/navbar/NavbarClose.svg"
+                  alt=""
+                />
+              )}
+            </div>
+            {showOptions && (
+              <div className="flex justify-center items-center mt-10">
                 <Link to="/">
                   <img
-                    className="w-full"
+                    className=""
                     src="/assets/icons/navbar/nav-logo.svg"
                     alt=""
                   />
                 </Link>
-              )}
-            </div>
-            {!showOptions && (
-              <img
-                onClick={() => {
-                  setShowOptions(!showOptions);
-                }}
-                src="/assets/icons/navbar/NavbarToggle.svg"
-                alt=""
-              />
+              </div>
             )}
-            {showOptions && (
-              <img
-                onClick={() => {
-                  setShowOptions(!showOptions);
-                }}
-                src="/assets/icons/navbar/NavbarClose.svg"
-                alt=""
-              />
-            )}
-          </div>
-          {showOptions && (
-            <div className="flex justify-center items-center mt-10">
-              <Link to="/">
-                <img
-                  className=""
-                  src="/assets/icons/navbar/nav-logo.svg"
-                  alt=""
-                />
-              </Link>
+            <div
+              className={`flex flex-col justify-start items-center  ${
+                showOptions
+                  ? "h-auto mt-28 overflow-auto"
+                  : "h-0 overflow-hidden"
+              }`}
+            >
+              <ul className="flex flex-col w-[185px] justify-center">
+                <div className="mb-6">
+                  <Solutions />
+                </div>
+                <div className="mb-6">
+                  <Company />
+                </div>
+                <div className="mb-6">
+                  <Resources />
+                </div>
+                <button
+                  className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm mb-14"
+                  onClick={() => {
+                    setShowOptions(!showOptions);
+                  }}
+                >
+                  Contact our team
+                </button>
+              </ul>
             </div>
-          )}
-          <div
-            className={`flex flex-col justify-start items-center  ${
-              showOptions ? "h-auto mt-28 overflow-auto" : "h-0 overflow-hidden"
-            }`}
-          >
-            <ul className="flex flex-col w-[185px] justify-center">
-              <div className="mb-6">
-                <Solutions />
-              </div>
-              <div className="mb-6">
-                <Company />
-              </div>
-              <div className="mb-6">
-                <Resources />
-              </div>
-              <button
-                className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm"
-                onClick={() => {
-                  setShowOptions(!showOptions);
-                }}
-              >
-                Contact our team
-              </button>
-            </ul>
           </div>
-        </div>
+        </animated.div>
       </div>
     </div>
   );
@@ -125,6 +139,14 @@ const Solutions = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  });
+
+  const openAnimation = useSpring({
+    from: { maxHeight: "0px" },
+    to: {
+      maxHeight: solutionsMenu ? "1000px" : "0px",
+    },
+    config: { duration: "750" },
   });
 
   return (
@@ -157,7 +179,12 @@ const Solutions = () => {
           alt=""
         />
       </button>
-      {solutionsMenu && (
+      <animated.div
+        className={`overflow-hidden ${
+          solutionsMenu ? "lg:block" : "lg:hidden"
+        }`}
+        style={openAnimation}
+      >
         <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
@@ -223,7 +250,7 @@ const Solutions = () => {
             </div>
           </div>
         </div>
-      )}
+      </animated.div>
     </div>
   );
 };
@@ -246,6 +273,14 @@ const Company = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  });
+
+  const openAnimation = useSpring({
+    from: { maxHeight: "0px" },
+    to: {
+      maxHeight: companyMenu ? "200px" : "0px",
+    },
+    config: { duration: "300" },
   });
 
   return (
@@ -278,7 +313,10 @@ const Company = () => {
           alt=""
         />
       </button>
-      {companyMenu && (
+      <animated.div
+        className={`overflow-hidden ${companyMenu ? "lg:block" : "lg:hidden"}`}
+        style={openAnimation}
+      >
         <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
@@ -303,7 +341,7 @@ const Company = () => {
             </div>
           </div>
         </div>
-      )}
+      </animated.div>
     </div>
   );
 };
@@ -326,6 +364,14 @@ const Resources = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  });
+
+  const openAnimation = useSpring({
+    from: { maxHeight: "0px" },
+    to: {
+      maxHeight: resourcesMenu ? "200px" : "0px",
+    },
+    config: { duration: "300" },
   });
 
   return (
@@ -358,7 +404,12 @@ const Resources = () => {
           alt=""
         />
       </button>
-      {resourcesMenu && (
+      <animated.div
+        className={`overflow-hidden ${
+          resourcesMenu ? "lg:block" : "lg:hidden"
+        }`}
+        style={openAnimation}
+      >
         <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
@@ -380,7 +431,7 @@ const Resources = () => {
             </div>
           </div>
         </div>
-      )}
+      </animated.div>
     </div>
   );
 };

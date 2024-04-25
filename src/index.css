@@ -77,3 +77,16 @@
 .navbar-dropdown-shadow {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
+
+
+.content{
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.5s ease;
+}
+.content p{
+  padding: 15px;
+}
+.content:target{
+  max-height: 150px;
+}
