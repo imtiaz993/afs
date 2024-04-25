@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
 const Navbar = () => {
+  const location = useLocation();
   const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
@@ -15,6 +16,19 @@ const Navbar = () => {
     }
   }, [showOptions]);
 
+  const isHome = location.pathname === "/";
+
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 10) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbarColor);
+
   const openAnimation = useSpring({
     from: { maxHeight: "44px" },
     to: {
@@ -24,7 +38,15 @@ const Navbar = () => {
   });
 
   return (
-    <div className="px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]">
+    <div
+      className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] transition-all duration-500  ${
+        isHome
+          ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+          : colorChange
+          ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+          : "bg-subtle-neutral"
+      } `}
+    >
       <div className="md:w-11/12 mx-auto">
         <div className="hidden lg:flex justify-between items-center">
           <div className="flex items-center">
