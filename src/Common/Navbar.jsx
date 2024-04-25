@@ -351,7 +351,10 @@ const Company = () => {
               <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Our partners
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
+              <Link
+                to="/investor-relations"
+                className="text-[15px] whitespace-nowrap block mt-4"
+              >
                 Investor relations
               </Link>
               <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
