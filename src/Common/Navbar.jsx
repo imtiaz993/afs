@@ -41,7 +41,9 @@ const Navbar = () => {
     <div
       className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] transition-all duration-500  ${
         isHome
-          ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+          ? colorChange
+            ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+            : "bg-white"
           : colorChange
           ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
           : "bg-subtle-neutral"
