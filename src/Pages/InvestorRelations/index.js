@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../Common/Navbar";
 import HeroWithImage from "../../Common/HeroWithImage";
 import Story from "../../Common/Story";
 import BOD from "./Components/BOD";
@@ -8,6 +9,7 @@ import News from "../../Common/News";
 const InvestorRelations = () => {
   return (
     <>
+      <Navbar />
       <HeroWithImage
         title={"Investor relations"}
         subtext={"Building trust and driving value"}

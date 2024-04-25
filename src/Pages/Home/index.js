@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../Common/Navbar";
 import Hero from "./Components/Hero";
 import PartnersSlider from "./Components/PartnersSlider";
 import Working from "./Components/Working";
@@ -11,6 +12,7 @@ import News from "../../Common/News";
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Hero />
       <PartnersSlider />
       <Working />

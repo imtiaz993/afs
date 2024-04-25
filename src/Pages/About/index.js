@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../Common/Navbar";
 import HeroWithImage from "../../Common/HeroWithImage";
 import Story from "../../Common/Story";
 import Commitment from "./Components/Commitment";
@@ -11,6 +12,7 @@ import Annnouncements from "./Components/Annnouncements";
 const About = () => {
   return (
     <>
+      <Navbar />
       <HeroWithImage
         title={"About us"}
         subtext={
