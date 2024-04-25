@@ -145,39 +145,43 @@ const Team = () => {
             Board of directors
           </button>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-          {activeTab === "team"
-            ? teams.team.map((item, index) => (
-                <div className="bg-brand-surface w-full" key={index}>
-                  <div className="m-2 mb-0">
-                    <img className="w-full" src={item.image} alt="" />
-                  </div>
-                  <div className="p-4 pt-0 lg:p-6">
-                    <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                      {item.name}
-                    </h1>
-                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                      {item.designation}
-                    </p>
-                  </div>
+        {activeTab === "team" ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+            {teams.team.map((item, index) => (
+              <div className="bg-brand-surface w-full" key={index}>
+                <div className="m-2 mb-0">
+                  <img className="w-full" src={item.image} alt="" />
                 </div>
-              ))
-            : teams.bod.map((item, index) => (
-                <div className="bg-brand-surface w-full" key={index}>
-                  <div className="m-2 mb-0">
-                    <img className="w-full" src={item.image} alt="" />
-                  </div>
-                  <div className="p-4 pt-0 lg:p-6">
-                    <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                      {item.name}
-                    </h1>
-                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                      {item.designation}
-                    </p>
-                  </div>
+                <div className="p-4 pt-0 lg:p-6">
+                  <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                    {item.name}
+                  </h1>
+                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                    {item.designation}
+                  </p>
                 </div>
-              ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+            {teams.bod.map((item, index) => (
+              <div className="bg-brand-surface w-full" key={index}>
+                <div className="m-2 mb-0">
+                  <img className="w-full" src={item.image} alt="" />
+                </div>
+                <div className="p-4 pt-0 lg:p-6">
+                  <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                    {item.name}
+                  </h1>
+                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                    {item.designation}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
