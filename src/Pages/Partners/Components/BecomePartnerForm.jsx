@@ -58,13 +58,13 @@ const BecomePartnerForm = () => {
                 placeholder="Company name"
               />
               <select className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none">
-                <option disabled>Company headquarters location</option>
+                <option value="">Company headquarters location</option>
                 <option value="">Location 1</option>
                 <option value="">Location 2</option>
                 <option value="">Location 3</option>
               </select>
               <select className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none">
-                <option disabled>Partnership type</option>
+                <option value="">Partnership type</option>
                 <option value="">Type 1</option>
                 <option value="">Type 2</option>
                 <option value="">Type 3</option>
