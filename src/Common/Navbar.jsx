@@ -32,7 +32,7 @@ const Navbar = () => {
   const openAnimation = useSpring({
     from: { maxHeight: "44px" },
     to: {
-      maxHeight: showOptions ? "1000px" : "44px",
+      maxHeight: showOptions ? "1500px" : "44px",
     },
     config: { duration: "500" },
   });
