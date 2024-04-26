@@ -1,16 +1,18 @@
 import React from "react";
-import HeroWithImage from "../../Common/HeroWithImage";
+import Navbar from "../../Common/Navbar";
+import HeroWithImage from "../../Common/CommonHero";
 import Story from "../../Common/Story";
 import Commitment from "./Components/Commitment";
 import History from "./Components/History";
 import Team from "./Components/Team";
 import CTA from "./Components/CTA";
-import Partners from "./Components/Partners";
+import Partners from "../../Common/Partners";
 import Annnouncements from "./Components/Annnouncements";
 
 const About = () => {
   return (
     <>
+      <Navbar />
       <HeroWithImage
         title={"About us"}
         subtext={
@@ -23,7 +25,7 @@ const About = () => {
       <History />
       <Team />
       <CTA />
-      <Partners />
+      <Partners subtext={"Our trusted partners"} />
       <Annnouncements />
     </>
   );

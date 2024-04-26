@@ -91,7 +91,7 @@ const News = () => {
               partnership with Xpence
             </p>
           </div>
-          <div className="pb-8 mb-8 border-b border-default">
+          <div className="pb-8 mb-8 lg:border-b border-default">
             <div className="flex">
               <p className="text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px]">
                 Partnership

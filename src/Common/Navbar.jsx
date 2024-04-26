@@ -100,12 +100,7 @@ const Navbar = () => {
             </div>
             {showOptions && (
               <div className="flex justify-center items-center mt-10">
-                <Link
-                  to="/"
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                >
+                <Link to="/">
                   <img
                     className=""
                     src="/assets/icons/navbar/nav-logo.svg"
@@ -123,22 +118,19 @@ const Navbar = () => {
             >
               <ul className="flex flex-col w-[185px] justify-center">
                 <div className="mb-6">
-                  <Solutions setShowOptions={setShowOptions} />
+                  <Solutions />
                 </div>
                 <div className="mb-6">
-                  <Company setShowOptions={setShowOptions} />
+                  <Company />
                 </div>
                 <div className="mb-6">
-                  <Resources setShowOptions={setShowOptions} />
+                  <Resources />
                 </div>
-                <button
-                  className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm mb-14"
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                >
-                  Contact our team
-                </button>
+                <Link to="/">
+                  <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm mb-14">
+                    Contact our team
+                  </button>
+                </Link>
               </ul>
             </div>
           </div>
@@ -150,7 +142,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-const Solutions = ({ setShowOptions }) => {
+const Solutions = () => {
   const solutionsDropdownRef = useRef(null);
   const [solutionsMenu, setSolutionsMenu] = useState(false);
 
@@ -218,58 +210,21 @@ const Solutions = ({ setShowOptions }) => {
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
               <h1 className="text-base font-medium text-primary mt-6">
-                {" "}
                 Solutions for banks
               </h1>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Card issuing & processing
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Digital banking
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
-                {" "}
+              <Link to="/" className="text-[15px] block mt-4">
                 Open banking
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Fraud & Risk management
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Value added services
               </Link>
             </div>
@@ -278,84 +233,28 @@ const Solutions = ({ setShowOptions }) => {
               <h1 className="text-base font-medium text-primary mt-6">
                 Solutions for businesses
               </h1>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Payment gateway
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 POS terminals
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 SoftPOS
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 eShop
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Merchant portal
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 HospitaLinkty
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 Food and beverage (F&B)
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 SME suite
               </Link>
             </div>
@@ -364,14 +263,7 @@ const Solutions = ({ setShowOptions }) => {
               <h1 className="text-base font-medium text-primary mt-6">
                 Solutions for consumer
               </h1>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setSolutionsMenu(!solutionsMenu);
-                }}
-                className="text-[15px] block mt-4"
-              >
+              <Link to="/" className="text-[15px] block mt-4">
                 BPay wallet
               </Link>
             </div>
@@ -382,7 +274,7 @@ const Solutions = ({ setShowOptions }) => {
   );
 };
 
-const Company = ({ setShowOptions }) => {
+const Company = () => {
   const companyDropdownRef = useRef(null);
   const [companyMenu, setCompanyMenu] = useState(false);
 
@@ -448,53 +340,24 @@ const Company = ({ setShowOptions }) => {
           <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
               <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setCompanyMenu(!companyMenu);
-                }}
+                to="/about"
                 className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
               >
                 About us
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setCompanyMenu(!companyMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Our partners
               </Link>
               <Link
                 to="/investor-relations"
-                onClick={() => {
-                  setShowOptions(false);
-                  setCompanyMenu(!companyMenu);
-                }}
                 className="text-[15px] whitespace-nowrap block mt-4"
               >
                 Investor relations
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setCompanyMenu(!companyMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Careers
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setCompanyMenu(!companyMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Contact
               </Link>
             </div>
@@ -505,7 +368,7 @@ const Company = ({ setShowOptions }) => {
   );
 };
 
-const Resources = ({ setShowOptions }) => {
+const Resources = () => {
   const resourcesDropdownRef = useRef(null);
   const [resourcesMenu, setResourcesMenu] = useState(false);
 
@@ -551,7 +414,7 @@ const Resources = ({ setShowOptions }) => {
       <button
         className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
         onClick={() => {
-          setResourcesMenu(!resourcesMenu);
+          setResourcesMenu(!resourcesMenu)
         }}
       >
         Resources
@@ -574,42 +437,17 @@ const Resources = ({ setShowOptions }) => {
             <div>
               <Link
                 to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setResourcesMenu(!resourcesMenu);
-                }}
                 className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
               >
                 News & Announcements
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setResourcesMenu(!resourcesMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Become a vendor
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setResourcesMenu(!resourcesMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 ESG
               </Link>
-              <Link
-                to="/"
-                onClick={() => {
-                  setShowOptions(false);
-                  setResourcesMenu(!resourcesMenu);
-                }}
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
+              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 Certifications
               </Link>
             </div>

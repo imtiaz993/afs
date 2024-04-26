@@ -94,7 +94,7 @@ const Annnouncements = () => {
                 entered a strategic partnership with Xpence
               </p>
             </div>
-            <div className="pb-8 mb-8 border-b border-default">
+            <div className="pb-8 mb-8 lg:border-b border-default">
               <div className="flex">
                 <div className="flex items-center">
                   <p className="text-xs text-secondary">

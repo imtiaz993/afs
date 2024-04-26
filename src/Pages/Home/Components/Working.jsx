@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AC from "./AC";
+import WorkingAccordion from "./WorkingAccordion";
 
 const Working = () => {
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -37,7 +37,7 @@ const Working = () => {
   ];
 
   return (
-    <div className="w-11/12 mx-auto py-5 lg:py-24 md:px-10 lg:px-16">
+    <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
       <p className="mb-4 text-secondary flex items-center">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
         Working with us
@@ -49,7 +49,7 @@ const Working = () => {
       <div className="flex justify-between flex-col-reverse lg:flex-row">
         <div className="lg:w-2/5 border-t border-default">
           {accordionContent.map((item, index) => (
-            <AC
+            <WorkingAccordion
               item={item}
               index={index}
               activeAccordion={activeAccordion}
