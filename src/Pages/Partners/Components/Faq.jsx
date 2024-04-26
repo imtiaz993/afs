@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FaqAccordion from "./FaqAccordion";
 
 const Faq = () => {
-  const [activeAccordion, setActiveAccordion] = useState(0);
+  const [activeAccordion, setActiveAccordion] = useState();
 
   const accordionOptions = [
     {

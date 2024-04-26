@@ -27,7 +27,7 @@ const FaqAccordion = ({
           }
         }}
       >
-        <h1 className="text-primary md:text-lg">{title}</h1>
+        <h1 className="text-primary md:text-lg mr-4">{title}</h1>
         <img
           src={`/assets/icons/partners/${
             activeAccordion === index
