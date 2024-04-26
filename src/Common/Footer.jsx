@@ -173,11 +173,8 @@ const Footer = () => {
                 <div className="w-[70px] h-[70px] border-r border-default p-1 flex items-center justify-center">
                   <img src="/assets/icons/footer/certification2.svg" alt="" />
                 </div>
-                <div className="w-[70px] h-[70px] border-r border-default p-1 flex items-center justify-center">
+                <div className="w-[70px] h-[70px p-1 flex items-center justify-center">
                   <img src="/assets/icons/footer/certification3.svg" alt="" />
-                </div>
-                <div className="w-[70px] h-[70px] p-1 flex items-center justify-center">
-                  <img src="/assets/icons/footer/certification4.svg" alt="" />
                 </div>
               </div>
             </div>

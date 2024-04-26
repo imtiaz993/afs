@@ -38,104 +38,107 @@ const Navbar = () => {
   });
 
   return (
-    <div
-      className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky top-0 z-[999] transition-all duration-500  ${
-        isHome
-          ? colorChange
+    <div>
+      <div
+        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 fixed top-0 left-0 right-0 z-[999] transition-all duration-500  ${
+          isHome
+            ? colorChange
+              ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+              : "bg-white"
+            : colorChange
             ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
-            : "bg-white"
-          : colorChange
-          ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
-          : "bg-subtle-neutral"
-      } `}
-    >
-      <div className="md:w-11/12 mx-auto">
-        <div className="hidden lg:flex justify-between items-center">
-          <div className="flex items-center">
-            <Link to="/">
-              <img src="/assets/icons/navbar/nav-logo.svg" alt="" />
-            </Link>
-            <Solutions />
-            <Company />
-            <Resources />
+            : "bg-subtle-neutral"
+        } `}
+      >
+        <div className="md:w-11/12 mx-auto">
+          <div className="hidden lg:flex justify-between items-center">
+            <div className="flex items-center">
+              <Link to="/">
+                <img src="/assets/icons/navbar/nav-logo.svg" alt="" />
+              </Link>
+              <Solutions />
+              <Company />
+              <Resources />
+            </div>
+            <div className="flex items-center">
+              <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
+                Contact our team
+              </button>
+            </div>
           </div>
-          <div className="flex items-center">
-            <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
-              Contact our team
-            </button>
-          </div>
-        </div>
-        <animated.div className="overflow-hidden" style={openAnimation}>
-          <div className={`lg:hidden h-[calc(100svh-32px)] overflow-auto`}>
-            <div className="flex justify-between">
-              <div>
+          <animated.div className="overflow-hidden" style={openAnimation}>
+            <div className={`lg:hidden h-[calc(100svh-32px)] overflow-auto`}>
+              <div className="flex justify-between">
+                <div>
+                  {!showOptions && (
+                    <Link to="/">
+                      <img
+                        className="w-full"
+                        src="/assets/icons/navbar/nav-logo.svg"
+                        alt=""
+                      />
+                    </Link>
+                  )}
+                </div>
                 {!showOptions && (
+                  <img
+                    onClick={() => {
+                      setShowOptions(!showOptions);
+                    }}
+                    src="/assets/icons/navbar/NavbarToggle.svg"
+                    alt=""
+                  />
+                )}
+                {showOptions && (
+                  <img
+                    onClick={() => {
+                      setShowOptions(!showOptions);
+                    }}
+                    src="/assets/icons/navbar/NavbarClose.svg"
+                    alt=""
+                  />
+                )}
+              </div>
+              {showOptions && (
+                <div className="flex justify-center items-center mt-10">
                   <Link to="/">
                     <img
-                      className="w-full"
+                      className=""
                       src="/assets/icons/navbar/nav-logo.svg"
                       alt=""
                     />
                   </Link>
-                )}
-              </div>
-              {!showOptions && (
-                <img
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                  src="/assets/icons/navbar/NavbarToggle.svg"
-                  alt=""
-                />
+                </div>
               )}
-              {showOptions && (
-                <img
-                  onClick={() => {
-                    setShowOptions(!showOptions);
-                  }}
-                  src="/assets/icons/navbar/NavbarClose.svg"
-                  alt=""
-                />
-              )}
-            </div>
-            {showOptions && (
-              <div className="flex justify-center items-center mt-10">
-                <Link to="/">
-                  <img
-                    className=""
-                    src="/assets/icons/navbar/nav-logo.svg"
-                    alt=""
-                  />
-                </Link>
+              <div
+                className={`flex flex-col justify-start items-center  ${
+                  showOptions
+                    ? "h-auto mt-28 overflow-auto"
+                    : "h-0 overflow-hidden"
+                }`}
+              >
+                <ul className="flex flex-col w-[185px] justify-center">
+                  <div className="mb-6">
+                    <Solutions />
+                  </div>
+                  <div className="mb-6">
+                    <Company />
+                  </div>
+                  <div className="mb-6">
+                    <Resources />
+                  </div>
+                  <Link to="/">
+                    <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm mb-14">
+                      Contact our team
+                    </button>
+                  </Link>
+                </ul>
               </div>
-            )}
-            <div
-              className={`flex flex-col justify-start items-center  ${
-                showOptions
-                  ? "h-auto mt-28 overflow-auto"
-                  : "h-0 overflow-hidden"
-              }`}
-            >
-              <ul className="flex flex-col w-[185px] justify-center">
-                <div className="mb-6">
-                  <Solutions />
-                </div>
-                <div className="mb-6">
-                  <Company />
-                </div>
-                <div className="mb-6">
-                  <Resources />
-                </div>
-                <Link to="/">
-                  <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm mb-14">
-                    Contact our team
-                  </button>
-                </Link>
-              </ul>
             </div>
-          </div>
-        </animated.div>
+          </animated.div>
+        </div>
       </div>
+      <div className="mb-[76px] lg:mb-[89.6px]"></div>
     </div>
   );
 };
@@ -345,7 +348,10 @@ const Company = () => {
               >
                 About us
               </Link>
-              <Link to="/partners" className="text-[15px] whitespace-nowrap block mt-4">
+              <Link
+                to="/partners"
+                className="text-[15px] whitespace-nowrap block mt-4"
+              >
                 Our partners
               </Link>
               <Link
@@ -414,7 +420,7 @@ const Resources = () => {
       <button
         className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
         onClick={() => {
-          setResourcesMenu(!resourcesMenu)
+          setResourcesMenu(!resourcesMenu);
         }}
       >
         Resources

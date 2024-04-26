@@ -18,7 +18,10 @@ const Partners = () => {
         }
         image={"/assets/images/partners/hero.png"}
         buttonText={"Become a partner"}
-        buttonNavigateLink={"/partners"}
+        onClick={() => {
+          const section = document.querySelector("#partners-form");
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
       />
       <OurPartners
         bg={true}

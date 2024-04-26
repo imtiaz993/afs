@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const BecomePartnerForm = () => {
   return (
-    <div className="md:w-11/12 mx-auto flex becomepartner-gradient relative">
+    <div
+      className="md:w-11/12 mx-auto flex becomepartner-gradient relative"
+      id="partners-form"
+    >
       <div className="w-full py-10 lg:py-24 px-[4.17%] lg:pl-16 relative z-10 grid lg:grid-cols-2 gap-8 md:gap-14">
         <div className="flex flex-col">
           <div className="flex flex-col items-center lg:items-start">

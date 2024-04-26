@@ -6,7 +6,7 @@ const HeroWithImage = ({
   subtext,
   description,
   buttonText,
-  buttonNavigateLink,
+  onClick,
   image,
 }) => {
   return (
@@ -22,15 +22,15 @@ const HeroWithImage = ({
               {description}
             </p>
           )}
-          {buttonText && buttonNavigateLink && (
-            <Link
-              to={buttonNavigateLink}
-              className="flex justify-center md:justify-start mt-10 mb-10 lg:mb-0"
-            >
-              <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 px-8 font-medium rounded-sm">
+          {buttonText && onClick && (
+            <div className="flex justify-center md:justify-start mt-10 mb-10 lg:mb-0">
+              <button
+                className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 px-8 font-medium rounded-sm"
+                onClick={onClick}
+              >
                 {buttonText}
               </button>
-            </Link>
+            </div>
           )}
         </div>
         <div className="mt-5 lg:mt-24 rounded overflow-hidden">

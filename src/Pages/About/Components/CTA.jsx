@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -13,9 +14,11 @@ const CTA = () => {
             and be part of a collaborative work culture that encourages
             professional growth, innovation, and creativity.
           </p>
-          <button className="transition-colors duration-500 text-center text-white py-3 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
-            View careers page
-          </button>
+          <Link to="/careers">
+            <button className="transition-colors duration-500 text-center text-white py-3 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+              View careers page
+            </button>
+          </Link>
         </div>
         <div className="hidden xl:flex w-2/5 py-6 items-center flex-wrap">
           {Array.from({ length: 17 }).map((item, index) => (
