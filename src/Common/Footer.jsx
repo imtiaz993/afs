@@ -69,10 +69,13 @@ const Footer = () => {
             <Link className="mb-3 text-sm text-secondary" to="/about">
               About us
             </Link>
-            <Link className="mb-3 text-sm text-secondary" to="/">
+            <Link className="mb-3 text-sm text-secondary" to="/partners">
               Our partners
             </Link>
-            <Link className="mb-3 text-sm text-secondary" to="/investor-relations">
+            <Link
+              className="mb-3 text-sm text-secondary"
+              to="/investor-relations"
+            >
               Investor relations
             </Link>
             <Link className="mb-3 text-sm text-secondary" to="/">

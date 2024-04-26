@@ -345,7 +345,7 @@ const Company = () => {
               >
                 About us
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
+              <Link to="/partners" className="text-[15px] whitespace-nowrap block mt-4">
                 Our partners
               </Link>
               <Link
