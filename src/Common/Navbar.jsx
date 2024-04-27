@@ -38,7 +38,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="lg:sticky top-0">
+    <div className="lg:sticky top-0 z-[999]">
       <div
         className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-500  ${
           isHome
