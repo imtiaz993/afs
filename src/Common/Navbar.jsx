@@ -67,7 +67,7 @@ const Navbar = () => {
             </div>
           </div>
           <animated.div className="overflow-hidden" style={openAnimation}>
-            <div className={`lg:hidden h-[calc(100svh-32px)] overflow-auto`}>
+            <div className={`lg:hidden h-[calc(100vh-16px)] overflow-auto`}>
               <div className="flex justify-between">
                 <div>
                   {!showOptions && (
@@ -94,6 +94,7 @@ const Navbar = () => {
                     onClick={() => {
                       setShowOptions(!showOptions);
                     }}
+                    className="mt-4"
                     src="/assets/icons/navbar/NavbarClose.svg"
                     alt=""
                   />
