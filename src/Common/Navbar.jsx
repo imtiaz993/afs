@@ -118,7 +118,7 @@ const Navbar = () => {
                     : "h-0 overflow-hidden"
                 }`}
               >
-                <ul className="flex flex-col w-[185px] justify-center mb-14">
+                <ul className="flex flex-col w-[185px] justify-center pb-14">
                   <div className="mb-6">
                     <Solutions />
                   </div>
