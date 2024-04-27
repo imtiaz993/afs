@@ -49,7 +49,7 @@ const Reviews = () => {
               <p className="font-medium text-center lg:text-left text-white mt-8">
                 Dr. Pallavi Menon
               </p>
-              <p className="text-center lg:text-left text-brand-tertiary mt-2">
+              <p className="text-center lg:text-left text-brand-tertiary mt-2 font-light">
                 Chief Financial Officer
               </p>
             </div>

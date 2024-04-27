@@ -45,7 +45,7 @@ const WorkingAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className={`text-secondary text-base md:text-lg mt-4`}>
+        <p className={`text-secondary text-base md:text-lg mt-4 font-light`}>
           {item.text}
         </p>
       </animated.div>

@@ -3,7 +3,7 @@ import React from "react";
 const Solutions = () => {
   return (
     <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
-      <p className="mb-4 text-secondary">Our solutions</p>
+      <p className="font-light mb-4 text-secondary">Our solutions</p>
       <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[950px] leading-[120%]">
         Unlock financial opportunities for growth and global expansion,
         accessible to banks and businesses of any size.
@@ -22,7 +22,7 @@ const Solutions = () => {
               <h1 className="text-2xl md:text-[40px] text-white mb-5 mt-[272px]">
                 For Banks
               </h1>
-              <p className="text-base md:text-lg text-white mb-4 max-w-[420px]">
+              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px]">
                 Gain access to state-of-the-art payment processing services,
                 card issuance, risk management systems, and other tailored
                 solutions.
@@ -34,15 +34,15 @@ const Solutions = () => {
                 <ul className="flex flex-wrap mt-4">
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">Card processing</span>
+                    <span className="opacity-80 font-light ml-1">Card processing</span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">ATM & POS Driving</span>
+                    <span className="opacity-80 font-light ml-1">ATM & POS Driving</span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">Card issuing</span>
+                    <span className="opacity-80 font-light ml-1">Card issuing</span>
                   </li>
                 </ul>
               </div>
@@ -60,7 +60,7 @@ const Solutions = () => {
               <h1 className="text-2xl md:text-[40px] text-primary mb-5">
                 All Solutions
               </h1>
-              <p className="text-base md:text-lg text-primary mb-8 max-w-[425px]">
+              <p className="font-light text-base md:text-lg text-primary mb-8 max-w-[425px]">
                 Unsure which solution best fits your business needs? Dive into
                 our comprehensive range of financial tools and services,
                 tailored to empower your business success.
@@ -79,7 +79,7 @@ const Solutions = () => {
               <h1 className="text-2xl md:text-[40px] text-white mb-5">
                 For Consumers
               </h1>
-              <p className="text-base md:text-lg text-white mb-8 max-w-[420px]">
+              <p className="font-light text-base md:text-lg text-white mb-8 max-w-[420px]">
                 Effortlessly receive your salary, access your personalized card,
                 and securely transfer funds to others. Simplify your finances
                 with BPay wallet.
@@ -111,7 +111,7 @@ const Solutions = () => {
               <h1 className="text-2xl md:text-[40px] text-white mb-5">
                 For Businesses
               </h1>
-              <p className="text-base md:text-lg text-white mb-4 max-w-[420px]">
+              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px]">
                 Boost growth and efficiency with all-in-one merchant services,
                 POS terminals, and custom payment solutions tailored to your
                 business needs.
@@ -123,15 +123,15 @@ const Solutions = () => {
                 <ul className="flex flex-wrap mt-4">
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">POS Terminals</span>
+                    <span className="opacity-80 font-light ml-1">POS Terminals</span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">Payroll solution</span>
+                    <span className="opacity-80 font-light ml-1">Payroll solution</span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 ml-1">Payment gateway</span>
+                    <span className="opacity-80 font-light ml-1">Payment gateway</span>
                   </li>
                 </ul>
               </div>

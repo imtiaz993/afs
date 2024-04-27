@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="px-[4.17px] py-10 lg:py-24 md:px-10 lg:px-16 relative">
       <div className="w-11/12 mx-auto relative z-10">
-        <p className="mb-4 text-secondary">About us</p>
+        <p className="mb-4 text-secondary font-light">About us</p>
         <h1 className="text-primary text-2xl md:text-5xl mb-16 max-w-[845px] leading-[120%]">
           Founded in 1984, AFS is owned by 37 banks and supports over 60 clients
           in 20+ countries, providing issuing, merchant acquiring, and various
@@ -14,13 +14,13 @@ const About = () => {
         </h1>
         <div className="lg:flex justify-between">
           <div className="lg:w-[45%] flex flex-col items-center lg:items-start">
-            <p className="text-center lg:text-left mb-4 text-secondary">
+            <p className="text-center lg:text-left mb-4 text-secondary font-light">
               By the numbers
             </p>
             <h1 className="text-center lg:text-left text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%]">
               Leveraging the power of digital payments
             </h1>
-            <p className="text-center lg:text-left text-base md:text-lg text-secondary mb-8 lg:max-w-[450px]">
+            <p className="font-light text-center lg:text-left text-base md:text-lg text-secondary mb-8 lg:max-w-[450px]">
               Discover how we are revolutionizing the financial sector through
               our relentless commitment to harnessing the potential of digital
               payments.
@@ -47,7 +47,7 @@ const About = () => {
                   suffix="B"
                 />
               </h1>
-              <p className="text-secondary">Acquiring volume</p>
+              <p className="text-secondary font-light">Acquiring volume</p>
             </div>
             <div className="mt-12 pb-12 border-b border-default grid grid-cols-2 gap-10 w-full">
               <div>
@@ -65,7 +65,7 @@ const About = () => {
                     suffix="M"
                   />
                 </h1>
-                <p className="text-secondary">Transactions completed</p>
+                <p className="text-secondary font-light">Transactions completed</p>
               </div>
               <div>
                 <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
@@ -82,7 +82,7 @@ const About = () => {
                     suffix="+"
                   />
                 </h1>
-                <p className="text-secondary">Years of experience</p>
+                <p className="text-secondary font-light">Years of experience</p>
               </div>
             </div>
             <div className="mt-12 pb-12 border-b border-default grid grid-cols-2 gap-10 w-full">
@@ -101,7 +101,7 @@ const About = () => {
                     suffix="M"
                   />
                 </h1>
-                <p className="text-secondary">Cards hosted</p>
+                <p className="text-secondary font-light">Cards hosted</p>
               </div>
               <div>
                 <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
@@ -118,7 +118,7 @@ const About = () => {
                     suffix="K"
                   />
                 </h1>
-                <p className="text-secondary">POS terminals deployed</p>
+                <p className="text-secondary font-light">POS terminals deployed</p>
               </div>
             </div>
           </div>

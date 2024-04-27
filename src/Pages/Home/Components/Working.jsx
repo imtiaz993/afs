@@ -39,7 +39,7 @@ const Working = () => {
   return (
     <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
       <p className="mb-4 text-secondary flex items-center">
-        <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
+        <img src="/assets/icons/home/diamond.svg" className="mr-2 font-light" alt="" />{" "}
         Working with us
       </p>
       <h1 className="text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%]">
