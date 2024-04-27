@@ -38,47 +38,59 @@ const BecomePartnerForm = () => {
                   className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
                   type="text"
                   placeholder="First name"
+                  required
                 />
                 <input
                   className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
                   type="text"
                   placeholder="Last name"
+                  required
                 />
               </div>
               <input
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
                 type="text"
                 placeholder="Job description"
+                required
               />
               <input
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
                 type="email"
                 placeholder="Company email address"
+                required
               />
               <input
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
                 type="text"
                 placeholder="Company name"
+                required
               />
-              <select className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none">
+              <select
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                required
+              >
                 <option value="">Company headquarters location</option>
-                <option value="">Location 1</option>
-                <option value="">Location 2</option>
-                <option value="">Location 3</option>
+                <option value="Location 1">Location 1</option>
+                <option value="Location 2">Location 2</option>
+                <option value="Location 3">Location 3</option>
               </select>
-              <select className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none">
+              <select
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                required
+              >
                 <option value="">Partnership type</option>
-                <option value="">Type 1</option>
-                <option value="">Type 2</option>
-                <option value="">Type 3</option>
+                <option value="Type 1">Type 1</option>
+                <option value="Type 2">Type 2</option>
+                <option value="Type 3">Type 3</option>
               </select>
               <textarea
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none"
+                required
                 rows={3}
                 placeholder="Please tell us more about your needs"
               />
               <div className="flex items-start mt-6 ">
-                <input type="checkbox" className="w-5 h-5" />
+                <input type="checkbox" className="w-5 h-5" required />
                 <p className="text-secondary text-sm ml-3">
                   By sending your information you agree to our
                   <Link className="text-primary underline ml-1" to="/">
@@ -87,7 +99,10 @@ const BecomePartnerForm = () => {
                 </p>
               </div>
               <div className="flex justify-center lg:justify-start">
-                <button className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm">
+                <button
+                  className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
+                  type="submit"
+                >
                   Submit your details
                 </button>
               </div>

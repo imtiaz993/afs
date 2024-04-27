@@ -5,7 +5,7 @@ const Partners = ({ bg, title, subtext }) => {
     <div className={`${bg ? "bg-subtle-neutral" : ""}`}>
       <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
         {title && <p className=" mb-4 text-secondary text-center">{title}</p>}
-        <h1 className="mb-5 md:mb-16 text-2xl md:text-[40px] text-primary text-center">
+        <h1 className="mb-5 md:mb-16 text-2xl md:text-5xl text-primary text-center">
           {subtext}
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-2">

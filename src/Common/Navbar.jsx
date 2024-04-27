@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div>
       <div
-        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 fixed top-0 left-0 right-0 z-[999] transition-all duration-500  ${
+        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky lg:fixed top-0 lg:left-0 lg:right-0 z-[999] transition-all duration-500  ${
           isHome
             ? colorChange
               ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
@@ -361,7 +361,10 @@ const Company = () => {
               >
                 Investor relations
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
+              <Link
+                to="/careers"
+                className="text-[15px] whitespace-nowrap block mt-4"
+              >
                 Careers
               </Link>
               <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">

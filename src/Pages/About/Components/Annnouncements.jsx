@@ -2,7 +2,7 @@ import React from "react";
 
 const Annnouncements = () => {
   return (
-    <div className="bg-subtle-neutral">
+    <div className="bg-subtle-neutral border-b border-default">
       <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
         <div className="mb-12 flex justify-between items-center sm:items-end">
           <h1 className="text-2xl md:text-[40px] text-primary mr-4">
@@ -24,9 +24,7 @@ const Annnouncements = () => {
             />
             <div className="flex mt-6">
               <div className="flex items-center">
-                <p className="text-xs text-secondary">
-                  April 01, 2024
-                </p>
+                <p className="text-xs text-secondary">April 01, 2024</p>
                 <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
                 <p className="text-xs text-secondary">5 min read</p>
               </div>
@@ -46,13 +44,9 @@ const Annnouncements = () => {
             <div className="pb-8 mb-8 border-b border-default">
               <div className="flex">
                 <div className="flex items-center">
-                  <p className="text-xs text-secondary">
-                    March 05, 2024
-                  </p>
+                  <p className="text-xs text-secondary">March 05, 2024</p>
                   <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                  <p className="text-xs text-secondary">
-                    5 min read
-                  </p>
+                  <p className="text-xs text-secondary">5 min read</p>
                 </div>
               </div>
               <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
@@ -73,13 +67,9 @@ const Annnouncements = () => {
             <div className="pb-8 mb-8 border-b border-default">
               <div className="flex">
                 <div className="flex items-center">
-                  <p className="text-xs text-secondary">
-                    March 05, 2024
-                  </p>
+                  <p className="text-xs text-secondary">March 05, 2024</p>
                   <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                  <p className="text-xs text-secondary">
-                    5 min read
-                  </p>
+                  <p className="text-xs text-secondary">5 min read</p>
                 </div>
               </div>
               <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
@@ -97,13 +87,9 @@ const Annnouncements = () => {
             <div className="pb-8 mb-8 lg:border-b border-default">
               <div className="flex">
                 <div className="flex items-center">
-                  <p className="text-xs text-secondary">
-                    March 05, 2024
-                  </p>
+                  <p className="text-xs text-secondary">March 05, 2024</p>
                   <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
-                  <p className="text-xs text-secondary">
-                    5 min read
-                  </p>
+                  <p className="text-xs text-secondary">5 min read</p>
                 </div>
               </div>
               <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">

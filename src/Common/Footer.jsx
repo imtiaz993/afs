@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="border-t border-default">
       <div className="w-11/12 lg:w-10/12 mx-auto py-10  lg:py-24">
         <div className="mb-16">
           <img src="/assets/icons/footer/logo.svg" alt="" />
@@ -78,7 +77,7 @@ const Footer = () => {
             >
               Investor relations
             </Link>
-            <Link className="mb-3 text-sm text-secondary" to="/">
+            <Link className="mb-3 text-sm text-secondary" to="/careers">
               Careers
             </Link>
             <Link className="mb-3 text-sm text-secondary" to="/">
@@ -212,7 +211,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

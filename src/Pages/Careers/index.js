@@ -3,6 +3,9 @@ import Navbar from "../../Common/Navbar";
 import HeroWithImage from "../../Common/CommonHero";
 import Story from "../../Common/Story";
 import CoreValues from "./Components/CoreValues";
+import Testimonials from "./Components/Testimonials";
+import OpenPositions from "./Components/OpenPositions";
+import JobQueryForm from "./Components/JobQueryForm";
 
 const Careers = () => {
   return (
@@ -20,6 +23,9 @@ const Careers = () => {
       />
       <Story bg={true} />
       <CoreValues />
+      <Testimonials />
+      <OpenPositions />
+      <JobQueryForm />
     </>
   );
 };
