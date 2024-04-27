@@ -38,9 +38,9 @@ const Navbar = () => {
   });
 
   return (
-    <div>
+    <div className="lg:sticky top-0">
       <div
-        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 sticky lg:fixed top-0 lg:left-0 lg:right-0 z-[999] transition-all duration-500  ${
+        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-500  ${
           isHome
             ? colorChange
               ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
@@ -139,7 +139,7 @@ const Navbar = () => {
           </animated.div>
         </div>
       </div>
-      <div className="mb-[76px] lg:mb-[89.6px]"></div>
+      <div className="mb-[76px] lg:hidden"></div>
     </div>
   );
 };
