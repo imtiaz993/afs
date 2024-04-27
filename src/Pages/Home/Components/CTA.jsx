@@ -11,7 +11,10 @@ const CTA = () => {
         <p className="text-center lg:text-left text-base md:text-2xl text-brand-primary mt-4 mb-10">
           Experience the power of AFS today!
         </p>
-        <button className="transition-colors duration-500 text-center text-white py-4 w-44 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+        <button
+          data-aos="fade-up"
+          className="transition-colors duration-500 text-center text-white py-4 w-44 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm"
+        >
           Contact our team
         </button>
       </div>

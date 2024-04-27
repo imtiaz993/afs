@@ -4,7 +4,7 @@ const Commitment = () => {
   return (
     <div className="bg-subtle-neutral">
       <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-        <p className="mb-4 text-secondary flex items-center">
+        <p className="mb-4 text-secondary flex items-center font-light">
           <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
           Our commitment
         </p>
@@ -23,7 +23,7 @@ const Commitment = () => {
             <h1 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our vision
             </h1>
-            <p className="text-lg  text-secondary">
+            <p className="text-lg  text-secondary font-light">
               To be the leading enabler for digital transaction transformation.
             </p>
           </div>
@@ -36,7 +36,7 @@ const Commitment = () => {
             <h1 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our mission
             </h1>
-            <p className="text-lg  text-secondary">
+            <p className="text-lg  text-secondary font-light">
               Offer better, faster, and more secure products and services that
               support our customers’ growth.
             </p>
@@ -50,7 +50,7 @@ const Commitment = () => {
             <h1 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our values
             </h1>
-            <p className="text-lg  text-secondary">
+            <p className="text-lg  text-secondary font-light">
               A client centric, collaborative and consistent entity, committed
               to delivering superior experiences.
             </p>

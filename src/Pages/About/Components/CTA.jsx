@@ -9,13 +9,16 @@ const CTA = () => {
           <h1 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%]">
             Interested in a career at AFS?
           </h1>
-          <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-6 mb-6">
+          <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-6 mb-6 font-light">
             Build the future of digital payments with us! Join our dynamic team
             and be part of a collaborative work culture that encourages
             professional growth, innovation, and creativity.
           </p>
           <Link to="/careers">
-            <button className="transition-colors duration-500 text-center text-white py-3 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+            <button
+              data-aos="fade-up"
+              className="transition-colors duration-500 text-center text-white py-3 w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm"
+            >
               View careers page
             </button>
           </Link>

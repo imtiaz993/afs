@@ -57,7 +57,7 @@ const History = () => {
 
   return (
     <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16 mb-[280px] md:mb-[376px] lg:mb-[280px]">
-      <p className="mb-4 text-secondary flex items-center">
+      <p className="mb-4 text-secondary flex items-center font-light">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" /> Our
         history
       </p>
@@ -145,7 +145,7 @@ const History = () => {
                       <h1 className="text-brand-secondary text-4xl md:text-5xl mb-10">
                         {slide.title}
                       </h1>
-                      <p className="text-primary text-[17px]">
+                      <p className="text-primary text-[17px] font-light">
                         {slide.description}
                       </p>
                     </div>

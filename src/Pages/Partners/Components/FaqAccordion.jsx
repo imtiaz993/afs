@@ -38,7 +38,7 @@ const FaqAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className="text-secondary mt-2 text-sm md:text-base">{text}</p>
+        <p className="text-secondary mt-2 text-sm md:text-base font-light">{text}</p>
       </animated.div>
     </div>
   );

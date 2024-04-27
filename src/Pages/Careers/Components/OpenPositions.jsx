@@ -126,7 +126,7 @@ const OpenPositions = () => {
   ];
   return (
     <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-      <p className="mb-4 text-secondary flex items-center">
+      <p className="mb-4 text-secondary flex items-center font-light">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
         Open positions
       </p>
@@ -137,15 +137,17 @@ const OpenPositions = () => {
         <div className="mr-8 lg:grid gap-2 mb-4 lg:mb-0">
           <select className=" mr-2 lg:mr-0 border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white">
             <option value="">Location</option>
-            <option value="">Location 1</option>
-            <option value="">Location 2</option>
-            <option value="">Location 3</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Egypt">Egypt</option>
+            <option value="UAE">UAE</option>
+            <option value="Oman">Oman</option>
           </select>
           <select className="border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white">
             <option value="">Department</option>
-            <option value="">Department 1</option>
-            <option value="">Department 2</option>
-            <option value="">Department 3</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Finance">Finance</option>
+            <option value="Design">Design</option>
+            <option value="Technology">Technology</option>
           </select>
         </div>
         <div className="border border-default rounded lg:w-[calc(100%-200px)]">
@@ -156,9 +158,7 @@ const OpenPositions = () => {
                 index !== positions.length ? "border-b border-default" : ""
               }  px-4 py-2 md:flex items-center justify-between`}
             >
-              <h1 className="py-2 text-primary">
-                {item.title}
-              </h1>
+              <h1 className="py-2 text-primary">{item.title}</h1>
               <div className="flex justify-between md:justify-start">
                 <div className="py-2 flex mr-8">
                   <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-lg">

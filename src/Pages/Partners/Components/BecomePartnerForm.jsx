@@ -13,7 +13,7 @@ const BecomePartnerForm = () => {
             <h1 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%]">
               Become a partner
             </h1>
-            <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px]">
+            <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px] font-light">
               Submit your interest in becoming a AFS partner and we will contact
               you as soon as possible.
             </p>
@@ -70,9 +70,10 @@ const BecomePartnerForm = () => {
                 required
               >
                 <option value="">Company headquarters location</option>
-                <option value="Location 1">Location 1</option>
-                <option value="Location 2">Location 2</option>
-                <option value="Location 3">Location 3</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+                <option value="Oman">Oman</option>
               </select>
               <select
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
@@ -100,6 +101,7 @@ const BecomePartnerForm = () => {
               </div>
               <div className="flex justify-center lg:justify-start">
                 <button
+                  data-aos="fade-up"
                   className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
                   type="submit"
                 >

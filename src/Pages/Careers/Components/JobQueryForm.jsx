@@ -15,7 +15,7 @@ const JobQueryForm = () => {
             <h1 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%] max-w-[464px]">
               Couldn't find the right job for you?
             </h1>
-            <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px]">
+            <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px] font-light">
               Should our existing job openings not match your skills and
               experience, please submit your personal information and resume.
               We'll contact you when a fitting opportunity arises.
@@ -64,9 +64,10 @@ const JobQueryForm = () => {
                 required
               >
                 <option value="">Location *</option>
-                <option value="Location 1">Location 1</option>
-                <option value="Location 2">Location 2</option>
-                <option value="ocation 3">Location 3</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+                <option value="Oman">Oman</option>
               </select>
               <div
                 className="rounded-sm py-1 pl-4 pr-1 text-tertiary bg-white flex items-center justify-between cursor-pointer"
@@ -107,6 +108,7 @@ const JobQueryForm = () => {
               </div>
               <div className="flex justify-center lg:justify-start">
                 <button
+                  data-aos="fade-up"
                   className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
                   type="submit"
                 >

@@ -3,7 +3,7 @@ import React from "react";
 const WhyPartner = () => {
   return (
     <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-      <p className="mb-4 text-secondary flex items-center">
+      <p className="mb-4 text-secondary flex items-center font-light">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" /> Why
         partner with us
       </p>
@@ -21,7 +21,7 @@ const WhyPartner = () => {
           <h1 className="mt-6 mb-2 text-lg text-primary">
             Access to cutting-edge technologies
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary font-light">
             Gain exclusive access to the latest financial technologies,
             enhancing your services and propelling your business ahead of the
             curve.
@@ -36,7 +36,7 @@ const WhyPartner = () => {
           <h1 className="mt-6 mb-2 text-lg text-primary">
             Increased revenue streams
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary font-light">
             Unlock new revenue opportunities through commissions, referrals, and
             expanded offerings with our financial solutions.
           </p>
@@ -50,7 +50,7 @@ const WhyPartner = () => {
           <h1 className="mt-6 mb-2 text-lg text-primary">
             Enhanced product offering
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary font-light">
             Stand out with added value to your services by integrating our
             comprehensive financial tools and solutions.
           </p>
@@ -64,7 +64,7 @@ const WhyPartner = () => {
           <h1 className="mt-6 mb-2 text-lg text-primary">
             Knowledge and expertise sharing
           </h1>
-          <p className="text-secondary">
+          <p className="text-secondary font-light">
             Benefit from shared insights and expertise in financial trends and
             best practices, fostering business growth.
           </p>

@@ -48,7 +48,7 @@ const Faq = () => {
 
   return (
     <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24 md:flex items-start">
-      <p className="mb-4 text-secondary flex items-center md:w-1/5">
+      <p className="mb-4 text-secondary flex items-center md:w-1/5 font-light">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" /> FAQ
       </p>
       <div className="md:w-4/5">

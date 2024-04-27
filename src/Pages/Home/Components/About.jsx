@@ -26,7 +26,10 @@ const About = () => {
               payments.
             </p>
             <Link to="/about">
-              <button className="transition-colors duration-500 text-center text-brand-secondary py-4 w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm">
+              <button
+                data-aos="fade-up"
+                className="transition-colors duration-500 text-center text-brand-secondary py-4 w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm"
+              >
                 Learn more about us
               </button>
             </Link>
@@ -65,7 +68,9 @@ const About = () => {
                     suffix="M"
                   />
                 </h1>
-                <p className="text-secondary font-light">Transactions completed</p>
+                <p className="text-secondary font-light">
+                  Transactions completed
+                </p>
               </div>
               <div>
                 <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
@@ -118,7 +123,9 @@ const About = () => {
                     suffix="K"
                   />
                 </h1>
-                <p className="text-secondary font-light">POS terminals deployed</p>
+                <p className="text-secondary font-light">
+                  POS terminals deployed
+                </p>
               </div>
             </div>
           </div>

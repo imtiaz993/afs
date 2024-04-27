@@ -27,22 +27,28 @@ const Solutions = () => {
                 card issuance, risk management systems, and other tailored
                 solutions.
               </p>
-              <div className="flex items-center flex-wrap">
+              <div className="flex items-center flex-wrap" data-aos="fade-up">
                 <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">Card processing</span>
+                    <span className="opacity-80 font-light ml-1">
+                      Card processing
+                    </span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">ATM & POS Driving</span>
+                    <span className="opacity-80 font-light ml-1">
+                      ATM & POS Driving
+                    </span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">Card issuing</span>
+                    <span className="opacity-80 font-light ml-1">
+                      Card issuing
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -65,7 +71,7 @@ const Solutions = () => {
                 our comprehensive range of financial tools and services,
                 tailored to empower your business success.
               </p>
-              <div className="">
+              <div className="" data-aos="fade-up">
                 <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-transparent border border-brand-secondary font-medium rounded-sm mr-6">
                   Explore
                 </button>
@@ -84,7 +90,7 @@ const Solutions = () => {
                 and securely transfer funds to others. Simplify your finances
                 with BPay wallet.
               </p>
-              <div className="">
+              <div className="" data-aos="fade-up">
                 <button className="transition-colors duration-500 text-center text-brand-secondary  hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white border border-brand-secondary font-medium rounded-sm mr-6">
                   Explore
                 </button>
@@ -116,22 +122,31 @@ const Solutions = () => {
                 POS terminals, and custom payment solutions tailored to your
                 business needs.
               </p>
-              <div className="flex items-center flex-wrap mb-[272px]">
+              <div
+                className="flex items-center flex-wrap mb-[272px]"
+                data-aos="fade-up"
+              >
                 <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">POS Terminals</span>
+                    <span className="opacity-80 font-light ml-1">
+                      POS Terminals
+                    </span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">Payroll solution</span>
+                    <span className="opacity-80 font-light ml-1">
+                      Payroll solution
+                    </span>
                   </li>
                   <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                     <img src="/assets/icons/home/check.svg" alt="" />
-                    <span className="opacity-80 font-light ml-1">Payment gateway</span>
+                    <span className="opacity-80 font-light ml-1">
+                      Payment gateway
+                    </span>
                   </li>
                 </ul>
               </div>

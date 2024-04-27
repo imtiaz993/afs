@@ -4,7 +4,7 @@ const Resources = () => {
   return (
     <div className="bg-subtle-neutral">
       <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
-        <p className="mb-4 text-secondary flex items-center">
+        <p className="mb-4 text-secondary flex items-center font-light">
           <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
           Resources
         </p>
