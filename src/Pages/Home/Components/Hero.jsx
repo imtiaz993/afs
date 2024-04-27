@@ -3,7 +3,10 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="px-[4.17%] md:w-11/12 mx-auto py-10 lg:py-32 md:px-10 lg:px-16 flex relative home-hero-gradient">
-      <div className="flex flex-col items-center md:items-start relative z-10">
+      <div
+        className="flex flex-col items-center md:items-start relative z-10"
+        data-aos="fade-up"
+      >
         <h1 className="text-white text-center md:text-left  text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[864px]">
           Secure, smart and simplified financial solutions
         </h1>
@@ -16,7 +19,10 @@ const Hero = () => {
           Contact our team
         </button>
       </div>
-      <div className="absolute top-0 right-0 bottom-0 opacity-40 md:opacity-100">
+      <div
+        className="absolute top-0 right-0 bottom-0 opacity-40 md:opacity-100"
+        data-aos="fade-right"
+      >
         <img
           className="w-full h-full"
           src="/assets/images/home/hero.png"
