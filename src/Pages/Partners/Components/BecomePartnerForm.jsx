@@ -35,32 +35,32 @@ const BecomePartnerForm = () => {
             <div className="grid gap-2">
               <div className="grid md:grid-cols-2 gap-2">
                 <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                   type="text"
                   placeholder="First name"
                   required
                 />
                 <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                   type="text"
                   placeholder="Last name"
                   required
                 />
               </div>
               <input
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 type="text"
                 placeholder="Job description"
                 required
               />
               <input
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 type="email"
                 placeholder="Company email address"
                 required
               />
               <input
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 type="text"
                 placeholder="Company name"
                 required
@@ -85,13 +85,13 @@ const BecomePartnerForm = () => {
                 <option value="Type 3">Type 3</option>
               </select>
               <textarea
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none bg-white"
                 required
                 rows={3}
                 placeholder="Please tell us more about your needs"
               />
               <div className="flex items-start mt-6 ">
-                <input type="checkbox" className="w-5 h-5" required />
+                <input type="checkbox" className="w-5 h-5 border border-default rounded bg-white" required />
                 <p className="text-secondary text-sm ml-3">
                   By sending your information you agree to our
                   <Link className="text-primary underline ml-1" to="/">

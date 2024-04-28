@@ -48,13 +48,13 @@ const JobQueryForm = () => {
             </h1>
             <div className="grid gap-2">
               <input
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 type="text"
                 placeholder="Full name *"
                 required
               />
               <input
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 required
                 type="email"
                 placeholder="Email address *"
@@ -92,13 +92,13 @@ const JobQueryForm = () => {
                 </button>
               </div>
               <textarea
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none"
+                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white resize-none"
                 required
                 rows={3}
                 placeholder="Your message *"
               />
               <div className="flex items-start mt-6">
-                <input type="checkbox" className="w-5 h-5" required />
+                <input type="checkbox" className="w-5 h-5 bg-white border border-default rounded" required />
                 <p className="text-secondary text-sm ml-3">
                   By sending your information you agree to our
                   <Link className="text-primary underline ml-1" to="/">
