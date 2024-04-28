@@ -10,7 +10,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification1.svg"
                 alt=""
-                className="w-3/5 sm:w-[194px]"
+                className="w-[100px] sm:w-[194px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -28,7 +28,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification2.svg"
                 alt=""
-                className="w-3/5 sm:w-[194px]"
+                className="w-[100px] sm:w-[194px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -46,7 +46,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification3.svg"
                 alt=""
-                className="w-3/5 sm:w-[194px]"
+                className="w-[100px] sm:w-[194px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -66,7 +66,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification4.svg"
                 alt=""
-                className="w-3/5 sm:w-[220px]"
+                className="w-[140px] sm:w-[220px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -84,7 +84,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification5.svg"
                 alt=""
-                className="w-3/5 sm:w-[160px]"
+                className="w-[90px] sm:w-[160px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -102,7 +102,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification6.svg"
                 alt=""
-                className="w-3/5 sm:w-[160px]"
+                className="w-[90px] sm:w-[160px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -120,7 +120,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification7.svg"
                 alt=""
-                className="w-3/5 sm:w-[194px]"
+                className="w-[100px] sm:w-[194px]"
               />
             </div>
             <div className="p-8 pt-0">
@@ -140,7 +140,7 @@ const Certificates = () => {
               <img
                 src="/assets/icons/certifications/certification8.svg"
                 alt=""
-                className="w-3/5 sm:w-[194px]"
+                className="w-[100px] sm:w-[194px]"
               />
             </div>
             <div className="p-8 pt-0">
