@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../Common/Navbar";
-import HeroWithImage from "../../Common/CommonHero";
+import CommonHero from "../../Common/CommonHero";
 import Story from "../../Common/Story";
 import Commitment from "./Components/Commitment";
 import History from "./Components/History";
@@ -13,7 +13,7 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <HeroWithImage
+      <CommonHero
         title={"About us"}
         subtext={
           "The region’s leading digital payment solutions provider and fintech enabler"

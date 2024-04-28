@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../Common/Navbar";
-import HeroWithImage from "../../Common/CommonHero";
+import CommonHero from "../../Common/CommonHero";
 import Story from "../../Common/Story";
 import CoreValues from "./Components/CoreValues";
 import Testimonials from "./Components/Testimonials";
@@ -11,7 +11,7 @@ const Careers = () => {
   return (
     <>
       <Navbar />
-      <HeroWithImage
+      <CommonHero
         title={"Careers at AFS"}
         subtext={"Join us as we shape the future of payments experiences"}
         description={
@@ -19,7 +19,10 @@ const Careers = () => {
         }
         image={"/assets/images/careers/hero.png"}
         buttonText={"See our open positions"}
-        buttonNavigateLink={"/careers"}
+        onClick={() => {
+          const section = document.querySelector("#position-table");
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
       />
       <Story bg={true} />
       <CoreValues />

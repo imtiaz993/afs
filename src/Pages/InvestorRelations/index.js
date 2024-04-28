@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../Common/Navbar";
-import HeroWithImage from "../../Common/CommonHero";
+import CommonHero from "../../Common/CommonHero";
 import Story from "../../Common/Story";
 import BOD from "./Components/BOD";
 import Resources from "./Components/Resources";
@@ -10,7 +10,7 @@ const InvestorRelations = () => {
   return (
     <>
       <Navbar />
-      <HeroWithImage
+      <CommonHero
         title={"Investor relations"}
         subtext={"Building trust and driving value"}
         image={"/assets/images/about/hero.png"}

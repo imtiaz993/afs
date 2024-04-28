@@ -92,7 +92,7 @@ const Footer = () => {
           <Link className="mb-3 text-sm text-secondary" to="/">
             ESG
           </Link>
-          <Link className="mb-3 text-sm text-secondary" to="/">
+          <Link className="mb-3 text-sm text-secondary" to="/certifications">
             Certifications
           </Link>
         </div>
@@ -167,21 +167,21 @@ const Footer = () => {
               <div className="border-r border-default p-1 flex items-center justify-center">
                 <img
                   className="mx-5"
-                  src="/assets/icons/footer/certification1.svg"
+                  src="/assets/icons/certifications/certification1.svg"
                   alt=""
                 />
               </div>
               <div className="border-r border-default p-1 flex items-center justify-center">
                 <img
                   className="mx-5"
-                  src="/assets/icons/footer/certification2.svg"
+                  src="/assets/icons/certifications/certification2.svg"
                   alt=""
                 />
               </div>
               <div className="p-1 flex items-center justify-center">
                 <img
                   className="mx-5"
-                  src="/assets/icons/footer/certification3.svg"
+                  src="/assets/icons/certifications/certification3.svg"
                   alt=""
                 />
               </div>

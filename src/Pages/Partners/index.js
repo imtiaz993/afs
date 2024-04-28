@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../Common/Navbar";
-import HeroWithImage from "../../Common/CommonHero";
+import CommonHero from "../../Common/CommonHero";
 import OurPartners from "../../Common/Partners";
 import WhyPartner from "./Components/WhyPartner";
 import BecomePartnerForm from "./Components/BecomePartnerForm";
@@ -10,7 +10,7 @@ const Partners = () => {
   return (
     <>
       <Navbar />
-      <HeroWithImage
+      <CommonHero
         title={"Our partners"}
         subtext={"Start your partnership journey with AFS."}
         description={

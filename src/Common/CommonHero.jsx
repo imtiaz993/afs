@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeroWithImage = ({
+const CommonHero = ({
   title,
   subtext,
   description,
@@ -34,12 +34,14 @@ const HeroWithImage = ({
             </div>
           )}
         </div>
-        <div className="mt-5 lg:mt-24 rounded overflow-hidden">
-          <img className="w-full" src={image} alt="" />
-        </div>
+        {image && (
+          <div className="mt-5 lg:mt-24 rounded overflow-hidden">
+            <img className="w-full" src={image} alt="" />
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default HeroWithImage;
+export default CommonHero;

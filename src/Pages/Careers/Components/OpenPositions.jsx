@@ -125,7 +125,10 @@ const OpenPositions = () => {
     },
   ];
   return (
-    <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
+    <div
+      className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24"
+      id="position-table"
+    >
       <p className="mb-4 text-secondary flex items-center font-light">
         <img src="/assets/icons/home/diamond.svg" className="mr-2" alt="" />{" "}
         Open positions

@@ -134,7 +134,6 @@ const Navbar = () => {
                       Contact our team
                     </button>
                   </Link>
-
                   </div>
                 </ul>
               </div>
@@ -460,7 +459,7 @@ const Resources = () => {
               <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
                 ESG
               </Link>
-              <Link to="/" className="text-[15px] whitespace-nowrap block mt-4">
+              <Link to="/certifications" className="text-[15px] whitespace-nowrap block mt-4">
                 Certifications
               </Link>
             </div>

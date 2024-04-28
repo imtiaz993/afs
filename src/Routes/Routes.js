@@ -7,6 +7,8 @@ import About from "../Pages/About";
 import InvestorRelations from "../Pages/InvestorRelations";
 import Partners from "../Pages/Partners";
 import Careers from "../Pages/Careers";
+import CareersDetail from "../Pages/CareersDetail";
+import Certifications from "../Pages/Certifications";
 
 const WebRoutes = () => {
   return (
@@ -18,6 +20,8 @@ const WebRoutes = () => {
         <Route path="/investor-relations" element={<InvestorRelations />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/careers/:id" element={<CareersDetail />} />
+        <Route path="/certifications" element={<Certifications />} />
       </Routes>
       <Footer />
     </BrowserRouter>
