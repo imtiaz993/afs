@@ -118,7 +118,7 @@ const Navbar = () => {
                     : "h-0 overflow-hidden"
                 }`}
               >
-                <ul className="flex flex-col w-[185px] justify-center pb-14">
+                <ul className="flex flex-col w-[185px] justify-center">
                   <div className="mb-6">
                     <Solutions />
                   </div>
@@ -128,11 +128,14 @@ const Navbar = () => {
                   <div className="mb-6">
                     <Resources />
                   </div>
-                  <Link to="/">
+                  <div className="pb-20">
+                  <Link to="/" className="mb-14">
                     <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
                       Contact our team
                     </button>
                   </Link>
+
+                  </div>
                 </ul>
               </div>
             </div>
