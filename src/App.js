@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./App.css";
 
 function App() {
-  Aos.init({ once: true, duration: 1200, offset: 1 });
+  Aos.init({ once: true, duration: 1200, delay: 300  });
   return (
     <div className="max-w-[1920px] mx-auto">
       <Routes />
