@@ -128,8 +128,8 @@ const Navbar = () => {
                   <div className="mb-6">
                     <Resources />
                   </div>
-                  <div>
-                  <Link to="/" className="mb-32">
+                  <div className="mb-40">
+                  <Link to="/">
                     <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
                       Contact our team
                     </button>
