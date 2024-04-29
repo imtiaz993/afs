@@ -17,6 +17,7 @@ const Annnouncements = () => {
               sizes="100vw"
               width={0}
               height={0}
+              className="w-auto"
               src="/assets/icons/home/arrow-right.svg"
               alt=""
             />
