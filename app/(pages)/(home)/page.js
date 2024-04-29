@@ -1,25 +1,25 @@
 import React from "react";
-import Navbar from "../../common/Navbar";
-import Hero from "./components/Hero";
+import Navbar from "app/common/Navbar";
+import HomeHero from "./components/HomeHero";
 import PartnersSlider from "./components/PartnersSlider";
 import Working from "./components/Working";
 import Solutions from "./components/Solutions";
 import About from "./components/About";
 import Reviews from "./components/Reviews";
-import CTA from "./components/CTA";
-import News from "../../common/News";
+import CommonCTA from "app/common/CommonCTA";
+import News from "app/common/News";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      <HomeHero />
       <PartnersSlider />
       <Working />
       <Solutions />
       <About />
       <Reviews />
-      <CTA />
+      <CommonCTA />
       <News />
     </>
   );

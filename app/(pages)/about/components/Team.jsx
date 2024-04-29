@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Team = () => {
   const [activeTab, setActiveTab] = useState("team");

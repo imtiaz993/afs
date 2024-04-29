@@ -8,7 +8,7 @@ import Footer from "./common/Footer";
 export default function RootWrapper({ children }) {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      Aos.init({ once: true, duration: 1200, delay: 300, offset: 0 });
+      Aos.init({ once: true, duration: 1000, delay: 300, offset: 0 });
     }
   }, []);
 

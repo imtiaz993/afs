@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Image from "next/image";
 
 const Testimonials = () => {
   const reviews = [
@@ -129,6 +129,7 @@ const Testimonials = () => {
                     sizes="100vw"
                     width={0}
                     height={0}
+                    className="w-auto"
                     src="/assets/icons/careers/reviews.svg"
                     alt=""
                   />

@@ -70,7 +70,7 @@ const BecomePartnerForm = () => {
                 required
               />
               <select
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 required
               >
                 <option value="">Company headquarters location</option>
@@ -80,7 +80,7 @@ const BecomePartnerForm = () => {
                 <option value="Oman">Oman</option>
               </select>
               <select
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 required
               >
                 <option value="">Partnership type</option>

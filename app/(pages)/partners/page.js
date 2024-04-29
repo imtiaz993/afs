@@ -1,12 +1,12 @@
 "use client"
 
 import React from "react";
-import Navbar from "../../common/Navbar";
-import CommonHero from "../../common/CommonHero";
-import OurPartners from "../../common/Partners";
+import Navbar from "app/common/Navbar";
+import CommonHero from "app/common/CommonHero";
+import OurPartners from "app/common/Partners";
 import WhyPartner from "./components/WhyPartner";
 import BecomePartnerForm from "./components/BecomePartnerForm";
-import Faq from "./components/Faq";
+import Faq from "app/common/Faq";
 
 const Partners = () => {
   return (

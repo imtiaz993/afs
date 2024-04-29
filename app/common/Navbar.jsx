@@ -3,8 +3,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useSpring, animated } from "react-spring";
 import Image from "next/image";
+import { useSpring, animated } from "react-spring";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -78,9 +78,11 @@ const Navbar = () => {
               <Resources />
             </div>
             <div className="flex items-center">
-              <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
-                Contact our team
-              </button>
+              <Link href="/contact">
+                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
+                  Contact our team
+                </button>
+              </Link>
             </div>
           </div>
           <animated.div className="overflow-hidden" style={openAnimation}>
@@ -158,7 +160,7 @@ const Navbar = () => {
                     <Resources />
                   </div>
                   <div className="mb-40">
-                    <Link href="/">
+                    <Link href="/contact">
                       <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
                         Contact our team
                       </button>
@@ -405,7 +407,7 @@ const Company = () => {
                 Careers
               </Link>
               <Link
-                href="/"
+                href="/contact"
                 className="text-[15px] whitespace-nowrap block mt-4"
               >
                 Contact

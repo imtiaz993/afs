@@ -69,7 +69,7 @@ const JobQueryForm = () => {
                 placeholder="Email address *"
               />
               <select
-                className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
                 required
               >
                 <option value="">Location *</option>

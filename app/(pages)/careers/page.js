@@ -1,9 +1,9 @@
 "use client"
 
 import React from "react";
-import Navbar from "../../common/Navbar";
-import CommonHero from "../../common/CommonHero";
-import Story from "../../common/Story";
+import Navbar from "app/common/Navbar";
+import CommonHero from "app/common/CommonHero";
+import Story from "app/common/Story";
 import CoreValues from "./components/CoreValues";
 import Testimonials from "./components/Testimonials";
 import OpenPositions from "./components/OpenPositions";

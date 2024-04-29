@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import WorkingAccordion from "./WorkingAccordion";
 import Image from "next/image";
+import WorkingAccordion from "./WorkingAccordion";
 
 const Working = () => {
   const [activeAccordion, setActiveAccordion] = useState(0);

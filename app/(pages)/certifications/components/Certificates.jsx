@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
 const Certificates = () => {
   return (
@@ -27,6 +27,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -54,6 +55,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -83,6 +85,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -110,6 +113,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -137,6 +141,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -164,6 +169,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -193,6 +199,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />
@@ -222,6 +229,7 @@ const Certificates = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
+                  className="w-auto"
                   src="/assets/icons/home/arrow-right.svg"
                   alt=""
                 />

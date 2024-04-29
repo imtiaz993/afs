@@ -6,13 +6,15 @@ const Footer = () => {
   return (
     <div className="w-11/12 lg:w-10/12 mx-auto py-10  lg:py-24">
       <div className="mb-16">
-        <Image
-          sizes="100vw"
-          width={67}
-          height={40}
-          src="/assets/icons/footer/logo.svg"
-          alt=""
-        />
+        <Link href="/">
+          <Image
+            sizes="100vw"
+            width={67}
+            height={40}
+            src="/assets/icons/footer/logo.svg"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="flex flex-col">
@@ -85,7 +87,7 @@ const Footer = () => {
           <Link className="mb-3 text-sm text-secondary" href="/careers">
             Careers
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary" href="/contact">
             Contact
           </Link>
 

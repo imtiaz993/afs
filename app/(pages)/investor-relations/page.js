@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../../common/Navbar";
-import CommonHero from "../../common/CommonHero";
-import Story from "../../common/Story";
+import Navbar from "app/common/Navbar";
+import CommonHero from "app/common/CommonHero";
+import Story from "app/common/Story";
 import BOD from "./components/BOD";
 import Resources from "./components/Resources";
-import News from "../../common/News";
+import News from "app/common/News";
 
 const InvestorRelations = () => {
   return (

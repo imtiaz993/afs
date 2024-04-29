@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import CountUp from "react-countup";
 import Link from "next/link";
 import Image from "next/image";
+import CountUp from "react-countup";
 
 const About = () => {
   return (

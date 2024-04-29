@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../../common/Navbar";
-import CommonHero from "../../common/CommonHero";
-import Story from "../../common/Story";
+import Navbar from "app/common/Navbar";
+import CommonHero from "app/common/CommonHero";
+import Story from "app/common/Story";
 import Commitment from "./components/Commitment";
 import History from "./components/History";
 import Team from "./components/Team";
-import CTA from "./components/CTA";
-import Partners from "../../common/Partners";
+import AboutCTA from "./components/AboutCTA";
+import Partners from "app/common/Partners";
 import Annnouncements from "./components/Annnouncements";
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
       <Commitment />
       <History />
       <Team />
-      <CTA />
+      <AboutCTA />
       <Partners subtext={"Our trusted partners"} />
       <Annnouncements />
     </>

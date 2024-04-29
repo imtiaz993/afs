@@ -67,7 +67,7 @@ const OpenPositions = () => {
     },
     {
       title: "Business Analyst",
-      department: "Opperations",
+      department: "Operations",
       location: "UAE",
       link: "/careers/1",
     },
@@ -91,7 +91,7 @@ const OpenPositions = () => {
     },
     {
       title: "Business Analyst",
-      department: "Opperations",
+      department: "Operations",
       location: "Egypt",
       link: "/careers/1",
     },
@@ -127,7 +127,7 @@ const OpenPositions = () => {
     },
     {
       title: "Business Analyst",
-      department: "Opperations",
+      department: "Operations",
       location: "UAE",
       link: "/careers/1",
     },
@@ -151,7 +151,7 @@ const OpenPositions = () => {
     },
     {
       title: "Business Analyst",
-      department: "Opperations",
+      department: "Operations",
       location: "Egypt",
       link: "/careers/1",
     },
@@ -196,7 +196,7 @@ const OpenPositions = () => {
       <div className="lg:flex items-start">
         <div className="mr-8 lg:grid gap-2 mb-4 lg:mb-0">
           <select
-            className=" mr-2 lg:mr-0 border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+            className="cursor-pointer mr-2 lg:mr-0 border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
             onChange={(e) => {
               handleFilterKeyLocationChange(e.target.value);
             }}
@@ -208,7 +208,7 @@ const OpenPositions = () => {
             <option value="Oman">Oman</option>
           </select>
           <select
-            className="border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
+            className="cursor-pointer border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
             onChange={(e) => handleFilterKeyDepartmentChange(e.target.value)}
           >
             <option value="*">Department</option>
@@ -216,7 +216,7 @@ const OpenPositions = () => {
             <option value="Finance">Finance</option>
             <option value="Design">Design</option>
             <option value="Technology">Technology</option>
-            <option value="Opperations"></option>
+            <option value="Operations">Operations</option>
           </select>
         </div>
         <div className="border border-default rounded lg:w-[calc(100%-200px)] filter-container">
