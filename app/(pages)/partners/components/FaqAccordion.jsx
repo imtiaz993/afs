@@ -33,6 +33,7 @@ const FaqAccordion = ({
           sizes="100vw"
           width={0}
           height={0}
+          className="w-auto"
           src={`/assets/icons/partners/${
             activeAccordion === index
               ? "openedAccordion.svg"

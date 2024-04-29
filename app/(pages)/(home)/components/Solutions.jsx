@@ -39,6 +39,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">
@@ -51,6 +52,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">
@@ -63,6 +65,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">
@@ -158,6 +161,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">
@@ -170,6 +174,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">
@@ -182,6 +187,7 @@ const Solutions = () => {
                       width={0}
                       height={0}
                       src="/assets/icons/home/check.svg"
+                      className="w-auto"
                       alt=""
                     />
                     <span className="opacity-80 font-light ml-1">

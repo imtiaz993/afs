@@ -41,7 +41,7 @@ const WorkingAccordion = ({
           sizes="100vw"
           width={0}
           height={0}
-          className={`transition-all duration-200 ${
+          className={`w-auto transition-all duration-200 ${
             activeAccordion === index ? "rotate-0" : "rotate-180"
           }`}
           src="/assets/icons/home/chevron.svg"

@@ -3,16 +3,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
-const Isotope = dynamic(() => import("isotope-layout"), {
-  ssr: false,
-});
+const loadIsotope = () => require("isotope-layout");
+
+let Isotope;
 
 const OpenPositions = () => {
   const isotope = useRef();
   const [filterKeyLocation, setFilterKeyLocation] = useState("*");
   const [filterKeyDepartment, setFilterKeyDepartment] = useState("*");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    Isotope = loadIsotope();
+  }, []);
 
   useEffect(() => {
     if (Isotope && !isotope.current) {
@@ -21,16 +25,11 @@ const OpenPositions = () => {
         layoutMode: "vertical",
       });
     }
-
-    return () => {
-      if (isotope.current) {
-        isotope.current.destroy();
-      }
-    };
   }, []);
 
   useEffect(() => {
-    if (isotope.current) {
+    if (Isotope && isotope.current) {
+      console.log(isotope.current);
       let filter = "";
       if (filterKeyLocation !== "*" && filterKeyDepartment !== "*") {
         filter = `.${filterKeyLocation}.${filterKeyDepartment}`;

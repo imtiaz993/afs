@@ -1,6 +1,5 @@
 import Head from "next/head";
 import RootWrapper from "./rootWrapper";
-import Footer from "./common/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
           />
         </Head>
         <RootWrapper>{children}</RootWrapper>
-        <Footer />
       </body>
     </html>
   );

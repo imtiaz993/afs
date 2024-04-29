@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Footer from "./common/Footer";
 
 export default function RootWrapper({ children }) {
   useEffect(() => {
@@ -11,5 +12,10 @@ export default function RootWrapper({ children }) {
     }
   }, []);
 
-  return <div className="max-w-[1920px] mx-auto">{children}</div>;
+  return (
+    <div className="max-w-[1920px] mx-auto">
+      {children}
+      <Footer />
+    </div>
+  );
 }

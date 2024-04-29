@@ -13,6 +13,7 @@ const Hero = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
+                className="w-auto"
                 src="/assets/icons/careers/back-arrow.svg"
                 alt=""
               />
