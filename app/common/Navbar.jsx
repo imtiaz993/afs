@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useSpring, animated } from "react-spring";
+import PageLayout from "./PageLayout";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -50,7 +51,7 @@ const Navbar = () => {
   return (
     <div className="lg:sticky top-0 z-[999]">
       <div
-        className={`px-[4.17%] mx-auto py-4 md:px-10 lg:px-16 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-500  ${
+        className={`py-4 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-500  ${
           isHome
             ? colorChange
               ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
@@ -60,7 +61,7 @@ const Navbar = () => {
             : "bg-subtle-neutral"
         } `}
       >
-        <div className="md:w-11/12 mx-auto">
+        <PageLayout>
           <div className="hidden lg:flex justify-between items-center">
             <div className="flex items-center">
               <Link href="/">
@@ -170,7 +171,7 @@ const Navbar = () => {
               </div>
             </div>
           </animated.div>
-        </div>
+        </PageLayout>
       </div>
       <div className="mb-[76px] lg:hidden"></div>
     </div>

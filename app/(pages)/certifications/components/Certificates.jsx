@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import PageLayout from "app/common/PageLayout";
 
 const Certificates = () => {
   return (
-    <div className="bg-subtle-neutral">
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
+    <PageLayout bg={"bg-subtle-neutral"}>
+      <div className="py-10 lg:py-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <div className="bg-white rounded h-[300px] sm:h-[433px] flex flex-col justify-between">
             <div className="px-[60px] flex justify-center items-center py-9">
@@ -238,7 +239,7 @@ const Certificates = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

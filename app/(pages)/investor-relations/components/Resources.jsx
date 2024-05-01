@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import PageLayout from "app/common/PageLayout";
 
 const Resources = () => {
   return (
-    <div className="bg-subtle-neutral">
-      <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
-        <p className="mb-4 text-secondary flex items-center font-light">
+    <PageLayout bg={"bg-subtle-neutral"}>
+      <div className="py-10 lg:py-24">
+        <p className="mb-4 text-secondary flex items-center ">
           <Image
             sizes="100vw"
             width={10}
@@ -61,7 +62,7 @@ const Resources = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

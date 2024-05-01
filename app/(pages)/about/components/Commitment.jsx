@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import PageLayout from "app/common/PageLayout";
 
 const Commitment = () => {
   return (
-    <div className="bg-subtle-neutral">
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-        <p className="mb-4 text-secondary flex items-center font-light">
+    <PageLayout bg={"bg-subtle-neutral"}>
+      <div className="py-10 lg:py-24">
+        <p className="mb-4 text-secondary flex items-center ">
           <Image
             sizes="100vw"
             width={10}
@@ -34,7 +35,7 @@ const Commitment = () => {
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our vision
             </h4>
-            <p className="text-lg  text-secondary font-light">
+            <p className="text-lg  text-secondary ">
               To be the leading enabler for digital transaction transformation.
             </p>
           </div>
@@ -50,7 +51,7 @@ const Commitment = () => {
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our mission
             </h4>
-            <p className="text-lg  text-secondary font-light">
+            <p className="text-lg  text-secondary ">
               Offer better, faster, and more secure products and services that
               support our customers’ growth.
             </p>
@@ -67,14 +68,14 @@ const Commitment = () => {
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
               Our values
             </h4>
-            <p className="text-lg  text-secondary font-light">
+            <p className="text-lg  text-secondary ">
               A client centric, collaborative and consistent entity, committed
               to delivering superior experiences.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

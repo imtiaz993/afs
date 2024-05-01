@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
+import PageLayout from "app/common/PageLayout";
 import ContactOption from "./components/ContactOption";
 import Support from "./components/Support";
 import Complaints from "./components/Complaints";
@@ -20,10 +21,12 @@ const Contact = () => {
       />
       <ContactOption />
       <Support />
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24 lg:pt-12 lg:flex justify-between">
-        <Complaints />
-        <EscalationChannels />
-      </div>
+      <PageLayout>
+        <div className="py-10 lg:py-24 lg:pt-12 lg:flex justify-between">
+          <Complaints />
+          <EscalationChannels />
+        </div>
+      </PageLayout>
       <Offices />
     </>
   );

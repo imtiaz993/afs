@@ -14,12 +14,12 @@ const Complaints = () => {
         id="contact-form"
       >
         <h4 className="mb-4 text-xl md:text-2xl text-primary">Complaints</h4>
-        <p className="mb-4 text-secondary text-lg font-light">
+        <p className="mb-4 text-secondary text-lg ">
           At AFS our customers are our priority. We take all disputes and
           complaints from our customers and business partners very seriously
           and, as such, all complaints are dealt with promptly and fairly.
         </p>
-        <p className="mb-10 text-secondary text-sm font-light">
+        <p className="mb-10 text-secondary text-sm ">
           AFS will endeavor to address all complaints within twenty (20)
           business days.
         </p>

@@ -49,7 +49,7 @@ const WorkingAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className={`text-secondary text-base md:text-lg mt-4 font-light`}>
+        <p className={`text-secondary text-base md:text-lg mt-4 `}>
           {item.text}
         </p>
       </animated.div>

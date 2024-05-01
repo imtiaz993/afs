@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import PageLayout from "app/common/PageLayout";
 
 const Team = () => {
   const [activeTab, setActiveTab] = useState("team");
@@ -112,102 +113,104 @@ const Team = () => {
     ],
   };
   return (
-    <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
-      <p className="mb-4 text-secondary flex items-center">
-        <Image
-          sizes="100vw"
-          width={10}
-          height={10}
-          src="/assets/icons/home/diamond.svg"
-          className="mr-2"
-          alt=""
-        />{" "}
-        Our team
-      </p>
-      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
-        Our seasoned team leads with vision and expertise, guiding our company
-        towards a successful future.
-      </h2>
-      <div>
-        <div className="flex border-b border-default">
-          <button
-            className={`transition-colors duration-300 text-center ${
-              activeTab === "team"
-                ? "text-white bg-brand-secondary"
-                : "text-brand-secondary bg-white"
-            }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
-            onClick={() => {
-              setActiveTab("team");
-            }}
-          >
-            Senior management
-          </button>
-          <button
-            className={`transition-colors duration-300 text-center ${
-              activeTab === "bod"
-                ? "text-white bg-brand-secondary"
-                : "text-brand-secondary bg-white"
-            }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
-            onClick={() => {
-              setActiveTab("bod");
-            }}
-          >
-            Board of directors
-          </button>
+    <PageLayout>
+      <div className="py-10 lg:py-24">
+        <p className="mb-4 text-secondary flex items-center">
+          <Image
+            sizes="100vw"
+            width={10}
+            height={10}
+            src="/assets/icons/home/diamond.svg"
+            className="mr-2"
+            alt=""
+          />{" "}
+          Our team
+        </p>
+        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
+          Our seasoned team leads with vision and expertise, guiding our company
+          towards a successful future.
+        </h2>
+        <div>
+          <div className="flex border-b border-default">
+            <button
+              className={`transition-colors duration-300 text-center ${
+                activeTab === "team"
+                  ? "text-white bg-brand-secondary"
+                  : "text-brand-secondary bg-white"
+              }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
+              onClick={() => {
+                setActiveTab("team");
+              }}
+            >
+              Senior management
+            </button>
+            <button
+              className={`transition-colors duration-300 text-center ${
+                activeTab === "bod"
+                  ? "text-white bg-brand-secondary"
+                  : "text-brand-secondary bg-white"
+              }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
+              onClick={() => {
+                setActiveTab("bod");
+              }}
+            >
+              Board of directors
+            </button>
+          </div>
+          {activeTab === "team" ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+              {teams.team.map((item, index) => (
+                <div className="bg-brand-surface w-full" key={index}>
+                  <div className="m-2 mb-0">
+                    <Image
+                      sizes="100vw"
+                      width={0}
+                      height={0}
+                      className="w-full"
+                      src={item.image}
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-4 pt-2 lg:p-6 lg:pt-4">
+                    <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                      {item.name}
+                    </h4>
+                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                      {item.designation}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+              {teams.bod.map((item, index) => (
+                <div className="bg-brand-surface w-full" key={index}>
+                  <div className="m-2 mb-0">
+                    <Image
+                      sizes="100vw"
+                      width={0}
+                      height={0}
+                      className="w-full"
+                      src={item.image}
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-4 pt-2 lg:p-6 lg:pt-4">
+                    <h4 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                      {item.name}
+                    </h4>
+                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                      {item.designation}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-        {activeTab === "team" ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-            {teams.team.map((item, index) => (
-              <div className="bg-brand-surface w-full" key={index}>
-                <div className="m-2 mb-0">
-                  <Image
-                    sizes="100vw"
-                    width={0}
-                    height={0}
-                    className="w-full"
-                    src={item.image}
-                    alt=""
-                  />
-                </div>
-                <div className="p-4 pt-2 lg:p-6 lg:pt-4">
-                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                    {item.name}
-                  </h4>
-                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                    {item.designation}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-            {teams.bod.map((item, index) => (
-              <div className="bg-brand-surface w-full" key={index}>
-                <div className="m-2 mb-0">
-                  <Image
-                    sizes="100vw"
-                    width={0}
-                    height={0}
-                    className="w-full"
-                    src={item.image}
-                    alt=""
-                  />
-                </div>
-                <div className="p-4 pt-2 lg:p-6 lg:pt-4">
-                  <h4 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                    {item.name}
-                  </h4>
-                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                    {item.designation}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

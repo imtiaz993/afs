@@ -7,15 +7,15 @@ const JobDetails = () => {
     <div className="md:w-48 mb-10 md:mb-0">
       <div className="mb-6">
         <h5 className="text-lg text-primary font-medium">Location</h5>
-        <p className="text-primary font-light">Kingdom of Bahrain</p>
+        <p className="text-primary ">Kingdom of Bahrain</p>
       </div>
       <div className="mb-6">
         <h5 className="text-lg text-primary font-medium">Type</h5>
-        <p className="text-primary font-light">Full time</p>
+        <p className="text-primary ">Full time</p>
       </div>
       <div className="mb-6">
         <h5 className="text-lg text-primary font-medium">Department</h5>
-        <p className="text-primary font-light">Legal</p>
+        <p className="text-primary ">Legal</p>
       </div>
       <button
         

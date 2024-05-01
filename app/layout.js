@@ -1,5 +1,5 @@
 import Head from "next/head";
-import RootWrapper from "./rootWrapper";
+import Footer from "./common/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -17,7 +17,8 @@ export default function RootLayout({ children }) {
             href="https://unpkg.com/isotope-layout/dist/isotope.min.css"
           />
         </Head>
-        <RootWrapper>{children}</RootWrapper>
+        {children}
+        <Footer />
       </body>
     </html>
   );

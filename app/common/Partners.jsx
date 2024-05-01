@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import PageLayout from "./PageLayout";
 
 const Partners = ({ bg, title, subtext }) => {
   return (
-    <div className={`${bg ? "bg-subtle-neutral" : ""}`}>
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-        {title && (
-          <p className=" mb-4 text-secondary text-center font-light">{title}</p>
-        )}
+    <PageLayout bg={bg ? "bg-subtle-neutral" : ""}>
+      <div className="py-10 lg:py-24">
+        {title && <p className=" mb-4 text-secondary text-center ">{title}</p>}
         <h2 className="mb-5 md:mb-16 text-2xl md:text-5xl text-primary text-center">
           {subtext}
         </h2>
@@ -134,7 +133,7 @@ const Partners = ({ bg, title, subtext }) => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

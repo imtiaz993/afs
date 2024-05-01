@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import PageLayout from "app/common/PageLayout";
 
 const Offices = () => {
   return (
-    <div className="bg-subtle-neutral">
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
-        <p className="mb-4 text-secondary flex items-center font-light">
+    <PageLayout bg={"bg-subtle-neutral"}>
+      <div className="py-10 lg:py-24">
+        <p className="mb-4 text-secondary flex items-center ">
           <Image
             sizes="100vw"
             width={10}
@@ -36,14 +37,10 @@ const Offices = () => {
                 Bahrain - Headquarters
               </h6>
               <div className="mb-10">
-                <p className="text-primary font-light mb-1">Level 12 & 14,</p>
-                <p className="text-primary font-light mb-1">
-                  Harbour Tower East,
-                </p>
-                <p className="text-primary font-light mb-1">
-                  Bahrain Financial Harbour
-                </p>
-                <p className="text-primary font-light">Manama</p>
+                <p className="text-primary  mb-1">Level 12 & 14,</p>
+                <p className="text-primary  mb-1">Harbour Tower East,</p>
+                <p className="text-primary  mb-1">Bahrain Financial Harbour</p>
+                <p className="text-primary ">Manama</p>
               </div>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
@@ -76,12 +73,10 @@ const Offices = () => {
                 United Arab Emirates
               </h6>
               <div className="mb-10">
-                <p className="text-primary font-light mb-1">
-                  Office C1205,Level 12,
-                </p>
-                <p className="text-primary font-light mb-1">Burj Daman,DIFC</p>
-                <p className="text-primary font-light mb-1 h-6"></p>
-                <p className="text-primary font-light">Dubai</p>
+                <p className="text-primary  mb-1">Office C1205,Level 12,</p>
+                <p className="text-primary  mb-1">Burj Daman,DIFC</p>
+                <p className="text-primary  mb-1 h-6"></p>
+                <p className="text-primary ">Dubai</p>
               </div>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
@@ -112,16 +107,10 @@ const Offices = () => {
             <div>
               <h6 className="mb-4 text-primary text-lg">Egypt</h6>
               <div className="mb-10">
-                <p className="text-primary font-light mb-1">
-                  Plot Number: B-39,
-                </p>
-                <p className="text-primary font-light mb-1">
-                  Street 90 (North),
-                </p>
-                <p className="text-primary font-light mb-1">
-                  Fifth Settlement,
-                </p>
-                <p className="text-primary font-light">New Cairo</p>
+                <p className="text-primary  mb-1">Plot Number: B-39,</p>
+                <p className="text-primary  mb-1">Street 90 (North),</p>
+                <p className="text-primary  mb-1">Fifth Settlement,</p>
+                <p className="text-primary ">New Cairo</p>
               </div>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
@@ -150,18 +139,12 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg">
-                Sultanate of Oman
-              </h6>
+              <h6 className="mb-4 text-primary text-lg">Sultanate of Oman</h6>
               <div className="mb-10">
-                <p className="text-primary font-light mb-1">
-                  Office 425, Level 4,
-                </p>
-                <p className="text-primary font-light mb-1">
-                  Al Fardan Heights,
-                </p>
-                <p className="text-primary font-light mb-1">Ghala,</p>
-                <p className="text-primary font-light">Muscat</p>
+                <p className="text-primary  mb-1">Office 425, Level 4,</p>
+                <p className="text-primary  mb-1">Al Fardan Heights,</p>
+                <p className="text-primary  mb-1">Ghala,</p>
+                <p className="text-primary ">Muscat</p>
               </div>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
@@ -180,7 +163,7 @@ const Offices = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

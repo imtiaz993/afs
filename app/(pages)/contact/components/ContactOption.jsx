@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import PageLayout from "app/common/PageLayout";
 
 const ContactOption = () => {
   return (
-    <div className="bg-subtle-neutral">
-      <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24">
+    <PageLayout bg={"bg-subtle-neutral"}>
+      <div className="mx-auto py-10 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-4">
           <div className="rounded banks-home-gradient">
             <div
@@ -19,7 +20,7 @@ const ContactOption = () => {
               <h3 className="mb-4 text-2xl md:text-[40px] text-white">
                 Commercial enquiries
               </h3>
-              <p className="mb-14 text-base md:text-lg text-white font-light">
+              <p className="mb-14 text-base md:text-lg text-white ">
                 Whether you are looking for a specific financial product or
                 service, exploring partnership opportunities, or have any other
                 commercial enquiries, our team is committed to finding the best
@@ -43,7 +44,7 @@ const ContactOption = () => {
             <h3 className="mb-4 text-2xl md:text-[40px] text-brand-secondary">
               PR & Communications
             </h3>
-            <p className="mb-14 text-base md:text-lg text-primary font-light">
+            <p className="mb-14 text-base md:text-lg text-primary ">
               If you have any enquiries regarding latest AFS news, media
               interviews, sponsorship opportunities, or general communications,
               our team is ready to assist you.
@@ -56,7 +57,7 @@ const ContactOption = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 
