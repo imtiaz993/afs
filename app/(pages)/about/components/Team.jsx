@@ -124,16 +124,16 @@ const Team = () => {
         />{" "}
         Our team
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
         Our seasoned team leads with vision and expertise, guiding our company
         towards a successful future.
-      </h1>
+      </h2>
       <div>
         <div className="flex border-b border-default">
           <button
             className={`transition-colors duration-300 text-center ${
               activeTab === "team"
-                ? "text-white bg-brand-secondary  border border-brand-secondary"
+                ? "text-white bg-brand-secondary"
                 : "text-brand-secondary bg-white"
             }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
             onClick={() => {
@@ -145,7 +145,7 @@ const Team = () => {
           <button
             className={`transition-colors duration-300 text-center ${
               activeTab === "bod"
-                ? "text-white bg-brand-secondary  border border-brand-secondary"
+                ? "text-white bg-brand-secondary"
                 : "text-brand-secondary bg-white"
             }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
             onClick={() => {
@@ -169,10 +169,10 @@ const Team = () => {
                     alt=""
                   />
                 </div>
-                <div className="p-4 pt-0 lg:p-6">
-                  <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                <div className="p-4 pt-0 lg:p-6 lg:pt-4">
+                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
-                  </h1>
+                  </h4>
                   <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
                     {item.designation}
                   </p>
@@ -195,9 +195,9 @@ const Team = () => {
                   />
                 </div>
                 <div className="p-4 pt-0 lg:p-6">
-                  <h1 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                  <h4 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
-                  </h1>
+                  </h4>
                   <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
                     {item.designation}
                   </p>

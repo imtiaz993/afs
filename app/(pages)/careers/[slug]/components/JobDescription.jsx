@@ -4,7 +4,7 @@ const JobDescription = () => {
   return (
     <div>
       <div className="mb-7">
-        <h1 className="text-xl md:text-2xl text-primary mb-4">About AFS</h1>
+        <h4 className="text-xl md:text-2xl text-primary mb-4">About AFS</h4>
         <p className="text-base md:text-lg text-primary font-light mb-4">
           At AFS we empower the region’s business and banking communities,
           end-users and consumers with customized payments technologies and
@@ -37,9 +37,9 @@ const JobDescription = () => {
         </p>
       </div>
       <div className="mb-7">
-        <h1 className="text-xl md:text-2xl text-primary mb-4">
+        <h4 className="text-xl md:text-2xl text-primary mb-4">
           Job requirements{" "}
-        </h1>
+        </h4>
         <p className="text-base md:text-lg text-primary font-light mb-4">
           Job requirements The candidate will be managing the Customer Due
           Diligence (CDD) and Screening procedures efficiently and accurately
@@ -53,7 +53,7 @@ const JobDescription = () => {
         </p>
       </div>
       <div className="mb-7">
-        <h1 className="text-xl md:text-2xl text-primary mb-4">Education</h1>
+        <h4 className="text-xl md:text-2xl text-primary mb-4">Education</h4>
         <ul className="text-primary font-light list-disc pl-5 marker:text-brand-secondary marker:text-xl">
           <li className="mb-4 text-base md:text-lg">Bachelor’s degree.</li>
           <li className="mb-4 text-base md:text-lg">
@@ -64,7 +64,7 @@ const JobDescription = () => {
         </ul>
       </div>
       <div className="mb-7">
-        <h1 className="text-xl md:text-2xl text-primary mb-4">Experience</h1>
+        <h4 className="text-xl md:text-2xl text-primary mb-4">Experience</h4>
         <ul className="text-primary font-light list-disc pl-5 marker:text-brand-secondary marker:text-xl">
           <li className="mb-4 text-base md:text-lg">
             Minimum 5+ years of relevant experience in sales, customer
@@ -74,9 +74,9 @@ const JobDescription = () => {
         </ul>
       </div>
       <div>
-        <h1 className="text-xl md:text-2xl text-primary mb-4">
+        <h4 className="text-xl md:text-2xl text-primary mb-4">
           Knowledge/Skills/Attributes: 
-        </h1>
+        </h4>
         <ul className="text-primary font-light list-disc pl-5 marker:text-brand-secondary marker:text-xl">
           <li className="mb-4 text-base md:text-lg">
             Strong knowledge of AML/CFT and sanctions regulatory requirements.  

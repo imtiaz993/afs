@@ -9,20 +9,39 @@ const About = () => {
   return (
     <div className="px-[4.17%] py-10 lg:py-24 md:px-10 lg:px-16 relative">
       <div className="w-11/12 mx-auto relative z-10">
-        <p className="mb-4 text-secondary font-light">About us</p>
-        <h1 className="text-primary text-2xl md:text-5xl mb-16 max-w-[845px] leading-[120%]">
+        <p className="mb-4 text-secondary font-light flex items-center">
+          {" "}
+          <Image
+            sizes="100vw"
+            width={10}
+            height={10}
+            src="/assets/icons/home/diamond.svg"
+            className="mr-2"
+            alt=""
+          />{" "}
+          About us
+        </p>
+        <h2 className="text-primary text-2xl md:text-5xl mb-16 max-w-[845px] leading-[120%]">
           Founded in 1984, AFS is owned by 37 banks and supports over 60 clients
           in 20+ countries, providing issuing, merchant acquiring, and various
           financial services.
-        </h1>
+        </h2>
         <div className="lg:flex justify-between">
           <div className="lg:w-[45%] flex flex-col items-center lg:items-start">
-            <p className="text-center lg:text-left mb-4 text-secondary font-light">
+            <p className="text-center lg:text-left mb-4 text-secondary font-light flex items-center">
+              <Image
+                sizes="100vw"
+                width={10}
+                height={10}
+                src="/assets/icons/home/diamond.svg"
+                className="mr-2"
+                alt=""
+              />{" "}
               By the numbers
             </p>
-            <h1 className="text-center lg:text-left text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%]">
+            <h3 className="text-center lg:text-left text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%]">
               Leveraging the power of digital payments
-            </h1>
+            </h3>
             <p className="font-light text-center lg:text-left text-base md:text-lg text-secondary mb-8 lg:max-w-[450px]">
               Discover how we are revolutionizing the financial sector through
               our relentless commitment to harnessing the potential of digital
@@ -30,8 +49,8 @@ const About = () => {
             </p>
             <Link href="/about">
               <button
-                data-aos="fade-up"
-                className="transition-colors duration-500 text-center text-brand-secondary py-4 w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm"
+                
+                className="transition-colors duration-500 text-center text-brand-secondary py-[15.2px] w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm"
               >
                 Learn more about us
               </button>

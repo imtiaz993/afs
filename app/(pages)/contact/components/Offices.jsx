@@ -16,9 +16,9 @@ const Offices = () => {
           />
           Our offices
         </p>
-        <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           Find us at these locations
-        </h1>
+        </h2>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           <div className="bg-white p-6 rounded">
             <div>
@@ -32,9 +32,9 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h5 className="mb-4 text-primary text-lg">
+              <h6 className="mb-4 text-primary text-lg">
                 Bahrain - Headquarters
-              </h5>
+              </h6>
               <div className="mb-10">
                 <p className="text-primary font-light mb-1">Level 12 & 14,</p>
                 <p className="text-primary font-light mb-1">
@@ -72,9 +72,9 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h5 className="mb-4 text-primary text-lg">
+              <h6 className="mb-4 text-primary text-lg">
                 United Arab Emirates
-              </h5>
+              </h6>
               <div className="mb-10">
                 <p className="text-primary font-light mb-1">
                   Office C1205,Level 12,
@@ -110,7 +110,7 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h5 className="mb-4 text-primary text-lg">Egypt</h5>
+              <h6 className="mb-4 text-primary text-lg">Egypt</h6>
               <div className="mb-10">
                 <p className="text-primary font-light mb-1">
                   Plot Number: B-39,
@@ -150,9 +150,9 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h5 className="mb-4 text-primary text-lg">
+              <h6 className="mb-4 text-primary text-lg">
                 Sultanate of Oman
-              </h5>
+              </h6>
               <div className="mb-10">
                 <p className="text-primary font-light mb-1">
                   Office 425, Level 4,

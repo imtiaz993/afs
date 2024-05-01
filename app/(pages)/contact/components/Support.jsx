@@ -15,9 +15,9 @@ const Support = () => {
         />
         Support
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl max-w-[976px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl max-w-[976px] leading-[120%]">
         Customer support channels
-      </h1>
+      </h2>
       <p className="text-lg md:text-2xl text-primary font-light mb-10 md:mb-16">
         Select the relevant channel and get in touch with our dedicated team.
       </p>
@@ -33,9 +33,9 @@ const Support = () => {
                 className="mr-4 w-auto"
                 alt=""
               />
-              <h1 className="text-xl md:text-2xl text-primary">
+              <h4 className="text-xl md:text-2xl text-primary">
                 AFS Merchant Support
-              </h1>
+              </h4>
             </div>
             <div>
               <h5 className="mb-4 text-primary text-lg">Contact us by phone</h5>
@@ -96,9 +96,9 @@ const Support = () => {
                 className="mr-4 w-auto"
                 alt=""
               />
-              <h1 className="text-xl md:text-2xl text-primary">
+              <h4 className="text-xl md:text-2xl text-primary">
                 Al Rateb Support - WPS
-              </h1>
+              </h4>
             </div>
             <div>
               <h5 className="mb-4 text-primary text-lg">Contact us by phone</h5>
@@ -143,7 +143,7 @@ const Support = () => {
                 className="mr-4 w-auto"
                 alt=""
               />
-              <h1 className="text-xl md:text-2xl text-primary">BPay</h1>
+              <h4 className="text-xl md:text-2xl text-primary">BPay</h4>
             </div>
             <div>
               <h5 className="mb-4 text-primary text-lg">Contact us by phone</h5>

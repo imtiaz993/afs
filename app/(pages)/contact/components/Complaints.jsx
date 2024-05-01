@@ -13,7 +13,7 @@ const Complaints = () => {
         className="py-10 px-5 md:px-8"
         id="contact-form"
       >
-        <h1 className="mb-4 text-xl md:text-2xl text-primary">Complaints</h1>
+        <h4 className="mb-4 text-xl md:text-2xl text-primary">Complaints</h4>
         <p className="mb-4 text-secondary text-lg font-light">
           At AFS our customers are our priority. We take all disputes and
           complaints from our customers and business partners very seriously
@@ -90,7 +90,7 @@ const Complaints = () => {
           </div>
           <div className="flex justify-center lg:justify-start">
             <button
-              data-aos="fade-up"
+              
               className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
               type="submit"
             >

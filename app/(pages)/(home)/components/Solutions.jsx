@@ -4,11 +4,22 @@ import Image from "next/image";
 const Solutions = () => {
   return (
     <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16">
-      <p className="font-light mb-4 text-secondary">Our solutions</p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[950px] leading-[120%]">
+      <p className="font-light mb-4 text-secondary flex items-center">
+        {" "}
+        <Image
+          sizes="100vw"
+          width={10}
+          height={10}
+          src="/assets/icons/home/diamond.svg"
+          className="mr-2"
+          alt=""
+        />{" "}
+        Our solutions
+      </p>
+      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[950px] leading-[120%]">
         Unlock financial opportunities for growth and global expansion,
         accessible to banks and businesses of any size.
-      </h1>
+      </h2>
       <div className="grid lg:grid-cols-2 gap-4">
         <div>
           <div className="banks-home-gradient rounded">
@@ -20,16 +31,16 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-white mb-5 mt-[272px]">
+              <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[272px]">
                 For Banks
-              </h1>
-              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px]">
+              </h3>
+              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80">
                 Gain access to state-of-the-art payment processing services,
                 card issuance, risk management systems, and other tailored
                 solutions.
               </p>
-              <div className="flex items-center flex-wrap" data-aos="fade-up">
-                <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
+              <div className="flex items-center flex-wrap" >
+                <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">
@@ -85,16 +96,16 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-primary mb-5">
+              <h3 className="text-2xl md:text-[40px] text-primary mb-5">
                 All Solutions
-              </h1>
-              <p className="font-light text-base md:text-lg text-primary mb-8 max-w-[425px]">
+              </h3>
+              <p className="font-light text-base md:text-lg text-primary mb-8 max-w-[425px] opacity-80">
                 Unsure which solution best fits your business needs? Dive into
                 our comprehensive range of financial tools and services,
                 tailored to empower your business success.
               </p>
-              <div className="" data-aos="fade-up">
-                <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-transparent border border-brand-secondary font-medium rounded-sm mr-6">
+              <div className="" >
+                <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-[15.2px] w-[118px] bg-transparent font-medium rounded-sm mr-6">
                   Explore
                 </button>
               </div>
@@ -104,16 +115,16 @@ const Solutions = () => {
         <div>
           <div className="bg-[#7A7A7A] rounded relative">
             <div className="p-6 md:px-10 py-12 rounded relative z-10">
-              <h1 className="text-2xl md:text-[40px] text-white mb-5">
+              <h3 className="text-2xl md:text-[40px] text-white mb-5">
                 For Consumers
-              </h1>
-              <p className="font-light text-base md:text-lg text-white mb-8 max-w-[420px]">
+              </h3>
+              <p className="font-light text-base md:text-lg text-white mb-8 max-w-[420px] opacity-80">
                 Effortlessly receive your salary, access your personalized card,
                 and securely transfer funds to others. Simplify your finances
                 with BPay wallet.
               </p>
-              <div className="" data-aos="fade-up">
-                <button className="transition-colors duration-500 text-center text-brand-secondary  hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white border border-brand-secondary font-medium rounded-sm mr-6">
+              <div className="" >
+                <button className="transition-colors duration-500 text-center text-brand-secondary  hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6">
                   Explore
                 </button>
               </div>
@@ -139,19 +150,19 @@ const Solutions = () => {
                 backgroundSize: "cover",
               }}
             >
-              <h1 className="text-2xl md:text-[40px] text-white mb-5">
+              <h3 className="text-2xl md:text-[40px] text-white mb-5">
                 For Businesses
-              </h1>
-              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px]">
+              </h3>
+              <p className="font-light text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80">
                 Boost growth and efficiency with all-in-one merchant services,
                 POS terminals, and custom payment solutions tailored to your
                 business needs.
               </p>
               <div
                 className="flex items-center flex-wrap mb-[272px]"
-                data-aos="fade-up"
+                
               >
-                <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
+                <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mr-6 mt-4">
                   Explore
                 </button>
                 <ul className="flex flex-wrap mt-4">

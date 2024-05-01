@@ -17,96 +17,96 @@ const Footer = () => {
         </Link>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div className="flex flex-col">
-          <h1 className="mb-6 font-medium text-primary">Solutions for banks</h1>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+        <div className="flex flex-col items-start">
+          <h6 className="mb-6 font-medium text-primary">Solutions for banks</h6>
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Card issuing & processing
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Digital banking
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Open banking
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Fraud & Risk management
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Value added services
           </Link>
         </div>
-        <div className="flex flex-col">
-          <h1 className="mb-6 font-medium text-primary">
+        <div className="flex flex-col items-start">
+          <h6 className="mb-6 font-medium text-primary">
             Solutions for businesses
-          </h1>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          </h6>
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Payment gateway
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             POS terminals
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             SoftPOS
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             eShop
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Merchant portal
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Hospitality
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Food and beverage (F&B)
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             SME suite
           </Link>
-          <h1 className="mt-8 mb-6 font-medium text-primary">
+          <h6 className="mt-8 mb-6 font-medium text-primary">
             Solutions for consumer
-          </h1>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          </h6>
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             BPay wallet
           </Link>
         </div>
-        <div className="flex flex-col sm:mt-10 lg:mt-0">
-          <h1 className="mb-6 font-medium text-primary">Company</h1>
-          <Link className="mb-3 text-sm text-secondary" href="/about">
+        <div className="flex flex-col items-start sm:mt-10 lg:mt-0">
+          <h6 className="mb-6 font-medium text-primary">Company</h6>
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/about">
             About us
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/partners">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/partners">
             Our partners
           </Link>
           <Link
-            className="mb-3 text-sm text-secondary"
+            className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
             href="/investor-relations"
           >
             Investor relations
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/careers">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/careers">
             Careers
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/contact">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/contact">
             Contact
           </Link>
 
-          <h1 className="mt-8 mb-6 font-medium text-primary">Resources</h1>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <h6 className="mt-8 mb-6 font-medium text-primary">Resources</h6>
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             News & Announcements
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             Become a vendor
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/">
             ESG
           </Link>
-          <Link className="mb-3 text-sm text-secondary" href="/certifications">
+          <Link className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline" href="/certifications">
             Certifications
           </Link>
         </div>
         <div className=" sm:mt-10 lg:mt-0">
-          <h1 className="mb-2 font-medium text-primary">Join our network</h1>
+          <h6 className="mb-2 font-medium text-primary">Join our network</h6>
           <p className="mb-6 text-sm text-secondary">
             Get the latest AFS news, announcements and more.
           </p>
@@ -116,20 +116,20 @@ const Footer = () => {
               className="py-3 px-4 max-w-72 border border-default outline-none"
               placeholder="Type your email"
             />
-            <button className="text-white py-3 max-w-72 bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
+            <button className="text-white py-[11.2px] max-w-72 bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
               Subscribe
             </button>
           </div>
           <p className="text-secondary mt-4 text-sm pb-10 mb-10 border-b border-default">
             By subscribing you agree to our{" "}
-            <Link className="text-primary underline " href="/">
+            <Link className="text-primary hover:text-brand-secondary hover:underline" href="/">
               Privacy Policy
             </Link>
           </p>
           <div className="pb-10 mb-10 border-b border-default">
-            <h1 className="text-primary font-medium mb-4">
+            <h6 className="text-primary font-medium mb-4">
               Follow us on social media
-            </h1>
+            </h6>
             <div className="flex items-center">
               <a href="#" className="mr-3">
                 <Image
@@ -184,9 +184,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="pb-10">
-            <h1 className="text-primary font-medium mb-4">
+            <h6 className="text-primary font-medium mb-4">
               Our certifications
-            </h1>
+            </h6>
             <div className="flex">
               <div className="border-r border-default p-1 flex items-center justify-center">
                 <Image
@@ -224,22 +224,22 @@ const Footer = () => {
       </div>
       <div className="border-t border-default text-sm mt-14 pt-10 text-secondary">
         <div className="flex flex-wrap">
-          <Link href="/" className="underline mr-4 mt-2 whitespace-nowrap">
+          <Link href="/" className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             AFS legal statement
           </Link>
-          <Link href="/" className="underline mr-4 mt-2 whitespace-nowrap">
+          <Link href="/" className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             Privacy Policy
           </Link>
-          <Link href="/" className="underline mr-4 mt-2 whitespace-nowrap">
+          <Link href="/" className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             Cookies Settings
           </Link>
-          <Link href="/" className="underline mr-4 mt-2 whitespace-nowrap">
+          <Link href="/" className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             Anti money laundering
           </Link>
-          <Link href="/" className="underline mr-4 mt-2 whitespace-nowrap">
+          <Link href="/" className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             Business terms & conditions
           </Link>
-          <Link href="/" className="underline mt-2 whitespace-nowrap">
+          <Link href="/" className="mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline">
             Merchant terms & conditions
           </Link>
         </div>

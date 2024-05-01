@@ -12,9 +12,9 @@ const FaqAccordion = ({
   const openAnimation = useSpring({
     from: { maxHeight: "0px" },
     to: {
-      maxHeight: activeAccordion === index ? "50px" : "0px",
+      maxHeight: activeAccordion === index ? "200px" : "0px",
     },
-    config: { duration: "200" },
+    config: { duration: "400" },
   });
   return (
     <div className="border-b border-default py-4">
@@ -28,7 +28,7 @@ const FaqAccordion = ({
           }
         }}
       >
-        <h1 className="text-primary md:text-lg mr-4">{title}</h1>
+        <h5 className="text-primary md:text-lg mr-4">{title}</h5>
         <Image
           sizes="100vw"
           width={0}

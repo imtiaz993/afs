@@ -21,9 +21,9 @@ const JobApplyForm = () => {
           e.preventDefault();
         }}
       >
-        <h1 className="mb-4 text-primary text-xl md:text-2xl">
+        <h4 className="mb-4 text-primary text-xl md:text-2xl">
           Apply for the position
-        </h1>
+        </h4>
         <div className="grid gap-2">
           <input
             className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none border border-default"
@@ -54,7 +54,7 @@ const JobApplyForm = () => {
               {resume ? resume.name : "Upload your resume"}
             </p>
             <button
-              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-2 w-[82px] rounded-sm"
+              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] rounded-sm"
               type="button"
             >
               Upload
@@ -76,7 +76,7 @@ const JobApplyForm = () => {
               {coverLetter ? coverLetter.name : "Cover letter"}
             </p>
             <button
-              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-2 w-[82px] rounded-sm"
+              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] rounded-sm"
               type="button"
             >
               Upload
@@ -103,8 +103,8 @@ const JobApplyForm = () => {
           </div>
           <div className="flex justify-center md:justify-start">
             <button
-              data-aos="fade-up"
-              className="mt-4 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[105px] font-medium rounded-sm"
+              
+              className="mt-4 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[105px] font-medium rounded-sm"
               type="submit"
             >
               Apply

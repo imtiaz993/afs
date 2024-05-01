@@ -27,8 +27,8 @@ const CommonHero = ({
           {buttonText && onClick && (
             <div className="flex justify-center md:justify-start mt-10 mb-10 lg:mb-0">
               <button
-                data-aos="fade-up"
-                className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 px-8 font-medium rounded-sm"
+                
+                className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] px-8 font-medium rounded-sm"
                 onClick={onClick}
               >
                 {buttonText}

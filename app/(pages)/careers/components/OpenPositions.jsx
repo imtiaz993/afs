@@ -190,9 +190,9 @@ const OpenPositions = () => {
         />{" "}
         Open positions
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
         Join us in building market-leading digital payments solutions
-      </h1>
+      </h2>
       <div className="lg:flex items-start">
         <div className="mr-8 lg:grid gap-2 mb-4 lg:mb-0">
           <select
@@ -227,7 +227,7 @@ const OpenPositions = () => {
                 index !== positions.length ? "border-b border-default" : ""
               }  px-4 py-2 md:flex items-center justify-between w-full`}
             >
-              <h1 className="py-2 text-primary">{item.title}</h1>
+              <h6 className="py-2 text-primary">{item.title}</h6>
               <div className="flex justify-between md:justify-start">
                 <div className="py-2 flex mr-8">
                   <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-lg">

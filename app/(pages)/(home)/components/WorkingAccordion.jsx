@@ -25,7 +25,7 @@ const WorkingAccordion = ({
       }}
     >
       <div className="flex justify-between items-start select-none">
-        <h1 className="text-lg md:text-2xl text-primary">
+        <h4 className="text-lg md:text-2xl text-primary">
           <span
             className={`mr-4 ${
               activeAccordion === index
@@ -36,7 +36,7 @@ const WorkingAccordion = ({
             {index < 10 ? "0" + (index + 1) : index + 1}
           </span>
           {item.title}
-        </h1>
+        </h4>
         <Image
           sizes="100vw"
           width={0}

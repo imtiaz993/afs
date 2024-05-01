@@ -73,9 +73,9 @@ const Testimonials = () => {
         <p className=" mb-4 text-secondary text-center font-light">
           Testimonials
         </p>
-        <h1 className="mb-10 md:mb-16 text-2xl md:text-5xl text-primary text-center max-w-[486px] mx-auto">
+        <h2 className="mb-10 md:mb-16 text-2xl md:text-5xl text-primary text-center max-w-[486px] mx-auto">
           Why our team members love to work here
-        </h1>
+        </h2>
       </div>
       <div className="w-11/12 mx-auto md:w-full pb-10 lg:pb-24">
         <Swiper
@@ -104,9 +104,9 @@ const Testimonials = () => {
           {reviews.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="p-6 bg-white relative h-[316px] xl:h-[330px] 2xl:h-[316px] flex flex-col justify-between">
-                <h1 className="text-lg md:text-[22px] text-primary font-light">
+                <h6 className="text-lg md:text-[22px] text-primary font-light">
                   {item.review}
-                </h1>
+                </h6>
                 <div>
                   <Image
                     sizes="100vw"

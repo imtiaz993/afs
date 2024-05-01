@@ -79,7 +79,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <Link href="/contact">
-                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
+                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] w-[185px] font-medium rounded-sm">
                   Contact our team
                 </button>
               </Link>
@@ -161,7 +161,7 @@ const Navbar = () => {
                   </div>
                   <div className="mb-40">
                     <Link href="/contact">
-                      <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-4 w-[185px] font-medium rounded-sm">
+                      <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] w-[185px] font-medium rounded-sm">
                         Contact our team
                       </button>
                     </Link>
@@ -249,9 +249,9 @@ const Solutions = () => {
         <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
-              <h1 className="text-base font-medium text-primary mt-6">
+              <p className="text-base font-medium text-primary mt-6">
                 Solutions for banks
-              </h1>
+              </p>
               <Link href="/" className="text-[15px] block mt-4">
                 Card issuing & processing
               </Link>
@@ -270,9 +270,9 @@ const Solutions = () => {
             </div>
 
             <div>
-              <h1 className="text-base font-medium text-primary mt-6">
+              <p className="text-base font-medium text-primary mt-6">
                 Solutions for businesses
-              </h1>
+              </p>
               <Link href="/" className="text-[15px] block mt-4">
                 Payment gateway
               </Link>
@@ -300,9 +300,9 @@ const Solutions = () => {
             </div>
 
             <div>
-              <h1 className="text-base font-medium text-primary mt-6">
+              <p className="text-base font-medium text-primary mt-6">
                 Solutions for consumer
-              </h1>
+              </p>
               <Link href="/" className="text-[15px] block mt-4">
                 BPay wallet
               </Link>

@@ -52,10 +52,10 @@ const Working = () => {
         />{" "}
         Working with us
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%]">
         Our innovative financial solutions deliver numerous benefits for banks
         and businesses, designed to ensure success for all partners.
-      </h1>
+      </h2>
       <div className="flex justify-between flex-col-reverse lg:flex-row">
         <div className="lg:w-2/5 border-t border-default">
           {accordionContent.map((item, index) => (

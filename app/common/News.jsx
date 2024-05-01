@@ -6,9 +6,9 @@ const News = () => {
     <div className="border-b border-default">
       <div className="w-11/12 lg:w-10/12 mx-auto py-10 lg:py-24 ">
         <div className="mb-12 flex justify-between items-center sm:items-end">
-          <h1 className="text-2xl md:text-[40px] text-primary mr-4">
+          <h3 className="text-2xl md:text-[40px] text-primary mr-4">
             Latest news & announcements
-          </h1>
+          </h3>
           <div className="flex items-center cursor-pointer">
             <p className="text-brand-secondary mr-2 whitespace-nowrap font-medium">
               See all
@@ -45,10 +45,10 @@ const News = () => {
                 <p className="text-xs  text-secondary font-light">5 min read</p>
               </div>
             </div>
-            <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
+            <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
               ACI Worldwide and AFS to drive payments modernization for banks
               and merchants in the Middle East
-            </h1>
+            </h4>
             <p className="font-light text-base sm:text-lg text-primary overflow-hidden text-ellipsis line-clamp-2">
               AFS–the leading digital payment solutions provider and fintech
               enabler in the Middle East and Africa–will utilize ACI Enterprise
@@ -72,10 +72,10 @@ const News = () => {
                   </p>
                 </div>
               </div>
-              <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
+              <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
                 AFS Transaction Index: Season-Opening Bahrain GP Delivers 66%
                 Surge in Spends
-              </h1>
+              </h4>
               <p className="font-light text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
                 This weekend’s action-packed season-opening Bahrain GP delivered
                 an epic increase in spends. Data shared in the annualTransaction
@@ -102,10 +102,10 @@ const News = () => {
                   </p>
                 </div>
               </div>
-              <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
+              <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
                 AFS enter strategic alliance with Xpence to innovate SME
                 financial management in Bahrain
-              </h1>
+              </h4>
               <p className="font-light text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
                 In a landmark move set to redefine financial management for
                 small and medium enterprises (SMEs) in Bahrain,ArabFinancial
@@ -129,10 +129,10 @@ const News = () => {
                   </p>
                 </div>
               </div>
-              <h1 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
+              <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2">
                 AFS conducts media workshop to showcase latest cloud-based
                 restaurant-first solution
-              </h1>
+              </h4>
               <p className="font-light text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis">
                 Arab Financial Services (AFS),the Middle East and Africa
                 region’s leading digital payment solutions provider and fintech

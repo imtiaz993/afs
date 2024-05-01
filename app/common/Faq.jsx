@@ -63,10 +63,10 @@ const Faq = () => {
         FAQ
       </p>
       <div className="md:w-4/5">
-        <h1 className="text-primary text-2xl md:text-5xl mb-8 md:mb-10 max-w-[526px] leading-[120%]">
+        <h2 className="text-primary text-2xl md:text-5xl mb-8 md:mb-10 max-w-[526px] leading-[120%]">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
-        </h1>
+        </h2>
         <div className="border-t border-default">
           {accordionOptions.map((item, index) => (
             <FaqAccordion

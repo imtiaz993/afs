@@ -28,8 +28,12 @@ const History = () => {
       description: "Launched merchant acquiring business in Egypt.",
     },
     {
-      title: "2017/2018",
-      description: "Launched merchant acquiring business in Oman and Bahrain.",
+      title: "2018",
+      description: "Launch of merchant acquiring business in Bahrain",
+    },
+    {
+      title: "2017",
+      description: "Launch of merchant acquiring business in Oman",
     },
     {
       title: "2011",
@@ -59,7 +63,7 @@ const History = () => {
   }, [swiperIndex]);
 
   return (
-    <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16 mb-[280px] md:mb-[376px] lg:mb-[280px]">
+    <div className="w-11/12 mx-auto py-10 lg:py-24 md:px-10 lg:px-16 mb-[280px] md:mb-[376px] lg:mb-[280px] history-swiper">
       <p className="mb-4 text-secondary flex items-center font-light">
         <Image
           sizes="100vw"
@@ -71,10 +75,10 @@ const History = () => {
         />{" "}
         Our history
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
         At AFS we take immense pride in our rich history and the milestones that
         have shaped us into the company we are today.
-      </h1>
+      </h2>
       <div>
         <div className="flex items-center mb-8">
           <div>
@@ -128,7 +132,7 @@ const History = () => {
 
         <div className="absolute right-0 w-full">
           <div className="max-w-[1920px] mx-auto">
-            <div className="w-[95.83%] ml-auto md:pl-10 lg:pl-16 history-swiper">
+            <div className="w-[95.83%] ml-auto md:pl-10 lg:pl-16">
               <Swiper
                 ref={swiperRef}
                 slidesPerView={1.2}
@@ -158,9 +162,9 @@ const History = () => {
                         index + 1 === slides.length ? "mr-4" : ""
                       }`}
                     >
-                      <h1 className="text-brand-secondary text-4xl md:text-5xl mb-10">
+                      <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10">
                         {slide.title}
-                      </h1>
+                      </h2>
                       <p className="text-primary text-[17px] font-light">
                         {slide.description}
                       </p>

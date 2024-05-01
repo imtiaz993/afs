@@ -15,18 +15,18 @@ const CoreValues = () => {
         />{" "}
         Our core values
       </p>
-      <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+      <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
         Our values are at the core of our business
-      </h1>
+      </h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-2">
         <div className="bg-subtle-neutral py-10 px-8 h-[299px] 2xl:h-[299px] rounded flex flex-col justify-between">
-          <h1 className="text-brand-secondary text-4xl md:text-5xl mb-10">
+          <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10">
             01
-          </h1>
+          </h2>
           <div>
-            <h5 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+            <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
               Client centric
-            </h5>
+            </h4>
             <p className="text-primary text-lg font-light">
               Our dedication lies in understanding our clients and nurturing
               enduring partnerships, ensuring the delivery of exceptional
@@ -35,13 +35,13 @@ const CoreValues = () => {
           </div>
         </div>
         <div className="bg-subtle-neutral py-10 px-8 h-[299px] 2xl:h-[299px] rounded flex flex-col justify-between">
-          <h1 className="text-brand-secondary text-4xl md:text-5xl mb-10">
+          <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10">
             02
-          </h1>
+          </h2>
           <div>
-            <h5 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+            <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
               Collaborative
-            </h5>
+            </h4>
             <p className="text-primary text-lg font-light">
               United as a cohesive team, we strive to consistently offer
               unparalleled service experiences across our extensive network.
@@ -49,13 +49,13 @@ const CoreValues = () => {
           </div>
         </div>
         <div className="bg-subtle-neutral py-10 px-8 h-[299px] 2xl:h-[299px] rounded flex flex-col justify-between">
-          <h1 className="text-brand-secondary text-4xl md:text-5xl mb-10">
+          <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10">
             03
-          </h1>
+          </h2>
           <div>
-            <h5 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+            <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
               Consistent
-            </h5>
+            </h4>
             <p className="text-primary text-lg font-light">
               Consistently trusted for our reliability, we uphold integrity in
               every interaction, serving all stakeholders with excellence.

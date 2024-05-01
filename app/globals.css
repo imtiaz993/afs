@@ -25,6 +25,7 @@
 
 * {
   font-family: "Montreal" !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .home-hero-gradient {
@@ -65,13 +66,24 @@
   display: inline-block; /* Necessary for background clip to work */
 }
 
-.history-swiper.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #036fd0;
+
+
+.home-reviews-swiper .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.2;
+}
+.home-reviews-swiper .swiper-pagination-bullet-active{
+  background-color: #fff;
+  opacity: 1;
 }
 
-.history-swiper.swiper-pagination-bullet {
-  background-color: red !important;
+.history-swiper .swiper-pagination-bullet {
+  background-color: #D4DFE9;
   opacity: 0.7;
+}
+.history-swiper .swiper-pagination-bullet-active{
+  background-color: #036fd0;
+  opacity: 1;
 }
 
 .navbar-dropdown-shadow {

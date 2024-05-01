@@ -4,7 +4,7 @@ const EscalationChannels = () => {
   return (
     <div className="mt-5 md:mt-0 lg:mt-0 lg:w-[45%] bg-subtle-neutral py-10 px-8">
       <div className="pb-8">
-        <h1 className="mb-4 text-xl md:text-2xl text-primary">Escalation Channels</h1>
+        <h4 className="mb-4 text-xl md:text-2xl text-primary">Escalation Channels</h4>
         <p className="mb-8 text-secondary font-light">
           If you are not satisfied with your complaint resolution, you may
           escalate your complaint via the escalation channels listed below
@@ -14,7 +14,7 @@ const EscalationChannels = () => {
       </div>
 
       <div className="pb-6">
-        <h1 className="mb-2 text-primary text-lg">Contact us by post mail</h1>
+        <h6 className="mb-2 text-primary text-lg">Contact us by post mail</h6>
         <p className="text-secondary font-light">Customer Service and Excellence Unit,</p>
         <p className="text-secondary font-light">Arab Financial Services Company B.S.C. (c),</p>
         <p className="text-secondary font-light">PO BOX 2152</p>
@@ -23,7 +23,7 @@ const EscalationChannels = () => {
       </div>
 
       <div>
-        <h1 className="mb-2 text-primary text-lg">Contact us by email</h1>
+        <h6 className="mb-2 text-primary text-lg">Contact us by email</h6>
         <p className="text-brand-secondary font-light">
           <a href="mailto:complaintsofficer@afs.com.bh">
             complaintsofficer@afs.com.bh

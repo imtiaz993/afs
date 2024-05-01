@@ -15,9 +15,9 @@ const JobQueryForm = () => {
       <div className="w-full py-10 lg:py-24 px-[4.17%] lg:pl-16 relative z-10 grid lg:grid-cols-2 gap-8 md:gap-14">
         <div className="flex flex-col">
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%] max-w-[464px]">
+            <h2 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%] max-w-[464px]">
               Couldn't find the right job for you?
-            </h1>
+            </h2>
             <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px] font-light">
               Should our existing job openings not match your skills and
               experience, please submit your personal information and resume.
@@ -52,9 +52,9 @@ const JobQueryForm = () => {
               e.preventDefault();
             }}
           >
-            <h1 className="mb-5 text-primary text-xl md:text-2xl">
+            <h4 className="mb-5 text-primary text-xl md:text-2xl">
               Submit your details below
-            </h1>
+            </h4>
             <div className="grid gap-2">
               <input
                 className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
@@ -94,7 +94,7 @@ const JobQueryForm = () => {
                   {file ? file.name : "Upload your resume *"}
                 </p>
                 <button
-                  className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-2 w-[82px] font-medium rounded-sm"
+                  className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] font-medium rounded-sm"
                   type="button"
                 >
                   Upload
@@ -121,8 +121,8 @@ const JobQueryForm = () => {
               </div>
               <div className="flex justify-center lg:justify-start">
                 <button
-                  data-aos="fade-up"
-                  className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
+                  
+                  className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[197px] font-medium rounded-sm"
                   type="submit"
                 >
                   Submit your details

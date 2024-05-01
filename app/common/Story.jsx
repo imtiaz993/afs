@@ -16,11 +16,11 @@ const Story = ({ bg }) => {
           />{" "}
           Our story
         </p>
-        <h1 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           At AFS we empower the region’s business and banking communities,
           end-users and consumers with customized payments technologies and
           solutions.
-        </h1>
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="hidden lg:block"></div>
           <div>
