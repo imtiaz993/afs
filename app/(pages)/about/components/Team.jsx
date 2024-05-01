@@ -169,7 +169,7 @@ const Team = () => {
                     alt=""
                   />
                 </div>
-                <div className="p-4 pt-0 lg:p-6 lg:pt-4">
+                <div className="p-4 pt-2 lg:p-6 lg:pt-4">
                   <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
                   </h4>
@@ -194,7 +194,7 @@ const Team = () => {
                     alt=""
                   />
                 </div>
-                <div className="p-4 pt-0 lg:p-6">
+                <div className="p-4 pt-2 lg:p-6 lg:pt-4">
                   <h4 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
                   </h4>

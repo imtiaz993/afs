@@ -158,7 +158,7 @@ const About = () => {
           sizes="100vw"
           width={0}
           height={0}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           src="/assets/images/home/about.png"
           alt=""
         />
