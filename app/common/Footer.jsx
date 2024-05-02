@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
+import InputField from "./form-components/InputField";
 
 const Footer = () => {
   return (
@@ -181,11 +182,7 @@ const Footer = () => {
               Get the latest AFS news, announcements and more.
             </p>
             <div className="flex flex-col">
-              <input
-                type="email"
-                className="py-3 px-4 max-w-72 border border-default outline-none"
-                placeholder="Type your email"
-              />
+              <InputField type="email" placeholder="Type your email" />
               <button className="text-white py-[11.2px] max-w-72 bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
                 Subscribe
               </button>

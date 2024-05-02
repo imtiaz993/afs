@@ -4,8 +4,8 @@ import PageLayout from "./PageLayout";
 
 const Story = ({ bg }) => {
   return (
-    <PageLayout bg={bg ? "bg-subtle-neutral" : ""}>
-      <div className={`relative`}>
+    <div className={`relative`}>
+      <PageLayout bg={bg ? "bg-subtle-neutral" : ""}>
         <div className="py-10 lg:py-24 relative z-10">
           <p className="mb-4 text-secondary flex items-center ">
             <Image
@@ -58,18 +58,18 @@ const Story = ({ bg }) => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block lg:w-[35%] 2xl:w-[33%] max-w-[550px] absolute bottom-0 left-0 opacity-40 md:opacity-100">
-          <Image
-            sizes="100vw"
-            width={0}
-            height={0}
-            className="w-full h-full"
-            src="/assets/images/about/story.png"
-            alt=""
-          />
-        </div>
+      </PageLayout>
+      <div className="hidden lg:block lg:w-[35%] 2xl:w-[33%] max-w-[550px] absolute bottom-0 left-0 opacity-40 md:opacity-100">
+        <Image
+          sizes="100vw"
+          width={0}
+          height={0}
+          className="w-full h-full"
+          src="/assets/images/about/story.png"
+          alt=""
+        />
       </div>
-    </PageLayout>
+    </div>
   );
 };
 

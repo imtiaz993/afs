@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
+import InputField from "app/common/form-components/InputField";
+import TextArea from "app/common/form-components/TextArea";
+import Select from "app/common/form-components/Select";
+import CheckBoxField from "app/common/form-components/CheckBoxField";
 
 const BecomePartnerForm = () => {
   return (
@@ -37,68 +41,23 @@ const BecomePartnerForm = () => {
             >
               <div className="grid gap-2">
                 <div className="grid md:grid-cols-2 gap-2">
-                  <input
-                    className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                    type="text"
-                    placeholder="First name"
-                    required
-                  />
-                  <input
-                    className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                    type="text"
-                    placeholder="Last name"
-                    required
-                  />
+                  <InputField type="text" placeholder="First name" />
+                  <InputField type="text" placeholder="Last name" />
                 </div>
-                <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  type="text"
-                  placeholder="Job description"
-                  required
+                <InputField type="text" placeholder="Job description" />
+                <InputField type="email" placeholder="Company email address" />
+                <InputField type="text" placeholder="Company name" />
+                <Select
+                  label="Company headquarters location"
+                  options={["Bahrain", "Egypt", "UAE", "Oman"]}
                 />
-                <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  type="email"
-                  placeholder="Company email address"
-                  required
+                <Select
+                  label="Partnership type"
+                  options={["Type 1", "Type 2", "Type 3", "Type 4"]}
                 />
-                <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  type="text"
-                  placeholder="Company name"
-                  required
-                />
-                <select
-                  className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  required
-                >
-                  <option value="">Company headquarters location</option>
-                  <option value="Bahrain">Bahrain</option>
-                  <option value="Egypt">Egypt</option>
-                  <option value="UAE">UAE</option>
-                  <option value="Oman">Oman</option>
-                </select>
-                <select
-                  className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  required
-                >
-                  <option value="">Partnership type</option>
-                  <option value="Type 1">Type 1</option>
-                  <option value="Type 2">Type 2</option>
-                  <option value="Type 3">Type 3</option>
-                </select>
-                <textarea
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none bg-white"
-                  required
-                  rows={3}
-                  placeholder="Please tell us more about your needs"
-                />
+                <TextArea placeholder="Please tell us more about your needs" />
                 <div className="flex items-start mt-6 ">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 border border-default rounded bg-white"
-                    required
-                  />
+                  <CheckBoxField />
                   <p className="text-secondary text-sm ml-3">
                     By sending your information you agree to our
                     <Link className="text-primary underline ml-1" href="/">

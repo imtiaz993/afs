@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import InputField from "app/common/form-components/InputField";
+import TextArea from "app/common/form-components/TextArea";
+import FileField from "app/common/form-components/FileField";
+import CheckBoxField from "app/common/form-components/CheckBoxField";
 
 const JobApplyForm = () => {
   const [resume, setResume] = useState();
@@ -25,75 +29,23 @@ const JobApplyForm = () => {
           Apply for the position
         </h4>
         <div className="grid gap-2">
-          <input
-            className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none border border-default"
-            type="text"
-            placeholder="Full name"
-            required
+          <InputField type="text" placeholder="Full name" />
+          <InputField type="email" placeholder="Email address" />
+          <FileField
+            file={resume}
+            setFile={setResume}
+            id="resume"
+            placeholder="Upload your resume"
           />
-          <input
-            className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none border border-default"
-            required
-            type="email"
-            placeholder="Email address"
+          <FileField
+            file={coverLetter}
+            setFile={setCoverLettr}
+            id="coverLetter"
+            placeholder="Cover letter"
           />
-
-          <div
-            className="rounded-sm py-1 pl-4 pr-1 text-tertiary bg-white flex items-center justify-between cursor-pointer border border-default"
-            onClick={handleOpenResumeFileUpload}
-          >
-            <input
-              type="file"
-              id="resumeFile"
-              className="hidden"
-              onChange={(e) => {
-                setResume(e.target.files[0]);
-              }}
-            />
-            <p className="bg-white w-full cursor-pointer">
-              {resume ? resume.name : "Upload your resume"}
-            </p>
-            <button
-              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] rounded-sm"
-              type="button"
-            >
-              Upload
-            </button>
-          </div>
-          <div
-            className="rounded-sm py-1 pl-4 pr-1 text-tertiary bg-white flex items-center justify-between cursor-pointer border border-default"
-            onClick={handleOpenCoverLetterFileUpload}
-          >
-            <input
-              type="file"
-              id="coverLetterFile"
-              className="hidden"
-              onChange={(e) => {
-                setCoverLettr(e.target.files[0]);
-              }}
-            />
-            <p className="bg-white w-full cursor-pointer">
-              {coverLetter ? coverLetter.name : "Cover letter"}
-            </p>
-            <button
-              className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] rounded-sm"
-              type="button"
-            >
-              Upload
-            </button>
-          </div>
-          <textarea
-            className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none border border-default resize-none"
-            required
-            rows={3}
-            placeholder="Your message"
-          />
+          <TextArea placeholder="Your message" />
           <div className="flex items-start mt-4">
-            <input
-              type="checkbox"
-              className="w-5 h-5 border border-default rounded"
-              required
-            />
+            <CheckBoxField />
             <p className="text-secondary text-sm ml-3">
               By sending your information you agree to our
               <Link className="text-primary underline ml-1" href="/">
@@ -103,7 +55,6 @@ const JobApplyForm = () => {
           </div>
           <div className="flex justify-center md:justify-start">
             <button
-              
               className="mt-4 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[105px] font-medium rounded-sm"
               type="submit"
             >

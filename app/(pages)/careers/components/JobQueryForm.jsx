@@ -4,6 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
+import InputField from "app/common/form-components/InputField";
+import TextArea from "app/common/form-components/TextArea";
+import Select from "app/common/form-components/Select";
+import FileField from "app/common/form-components/FileField";
+import CheckBoxField from "app/common/form-components/CheckBoxField";
 
 const JobQueryForm = () => {
   const [file, setFile] = useState();
@@ -58,62 +63,21 @@ const JobQueryForm = () => {
                 Submit your details below
               </h4>
               <div className="grid gap-2">
-                <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  type="text"
-                  placeholder="Full name *"
-                  required
+                <InputField type="text" placeholder="Full name *" />
+                <InputField type="text" placeholder="Email address *" />
+                <Select
+                  label="Company headquarters location"
+                  options={["Bahrain", "Egypt", "UAE", "Oman"]}
                 />
-                <input
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  required
-                  type="email"
-                  placeholder="Email address *"
+                <FileField
+                  file={file}
+                  setFile={setFile}
+                  id="resume"
+                  placeholder="Upload your resume *"
                 />
-                <select
-                  className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-                  required
-                >
-                  <option value="">Location *</option>
-                  <option value="Bahrain">Bahrain</option>
-                  <option value="Egypt">Egypt</option>
-                  <option value="UAE">UAE</option>
-                  <option value="Oman">Oman</option>
-                </select>
-                <div
-                  className="rounded-sm py-1 pl-4 pr-1 text-tertiary bg-white flex items-center justify-between cursor-pointer"
-                  onClick={handleOpenFileUpload}
-                >
-                  <input
-                    type="file"
-                    id="fileInput"
-                    className="hidden"
-                    onChange={(e) => {
-                      setFile(e.target.files[0]);
-                    }}
-                  />
-                  <p className="bg-white w-full cursor-pointer">
-                    {file ? file.name : "Upload your resume *"}
-                  </p>
-                  <button
-                    className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] font-medium rounded-sm"
-                    type="button"
-                  >
-                    Upload
-                  </button>
-                </div>
-                <textarea
-                  className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white resize-none"
-                  required
-                  rows={3}
-                  placeholder="Your message *"
-                />
+                <TextArea placeholder="Your message *" />
                 <div className="flex items-start mt-6">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 bg-white border border-default rounded"
-                    required
-                  />
+                  <CheckBoxField />
                   <p className="text-secondary text-sm ml-3">
                     By sending your information you agree to our
                     <Link className="text-primary underline ml-1" href="/">

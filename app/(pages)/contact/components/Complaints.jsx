@@ -2,6 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import InputField from "app/common/form-components/InputField";
+import Select from "app/common/form-components/Select";
+import TextArea from "app/common/form-components/TextArea";
+import CheckBoxField from "app/common/form-components/CheckBoxField";
 
 const Complaints = () => {
   return (
@@ -26,61 +30,21 @@ const Complaints = () => {
         <h5 className="mb-5 text-lg">Submit your details below</h5>
         <div className="grid gap-2">
           <div className="grid md:grid-cols-2 gap-2">
-            <input
-              className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-              type="text"
-              placeholder="First name *"
-              required
-            />
-            <input
-              className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-              type="text"
-              placeholder="Last name  *"
-              required
-            />
+            <InputField type="text" placeholder="First name *" />
+            <InputField type="text" placeholder="Last name  *" />
           </div>
           <div className="grid md:grid-cols-2 gap-2">
-            <input
-              className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-              type="tel"
-              placeholder="Phone number *"
-              required
-            />
-            <input
-              className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-              type="email"
-              placeholder="Email address  *"
-              required
-            />
+            <InputField type="tel" placeholder="Phone number *" />
+            <InputField type="email" placeholder="Email address  *" />
           </div>
-          <input
-            className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-            type="text"
-            placeholder="Business name *"
-            required
+          <InputField type="text" placeholder="Business name *" />
+          <Select
+            label="Select a complaints category *"
+            options={["Category 1", "Category 2", "Category 3", "Category 4"]}
           />
-          <select
-            className="cursor-pointer rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white border border-default"
-            required
-          >
-            <option value="">Select a complaints category *</option>
-            <option value="Category 1">Category 1</option>
-            <option value="Category 2">Category 2</option>
-            <option value="Category 3">Category 3</option>
-            <option value="Category 4">Category 4</option>
-          </select>
-          <textarea
-            className="rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none resize-none bg-white border border-default"
-            required
-            rows={3}
-            placeholder="Details of your complaint *"
-          />
+          <TextArea placeholder="Details of your complaint *" />
           <div className="flex items-start mt-6 ">
-            <input
-              type="checkbox"
-              className="w-5 h-5 border border-default rounded bg-white"
-              required
-            />
+            <CheckBoxField />
             <p className="text-secondary text-sm ml-3">
               By sending your information you agree to our
               <Link className="text-primary underline ml-1" href="/">
@@ -90,7 +54,6 @@ const Complaints = () => {
           </div>
           <div className="flex justify-center lg:justify-start">
             <button
-              
               className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
               type="submit"
             >
