@@ -15,7 +15,7 @@ const Reviews = () => {
 
   return (
     <PageLayout styles={"px-0"}>
-      <div className="px-10 lg:px-16 py-10 lg:py-24 bg-brand-primary lg:flex justify-between relative">
+      <div className="px-4 md:px-10 lg:px-16 py-10 lg:py-24 bg-brand-primary lg:flex justify-between relative">
         <div className="lg:w-[45%] relative z-10 home-reviews-swiper">
           <Swiper
             ref={swiperRef}
