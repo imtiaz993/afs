@@ -36,6 +36,9 @@ const TextArea = ({ placeholder }) => {
       className={`relative bg-white border rounded-sm py-3 px-4 cursor-text ${
         isFocused ? "border-brand-secondary" : "border-default "
       }`}
+      onClick={() => {
+        handleFocus();
+      }}
     >
       <textarea
         className={`w-full text-tertiary placeholder:text-tertiary outline-none resize-none  relative ${

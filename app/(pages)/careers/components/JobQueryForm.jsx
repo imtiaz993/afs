@@ -72,7 +72,6 @@ const JobQueryForm = () => {
                 <FileField
                   file={file}
                   setFile={setFile}
-                  id="resume"
                   placeholder="Upload your resume *"
                 />
                 <TextArea placeholder="Your message *" />

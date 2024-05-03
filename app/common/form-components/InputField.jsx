@@ -36,6 +36,9 @@ const InputField = ({ type, placeholder }) => {
       className={`relative bg-white border rounded-sm py-3 px-4 cursor-text ${
         isFocused ? "border-brand-secondary" : "border-default "
       }`}
+      onClick={() => {
+        handleFocus();
+      }}
     >
       <input
         className={`w-full text-tertiary placeholder:text-tertiary outline-none relative ${
@@ -53,10 +56,8 @@ const InputField = ({ type, placeholder }) => {
           handleFocus();
         }}
         className={`absolute left-4 transition-all cursor-text ${
-          isFocused || value
-            ? "text-[10px] top-[5px]  block select-none"
-            : ""
-        } ${isFocused ?"text-brand-secondary":"text-tertiary"}`}
+          isFocused || value ? "text-[10px] top-[5px]  block select-none" : ""
+        } ${isFocused ? "text-brand-secondary" : "text-tertiary"}`}
       >
         {placeholder}
       </label>

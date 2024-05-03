@@ -2,9 +2,9 @@
 
 import React from "react";
 
-const FileField = ({ file, setFile, id, placeholder }) => {
+const FileField = ({ file, setFile, placeholder }) => {
   const handleOpenFile = () => {
-    document.getElementById(id).click();
+    document.getElementById(placeholder.replace(/ /g, "")).click();
   };
 
   return (
@@ -14,7 +14,7 @@ const FileField = ({ file, setFile, id, placeholder }) => {
     >
       <input
         type="file"
-        id={id}
+        id={placeholder.replace(/ /g, "")}
         className="hidden"
         onChange={(e) => {
           setFile(e.target.files[0]);

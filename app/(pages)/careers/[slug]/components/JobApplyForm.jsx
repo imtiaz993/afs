@@ -34,13 +34,11 @@ const JobApplyForm = () => {
           <FileField
             file={resume}
             setFile={setResume}
-            id="resume"
             placeholder="Upload your resume"
           />
           <FileField
             file={coverLetter}
             setFile={setCoverLettr}
-            id="coverLetter"
             placeholder="Cover letter"
           />
           <TextArea placeholder="Your message" />
