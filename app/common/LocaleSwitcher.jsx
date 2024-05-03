@@ -53,7 +53,7 @@ export default function LocaleSwitcher({ locale }) {
 
   return (
     <div
-      className="mr-6 lg:mr-8 outline-none relative"
+      className="mr-6 lg:mr-8 outline-none lg:relative"
       ref={localesDropdownRef}
       onMouseLeave={() => {
         if (window.innerWidth > 1024) {
@@ -98,7 +98,7 @@ export default function LocaleSwitcher({ locale }) {
         className={`overflow-hidden ${localesMenu ? "block" : "hidden"}`}
         style={openAnimation}
       >
-        <div className="w-24 absolute z-[999999999px] top-6 -right-[14px] text-secondary navbar-dropdown-shadow rounded-md">
+        <div className="w-24 absolute z-[999999999px] right-11 md:right-16 lg:-right-[14px] top-14 lg:top-6 text-secondary locale-dropdown-shadow rounded-md">
           <ul className="w-full py-2 bg-white text-dark flex flex-col justify-between rounded-md">
             {locales.map((loc) => (
               <li

@@ -66,28 +66,32 @@
   display: inline-block; /* Necessary for background clip to work */
 }
 
-
-
 .home-reviews-swiper .swiper-pagination-bullet {
   background-color: #fff;
   opacity: 0.2;
 }
-.home-reviews-swiper .swiper-pagination-bullet-active{
+.home-reviews-swiper .swiper-pagination-bullet-active {
   background-color: #fff;
   opacity: 1;
 }
 
 .history-swiper .swiper-pagination-bullet {
-  background-color: #D4DFE9;
+  background-color: #d4dfe9;
   opacity: 0.7;
 }
-.history-swiper .swiper-pagination-bullet-active{
+.history-swiper .swiper-pagination-bullet-active {
   background-color: #036fd0;
   opacity: 1;
 }
 
-.navbar-dropdown-shadow {
+.locale-dropdown-shadow {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-dropdown-shadow {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  }
 }
 
 .becomepartner-gradient {

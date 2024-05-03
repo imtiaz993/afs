@@ -90,7 +90,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <animated.div className="" style={openAnimation}>
+          <animated.div className="overflow-hidden" style={openAnimation}>
             <div className={`lg:hidden h-[calc(100vh-16px)] overflow-auto`}>
               <div className="flex items-center justify-between">
                 <div>
@@ -251,12 +251,12 @@ const Solutions = () => {
         />
       </button>
       <animated.div
-        className={`lg:absolute overflow-hidden ${
+        className={`overflow-hidden ${
           solutionsMenu ? "lg:block" : "lg:hidden"
         }`}
         style={openAnimation}
       >
-        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+        <div className="lg:absolute top-6 text-secondary lg:rounded-md navbar-dropdown-shadow">
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
               <p className="text-base font-medium text-primary mt-6">
@@ -389,7 +389,7 @@ const Company = () => {
         className={`overflow-hidden ${companyMenu ? "lg:block" : "lg:hidden"}`}
         style={openAnimation}
       >
-        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+        <div className="lg:absolute top-6 text-secondary navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
               <Link
@@ -497,7 +497,7 @@ const Resources = () => {
         }`}
         style={openAnimation}
       >
-        <div className="lg:absolute top-6 text-secondary lg:navbar-dropdown-shadow lg:rounded-md">
+        <div className="lg:absolute top-6 text-secondary  navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
               <Link

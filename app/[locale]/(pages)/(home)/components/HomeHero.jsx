@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const HomeHero = () => {
   const t = useTranslations("HomeHero");
   return (
-    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden lg:!pr-0">
+    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden md:!pr-0">
       <div className="py-10 lg:py-32 flex relative">
         <div className="flex flex-col items-center md:items-start relative z-10">
           <h1 className="text-white text-center md:text-left  text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[864px]">
@@ -29,7 +29,7 @@ const HomeHero = () => {
             sizes="100vw"
             width={0}
             height={0}
-            className="w-full h-full"
+            className="w-full h-full object-cover"
             src="/assets/images/home/hero.png"
             alt=""
           />
