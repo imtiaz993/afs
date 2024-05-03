@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n.config";
 import InputField from "app/common/form-components/InputField";
 import Select from "app/common/form-components/Select";
 import TextArea from "app/common/form-components/TextArea";

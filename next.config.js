@@ -1,4 +1,7 @@
 const path = require("path");
+const createNextIntlPlugin = require("next-intl/plugin");
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
@@ -6,7 +9,7 @@ const nextConfig = {
   swcMinify: true,
 };
 
-module.exports = {
+module.exports = withNextIntl({
   ...nextConfig,
   webpack: (
     config,
@@ -20,4 +23,4 @@ module.exports = {
     };
     return config;
   },
-};
+});

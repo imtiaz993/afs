@@ -1,13 +1,16 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname } from "@/i18n.config";
+import { Link } from "@/i18n.config";
 import Image from "next/image";
 import { useSpring, animated } from "react-spring";
 import PageLayout from "./PageLayout";
+import { useLocale } from "next-intl";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 const Navbar = () => {
+  const locale = useLocale();
   const pathname = usePathname();
   const [showOptions, setShowOptions] = useState(false);
 
@@ -79,6 +82,7 @@ const Navbar = () => {
               <Resources />
             </div>
             <div className="flex items-center">
+              <LocaleSwitcher locale={locale} />
               <Link href="/contact">
                 <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] w-[185px] font-medium rounded-sm">
                   Contact our team
@@ -86,9 +90,9 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <animated.div className="overflow-hidden" style={openAnimation}>
+          <animated.div className="" style={openAnimation}>
             <div className={`lg:hidden h-[calc(100vh-16px)] overflow-auto`}>
-              <div className="flex justify-between">
+              <div className="flex items-center justify-between">
                 <div>
                   {!showOptions && (
                     <Link href="/">
@@ -103,31 +107,36 @@ const Navbar = () => {
                     </Link>
                   )}
                 </div>
-                {!showOptions && (
-                  <Image
-                    sizes="100vw"
-                    width={22}
-                    height={22}
-                    onClick={() => {
-                      setShowOptions(!showOptions);
-                    }}
-                    src="/assets/icons/navbar/NavbarToggle.svg"
-                    alt=""
-                  />
-                )}
-                {showOptions && (
-                  <Image
-                    sizes="100vw"
-                    width={22}
-                    height={22}
-                    onClick={() => {
-                      setShowOptions(!showOptions);
-                    }}
-                    className="mt-4"
-                    src="/assets/icons/navbar/NavbarClose.svg"
-                    alt=""
-                  />
-                )}
+                <div className="flex items-center">
+                  <div className={`${showOptions?"mt-4":""}`}>
+                    <LocaleSwitcher locale={locale} />
+                  </div>
+                  {!showOptions && (
+                    <Image
+                      sizes="100vw"
+                      width={22}
+                      height={22}
+                      onClick={() => {
+                        setShowOptions(!showOptions);
+                      }}
+                      src="/assets/icons/navbar/NavbarToggle.svg"
+                      alt=""
+                    />
+                  )}
+                  {showOptions && (
+                    <Image
+                      sizes="100vw"
+                      width={22}
+                      height={22}
+                      onClick={() => {
+                        setShowOptions(!showOptions);
+                      }}
+                      className="mt-4"
+                      src="/assets/icons/navbar/NavbarClose.svg"
+                      alt=""
+                    />
+                  )}
+                </div>
               </div>
               {showOptions && (
                 <div className="flex justify-center items-center mt-10">
@@ -242,7 +251,7 @@ const Solutions = () => {
         />
       </button>
       <animated.div
-        className={`overflow-hidden ${
+        className={`lg:absolute overflow-hidden ${
           solutionsMenu ? "lg:block" : "lg:hidden"
         }`}
         style={openAnimation}

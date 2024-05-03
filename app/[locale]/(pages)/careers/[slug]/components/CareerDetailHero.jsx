@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n.config";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
 

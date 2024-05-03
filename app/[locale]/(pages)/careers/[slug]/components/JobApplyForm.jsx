@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n.config";
 import InputField from "app/common/form-components/InputField";
 import TextArea from "app/common/form-components/TextArea";
 import FileField from "app/common/form-components/FileField";
