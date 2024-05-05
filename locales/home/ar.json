@@ -1,5 +1,7 @@
 {
-    "HomeHero": {
+  "Home": {
+    "Hero": {
       "title": "Secure, smart and simplified financial solutions"
     }
   }
+}

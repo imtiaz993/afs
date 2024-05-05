@@ -10,7 +10,33 @@ export default getRequestConfig(async ({ locale }) => {
     return notFound();
   }
 
+  const Navbar = await import(`./locales/navbar/${locale}.json`);
+  const Footer = await import(`./locales/footer/${locale}.json`);
+  const Home = await import(`./locales/home/${locale}.json`);
+  const About = await import(`./locales/about/${locale}.json`);
+  const Partners = await import(`./locales/partners/${locale}.json`);
+  const InvestorRelations = await import(
+    `./locales/investor-relations/${locale}.json`
+  );
+  const Careers = await import(`./locales/careers/${locale}.json`);
+  const CareerDetails = await import(`./locales/career-details/${locale}.json`);
+  const Contact = await import(`./locales/contact/${locale}.json`);
+  const Certifications = await import(
+    `./locales/certifications/${locale}.json`
+  );
+
   return {
-    messages: (await import(`./locales/${locale}.json`)).default,
+    messages: {
+      ...Navbar.default,
+      ...Footer.default,
+      ...Home.default,
+      ...Partners.default,
+      ...About.default,
+      ...InvestorRelations.default,
+      ...Careers.default,
+      ...CareerDetails.default,
+      ...Contact.default,
+      ...Certifications.default,
+    },
   };
 });

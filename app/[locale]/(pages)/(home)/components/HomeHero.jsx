@@ -5,7 +5,7 @@ import PageLayout from "app/common/PageLayout";
 import { useTranslations } from "next-intl";
 
 const HomeHero = () => {
-  const t = useTranslations("HomeHero");
+  const t = useTranslations("Home.Hero");
   return (
     <PageLayout styles="home-hero-gradient md:rounded overflow-hidden md:!pr-0">
       <div className="py-10 lg:py-32 flex relative">
