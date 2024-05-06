@@ -1,3 +1,71 @@
 {
-  "Footer": {}
+  "Footer": {
+    "solutions for banks": {
+      "title": "Solutions for banks",
+      "links": [
+        "Card issuing & processing",
+        "Digital banking",
+        "Open banking",
+        "Fraud & Risk management",
+        "Value added services"
+      ]
+    },
+    "solutions for businesses": {
+      "title": "Solutions for businesses",
+      "links": [
+        "Payment gateway",
+        "POS terminals",
+        "SoftPOS",
+        "eShop",
+        "Merchant portal",
+        "Hospitality",
+        "Food and beverage (F&B)",
+        "SME suite"
+      ]
+    },
+    "solutions for consumer": {
+      "title": "Solutions for businesses",
+      "links": ["BPay wallet"]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        "About us",
+        "Our partners",
+        "Open banking",
+        "Investor relations",
+        "Careers",
+        "Contact"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        "News & Announcements",
+        "Become a vendor",
+        "ESG",
+        "Certifications"
+      ]
+    },
+    "join network": {
+      "title": "Join our network",
+      "description": "Get the latest AFS news, announcements and more.",
+      "input placeholder": "Type your email",
+      "button": "Subscribe",
+      "privacy text": "By subscribing you agree to our",
+      "privacy policy": "Privacy Policy"
+    },
+    "social follow": "Follow us on social media",
+    "certifications": "Our certifications",
+    "public links": [
+      "AFS legal statement",
+      "Privacy Policy",
+      "Cookies Settings",
+      "Anti money laundering",
+      "Business terms & conditions",
+      "Merchant terms & conditions"
+    ],
+    "rights":"© 2024 Arab Financial Services. All rights reserved.",
+    "license":"Licensed as an Ancillary Service Provider by the Central Bank of Bahrain"
+  }
 }

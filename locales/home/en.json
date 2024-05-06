@@ -1,7 +1,124 @@
 {
   "Home": {
     "Hero": {
-      "title": "حلول مالية آمنة وذكية ومبسطة"
+      "title": "Secure, smart and simplified financial solutions",
+      "description": "Gain access to enterprise-grade tools designed to streamline your day-to-day financial operations, tailored for banks, fintechs, businesses and consumers.",
+      "contact team": "Contact our team"
+    },
+    "Working": {
+      "title": "Working with us",
+      "headline": "Our innovative financial solutions deliver numerous benefits for banks and businesses, designed to ensure success for all partners.",
+      "accordion": [
+        {
+          "count": "01",
+          "title": "Secure transaction processing",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        },
+        {
+          "count": "02",
+          "title": "Card issuing and processing",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        },
+        {
+          "count": "03",
+          "title": "Cross-border payments",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        },
+        {
+          "count": "04",
+          "title": "Risk and fraud management",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        },
+        {
+          "count": "05",
+          "title": "Real-time settlements",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        },
+        {
+          "count": "06",
+          "title": "Integration flexibility",
+          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+        }
+      ]
+    },
+    "Solutions": {
+      "title": "Our solutions",
+      "headline": "Unlock financial opportunities for growth and global expansion, accessible to banks and businesses of any size.",
+      "banks": {
+        "title": "For Banks",
+        "description": "Gain access to state-of-the-art payment processing services, card issuance, risk management systems, and other tailored solutions.",
+        "button": "Explore",
+        "features": [
+          "Card processing",
+          "ATM & POS Driving",
+          "Card issuing",
+          "All Solutions"
+        ]
+      },
+      "solutions": {
+        "title": "All Solutions",
+        "description": "Unsure which solution best fits your business needs? Dive into our comprehensive range of financial tools and services, tailored to empower your business success.",
+        "button": "Explore"
+      },
+      "consumers": {
+        "title": "For Consumers",
+        "description": "Effortlessly receive your salary, access your personalized card, and securely transfer funds to others. Simplify your finances with BPay wallet.",
+        "button": "Explore"
+      },
+      "businesses": {
+        "title": "For Businesses",
+        "description": "Boost growth and efficiency with all-in-one merchant services, POS terminals, and custom payment solutions tailored to your business needs.",
+        "button": "Explore",
+
+        "features": ["POS Terminals", "Payroll solution", "Payment gateway"]
+      }
+    },
+    "About": {
+      "title": "About us",
+      "headline": "Founded in 1984, AFS is owned by 37 banks and supports over 60 clients in 20+ countries, providing issuing, merchant acquiring, and various financial services.",
+      "sub title": "By the numbers",
+      "sub headline": "Leveraging the power of digital payments",
+      "description": "Discover how we are revolutionizing the financial sector through our relentless commitment to harnessing the potential of digital payments.",
+      "statistics": {
+        "volume": {
+          "count": "$3.2B",
+          "text": "Acquiring volume"
+        },
+        "transactions": {
+          "count": "288M",
+          "text": "Transactions completed"
+        },
+        "experience": {
+          "count": "40+",
+          "text": "Years of experience"
+        },
+        "cards": {
+          "count": "1.8M",
+          "text": "Cards hosted"
+        },
+        "terminals": {
+          "count": "33K",
+          "text": "POS terminals deployed"
+        }
+      },
+      "learn more": "Link to learn more about AFS"
+    },
+    "Reviews": [
+      {
+        "quote": "Implementing AFS's card issuing and processing solution transformed how we handle payments, making transactions not just faster but also significantly more secure.",
+        "author": "Dr. Pallavi Menon",
+        "position": "Chief Financial Officer"
+      },
+      {
+        "quote": "Implementing AFS's card issuing and processing solution transformed how we handle payments, making transactions not just faster but also significantly more secure.",
+        "author": "Dr. Pallavi Menon",
+        "position": "Chief Financial Officer"
+      }
+    ],
+    "CTA": {
+      "title": "Ready to revolutionize your financial transactions?",
+      "description": "Experience the power of AFS today!",
+      "contact team": "Contact our team"
     }
   }
 }

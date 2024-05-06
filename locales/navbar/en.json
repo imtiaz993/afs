@@ -1,3 +1,55 @@
 {
-  "Navbar": {}
+  "Navbar": {
+    "solutions": {
+      "title": "Solutions",
+      "solutions for banks": {
+        "title": "Solutions for banks",
+        "links": [
+          "Card issuing & processing",
+          "Digital banking",
+          "Open banking",
+          "Fraud & Risk management",
+          "Value added services"
+        ]
+      },
+      "solutions for businesses": {
+        "title": "Solutions for businesses",
+        "links": [
+          "Payment gateway",
+          "POS terminals",
+          "SoftPOS",
+          "eShop",
+          "Merchant portal",
+          "Hospitality",
+          "Food and beverage (F&B)",
+          "SME suite"
+        ]
+      },
+      "solutions for consumer": {
+        "title": "Solutions for businesses",
+        "links": ["BPay wallet"]
+      }
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        "About us",
+        "Our partners",
+        "Open banking",
+        "Investor relations",
+        "Careers",
+        "Contact"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        "News & Announcements",
+        "Become a vendor",
+        "ESG",
+        "Certifications"
+      ]
+    },
+    "contact team":"Contact our team"
+  }
 }
