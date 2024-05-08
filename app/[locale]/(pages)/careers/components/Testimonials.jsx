@@ -36,13 +36,13 @@ const Testimonials = () => {
 
   return (
     <div className="bg-subtle-neutral">
-      <div className="w-11/12 lg:w-10/12 mx-auto pt-10 lg:pt-24">
+      <div className="lg:w-10/12 mx-auto pt-10 lg:pt-24">
         <p className=" mb-4 text-secondary text-center ">Testimonials</p>
         <h2 className="mb-10 md:mb-16 text-2xl md:text-5xl text-primary text-center max-w-[486px] mx-auto">
           Why our team members love to work here
         </h2>
       </div>
-      <div className="w-11/12 mx-auto md:w-full pb-10 lg:pb-24">
+      <div className="mx-auto md:w-full pb-10 lg:pb-24">
         <Marquee gradient={false} autoFill pauseOnHover>
           <div className="flex justify-between">
             {reviews.map((item, index) => (

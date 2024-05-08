@@ -11,7 +11,7 @@ const About = () => {
     <div className="relative">
       <PageLayout>
         <div className="py-10 lg:py-24">
-          <div className="w-11/12 mx-auto relative z-10">
+          <div className="relative z-10">
             <p className="mb-4 text-secondary  flex items-center">
               {" "}
               <Image
@@ -51,7 +51,7 @@ const About = () => {
                   of digital payments.
                 </p>
                 <Link href="/about">
-                  <button className="transition-colors duration-500 text-center text-brand-secondary py-[15.2px] w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm">
+                  <button className="transition-colors duration-500 text-center text-brand-secondary py-[15px] w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm">
                     Learn more about us
                   </button>
                 </Link>

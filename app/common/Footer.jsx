@@ -183,7 +183,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-col">
               <InputField type="email" placeholder="Type your email" />
-              <button className="text-white py-[11.2px] max-w-72 bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
+              <button className="text-white py-[11px] w-full bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
                 Subscribe
               </button>
             </div>

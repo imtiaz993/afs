@@ -18,7 +18,7 @@ const AboutCTA = () => {
               professional growth, innovation, and creativity.
             </p>
             <Link href="/careers">
-              <button className="transition-colors duration-500 text-center text-white py-[11.2px] w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+              <button className="transition-colors duration-500 text-center text-white py-[11px] w-48 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
                 View careers page
               </button>
             </Link>

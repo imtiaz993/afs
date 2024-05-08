@@ -2,14 +2,13 @@
   "News": {
     "title": "Latest news & announcements",
     "see all": "See all",
-    "highlighted": [
-      {
-        "date": "April 01, 2024",
-        "duration": "5 min read",
-        "headline": "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East",
-        "content": "AFS–the leading digital payment solutions provider and fintech enabler in the Middle East and Africa–will utilize ACI Enterprise Payments Platform and ACI Payments OrchestrationPlatform to drive digital payments modernization in the region"
-      }
-    ],
+    "highlighted": {
+      "tag": "Partnership",
+      "date": "April 01, 2024",
+      "duration": "5 min read",
+      "headline": "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East",
+      "content": "AFS–the leading digital payment solutions provider and fintech enabler in the Middle East and Africa–will utilize ACI Enterprise Payments Platform and ACI Payments OrchestrationPlatform to drive digital payments modernization in the region"
+    },
     "news": [
       {
         "date": "March 05, 2024",

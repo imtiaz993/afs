@@ -6,7 +6,7 @@ import PageLayout from "app/common/PageLayout";
 const CareerDetailHero = () => {
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
-      <div className="lg:max-w-[864px] mx-auto py-10 lg:py-24">
+      <div className="lg:max-w-[864px] mx-auto py-10 lg:py-16">
         <div className="md:px-10 lg:px-0">
           <Link href="/careers" className="inline-flex items-center mb-6">
             <div>

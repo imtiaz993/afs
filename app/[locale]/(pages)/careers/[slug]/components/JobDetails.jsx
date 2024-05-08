@@ -13,13 +13,13 @@ const JobDetails = () => {
         <h5 className="text-lg text-primary font-medium">Type</h5>
         <p className="text-primary ">Full time</p>
       </div>
-      <div className="mb-6">
+      <div className="mb-8">
         <h5 className="text-lg text-primary font-medium">Department</h5>
         <p className="text-primary ">Legal</p>
       </div>
       <button
         
-        className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[192px] rounded-sm"
+        className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[192px] rounded-sm"
         onClick={() => {
           const section = document.querySelector("#apply-form");
           section.scrollIntoView({ behavior: "smooth", block: "start" });

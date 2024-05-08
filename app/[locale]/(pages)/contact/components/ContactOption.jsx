@@ -50,7 +50,7 @@ const ContactOption = () => {
               our team is ready to assist you.
             </p>
             <a href="mailto:xyz@afs.com">
-              <button className="transition-colors duration-500 text-center bg-transparent text-brand-secondary  hover:text-white border border-brand-secondary hover:bg-brand-secondary py-[11.2px] w-[185px] font-medium rounded-sm">
+              <button className="transition-colors duration-500 text-center bg-transparent text-brand-secondary  hover:text-white border border-brand-secondary hover:bg-brand-secondary py-[11px] w-[185px] font-medium rounded-sm">
                 Send us an email
               </button>
             </a>

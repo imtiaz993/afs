@@ -103,7 +103,7 @@ const Solutions = () => {
                   tailored to empower your business success.
                 </p>
                 <div className="">
-                  <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-[15.2px] w-[118px] bg-transparent font-medium rounded-sm mr-6">
+                  <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-[15px] w-[118px] bg-transparent font-medium rounded-sm mr-6">
                     Explore
                   </button>
                 </div>

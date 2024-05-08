@@ -41,7 +41,7 @@ const TextArea = ({ placeholder }) => {
       }}
     >
       <textarea
-        className={`w-full text-tertiary placeholder:text-tertiary outline-none resize-none  relative ${
+        className={`w-full text-primary placeholder:text-tertiary outline-none resize-none  relative ${
           isFocused || value ? "top-1.5" : ""
         }`}
         required

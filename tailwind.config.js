@@ -15,7 +15,9 @@ module.exports = {
         "brand-tertiary": "#00AEEF",
         "brand-surface": "#E6F1FA",
         "subtle-neutral": "#F2F6FA",
+        "surface-neutral": "#D4DFE9",
         "dark-neutral": "#002A52",
+        "critical-primary": "#B3093C",
       },
       borderColor: {
         default: "#D4DFE9",

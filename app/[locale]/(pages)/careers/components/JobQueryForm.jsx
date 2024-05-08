@@ -17,10 +17,10 @@ const JobQueryForm = () => {
   };
 
   return (
-    <PageLayout>
+    <PageLayout styles={"!px-0"}>
       <div className="flex becomepartner-gradient">
-        <div className="w-full py-10 lg:py-24 px-[4.17%] lg:pl-16 relative z-10 grid lg:grid-cols-2 gap-8 md:gap-14">
-          <div className="flex flex-col">
+        <div className="w-full py-10 lg:py-24 px-10 md:px-16 lg:pl-16 relative z-10 lg:flex justify-between">
+          <div className="flex flex-col lg:w-[46%]">
             <div className="flex flex-col items-center lg:items-start">
               <h2 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%] max-w-[464px]">
                 Couldn't find the right job for you?
@@ -53,7 +53,7 @@ const JobQueryForm = () => {
               />
             </div>
           </div>
-          <div>
+          <div className="lgw-[54%] mt-10 lg:mt-0">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -86,7 +86,7 @@ const JobQueryForm = () => {
                 </div>
                 <div className="flex justify-center lg:justify-start">
                   <button
-                    className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[197px] font-medium rounded-sm"
+                    className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[197px] font-medium rounded-sm"
                     type="submit"
                   >
                     Submit your details

@@ -38,7 +38,7 @@ const Select = ({ label, options }) => {
       }}
     >
       <select
-        className={`w-full px-4 text-tertiary outline-none bg-transparent absolute -left-[3px] bottom-0 top-0 z-10 ${
+        className={`w-full px-4 text-primary outline-none bg-transparent absolute -left-[3px] bottom-0 top-0 z-10 ${
           value && isFocused ? "pt-2.5" : ""
         } ${value ? "pt-2.5" : ""}`}
         required

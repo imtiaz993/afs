@@ -41,7 +41,7 @@ const InputField = ({ type, placeholder }) => {
       }}
     >
       <input
-        className={`w-full text-tertiary placeholder:text-tertiary outline-none relative ${
+        className={`w-full text-primary placeholder:text-tertiary outline-none relative ${
           isFocused || value ? "top-1.5" : ""
         }`}
         type={type}

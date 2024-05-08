@@ -67,6 +67,7 @@ const Working = () => {
                 activeAccordion={activeAccordion}
                 accordionContent={accordionContent}
                 setActiveAccordion={setActiveAccordion}
+                key={index}
               />
             ))}
           </div>

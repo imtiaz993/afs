@@ -9,10 +9,10 @@ import CheckBoxField from "app/common/form-components/CheckBoxField";
 
 const BecomePartnerForm = () => {
   return (
-    <PageLayout>
+    <PageLayout styles={"!px-0"}>
       <div className="flex becomepartner-gradient relative" id="partners-form">
-        <div className="w-full py-10 lg:py-24 px-[4.17%] lg:pl-16 relative z-10 grid lg:grid-cols-2 gap-8 md:gap-14">
-          <div className="flex flex-col">
+        <div className="w-full py-10 lg:py-24 px-10 md:px-16 lg:pl-16 relative z-10 lg:flex justify-between">
+          <div className="flex flex-col lg:w-[46%]">
             <div className="flex flex-col items-center lg:items-start">
               <h2 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%]">
                 Become a partner
@@ -27,13 +27,13 @@ const BecomePartnerForm = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
-                className="hidden lg:block w-1/2 absolute left-0 bottom-0 h-3/4"
+                className="hidden lg:block w-[40%] absolute left-0 bottom-0"
                 src="/assets/images/partners/cta.png"
                 alt=""
               />
             </div>
           </div>
-          <div>
+          <div className="lg:w-[54%] mt-10 lg:mt-0">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -67,7 +67,7 @@ const BecomePartnerForm = () => {
                 </div>
                 <div className="flex justify-center lg:justify-start">
                   <button
-                    className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11.2px] w-[197px] font-medium rounded-sm"
+                    className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[197px] font-medium rounded-sm"
                     type="submit"
                   >
                     Submit your details

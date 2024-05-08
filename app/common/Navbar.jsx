@@ -84,7 +84,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <LocaleSwitcher locale={locale} />
               <Link href="/contact">
-                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] w-[185px] font-medium rounded-sm">
+                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
                   Contact our team
                 </button>
               </Link>
@@ -171,7 +171,7 @@ const Navbar = () => {
                   </div>
                   <div className="mb-40">
                     <Link href="/contact">
-                      <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15.2px] w-[185px] font-medium rounded-sm">
+                      <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
                         Contact our team
                       </button>
                     </Link>

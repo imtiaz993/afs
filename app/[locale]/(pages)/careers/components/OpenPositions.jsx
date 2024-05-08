@@ -228,7 +228,7 @@ const OpenPositions = () => {
               >
                 <h6 className="py-2 text-primary">{item.title}</h6>
                 <div className="flex justify-between md:justify-start">
-                  <div className="py-2 flex mr-8">
+                  <div className="py-2 flex items-center mr-8">
                     <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-lg">
                       {item.department}
                     </p>

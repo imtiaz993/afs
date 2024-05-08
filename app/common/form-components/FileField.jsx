@@ -21,7 +21,7 @@ const FileField = ({ file, setFile, placeholder }) => {
         }}
       />
       <p
-        className={`bg-white text-tertiary w-full cursor-pointer relative ${
+        className={`bg-white text-primary w-full cursor-pointer relative ${
           file ? "top-1.5" : ""
         }`}
       >
