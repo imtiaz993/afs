@@ -67,7 +67,7 @@ const BOD = () => {
                     alt=""
                   />
                 </div>
-                <div className="p-4 pt-2 lg:p-6 lg:pt-4">
+                <div className="p-4 pt-2 lg:p-6">
                   <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
                   </h4>

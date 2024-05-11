@@ -3,39 +3,45 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
+import { useLocale, useTranslations } from "next-intl";
 import WorkingAccordion from "./WorkingAccordion";
 
 const Working = () => {
+  const locale = useLocale();
+  const t = useTranslations("Home.Working");
+  const accordion = t.raw("accordion");
+  const isArabic = locale === "ar";
+
   const [activeAccordion, setActiveAccordion] = useState(0);
   const accordionContent = [
     {
-      title: "Secure transaction processing",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[0].title,
+      text: accordion[0].description,
       image: "/assets/images/home/accordion.png",
     },
     {
-      title: "Card issuing and processing",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[1].title,
+      text: accordion[2].description,
       image: "/assets/images/home/accordion1.jpg",
     },
     {
-      title: "Cross-border payments",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[2].title,
+      text: accordion[2].description,
       image: "/assets/images/home/accordion.png",
     },
     {
-      title: "Risk and fraud management",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[3].title,
+      text: accordion[3].description,
       image: "/assets/images/home/accordion1.jpg",
     },
     {
-      title: "Real-time settlements",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[4].title,
+      text: accordion[4].description,
       image: "/assets/images/home/accordion.png",
     },
     {
-      title: "Integration flexibility",
-      text: "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction.",
+      title: accordion[5].title,
+      text: accordion[5].description,
       image: "/assets/images/home/accordion1.jpg",
     },
   ];
@@ -43,22 +49,37 @@ const Working = () => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24">
-        <p className="mb-4 text-secondary flex items-center ">
-          <Image
-            sizes="100vw"
-            width={10}
-            height={10}
-            src="/assets/icons/home/diamond.svg"
-            className="mr-2"
-            alt=""
-          />{" "}
-          Working with us
-        </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%]">
-          Our innovative financial solutions deliver numerous benefits for banks
-          and businesses, designed to ensure success for all partners.
-        </h2>
-        <div className="flex justify-between flex-col-reverse lg:flex-row">
+        <div className={`${isArabic ? "flex flex-col items-end" : ""}`}>
+          <p
+            className={`mb-4 text-secondary flex items-center ${
+              isArabic
+                ? "text-right justify- end flex-row-reverse"
+                : "text-left justify-start"
+            }`}
+          >
+            <Image
+              sizes="100vw"
+              width={10}
+              height={10}
+              src="/assets/icons/home/diamond.svg"
+              className={` ${isArabic ? "ml-2" : "mr-2"}`}
+              alt=""
+            />{" "}
+            {t("title")}
+          </p>
+          <h2
+            className={`text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%] ${
+              isArabic ? "text-right" : "text-left"
+            }`}
+          >
+            {t("headline")}
+          </h2>
+        </div>
+        <div
+          className={`flex justify-between flex-col-reverse  ${
+            isArabic ? "lg:flex-row-reverse" : "lg:flex-row"
+          }`}
+        >
           <div className="lg:w-2/5 border-t border-default">
             {accordionContent.map((item, index) => (
               <WorkingAccordion

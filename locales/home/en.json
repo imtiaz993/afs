@@ -101,7 +101,7 @@
           "text": "POS terminals deployed"
         }
       },
-      "learn more": "Link to learn more about AFS"
+      "learn more": "Learn more about us"
     },
     "Reviews": [
       {
@@ -117,6 +117,7 @@
     ],
     "CTA": {
       "title": "Ready to revolutionize your financial transactions?",
+      "highlighted":"revolutionize",
       "description": "Experience the power of AFS today!",
       "contact team": "Contact our team"
     }

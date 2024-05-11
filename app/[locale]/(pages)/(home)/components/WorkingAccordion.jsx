@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useSpring, animated } from "react-spring";
+import { useLocale } from "next-intl";
 
 const WorkingAccordion = ({
   item,
@@ -9,6 +10,9 @@ const WorkingAccordion = ({
   accordionContent,
   setActiveAccordion,
 }) => {
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   const openAnimation = useSpring({
     from: { maxHeight: "0px" },
     to: {
@@ -24,10 +28,18 @@ const WorkingAccordion = ({
         setActiveAccordion(index);
       }}
     >
-      <div className="flex justify-between items-start select-none">
-        <h4 className="text-lg md:text-2xl text-primary">
+      <div
+        className={`flex justify-between items-start select-none ${
+          isArabic ? "flex-row-reverse" : ""
+        }`}
+      >
+        <h4
+          className={`text-lg md:text-2xl text-primary ${
+            isArabic ? "flex flex-row-reverse" : ""
+          }`}
+        >
           <span
-            className={`mr-4 ${
+            className={`${isArabic ? "ml-4" : "mr-4"} ${
               activeAccordion === index
                 ? " text-brand-secondary"
                 : "text-tertiary"
@@ -49,7 +61,11 @@ const WorkingAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className={`text-secondary text-base md:text-lg mt-4 `}>
+        <p
+          className={`text-secondary text-base md:text-lg mt-4 ${
+            isArabic ? "text-right" : ""
+          }`}
+        >
           {item.text}
         </p>
       </animated.div>

@@ -3,48 +3,48 @@
     "solutions for banks": {
       "title": "Solutions for banks",
       "links": [
-        "Card issuing & processing",
-        "Digital banking",
-        "Open banking",
-        "Fraud & Risk management",
-        "Value added services"
+        { "title": "Card issuing & processing", "link": "/" },
+        { "title": "Digital banking", "link": "/" },
+        { "title": "Open banking", "link": "/" },
+        { "title": "Fraud & Risk management", "link": "/" },
+        { "title": "Value added services", "link": "/" }
       ]
     },
     "solutions for businesses": {
       "title": "Solutions for businesses",
       "links": [
-        "Payment gateway",
-        "POS terminals",
-        "SoftPOS",
-        "eShop",
-        "Merchant portal",
-        "Hospitality",
-        "Food and beverage (F&B)",
-        "SME suite"
+        { "title": "Payment gateway", "link": "/" },
+        { "title": "POS terminals", "link": "/" },
+        { "title": "SoftPOS", "link": "/" },
+        { "title": "eShop", "link": "/" },
+        { "title": "Merchant portal", "link": "/" },
+        { "title": "Hospitality", "link": "/" },
+        { "title": "Food and beverage (F&B)", "link": "/" },
+        { "title": "SME suite", "link": "/" }
       ]
     },
     "solutions for consumer": {
       "title": "Solutions for businesses",
-      "links": ["BPay wallet"]
+      "links": [{ "title": "BPay wallet", "link": "/" }]
     },
     "company": {
       "title": "Company",
       "links": [
-        "About us",
-        "Our partners",
-        "Open banking",
-        "Investor relations",
-        "Careers",
-        "Contact"
+        { "title": "About us", "link": "/" },
+        { "title": "Our partners", "link": "/" },
+        { "title": "Open banking", "link": "/" },
+        { "title": "Investor relations", "link": "/" },
+        { "title": "Careers", "link": "/" },
+        { "title": "Contact", "link": "/" }
       ]
     },
     "resources": {
       "title": "Resources",
       "links": [
-        "News & Announcements",
-        "Become a vendor",
-        "ESG",
-        "Certifications"
+        { "title": "News & Announcements", "link": "/" },
+        { "title": "Become a vendor", "link": "/" },
+        { "title": "ESG", "link": "/" },
+        { "title": "Certifications", "link": "/" }
       ]
     },
     "join network": {
@@ -58,14 +58,15 @@
     "social follow": "Follow us on social media",
     "certifications": "Our certifications",
     "public links": [
-      "AFS legal statement",
-      "Privacy Policy",
-      "Cookies Settings",
-      "Anti money laundering",
-      "Business terms & conditions",
-      "Merchant terms & conditions"
+      { "title": "AFS legal statement", "link": "/" },
+      { "title": "Privacy Policy", "link": "/" },
+      { "title": "Cookies Settings", "link": "/" },
+      { "title": "Anti money laundering", "link": "/" },
+      { "title": "Business terms & conditions", "link": "/" },
+      { "title": "Merchant terms & conditions", "link": "/" }
     ],
-    "rights":"© 2024 Arab Financial Services. All rights reserved.",
-    "license":"Licensed as an Ancillary Service Provider by the Central Bank of Bahrain"
+
+    "rights": "© 2024 Arab Financial Services. All rights reserved.",
+    "license": "Licensed as an Ancillary Service Provider by the Central Bank of Bahrain"
   }
 }

@@ -24,7 +24,7 @@ const HomeHero = () => {
           <h1 className="text-white text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
             {t("title")}
           </h1>
-          <p className="text-white text-base md:text-2xl md:max-w-[400px] lg:max-w-[640px] mt-6">
+          <p className="text-white text-base md:text-2xl md:max-w-[400px] lg:max-w-[640px] mt-6 opacity-80">
             {t("description")}
           </p>
           <Link href="/contact">

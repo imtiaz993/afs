@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 const CommonCTA = ({
   primaryContent,
@@ -13,6 +14,9 @@ const CommonCTA = ({
   bgColor = "cta-home-gradient",
   rounded,
 }) => {
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   let primaryContentNode = primaryContent;
   if (primaryContentTextTarget) {
     const targetWordIndex = primaryContent
@@ -45,29 +49,29 @@ const CommonCTA = ({
   return (
     <div className={`${bgColor} relative ${rounded ? "rounded-sm" : ""}`}>
       <div
-        className={`w-full py-10 px-10 relative z-10 items-center lg:items-start ${
+        className={`w-full py-10 px-10 relative z-10 items-center ${
           primaryContentTextTarget
             ? "lg:max-w-[700px] lg:py-24 lg:pl-16"
             : "lg:max-w-[600px] lg:py-14 lg:pl-10"
-        }`}
+        } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
       >
         <div
-          className={`text-2xl text-center lg:text-left text-primary leading-[120%] ${
+          className={`text-2xl text-center  text-primary leading-[120%] ${
             primaryContentTextTarget ? "md:text-5xl" : "md:text-[32px]"
-          }`}
+          } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
         >
           {primaryContentNode}
         </div>
         <h4
-          className={`text-center lg:text-left text-base mt-4 ${
+          className={`text-center text-base mt-4 ${
             primaryContentTextTarget
               ? "md:text-2xl text-brand-primary mb-10"
               : "text-primary lg:max-w-[438px]"
-          }`}
+          } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
         >
           {secondaryContent}
         </h4>
-        <div>
+        <div className={`flex ${isArabic ? "justify-end" : "justify-start"}`}>
           <Link href={primaryButtonLink}>
             <button
               className={`transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm w-full lg:w-auto ${

@@ -5,51 +5,50 @@
       "solutions for banks": {
         "title": "Solutions for banks",
         "links": [
-          "Card issuing & processing",
-          "Digital banking",
-          "Open banking",
-          "Fraud & Risk management",
-          "Value added services"
+          { "title": "Card issuing & processing", "link": "/" },
+          { "title": "Digital banking", "link": "/" },
+          { "title": "Open banking", "link": "/" },
+          { "title": "Fraud & Risk management", "link": "/" },
+          { "title": "Value added services", "link": "/" }
         ]
       },
       "solutions for businesses": {
         "title": "Solutions for businesses",
         "links": [
-          "Payment gateway",
-          "POS terminals",
-          "SoftPOS",
-          "eShop",
-          "Merchant portal",
-          "Hospitality",
-          "Food and beverage (F&B)",
-          "SME suite"
+          { "title": "Payment gateway", "link": "/" },
+          { "title": "POS terminals", "link": "/" },
+          { "title": "SoftPOS", "link": "/" },
+          { "title": "eShop", "link": "/" },
+          { "title": "Merchant portal", "link": "/" },
+          { "title": "Hospitality", "link": "/" },
+          { "title": "Food and beverage (F&B)", "link": "/" },
+          { "title": "SME suite", "link": "/" }
         ]
       },
       "solutions for consumer": {
         "title": "Solutions for businesses",
-        "links": ["BPay wallet"]
+        "links": [{ "title": "BPay wallet", "link": "/" }]
       }
     },
     "company": {
       "title": "Company",
       "links": [
-        "About us",
-        "Our partners",
-        "Open banking",
-        "Investor relations",
-        "Careers",
-        "Contact"
+        { "title": "About us", "link": "/about" },
+        { "title": "Our partners", "link": "/partners" },
+        { "title": "Investor relations", "link": "//investor-relations" },
+        { "title": "Careers", "link": "/careers" },
+        { "title": "Contact", "link": "/contact" }
       ]
     },
     "resources": {
       "title": "Resources",
       "links": [
-        "News & Announcements",
-        "Become a vendor",
-        "ESG",
-        "Certifications"
+        { "title": "News & Announcements", "link": "/" },
+        { "title": "Become a vendor", "link": "/" },
+        { "title": "ESG", "link": "/" },
+        { "title": "Certifications", "link": "/certifications" }
       ]
     },
-    "contact team":"Contact our team"
+    "contact team": "Contact our team"
   }
 }

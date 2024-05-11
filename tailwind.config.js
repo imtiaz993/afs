@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontWeight: {
+        regular: "450",
+      },
       colors: {
         primary: "#002A52",
         secondary: "#2E577C",

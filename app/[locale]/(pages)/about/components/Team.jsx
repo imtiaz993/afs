@@ -169,6 +169,7 @@ const Team = () => {
                       className="w-full"
                       src={item.image}
                       alt=""
+                      priority={true}
                     />
                   </div>
                   <div className="p-4 pt-2 lg:p-6 lg:pt-4">
@@ -194,10 +195,11 @@ const Team = () => {
                       className="w-full"
                       src={item.image}
                       alt=""
+                      priority={true}
                     />
                   </div>
-                  <div className="p-4 pt-2 lg:p-6 lg:pt-4">
-                    <h4 className="mt-4 text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                  <div className="p-4 pt-2 lg:p-6">
+                    <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
                       {item.name}
                     </h4>
                     <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">

@@ -11,18 +11,21 @@
     },
     "news": [
       {
+        "tag": "Case studies",
         "date": "March 05, 2024",
         "duration": "5 min read",
         "headline": "AFS Transaction Index: Season-Opening Bahrain GP Delivers 66% Surge in Spends",
         "content": "This weekend’s action-packed season-opening Bahrain GP delivered an epic increase in spends. Data shared in the annual Transaction Index published by Arab Financial Services (AFS), the Middle East and Africa region’s leading digital payment solutions provider and fintech enabler, compared the year-on-year difference in spends during the F1 week, recording a 66% surge in payments spends during the recently concluded 2024 F1 Gulf Air Bahrain Grand Prix."
       },
       {
+        "tag": "Partnership",
         "date": "March 05, 2024",
         "duration": "5 min read",
         "headline": "AFS enter strategic alliance with Xpence to innovate SME financial management in Bahrain",
         "content": "In a landmark move set to redefine financial management for small and medium enterprises (SMEs) in Bahrain, Arab Financial Services (AFS), the Middle East and Africa region’s leading digital payment solutions provider and fintech enabler, has entered a strategic partnership with Xpence"
       },
       {
+        "tag": "Partnership",
         "date": "March 05, 2024",
         "duration": "5 min read",
         "headline": "AFS conducts media workshop to showcase latest cloud-based restaurant-first solution",

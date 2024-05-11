@@ -6,11 +6,13 @@ import { Link } from "@/i18n.config";
 import Image from "next/image";
 import { useSpring, animated } from "react-spring";
 import PageLayout from "./PageLayout";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 const Navbar = () => {
   const locale = useLocale();
+  const t = useTranslations("Navbar");
+
   const pathname = usePathname();
   const [showOptions, setShowOptions] = useState(false);
 
@@ -85,7 +87,7 @@ const Navbar = () => {
               <LocaleSwitcher locale={locale} />
               <Link href="/contact">
                 <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
-                  Contact our team
+                  {t("contact team")}
                 </button>
               </Link>
             </div>
@@ -108,7 +110,7 @@ const Navbar = () => {
                   )}
                 </div>
                 <div className="flex items-center">
-                  <div className={`${showOptions?"mt-4":""}`}>
+                  <div className={`${showOptions ? "mt-4" : ""}`}>
                     <LocaleSwitcher locale={locale} />
                   </div>
                   {!showOptions && (
@@ -172,7 +174,7 @@ const Navbar = () => {
                   <div className="mb-40">
                     <Link href="/contact">
                       <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
-                        Contact our team
+                        {t("contact team")}
                       </button>
                     </Link>
                   </div>
@@ -190,6 +192,11 @@ const Navbar = () => {
 export default Navbar;
 
 const Solutions = () => {
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
+  const solutionsLinks = t.raw("solutions");
+  const isArabic = locale === "ar";
+
   const solutionsDropdownRef = useRef(null);
   const [solutionsMenu, setSolutionsMenu] = useState(false);
 
@@ -238,7 +245,7 @@ const Solutions = () => {
           setSolutionsMenu(!solutionsMenu);
         }}
       >
-        Solutions
+        {solutionsLinks.title}
         <Image
           sizes="100vw"
           width={12}
@@ -259,63 +266,72 @@ const Solutions = () => {
         <div className="lg:absolute top-6 text-secondary lg:rounded-md navbar-dropdown-shadow">
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
-              <p className="text-base font-medium text-primary mt-6">
-                Solutions for banks
+              <p
+                className={`text-base font-medium text-primary mt-6 ${
+                  isArabic ? "text-right" : ""
+                }`}
+              >
+                {solutionsLinks["solutions for banks.title"]}
               </p>
-              <Link href="/" className="text-[15px] block mt-4">
-                Card issuing & processing
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Digital banking
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Open banking
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Fraud & Risk management
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Value added services
-              </Link>
+              {solutionsLinks["solutions for banks"].links.map(
+                (item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    className={`text-[15px] block mt-4 ${
+                      isArabic ? "text-right" : ""
+                    }  `}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
             </div>
 
             <div>
-              <p className="text-base font-medium text-primary mt-6">
-                Solutions for businesses
+              <p
+                className={`text-base font-medium text-primary mt-6 ${
+                  isArabic ? "text-right" : ""
+                }`}
+              >
+                {solutionsLinks["solutions for businesses"].title}
               </p>
-              <Link href="/" className="text-[15px] block mt-4">
-                Payment gateway
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                POS terminals
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                SoftPOS
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                eShop
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Merchant portal
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                HospitaLinkty
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                Food and beverage (F&B)
-              </Link>
-              <Link href="/" className="text-[15px] block mt-4">
-                SME suite
-              </Link>
+              {solutionsLinks["solutions for businesses"].links.map(
+                (item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    className={`text-[15px] block mt-4 ${
+                      isArabic ? "text-right" : ""
+                    } `}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
             </div>
 
             <div>
-              <p className="text-base font-medium text-primary mt-6">
-                Solutions for consumer
+              <p
+                className={`text-base font-medium text-primary mt-6 ${
+                  isArabic ? "text-right" : ""
+                }`}
+              >
+                {solutionsLinks["solutions for consumer"].title}
               </p>
-              <Link href="/" className="text-[15px] block mt-4">
-                BPay wallet
-              </Link>
+              {solutionsLinks["solutions for consumer"].links.map(
+                (item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    className={`text-[15px] block mt-4 ${
+                      isArabic ? "text-right" : ""
+                    }  `}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -325,6 +341,11 @@ const Solutions = () => {
 };
 
 const Company = () => {
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
+  const companyLinks = t.raw("company");
+  const isArabic = locale === "ar";
+
   const companyDropdownRef = useRef(null);
   const [companyMenu, setCompanyMenu] = useState(false);
 
@@ -373,7 +394,7 @@ const Company = () => {
           setCompanyMenu(!companyMenu);
         }}
       >
-        Company
+        {companyLinks.title}
         <Image
           sizes="100vw"
           width={12}
@@ -392,36 +413,17 @@ const Company = () => {
         <div className="lg:absolute top-6 text-secondary navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
-              <Link
-                href="/about"
-                className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
-              >
-                About us
-              </Link>
-              <Link
-                href="/partners"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Our partners
-              </Link>
-              <Link
-                href="/investor-relations"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Investor relations
-              </Link>
-              <Link
-                href="/careers"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Careers
-              </Link>
-              <Link
-                href="/contact"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Contact
-              </Link>
+              {companyLinks.links.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.link}
+                  className={`text-[15px] whitespace-nowrap block ${
+                    isArabic ? "text-right" : ""
+                  }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -431,6 +433,11 @@ const Company = () => {
 };
 
 const Resources = () => {
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
+  const resourcesLink = t.raw("resources");
+  const isArabic = locale === "ar";
+
   const resourcesDropdownRef = useRef(null);
   const [resourcesMenu, setResourcesMenu] = useState(false);
 
@@ -479,7 +486,7 @@ const Resources = () => {
           setResourcesMenu(!resourcesMenu);
         }}
       >
-        Resources
+        {resourcesLink.title}
         <Image
           sizes="100vw"
           width={12}
@@ -500,30 +507,17 @@ const Resources = () => {
         <div className="lg:absolute top-6 text-secondary  navbar-dropdown-shadow lg:rounded-md">
           <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
             <div>
-              <Link
-                href="/"
-                className="text-[15px] whitespace-nowrap block mt-4 lg:mt-0"
-              >
-                News & Announcements
-              </Link>
-              <Link
-                href="/"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Become a vendor
-              </Link>
-              <Link
-                href="/"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                ESG
-              </Link>
-              <Link
-                href="/certifications"
-                className="text-[15px] whitespace-nowrap block mt-4"
-              >
-                Certifications
-              </Link>
+              {resourcesLink.links.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.link}
+                  className={`text-[15px] whitespace-nowrap block ${
+                    isArabic ? "text-right" : ""
+                  }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

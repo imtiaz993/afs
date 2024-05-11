@@ -6,9 +6,15 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useTranslations, useLocale } from "next-intl";
 import PageLayout from "app/common/PageLayout";
 
 const Reviews = () => {
+  const locale = useLocale();
+  const t = useTranslations("Home");
+  const reviews = t.raw("Reviews");
+  const isArabic = locale === "ar";
+
   const swiperRef = useRef();
   const [swiperIndex, setSwiperIndex] = useState(0);
   const slidesCount = 2;
@@ -27,36 +33,34 @@ const Reviews = () => {
               clickable: true,
             }}
           >
-            <SwiperSlide>
-              <div>
-                <h3 className="text-xl md:text-3xl text-center lg:text-left leading-[130%] text-white">
-                  "Implementing AFS's card issuing and processing solution
-                  transformed how we handle payments, making transactions not
-                  just faster but also significantly more secure.{" "}
-                </h3>
-                <p className="font-medium text-center lg:text-left text-white mt-8">
-                  Dr. Pallavi Menon
-                </p>
-                <p className="text-center lg:text-left text-brand-tertiary mt-2">
-                  Chief Financial Officer
-                </p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <h3 className="text-xl md:text-3xl text-center lg:text-left leading-[130%] text-white">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  ipsam nostrum id reprehenderit, temporibus illum non
-                  voluptatem itaque quas voluptatum?
-                </h3>
-                <p className="font-medium text-center lg:text-left text-white mt-8">
-                  Dr. Pallavi Menon
-                </p>
-                <p className="text-center lg:text-left text-brand-tertiary mt-2 ">
-                  Chief Financial Officer
-                </p>
-              </div>
-            </SwiperSlide>
+            {reviews.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div>
+                  <h3
+                    className={`text-xl md:text-3xl text-center leading-[130%] text-white ${
+                      isArabic ? "lg:text-right" : "lg:text-left"
+                    }`}
+                  >
+                    {item.quote}
+                  </h3>
+                  <p
+                    className={`font-medium text-center text-white mt-8 ${
+                      isArabic ? "lg:text-right" : "lg:text-left"
+                    }`}
+                  >
+                    {item.author}
+                  </p>
+                  <p
+                    className={`text-center  text-brand-tertiary mt-2 ${
+                      isArabic ? "lg:text-right" : "lg:text-left"
+                    }`}
+                  >
+                    {item.position}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+
             <div className="flex items-center  mt-16 ">
               <div>
                 <div className="inline-flex justify-center lg:justify-start relative z-20 select-none">

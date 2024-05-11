@@ -1,10 +1,21 @@
 import React from "react";
 import { Link } from "@/i18n.config";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import PageLayout from "./PageLayout";
 import InputField from "./form-components/InputField";
 
 const Footer = () => {
+  const locale = useLocale();
+  const t = useTranslations("Footer");
+  const isArabic = locale === "ar";
+  const bankLinks = t.raw("solutions for banks");
+  const businessLinks = t.raw("solutions for businesses");
+  const consumerLinks = t.raw("solutions for consumer");
+  const companyLinks = t.raw("company");
+  const resourcesLinks = t.raw("resources");
+  const publicLinks = t.raw("public links");
+
   return (
     <PageLayout>
       <div className="py-10 lg:py-24">
@@ -21,187 +32,145 @@ const Footer = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="flex flex-col items-start">
-            <h6 className="mb-6 font-medium text-primary">
-              Solutions for banks
+            <h6
+              className={`mb-6 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {bankLinks.title}
             </h6>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Card issuing & processing
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Digital banking
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Open banking
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Fraud & Risk management
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Value added services
-            </Link>
+            {bankLinks.links.map((item, index) => (
+              <Link
+                key={index}
+                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href={item.link}
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-col items-start">
-            <h6 className="mb-6 font-medium text-primary">
-              Solutions for businesses
+            <h6
+              className={`mb-6 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {businessLinks.title}
             </h6>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
+            {businessLinks.links.map((item, index) => (
+              <Link
+                key={index}
+                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href="/"
+              >
+                {item.title}
+              </Link>
+            ))}
+            <h6
+              className={`mt-8 mb-6 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
             >
-              Payment gateway
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              POS terminals
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              SoftPOS
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              eShop
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Merchant portal
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Hospitality
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Food and beverage (F&B)
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              SME suite
-            </Link>
-            <h6 className="mt-8 mb-6 font-medium text-primary">
-              Solutions for consumer
+              {consumerLinks.title}
             </h6>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              BPay wallet
-            </Link>
+            {consumerLinks.links.map((item, index) => (
+              <Link
+                key={index}
+                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href="/"
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-col items-start sm:mt-10 lg:mt-0">
-            <h6 className="mb-6 font-medium text-primary">Company</h6>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/about"
+            <h6
+              className={`mb-6 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
             >
-              About us
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/partners"
-            >
-              Our partners
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/investor-relations"
-            >
-              Investor relations
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/careers"
-            >
-              Careers
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/contact"
-            >
-              Contact
-            </Link>
+              {companyLinks.title}
+            </h6>
+            {companyLinks.links.map((item, index) => (
+              <Link
+                key={index}
+                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href="/"
+              >
+                {item.title}
+              </Link>
+            ))}
 
-            <h6 className="mt-8 mb-6 font-medium text-primary">Resources</h6>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
+            <h6
+              className={`mt-8 mb-6 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
             >
-              News & Announcements
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              Become a vendor
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/"
-            >
-              ESG
-            </Link>
-            <Link
-              className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-              href="/certifications"
-            >
-              Certifications
-            </Link>
+              {resourcesLinks.title}
+            </h6>
+            {resourcesLinks.links.map((item, index) => (
+              <Link
+                key={index}
+                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href="/"
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
-          <div className=" sm:mt-10 lg:mt-0">
-            <h6 className="mb-2 font-medium text-primary">Join our network</h6>
-            <p className="mb-6 text-sm text-secondary">
-              Get the latest AFS news, announcements and more.
+          <div className={`sm:mt-10 lg:mt-0 ${isArabic ? "text-right" : ""}`}>
+            <h6
+              className={`mb-2 font-medium text-primary ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {t("join network.title")}
+            </h6>
+            <p
+              className={`mb-6 text-sm text-secondary ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {t("join network.description")}
             </p>
             <div className="flex flex-col">
-              <InputField type="email" placeholder="Type your email" />
+              <InputField
+                type="email"
+                placeholder={t("join network.input placeholder")}
+              />
               <button className="text-white py-[11px] w-full bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
-                Subscribe
+                {t("join network.button")}
               </button>
             </div>
             <p className="text-secondary mt-4 text-sm pb-10 mb-10 border-b border-default">
-              By subscribing you agree to our{" "}
+              {t("join network.privacy text")}{" "}
               <Link
                 className="text-primary hover:text-brand-secondary hover:underline"
                 href="/"
               >
-                Privacy Policy
+                {t("join network.privacy policy")}
               </Link>
             </p>
             <div className="pb-10 mb-10 border-b border-default">
               <h6 className="text-primary font-medium mb-4">
-                Follow us on social media
+                {t("social follow")}
               </h6>
-              <div className="flex items-center">
-                <a href="#" className="mr-3">
+              <div
+                className={`flex items-center ${
+                  isArabic ? "flex-row-reverse" : ""
+                }`}
+              >
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -211,7 +180,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -221,7 +190,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -231,7 +200,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -254,8 +223,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="pb-10">
-              <h6 className="text-primary font-medium mb-4">
-                Our certifications
+              <h6
+                className={`text-primary font-medium mb-4 ${
+                  isArabic ? "text-right" : ""
+                }`}
+              >
+                {t("certifications")}
               </h6>
               <div className="flex">
                 <div className="border-r border-default p-1 flex items-center justify-center">
@@ -293,51 +266,35 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-default text-sm mt-14 pt-10 text-secondary">
-          <div className="flex flex-wrap">
-            <Link
-              href="/"
-              className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              AFS legal statement
-            </Link>
-            <Link
-              href="/"
-              className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/"
-              className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              Cookies Settings
-            </Link>
-            <Link
-              href="/"
-              className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              Anti money laundering
-            </Link>
-            <Link
-              href="/"
-              className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              Business terms & conditions
-            </Link>
-            <Link
-              href="/"
-              className="mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
-            >
-              Merchant terms & conditions
-            </Link>
+          <div
+            className={`flex flex-wrap ${isArabic ? "flex-row-reverse" : ""}`}
+          >
+            {publicLinks.map((item, index) => (
+              <Link
+                key={index}
+                className={`mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline ${
+                  isArabic ? "text-right" : ""
+                }`}
+                href="/"
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
           <div>
-            <p className="mt-6 font-normal text-sm">
-              © 2024 Arab Financial Services. All rights reserved.
+            <p
+              className={`mt-6 font-normal text-sm ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {t("rights")}
             </p>
-            <p className="mt-1 text-xs text-tertiary">
-              Licensed as an Ancillary Service Provider by the Central Bank of
-              Bahrain
+            <p
+              className={`mt-1 text-xs text-tertiary ${
+                isArabic ? "text-right" : ""
+              }`}
+            >
+              {t("license")}
             </p>
           </div>
         </div>

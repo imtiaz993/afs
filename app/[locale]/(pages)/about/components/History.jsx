@@ -153,7 +153,7 @@ const History = () => {
                 slidesPerView: 3.5,
               },
               1536: {
-                slidesPerView: 3.5,
+                slidesPerView: 4.5,
               },
             }}
           >

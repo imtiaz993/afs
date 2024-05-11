@@ -194,29 +194,35 @@ const OpenPositions = () => {
         </h2>
         <div className="lg:flex items-start">
           <div className="mr-8 lg:grid gap-2 mb-4 lg:mb-0">
-            <select
-              className="cursor-pointer mr-2 lg:mr-0 border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-              onChange={(e) => {
-                handleFilterKeyLocationChange(e.target.value);
-              }}
-            >
-              <option value="*">Location</option>
-              <option value="Bahrain">Bahrain</option>
-              <option value="Egypt">Egypt</option>
-              <option value="UAE">UAE</option>
-              <option value="Oman">Oman</option>
-            </select>
-            <select
-              className="cursor-pointer border border-default w-36 md:w-48 rounded-sm py-3 px-4 text-tertiary placeholder:text-tertiary outline-none bg-white"
-              onChange={(e) => handleFilterKeyDepartmentChange(e.target.value)}
-            >
-              <option value="*">Department</option>
-              <option value="Commercial">Commercial</option>
-              <option value="Finance">Finance</option>
-              <option value="Design">Design</option>
-              <option value="Technology">Technology</option>
-              <option value="Operations">Operations</option>
-            </select>
+            <div className="border border-default w-36 md:w-48 rounded-sm">
+              <select
+                className="w-full h-full px-4 py-3 border-r-[16px] border-transparent cursor-pointer mr-2 lg:mr-0 text-tertiary placeholder:text-tertiary outline-none bg-white"
+                onChange={(e) => {
+                  handleFilterKeyLocationChange(e.target.value);
+                }}
+              >
+                <option value="*">Location</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+                <option value="Oman">Oman</option>
+              </select>
+            </div>
+            <div className="border border-default w-36 md:w-48 rounded-sm">
+              <select
+                className="w-full h-full px-4 py-3 border-r-[16px] border-transparent  cursor-pointer text-tertiary placeholder:text-tertiary outline-none bg-white"
+                onChange={(e) =>
+                  handleFilterKeyDepartmentChange(e.target.value)
+                }
+              >
+                <option value="*">Department</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Finance">Finance</option>
+                <option value="Design">Design</option>
+                <option value="Technology">Technology</option>
+                <option value="Operations">Operations</option>
+              </select>
+            </div>
           </div>
           <div className="border border-default rounded lg:w-[calc(100%-200px)] filter-container">
             {positions.map((item, index) => (
