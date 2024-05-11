@@ -35,12 +35,12 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary">
+                <h4 className="text-xl md:text-2xl text-primary font-regular">
                   AFS Merchant Support
                 </h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg">
+                <h5 className="mb-4 text-primary text-lg font-regular">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -81,7 +81,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg">Contact us by email</h5>
+              <h5 className="mb-2 text-primary text-lg font-regular">Contact us by email</h5>
               <a href="mailto:merchantsupport@afs.com.bh">
                 <p className="text-brand-secondary">
                   merchantsupport@afs.com.bh
@@ -100,12 +100,12 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary">
+                <h4 className="text-xl md:text-2xl text-primary font-regular">
                   Al Rateb Support - WPS
                 </h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg">
+                <h5 className="mb-4 text-primary text-lg font-regular">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -132,7 +132,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg">Contact us by email</h5>
+              <h5 className="mb-2 text-primary text-lg font-regular">Contact us by email</h5>
               <a href="mailto:payroll.cards@afs.com.bh">
                 <p className="text-brand-secondary">payroll.cards@afs.com.bh</p>
               </a>
@@ -149,10 +149,10 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary">BPay</h4>
+                <h4 className="text-xl md:text-2xl text-primary font-regular">BPay</h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg">
+                <h5 className="mb-4 text-primary text-lg font-regular">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -179,7 +179,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg">Contact us by email</h5>
+              <h5 className="mb-2 text-primary text-lg font-regular">Contact us by email</h5>
               <a href="mailto:bpaysupport@afs.com.bh">
                 <p className="text-brand-secondary">bpaysupport@afs.com.bh</p>
               </a>

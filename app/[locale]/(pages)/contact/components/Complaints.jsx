@@ -17,7 +17,7 @@ const Complaints = () => {
         className="py-10 px-5 md:px-8"
         id="contact-form"
       >
-        <h4 className="mb-4 text-xl md:text-2xl text-primary">Complaints</h4>
+        <h4 className="mb-4 text-xl md:text-2xl text-primary font-regular">Complaints</h4>
         <p className="mb-4 text-secondary text-lg ">
           At AFS our customers are our priority. We take all disputes and
           complaints from our customers and business partners very seriously
@@ -27,7 +27,7 @@ const Complaints = () => {
           AFS will endeavor to address all complaints within twenty (20)
           business days.
         </p>
-        <h5 className="mb-5 text-lg">Submit your details below</h5>
+        <h5 className="mb-5 text-lg font-regular">Submit your details below</h5>
         <div className="grid gap-2">
           <div className="grid md:grid-cols-2 gap-2">
             <InputField type="text" placeholder="First name *" />

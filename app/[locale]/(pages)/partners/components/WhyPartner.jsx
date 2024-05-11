@@ -31,7 +31,7 @@ const WhyPartner = () => {
               src="/assets/images/partners/1.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
               Access to cutting-edge technologies
             </h6>
             <p className="text-secondary ">
@@ -49,7 +49,7 @@ const WhyPartner = () => {
               src="/assets/images/partners/2.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
               Increased revenue streams
             </h6>
             <p className="text-secondary ">
@@ -66,7 +66,7 @@ const WhyPartner = () => {
               src="/assets/images/partners/3.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
               Enhanced product offering
             </h6>
             <p className="text-secondary ">
@@ -83,7 +83,7 @@ const WhyPartner = () => {
               src="/assets/images/partners/4.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
               Knowledge and expertise sharing
             </h6>
             <p className="text-secondary ">

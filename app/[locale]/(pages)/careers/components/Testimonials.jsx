@@ -47,7 +47,7 @@ const Testimonials = () => {
           <div className="flex justify-between">
             {reviews.map((item, index) => (
               <div className="p-6 bg-white relative h-[316px] xl:h-[330px] 2xl:h-[316px] w-[300px] md:w-[540px] flex flex-col justify-between mr-2">
-                <h6 className="text-lg md:text-[22px] text-primary ">
+                <h6 className="text-lg md:text-2xl text-primary">
                   {item.review}
                 </h6>
                 <div>

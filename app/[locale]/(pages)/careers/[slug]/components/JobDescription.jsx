@@ -4,7 +4,7 @@ const JobDescription = () => {
   return (
     <div>
       <div className="mb-7">
-        <h4 className="text-xl md:text-2xl text-primary mb-4">About AFS</h4>
+        <h4 className="text-xl md:text-2xl text-primary mb-4 font-regular">About AFS</h4>
         <p className="text-base md:text-lg text-primary  mb-4">
           At AFS we empower the region’s business and banking communities,
           end-users and consumers with customized payments technologies and
@@ -37,7 +37,7 @@ const JobDescription = () => {
         </p>
       </div>
       <div className="mb-7">
-        <h4 className="text-xl md:text-2xl text-primary mb-4">
+        <h4 className="text-xl md:text-2xl text-primary mb-4 font-regular">
           Job requirements{" "}
         </h4>
         <p className="text-base md:text-lg text-primary  mb-4">
@@ -53,7 +53,7 @@ const JobDescription = () => {
         </p>
       </div>
       <div className="mb-7">
-        <h4 className="text-xl md:text-2xl text-primary mb-4">Education</h4>
+        <h4 className="text-xl md:text-2xl text-primary mb-4 font-regular">Education</h4>
         <ul className="text-primary  list-disc pl-5 marker:text-brand-secondary marker:text-xl">
           <li className="mb-4 text-base md:text-lg">Bachelor’s degree.</li>
           <li className="mb-4 text-base md:text-lg">
@@ -64,7 +64,7 @@ const JobDescription = () => {
         </ul>
       </div>
       <div className="mb-7">
-        <h4 className="text-xl md:text-2xl text-primary mb-4">Experience</h4>
+        <h4 className="text-xl md:text-2xl text-primary mb-4 font-regular">Experience</h4>
         <ul className="text-primary  list-disc pl-5 marker:text-brand-secondary marker:text-xl">
           <li className="mb-4 text-base md:text-lg">
             Minimum 5+ years of relevant experience in sales, customer
@@ -74,7 +74,7 @@ const JobDescription = () => {
         </ul>
       </div>
       <div>
-        <h4 className="text-xl md:text-2xl text-primary mb-4">
+        <h4 className="text-xl md:text-2xl text-primary mb-4 font-regular">
           Knowledge/Skills/Attributes: 
         </h4>
         <ul className="text-primary  list-disc pl-5 marker:text-brand-secondary marker:text-xl">

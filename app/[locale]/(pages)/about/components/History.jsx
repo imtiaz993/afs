@@ -133,8 +133,8 @@ const History = () => {
           </div>
         </div>
       </PageLayout>
-      <PageLayout styles={"!px-0"}>
-        <div className="w-full pl-10 lg:pl-16 pb-10 lg:pb-24">
+      <div className="w-full ml-10 lg:ml-16 pb-10 lg:pb-24 relative mb-[280px]">
+        <div className="w-full absolute inset-y-0 left-0 right-0 ml-auto pl-[calc(50%-720px)]">
           <Swiper
             ref={swiperRef}
             slidesPerView={1.2}
@@ -152,7 +152,7 @@ const History = () => {
               1280: {
                 slidesPerView: 3.5,
               },
-              1536: {
+              1440: {
                 slidesPerView: 4.5,
               },
             }}
@@ -175,7 +175,7 @@ const History = () => {
             ))}
           </Swiper>
         </div>
-      </PageLayout>
+      </div>
     </div>
   );
 };

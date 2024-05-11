@@ -28,7 +28,7 @@ const FaqAccordion = ({
           }
         }}
       >
-        <h5 className="text-primary md:text-lg mr-4">{title}</h5>
+        <h5 className="text-primary md:text-lg mr-4 font-regular">{title}</h5>
         <Image
           sizes="100vw"
           width={0}
@@ -43,7 +43,7 @@ const FaqAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className="text-secondary mt-2 text-sm md:text-base ">
+        <p className="text-secondary mt-2 text-sm md:text-base">
           {text}
         </p>
       </animated.div>

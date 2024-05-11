@@ -26,7 +26,7 @@ const CoreValues = () => {
               01
             </h2>
             <div>
-              <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+              <h4 className="mb-4 text-primary text-xl md:text-2xl font-regular">
                 Client centric
               </h4>
               <p className="text-primary text-lg ">
@@ -41,7 +41,7 @@ const CoreValues = () => {
               02
             </h2>
             <div>
-              <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+              <h4 className="mb-4 text-primary text-xl md:text-2xl font-regular">
                 Collaborative
               </h4>
               <p className="text-primary text-lg ">
@@ -55,7 +55,7 @@ const CoreValues = () => {
               03
             </h2>
             <div>
-              <h4 className="mb-4 text-primary font-medium text-xl md:text-2xl">
+              <h4 className="mb-4 text-primary text-xl md:text-2xl font-regular">
                 Consistent
               </h4>
               <p className="text-primary text-lg ">

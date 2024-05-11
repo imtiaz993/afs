@@ -33,7 +33,7 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg">
+              <h6 className="mb-4 text-primary text-lg font-regular">
                 Bahrain - Headquarters
               </h6>
               <div className="mb-10">
@@ -69,7 +69,7 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg">
+              <h6 className="mb-4 text-primary text-lg font-regular">
                 United Arab Emirates
               </h6>
               <div className="mb-10">
@@ -105,7 +105,7 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg">Egypt</h6>
+              <h6 className="mb-4 text-primary text-lg font-regular">Egypt</h6>
               <div className="mb-10">
                 <p className="text-primary  mb-1">Plot Number: B-39,</p>
                 <p className="text-primary  mb-1">Street 90 (North),</p>
@@ -139,7 +139,7 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg">Sultanate of Oman</h6>
+              <h6 className="mb-4 text-primary text-lg font-regular">Sultanate of Oman</h6>
               <div className="mb-10">
                 <p className="text-primary  mb-1">Office 425, Level 4,</p>
                 <p className="text-primary  mb-1">Al Fardan Heights,</p>

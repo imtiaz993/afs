@@ -68,7 +68,7 @@ const News = () => {
                 </div>
               </div>
               <h4
-                className={`text-primary text-lg sm:text-2xl mb-4 mt-2 ${
+                className={`text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular ${
                   isArabic ? "text-right" : ""
                 }`}
               >
@@ -109,7 +109,7 @@ const News = () => {
                     </div>
                   </div>
                   <h4
-                    className={`text-primary text-lg sm:text-2xl mb-4 mt-2 ${
+                    className={`text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular ${
                       isArabic ? "text-right" : ""
                     }`}
                   >

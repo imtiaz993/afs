@@ -3,28 +3,42 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Montreal";
+  font-family: "PP Montreal";
   src: url("../public/Font/PPNeueMontreal-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montreal";
+  font-family: "PP Montreal";
+  src: url("../public/Font/PPNeueMontreal-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PP Montreal";
   src: url("../public/Font/PPNeueMontreal-Regular.ttf") format("truetype");
   font-weight: 450;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montreal";
+  font-family: "PP Montreal";
   src: url("../public/Font/PPNeueMontreal-Book.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "PP Montreal";
+  src: url("../public/Font/PPNeueMontreal-BookItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
 * {
-  font-family: "Montreal" !important;
+  font-family: "PP Montreal" !important;
   -webkit-font-smoothing: antialiased;
 }
 

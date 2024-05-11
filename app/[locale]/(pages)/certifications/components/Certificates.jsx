@@ -19,7 +19,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">PCI DSS V3.2.1</h6>
+              <h6 className="text-lg text-primary mb-2 font-regular">PCI DSS V3.2.1</h6>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
                   View document
@@ -47,7 +47,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">PCI PIN</h6>
+              <h6 className="text-lg text-primary mb-2 font-regular">PCI PIN</h6>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
                   View document
@@ -75,7 +75,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">
+              <h6 className="text-lg text-primary mb-2 font-regular">
                 Information Security Management System – ISO/IEC 27001:2022
               </h6>
               <div className="flex items-center cursor-pointer">
@@ -105,7 +105,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">Visa</h6>
+              <h6 className="text-lg text-primary mb-2 font-regular">Visa</h6>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
                   View document
@@ -133,7 +133,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">Mastercard</h6>
+              <h6 className="text-lg text-primary mb-2 font-regular">Mastercard</h6>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
                   View document
@@ -161,7 +161,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">Amex</h6>
+              <h6 className="text-lg text-primary mb-2 font-regular">Amex</h6>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2">
                   View document
@@ -189,7 +189,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">
+              <h6 className="text-lg text-primary mb-2 font-regular">
                 Business Continuity Management – ISO 22301
               </h6>
               <div className="flex items-center cursor-pointer">
@@ -219,7 +219,7 @@ const Certificates = () => {
               />
             </div>
             <div className="p-8 pt-0">
-              <h6 className="text-lg text-primary mb-2">
+              <h6 className="text-lg text-primary mb-2 font-regular">
                 Quality System Certification – ISO 9001:2015
               </h6>
               <div className="flex items-center cursor-pointer">

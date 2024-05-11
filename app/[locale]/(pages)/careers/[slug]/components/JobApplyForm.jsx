@@ -25,7 +25,7 @@ const JobApplyForm = () => {
           e.preventDefault();
         }}
       >
-        <h4 className="mb-4 text-primary text-xl md:text-2xl">
+        <h4 className="mb-4 text-primary text-xl md:text-2xl font-medium">
           Apply for the position
         </h4>
         <div className="grid gap-2">
