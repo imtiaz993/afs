@@ -43,53 +43,53 @@ const SolutionBanks = () => {
     },
   ];
   return (
-    <div>
-      <PageLayout>
-        <div
-          className="py-10 lg:py-24 md:flex items-start"
-          id="solution-for-banks"
-        >
-          <PageNav selected={"banks"} />
-          <div className="md:w-[calc(100%-192px)]">
-            <FeatureHighlightCard
-              message={
-                "We put at your disposal a wide range of solutions design to meet the evolving need of the banking sector, our services ensure secure, efficient and compliant operations"
-              }
-              primaryButtonLabel={"View all banking solutions"}
-              secondaryButtonLabel={"Contact our team"}
-              secondaryButtonLink={"/contact"}
-            />
-            <BgImageTestimonial />
-            <PartnersSlider gradient={false} />
-            <div className="grid my-6 md:grid-cols-2 gap-4">
-              {banksData.map((data) => (
-                <SolutionFeatures
-                  title={data.title}
-                  description={data.description}
-                  descriptionCritical={data.descriptionCritical}
-                  backgroundColor={"bg-subtle-neutral"}
-                  imageSrc={"/assets/images/solutions/productIllustration.png"}
-                  key={data.title}
-                />
-              ))}
-            </div>
-            <CommonCTA
-              primaryContent={
-                "Want to learn more about our solutions and how we can help your business?"
-              }
-              secondaryContent={
-                "Our dedicated business development team are ready to help guide you on the best solution for your business."
-              }
-              primaryButtonLabel={"Contact our team"}
-              secondaryButtonLabel={"View all business solutions"}
-              primaryButtonLink={"/contact"}
-              bgColor={"bg-surface-neutral"}
-              rounded={true}
-            />
+    <PageLayout>
+      <div
+        className="py-10 lg:py-24 md:flex items-start"
+        id="solution-for-banks"
+      >
+        <PageNav selected={"banks"} />
+        <div className="md:w-[calc(100%-192px)]">
+          <FeatureHighlightCard
+            message={
+              "We put at your disposal a wide range of solutions design to meet the evolving need of the banking sector, our services ensure secure, efficient and compliant operations"
+            }
+            primaryButtonLabel={"View all banking solutions"}
+            primaryButtonLink={"/solutions/banks"}
+            secondaryButtonLabel={"Contact our team"}
+            secondaryButtonLink={"/contact"}
+          />
+          <BgImageTestimonial />
+          <PartnersSlider gradient={false} />
+          <div className="grid my-6 md:grid-cols-2 gap-4">
+            {banksData.map((data) => (
+              <SolutionFeatures
+                title={data.title}
+                description={data.description}
+                descriptionCritical={data.descriptionCritical}
+                backgroundColor={"bg-subtle-neutral"}
+                imageSrc={"/assets/images/solutions/productIllustration.png"}
+                key={data.title}
+              />
+            ))}
           </div>
+          <CommonCTA
+            primaryContent={
+              "Want to learn more about our solutions and how we can help your business?"
+            }
+            secondaryContent={
+              "Our dedicated business development team are ready to help guide you on the best solution for your business."
+            }
+            primaryButtonLabel={"Contact our team"}
+            secondaryButtonLabel={"View all business solutions"}
+            primaryButtonLink={"/contact"}
+            bgColor={"bg-surface-neutral"}
+            rounded={true}
+            lessPaddingVariant={true}
+          />
         </div>
-      </PageLayout>
-    </div>
+      </div>
+    </PageLayout>
   );
 };
 

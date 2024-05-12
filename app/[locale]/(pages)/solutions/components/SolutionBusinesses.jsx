@@ -91,6 +91,7 @@ const SolutionBusinesses = () => {
             primaryButtonLink={"/contact"}
             bgColor={"bg-surface-neutral"}
             rounded={true}
+            lessPaddingVariant={true}
           />
         </div>
       </div>

@@ -3,12 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
+import { Link } from "i18n.config";
 
 const CommonHero = ({
   title,
   subtext,
   description,
   buttonText,
+  buttonLink,
   onClick,
   image,
 }) => {
@@ -25,14 +27,23 @@ const CommonHero = ({
               {description}
             </p>
           )}
-          {buttonText && onClick && (
+          {buttonText && (onClick || buttonLink) && (
             <div className="flex justify-center md:justify-start mt-10 mb-10 lg:mb-0">
-              <button
-                className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] px-8 font-medium rounded-sm"
-                onClick={onClick}
-              >
-                {buttonText}
-              </button>
+              {onClick && (
+                <button
+                  className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] px-8 font-medium rounded-sm"
+                  onClick={onClick}
+                >
+                  {buttonText}
+                </button>
+              )}
+              {buttonLink && (
+                <Link href={buttonLink}>
+                  <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] px-8 font-medium rounded-sm">
+                    {buttonText}
+                  </button>
+                </Link>
+              )}
             </div>
           )}
         </div>

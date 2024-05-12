@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const SolutionFeatures = ({
   title,
@@ -7,6 +8,7 @@ const SolutionFeatures = ({
   backgroundColor = "bg-white",
   descriptionCritical,
   imageSrc,
+  learnMoreLink,
 }) => {
   return (
     <>
@@ -22,6 +24,20 @@ const SolutionFeatures = ({
           >
             {description}
           </p>
+          {learnMoreLink ? (
+            <Link href={learnMoreLink}>
+              <p className="mt-4 text-brand-secondary font-[530] leading-6">
+                Learn more
+                <Image
+                  sizes="100vw"
+                  src={"/assets/icons/home/arrow-right.svg"}
+                  width={0}
+                  height={0}
+                  className="w-4 h-4 ml-2 inline"
+                ></Image>
+              </p>
+            </Link>
+          ) : null}
         </div>
         <Image
           src={imageSrc}

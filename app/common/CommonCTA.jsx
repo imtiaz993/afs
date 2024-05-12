@@ -3,6 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 
+function findIndexOfText(textArray, text) {
+  const mapOfIndexWithText = new Map();
+
+  textArray.forEach((item) => {
+    const idx = text.indexOf(item);
+    if (idx >= 0) mapOfIndexWithText.set(idx, item);
+  });
+
+  return mapOfIndexWithText;
+}
+
+function createSpanElement(text, color) {
+  const spanElement = React.createElement(
+    "span",
+    { className: `${color}` },
+    text + " "
+  );
+
+  return spanElement;
+}
+
 const CommonCTA = ({
   primaryContent,
   primaryContentTextTarget,
@@ -13,60 +34,63 @@ const CommonCTA = ({
   secondaryButtonLink = "",
   bgColor = "cta-home-gradient",
   rounded,
+  lessPaddingVariant,
 }) => {
   const locale = useLocale();
   const isArabic = locale === "ar";
 
   let primaryContentNode = primaryContent;
   if (primaryContentTextTarget) {
-    const targetWordIndex = primaryContent
-      .split(" ")
-      .findIndex((word) => word == primaryContentTextTarget.text);
-
-    let prefixString = "",
-      postfixString = "";
-
-    primaryContent.split(" ").forEach((word, idx) => {
-      if (idx < targetWordIndex) prefixString += word + " ";
-      else if (idx > targetWordIndex) postfixString += word + " ";
-    });
-
-    const spanElement = React.createElement(
-      "span",
-      { className: `${primaryContentTextTarget.color}` },
-      primaryContentTextTarget.text + " "
+    const mapOfIndexWithText = findIndexOfText(
+      primaryContentTextTarget.text,
+      primaryContent
     );
 
-    primaryContentNode = React.createElement(
-      "h2",
-      null,
-      prefixString,
-      spanElement,
-      postfixString
-    );
+    const primaryContentNodeData = ["h2", null];
+    let generatedText = "";
+    for (let i = 0; i < primaryContent.length; i++) {
+      if (mapOfIndexWithText.has(i)) {
+        if (generatedText.length > 0) {
+          primaryContentNodeData.push(generatedText);
+          generatedText = "";
+        }
+
+        const text = mapOfIndexWithText.get(i);
+        const spanElement = createSpanElement(
+          text,
+          primaryContentTextTarget.color
+        );
+        primaryContentNodeData.push(spanElement);
+        i += text.length - 1;
+      } else generatedText += primaryContent[i];
+    }
+
+    if (generatedText.length > 0) primaryContentNodeData.push(generatedText);
+
+    primaryContentNode = React.createElement(...primaryContentNodeData);
   }
 
   return (
     <div className={`${bgColor} relative ${rounded ? "rounded-sm" : ""}`}>
       <div
         className={`w-full py-10 px-10 relative z-10 items-center ${
-          primaryContentTextTarget
-            ? "lg:max-w-[700px] lg:py-24 lg:pl-16"
-            : "lg:max-w-[600px] lg:py-14 lg:pl-10"
+          lessPaddingVariant
+            ? "lg:max-w-[600px] lg:py-14 lg:pl-10"
+            : "lg:max-w-[700px] lg:py-24 lg:pl-16"
         } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
       >
         <div
           className={`text-2xl text-center  text-primary leading-[120%] ${
-            primaryContentTextTarget ? "md:text-5xl" : "md:text-[32px]"
+            lessPaddingVariant ? "md:text-[32px]" : "md:text-5xl"
           } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
         >
           {primaryContentNode}
         </div>
         <h4
           className={`text-center text-base mt-4 ${
-            primaryContentTextTarget
-              ? "md:text-2xl text-brand-primary mb-10"
-              : "text-primary lg:max-w-[438px]"
+            lessPaddingVariant
+            ? "text-primary lg:max-w-[438px]"
+            : "md:text-2xl text-brand-primary mb-10"
           } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
         >
           {secondaryContent}
@@ -74,10 +98,8 @@ const CommonCTA = ({
         <div className={`flex ${isArabic ? "justify-end" : "justify-start"}`}>
           <Link href={primaryButtonLink}>
             <button
-              className={`transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm w-full lg:w-auto ${
-                primaryContentTextTarget
-                  ? "py-[15px] px-8"
-                  : "py-[11px] px-8 mt-10"
+              className={`transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm w-full lg:w-auto px-8 ${
+                lessPaddingVariant ? "py-[11px] mt-10" : "py-[15px] "
               }`}
             >
               {primaryButtonLabel}

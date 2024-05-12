@@ -28,7 +28,7 @@ const Home = () => {
         <CommonCTA
           primaryContent={t("title")}
           primaryContentTextTarget={{
-            text: t("highlighted"),
+            text: [t("highlighted")],
             color: "text-brand-secondary",
           }}
           secondaryContent={t("description")}
