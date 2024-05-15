@@ -80,11 +80,13 @@
   display: inline-block; /* Necessary for background clip to work */
 }
 
-.home-reviews-swiper .swiper-pagination-bullet {
+.home-reviews-swiper .swiper-pagination-bullet,
+.solutions-swiper .swiper-pagination-bullet {
   background-color: #fff;
   opacity: 0.2;
 }
-.home-reviews-swiper .swiper-pagination-bullet-active {
+.home-reviews-swiper .swiper-pagination-bullet-active,
+.solutions-swiper .swiper-pagination-bullet-active {
   background-color: #fff;
   opacity: 1;
 }

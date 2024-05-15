@@ -271,7 +271,7 @@ const Solutions = () => {
                   isArabic ? "text-right" : ""
                 }`}
               >
-                {solutionsLinks["solutions for banks.title"]}
+                {solutionsLinks["solutions for banks"].title}
               </p>
               {solutionsLinks["solutions for banks"].links.map(
                 (item, index) => (

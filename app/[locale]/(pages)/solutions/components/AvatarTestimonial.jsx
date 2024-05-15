@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
 
-const Testimonial2 = () => {
+const AvatarTestimonial = () => {
   return (
     <div className="mt-6 sm:max-h-[348px] p-6 md:p-10 bg-dark-neutral flex justify-between">
       <div className="flex flex-col justify-between xl:w-[600px] mr-5">
@@ -32,4 +31,4 @@ const Testimonial2 = () => {
   );
 };
 
-export default Testimonial2;
+export default AvatarTestimonial;

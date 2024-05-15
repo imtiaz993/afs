@@ -5,10 +5,16 @@
       "solutions for banks": {
         "title": "Solutions for banks",
         "links": [
-          { "title": "Card issuing & processing", "link": "/" },
+          {
+            "title": "Card issuing & processing",
+            "link": "/solutions/banks/card-issuing-processing"
+          },
           { "title": "Digital banking", "link": "/" },
           { "title": "Open banking", "link": "/" },
-          { "title": "Fraud & Risk management", "link": "/" },
+          {
+            "title": "Fraud & Risk management",
+            "link": "/solutions/banks/fraud-risk-management"
+          },
           { "title": "Value added services", "link": "/" }
         ]
       },

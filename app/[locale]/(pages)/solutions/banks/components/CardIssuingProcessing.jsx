@@ -32,13 +32,13 @@ const CardIssuingProcessing = () => {
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="py-10 lg:py-24 md:flex items-start">
         <div className="w-[192px] mt-12 md:mt-0 mr-8 md:sticky top-[110px] mb-6">
-          <p className="mb-2 text-secondary flex items-center cursor-pointer">
+          <p className="mb-2 text-secondary flex items-start cursor-pointer">
             <Image
               sizes="100vw"
               width={10}
               height={10}
               src={"/assets/icons/home/diamond.svg"}
-              className="mr-2"
+              className="mr-2 pt-[6px]"
               alt=""
             />{" "}
             Card issuing & processing
@@ -50,6 +50,7 @@ const CardIssuingProcessing = () => {
               "Revolutionize your bank card operations by enhancing efficiency and streamlining processes with a comprehensive solution that simplifies card issuance and processing."
             }
             primaryButtonLabel={"Learn more"}
+            primaryButtonLink={"/solutions/banks/card-issuing-processing"}
             secondaryButtonLabel={"Contact our team"}
             secondaryButtonLink={"/contact"}
           />
@@ -77,6 +78,7 @@ const CardIssuingProcessing = () => {
             primaryButtonLabel={"Contact our team"}
             primaryButtonLink={"/contact"}
             secondaryButtonLabel={"Learn more"}
+            secondaryButtonLink={"/solutions/banks/card-issuing-processing"}
             bgColor={"bg-white"}
             rounded={true}
             lessPaddingVariant={true}

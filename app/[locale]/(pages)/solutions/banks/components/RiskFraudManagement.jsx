@@ -33,13 +33,13 @@ const RiskFraudManagement = () => {
     <PageLayout>
       <div className="py-10 lg:py-24 md:flex items-start">
         <div className="w-[192px] mt-12 md:mt-0 mr-8 md:sticky top-[110px] mb-6">
-          <p className="mb-2 text-secondary flex items-center cursor-pointer">
+          <p className="mb-2 text-secondary flex items-start cursor-pointer">
             <Image
               sizes="100vw"
               width={10}
               height={10}
               src={"/assets/icons/home/diamond.svg"}
-              className="mr-2"
+              className="mr-2 pt-[6px]"
               alt=""
             />{" "}
             Risk and fraund management
@@ -51,6 +51,7 @@ const RiskFraudManagement = () => {
               "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats."
             }
             primaryButtonLabel={"Learn more"}
+            primaryButtonLink={"/solutions/banks/fraud-risk-management"}
             secondaryButtonLabel={"Contact our team"}
             secondaryButtonLink={"/contact"}
           />
@@ -63,7 +64,6 @@ const RiskFraudManagement = () => {
                 backgroundColor={"bg-subtle-neutral"}
                 imageSrc={"/assets/images/solutions/productIllustration.png"}
                 key={data.title}
-                
               />
             ))}
           </div>
@@ -81,6 +81,7 @@ const RiskFraudManagement = () => {
             primaryButtonLabel={"Contact our team"}
             primaryButtonLink={"/contact"}
             secondaryButtonLabel={"Learn more"}
+            secondaryButtonLink={"/solutions/banks/fraud-risk-management"}
             bgColor={"bg-subtle-neutral"}
             rounded={true}
             lessPaddingVariant={true}

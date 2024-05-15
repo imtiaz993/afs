@@ -1,46 +1,65 @@
 import React from "react";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
+import SingleNav from "./SingleNav";
+import CommonCTA from "./CommonCTA";
 
-const Features = () => {
+const Features = ({ data, commonCTAData }) => {
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="py-10 lg:py-24 md:flex items-start">
-        <div className="w-[192px] mt-12 md:mt-0 mr-8 md:sticky top-[110px] mb-6">
-          <p className="mb-2 text-secondary flex items-center cursor-pointer">
-            <Image
-              sizes="100vw"
-              width={10}
-              height={10}
-              src={"/assets/icons/home/diamond.svg"}
-              className="mr-2"
-              alt=""
-            />{" "}
-            Features
-          </p>
-        </div>
+        <SingleNav title={"Features"} />
         <div className="md:w-[calc(100%-192px)]">
-          <div className="flex gap-8">
-            <Image
-              sizes="100vw"
-              width={600}
-              height={450}
-              src="/assets/images/solutions/imageBgWhite.png"
-              className="h-full w-full"
-              alt=""
-            />{" "}
-            <div className="ml-8 min-w-[416px]">
-              <h3 className="text-[40px] leading-[48px] text-primary mb-4">
-                Credit and debit cards
-              </h3>
-              <p className="text-lg text-primary">
-                Tailored to promote financial freedom and ease of use, our cards
-                are designed to integrate seamlessly with your bank's existing
-                services, offering a reliable and secure way to access funds,
-                make purchases, and manage finances efficiently.
-              </p>
+          {data.map((item) => (
+            <div className="flex flex-col lg:flex-row gap-8 mb-24">
+              <div
+                className="lg:w-[608px] h-[450px] bg-white"
+                style={{
+                  backgroundImage: "",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+              <div className="lg:ml-8 lg:w-[416px]">
+                <h3 className="text-[40px] leading-[48px] text-primary mb-4">
+                  {item.title}
+                </h3>
+                <p
+                  className={`text-lg ${
+                    item.descriptionCritical
+                      ? "text-critical-primary"
+                      : "text-primary"
+                  }`}
+                >
+                  {item.description}
+                </p>
+                {item.secondaryDescription ? (
+                  <>
+                    <div className="mt-7">
+                      <p
+                        className={`text-lg ${
+                          item.descriptionCritical
+                            ? "text-critical-primary"
+                            : "text-primary"
+                        }`}
+                      >
+                        {item.secondaryDescription}
+                      </p>
+                    </div>
+                  </>
+                ) : null}
+              </div>
             </div>
-          </div>
+          ))}
+          <CommonCTA
+            lessPaddingVariant={true}
+            rounded={true}
+            bgColor={commonCTAData?.bgColor}
+            primaryContent={commonCTAData?.primaryContent}
+            secondaryContent={commonCTAData?.secondaryContent}
+            primaryButtonLabel={commonCTAData?.primaryButtonLabel}
+            primaryButtonLink={commonCTAData?.primaryButtonLink}
+          />
         </div>
       </div>
     </PageLayout>

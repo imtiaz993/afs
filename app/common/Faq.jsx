@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
 import FaqAccordion from "./FaqAccordion";
+import SingleNav from "./SingleNav";
 
 const Faq = () => {
   const [activeAccordion, setActiveAccordion] = useState();
@@ -53,18 +54,8 @@ const Faq = () => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24 md:flex items-start">
-        <p className="mb-4 text-secondary flex items-center md:w-1/5 ">
-          <Image
-            sizes="100vw"
-            width={10}
-            height={10}
-            src="/assets/icons/home/diamond.svg"
-            className="mr-2"
-            alt=""
-          />{" "}
-          FAQ
-        </p>
-        <div className="md:w-4/5">
+        <SingleNav title={"FAQ"} />
+        <div className="md:w-[calc(100%-192px)]">
           <h2 className="text-primary text-2xl md:text-5xl mb-8 md:mb-10 max-w-[526px] leading-[120%]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

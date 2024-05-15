@@ -1,24 +1,12 @@
-import React from "react";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
+import SingleNav from "./SingleNav";
 
 const Benefits = ({ data }) => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24 md:flex items-start">
-        <div className="w-[192px] mt-12 md:mt-0 mr-8 md:sticky top-[110px] mb-6">
-          <p className="mb-2 text-secondary flex items-center cursor-pointer">
-            <Image
-              sizes="100vw"
-              width={10}
-              height={10}
-              src={"/assets/icons/home/diamond.svg"}
-              className="mr-2"
-              alt=""
-            />{" "}
-            Benefits
-          </p>
-        </div>
+        <SingleNav title={"Benefits"} />
         <div className="md:w-[calc(100%-192px)]">
           <h3 className="text-[40px] leading-[120%] text-primary mb-16">
             Our all-encompassing solution transforms the way banks issue and

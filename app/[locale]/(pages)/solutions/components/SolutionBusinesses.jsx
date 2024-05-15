@@ -1,7 +1,6 @@
-import React from "react";
+import Image from "next/image";
 import tailwindConfig from "tailwind.config";
 import PageLayout from "app/common/PageLayout";
-import PageNav from "./PageNav";
 import FeatureHighlightCard from "app/common/FeatureHighlightCard";
 import BgImageTestimonial from "./BgImageTestimonial";
 import PartnersSlider from "app/common/PartnersSlider";
@@ -48,12 +47,19 @@ const SolutionBusinesses = () => {
   ];
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
-      <div
-        className="py-10 lg:py-24 md:flex items-start"
-        id="solution-for-businesses"
-      >
-        <PageNav selected={"businesses"} />
-        <div className="md:w-[calc(100%-192px)]">
+      <div className="py-10 md:py-24" id="solution-for-businesses">
+        <div className="md:ml-56">
+          <p className="md:hidden mt-12 mb-6 text-secondary flex items-start">
+            <Image
+              sizes="100vw"
+              width={10}
+              height={10}
+              src={"/assets/icons/home/diamond.svg"}
+              className="mr-2 mt-[6px]"
+              alt=""
+            />{" "}
+            Solutions for businesses
+          </p>
           <FeatureHighlightCard
             message={
               "Experience the power of seamless transactions with our comprehensive suite of digital payment solutions, from robust card processing services to merchant acquiring we equip your business with the tools to thrive in the digital age."

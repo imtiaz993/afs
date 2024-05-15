@@ -89,13 +89,17 @@ const CommonCTA = ({
         <h4
           className={`text-center text-base mt-4 ${
             lessPaddingVariant
-            ? "text-primary lg:max-w-[438px]"
-            : "md:text-2xl text-brand-primary mb-10"
+              ? "text-primary lg:max-w-[438px]"
+              : "md:text-2xl text-brand-primary mb-10"
           } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
         >
           {secondaryContent}
         </h4>
-        <div className={`flex ${isArabic ? "justify-end" : "justify-start"}`}>
+        <div
+          className={`block md:flex ${
+            isArabic ? "justify-end" : "justify-start"
+          }`}
+        >
           <Link href={primaryButtonLink}>
             <button
               className={`transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm w-full lg:w-auto px-8 ${
@@ -108,7 +112,7 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`lg:ml-4 transition-colors duration-500 text-center text-brand-secondary  hover:text-white border border-brand-secondary hover:bg-brand-secondary py-3 px-8 font-medium rounded-sm mt-5 w-full lg:w-auto ${bgColor}`}
+                className={`md:ml-4 transition-colors duration-500 text-center text-brand-secondary  hover:text-white border border-brand-secondary hover:bg-brand-secondary py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-10 w-full lg:w-auto ${bgColor}`}
               >
                 {secondaryButtonLabel}
               </button>

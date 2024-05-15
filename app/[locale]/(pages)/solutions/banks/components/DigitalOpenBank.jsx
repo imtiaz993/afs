@@ -25,13 +25,13 @@ const DigitalOpenBank = () => {
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="py-10 lg:py-24 md:flex items-start">
         <div className="w-[192px] mt-12 md:mt-0 mr-8 md:sticky top-[110px] mb-6">
-          <p className="mb-2 text-secondary flex items-center cursor-pointer">
+          <p className="mb-2 text-secondary flex items-start cursor-pointer">
             <Image
               sizes="100vw"
               width={10}
               height={10}
               src={"/assets/icons/home/diamond.svg"}
-              className="mr-2"
+              className="mr-2 pt-[6px]"
               alt=""
             />{" "}
             Digital & Open banking

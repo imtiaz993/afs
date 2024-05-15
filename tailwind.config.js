@@ -17,10 +17,11 @@ module.exports = {
         "brand-secondary": "#036FD0",
         "brand-tertiary": "#00AEEF",
         "brand-surface": "#E6F1FA",
+        "critical-primary": "#B3093C",
+        "dark-neutral": "#002A52",
+        "medium-brand": "#036FD0",
         "subtle-neutral": "#F2F6FA",
         "surface-neutral": "#D4DFE9",
-        "dark-neutral": "#002A52",
-        "critical-primary": "#B3093C",
       },
       borderColor: {
         default: "#D4DFE9",
