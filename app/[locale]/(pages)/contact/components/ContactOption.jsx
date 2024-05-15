@@ -8,11 +8,11 @@ const ContactOption = () => {
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="mx-auto py-10 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="rounded banks-home-gradient">
+          <div className="rounded banks-home-gradient overflow-hidden">
             <div
-              className="py-10 px-8"
+              className="py-10 px-8 h-full"
               style={{
-                background: `url('/assets/images/contact/cardbg.png') no-repeat top right`,
+                background: `url('/assets/images/contact/cardbg.png') no-repeat right`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}

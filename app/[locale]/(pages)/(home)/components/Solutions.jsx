@@ -44,7 +44,7 @@ const Solutions = () => {
           <div>
             <div className="banks-home-gradient rounded">
               <div
-                className="p-6 md:p-10 rounded"
+                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded"
                 style={{
                   background: `url('/assets/images/home/forBanks.png') no-repeat top center`,
                   backgroundRepeat: "no-repeat",
@@ -60,7 +60,9 @@ const Solutions = () => {
                 </h3>
                 <p
                   className={` text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80 ${
-                    isArabic ? "ml-auto text-right" : ""
+                    isArabic
+                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
+                      : ""
                   }`}
                 >
                   {t("banks.description")}
@@ -77,7 +79,11 @@ const Solutions = () => {
                   >
                     {t("banks.button")}
                   </button>
-                  <ul className="flex flex-wrap mt-4">
+                  <ul
+                    className={`flex flex-wrap mt-4 ${
+                      isArabic ? "lg:flex-nowrap w-[420px] justify-end" : ""
+                    }`}
+                  >
                     <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                       <Image
                         sizes="100vw"
@@ -123,7 +129,7 @@ const Solutions = () => {
             </div>
             <div className="all-solution-home-gradient mt-4 rounded overflow-hidden">
               <div
-                className="p-6 md:px-10 py-12 rounded"
+                className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded"
                 style={{
                   background: `url('/assets/images/home/allSolutions.png') no-repeat top center`,
                   backgroundRepeat: "no-repeat",
@@ -139,7 +145,9 @@ const Solutions = () => {
                 </h3>
                 <p
                   className={`text-base md:text-lg text-primary mb-8 max-w-[425px] opacity-80 ${
-                    isArabic ? "ml-auto text-right" : ""
+                    isArabic
+                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
+                      : ""
                   }`}
                 >
                   {t("solutions.description")}
@@ -154,7 +162,7 @@ const Solutions = () => {
           </div>
           <div>
             <div className="bg-[#7A7A7A] rounded relative">
-              <div className="p-6 md:px-10 py-12 rounded relative z-10">
+              <div className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded relative z-10">
                 <h3
                   className={`text-2xl md:text-[40px] text-white mb-5 ${
                     isArabic ? "text-right" : ""
@@ -164,7 +172,9 @@ const Solutions = () => {
                 </h3>
                 <p
                   className={`text-base md:text-lg text-white mb-8 max-w-[420px] opacity-80 ${
-                    isArabic ? "ml-auto text-right" : ""
+                    isArabic
+                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
+                      : ""
                   }`}
                 >
                   {t("consumers.description")}
@@ -193,7 +203,7 @@ const Solutions = () => {
             </div>
             <div className="bg-black mt-4 rounded">
               <div
-                className="p-6 md:p-10 rounded"
+                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded"
                 style={{
                   background: `url('/assets/images/home/forBusiness.png') no-repeat top center`,
                   backgroundRepeat: "no-repeat",
@@ -209,7 +219,9 @@ const Solutions = () => {
                 </h3>
                 <p
                   className={` text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80 ${
-                    isArabic ? "ml-auto text-right" : ""
+                    isArabic
+                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
+                      : ""
                   }`}
                 >
                   {t("businesses.description")}
@@ -226,7 +238,11 @@ const Solutions = () => {
                   >
                     {t("businesses.button")}
                   </button>
-                  <ul className="flex flex-wrap mt-4">
+                  <ul
+                    className={`flex flex-wrap mt-4 ${
+                      isArabic ? "w-[428px] justify-end" : ""
+                    }`}
+                  >
                     <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                       <Image
                         sizes="100vw"
