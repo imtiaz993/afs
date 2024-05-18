@@ -35,6 +35,7 @@ const CommonCTA = ({
   bgColor = "cta-home-gradient",
   rounded,
   lessPaddingVariant,
+  gridVariant,
 }) => {
   const locale = useLocale();
   const isArabic = locale === "ar";
@@ -71,27 +72,33 @@ const CommonCTA = ({
   }
 
   return (
-    <div className={`${bgColor} relative ${rounded ? "rounded-sm" : ""}`}>
+    <div
+      className={`${bgColor} relative ${
+        rounded ? "rounded-sm" : ""
+      } h-[537px] md:h-full`}
+    >
       <div
-        className={`w-full py-10 px-10 relative z-10 items-center ${
+        className={`w-full py-12 md:py-[56px] px-4 md:px-10 relative z-10 items-center ${
           lessPaddingVariant
             ? "lg:max-w-[600px] lg:py-14 lg:pl-10"
-            : "lg:max-w-[700px] lg:py-24 lg:pl-16"
+            : "lg:max-w-[872px] lg:py-24 lg:pl-16"
         } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
       >
         <div
-          className={`text-2xl text-center  text-primary leading-[120%] ${
-            lessPaddingVariant ? "md:text-[32px]" : "md:text-5xl"
-          } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
+          className={`text-2xl  text-primary  ${
+            lessPaddingVariant
+              ? "md:text-[32px] leading-[120%]"
+              : "md:text-[48px] leading-[57.6px] lg:max-w-[596px]"
+          } ${isArabic ? "lg:text-right" : "text-left"}`}
         >
           {primaryContentNode}
         </div>
         <h4
-          className={`text-center text-base mt-4 ${
+          className={`text-base mt-4 ${
             lessPaddingVariant
               ? "text-primary lg:max-w-[438px]"
-              : "md:text-2xl text-brand-primary mb-10"
-          } ${isArabic ? "lg:text-right" : "lg:text-left"}`}
+              : "md:text-2xl text-brand-primary mb-10 lg:max-w-[768px]"
+          } ${isArabic ? "lg:text-right" : "text-left"}`}
         >
           {secondaryContent}
         </h4>
@@ -122,14 +129,22 @@ const CommonCTA = ({
           )}
         </div>
       </div>
-      <Image
-        sizes="100vw"
-        width={0}
-        height={0}
-        className="hidden lg:block w-1/2 absolute top-0 right-0 bottom-0 h-full"
-        src="/assets/images/home/CTA.png"
-        alt=""
-      />
+      <div
+        className={`md:hidden lg:block absolute -left-[60px] bottom-0 right-0 ${
+          gridVariant
+            ? "lg:-left-[50px] xl:-left-[90px] lg:top-[210px]"
+            : "lg:w-1/2  md:left-auto top-auto md:top-0"
+        }`}
+      >
+        <Image
+          sizes="100vw"
+          width={0}
+          height={0}
+          className="h-full w-full"
+          src="/assets/images/home/CTA.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 };

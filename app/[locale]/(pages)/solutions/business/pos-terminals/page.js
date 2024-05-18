@@ -8,59 +8,57 @@ import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
-const FraudRiskManagement = () => {
+const POSTerminals = () => {
   const benefitsData = [
     {
-      title: "Enhanced security",
+      title: "Increased transaction speed",
       description:
-        "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+        "Improved customer satisfaction and increased sales opportunities.",
     },
     {
-      title: "Improved trust",
+      title: "Advanced security",
       description:
-        "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+        "Protect your business against data breaches and fraud with state-of-the-art encryption and security protocols.",
     },
     {
-      title: "Operational efficiency",
+      title: "Versatile payment options",
       description:
-        "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
+        "From traditional cards to contactless and mobile payments, accommodates all customer preferences.",
     },
     {
-      title: "Strategic risk insights",
+      title: "Detailed sales analytics",
       description:
-        "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+        "Gain valuable insights into your sales trends and customer preferences with built-in analytics features.",
     },
   ];
 
   const featuresData = [
     {
-      title: "On-hehalf fraud management",
+      title: "Smart integrated POS terminals",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+        "everage the flexibility and efficiency of Android with our smart, integrated POS terminals. These devices offer intuitive operation, extensive app compatibility, and easy customization to fit your unique business needs.",
     },
     {
-      title: "Authentication services",
+      title: "Accept all major card schemes",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: true,
+        "Ensure you never miss a sale by accepting all major credit and debit cards. Our terminals are designed to support a wide range of card schemes, catering to a diverse customer base.",
     },
     {
-      title: "24/7 risk monitoring",
+      title: "Secure payment experience",
       description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
-      secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
+        "Combine speed with security in your payment process. Our terminals provide quick transaction times without compromising on data protection, offering a seamless checkout experience for customers.",
+    },
+    {
+      title: "Loan on POS",
+      description:
+        "This service simplifies the borrowing process, integrating credit options seamlessly into the transaction flow, which can boost sales and improve customer satisfaction by providing instant access to credit at critical buying moments.",
+    },
+    {
+      title: "Dynamic currency conversion",
+      description:
+        "Enhance the shopping experience for international customers by offering the convenience of paying in their home currency. This feature not only simplifies transactions but also provides transparency in currency exchange rates.",
     },
   ];
-
-  const featuresCommonCTAData = {
-    primaryContent: "Interested in our fraud and risk management solutions?",
-    secondaryContent:
-      "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
-    primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
-    bgColor: "bg-surface-neutral",
-  };
 
   const accordionOptions = [
     {
@@ -69,7 +67,7 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title: "Lorem Ipsum is simply text printing and typesetting industry?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
@@ -103,15 +101,15 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
   ];
-
+  
   return (
     <>
       <Navbar />
       <CommonHero
-        title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        title={"POS Terminals"}
+        subtext={"Next-generation POS terminals for your business"}
         description={
-          "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
+          "Elevate your retail experience with our advanced POS terminals. Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics."
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
@@ -119,16 +117,26 @@ const FraudRiskManagement = () => {
       />
       <Benefits
         description={
-          "Unlock comprehensive protection and insights with our risk and fraud management solution, designed to secure transactions, enhance trust, and streamline your operations."
+          "Using our next-generation POS terminals brings a transformative advantage to your business, streamlining operations and enhancing customer interactions."
         }
         data={benefitsData}
       />
-      <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
+      <Features
+        data={featuresData}
+        commonCTAData={{
+          bgColor: "bg-surface-neutral",
+          primaryContent: "Interested in our next-gen POS terminals?",
+          secondaryContent:
+            "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+          primaryButtonLabel: "Contact our team",
+          primaryButtonLink: "/contact",
+        }}
+      />
       <UsedTrustedBy />
-      <TestimonialSllider />
+      <TestimonialSllider bgColor={"bg-white"} />
       <Faq
         title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
         }
         accordionOptions={accordionOptions}
       />
@@ -148,4 +156,4 @@ const FraudRiskManagement = () => {
   );
 };
 
-export default FraudRiskManagement;
+export default POSTerminals;

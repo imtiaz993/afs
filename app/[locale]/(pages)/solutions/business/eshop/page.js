@@ -8,59 +8,60 @@ import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
-const FraudRiskManagement = () => {
+const eShop = () => {
   const benefitsData = [
     {
-      title: "Enhanced security",
+      title: "Wider customer reach",
       description:
-        "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+        "Expand your market by connecting with customers globally. eShop helps you tap into new demographics and increase your sales footprint.",
     },
     {
-      title: "Improved trust",
+      title: "Secure and efficient transactions",
       description:
-        "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+        "With pre-integration of the AFS payment gateway, your transactions are secure, reliable, and quick, ensuring customer trust and satisfaction.",
     },
     {
-      title: "Operational efficiency",
+      title: "Tailored online store",
       description:
-        "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
+        "Customize your eCommerce site to reflect your brand and cater to specific business requirements, enhancing the shopping experience for your customers.",
     },
     {
-      title: "Strategic risk insights",
+      title: "Streamlined operations",
       description:
-        "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+        "From billing to customer management, eShop simplifies your daily operations so you can focus on growth and customer engagement.",
     },
   ];
 
   const featuresData = [
     {
-      title: "On-hehalf fraud management",
+      title: "eInvoicing",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
-    },
-    {
-      title: "Authentication services",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: true,
-    },
-    {
-      title: "24/7 risk monitoring",
-      description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
+        "Streamline your billing process with our advanced eInvoicing system. This feature not only automates invoice generation but also facilitates faster payment processing, helping you manage cash flow more efficiently. ",
       secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
+        "Tailor invoice templates to your brand, send automatic payment reminders to customers, and reduce administrative overhead by keeping all your billing digital and centralized.",
+    },
+    {
+      title: "Reporting dashboard",
+      description:
+        "Gain actionable insights with our comprehensive reporting dashboards. Track key performance indicators (KPIs) such as sales growth, customer retention rates, and product popularity.",
+      secondaryDescription:
+        "Use these insights to adjust your sales strategies, optimize your marketing campaigns, and improve overall business performance.",
+    },
+    {
+      title: "Recurring billing",
+      description:
+        "Ideal for businesses that offer subscription-based services, our recurring billing feature automates the billing cycle, ensuring consistent revenue and improving customer retention. ",
+      secondaryDescription:
+        "This tool is designed to handle all aspects of subscription management, including upgrades, downgrades, pauses, and cancellations, providing a flexible and user-friendly experience for both you and your customers.",
+    },
+    {
+      title: "Payment versatility",
+      description:
+        "Our platform supports a diverse range of payment methods to ensure you never miss a sale. Accept payments via credit cards, digital wallets, bank transfers, and more.",
+      secondaryDescription:
+        "This versatility not only enhances customer convenience but also ensures you can cater to local and international markets with ease.",
     },
   ];
-
-  const featuresCommonCTAData = {
-    primaryContent: "Interested in our fraud and risk management solutions?",
-    secondaryContent:
-      "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
-    primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
-    bgColor: "bg-surface-neutral",
-  };
 
   const accordionOptions = [
     {
@@ -69,7 +70,7 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title: "Lorem Ipsum is simply text printing and typesetting industry?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
@@ -108,10 +109,10 @@ const FraudRiskManagement = () => {
     <>
       <Navbar />
       <CommonHero
-        title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        title={"eShop"}
+        subtext={"Your complete online sales platform"}
         description={
-          "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
+          "Sell online effortlessly with eShop, your complete eCommerce solution integrated with the AFS payment gateway."
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
@@ -119,16 +120,26 @@ const FraudRiskManagement = () => {
       />
       <Benefits
         description={
-          "Unlock comprehensive protection and insights with our risk and fraud management solution, designed to secure transactions, enhance trust, and streamline your operations."
+          "eShop provides powerful tools designed to enhance your online business presence and operational efficiency. Experience the advantages of a platform that grows with your needs."
         }
         data={benefitsData}
       />
-      <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
+      <Features
+        data={featuresData}
+        commonCTAData={{
+          bgColor: "bg-surface-neutral",
+          primaryContent: "Interested in our eShop solution?",
+          secondaryContent:
+            "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+          primaryButtonLabel: "Contact our team",
+          primaryButtonLink: "/contact",
+        }}
+      />
       <UsedTrustedBy />
-      <TestimonialSllider />
+      <TestimonialSllider bgColor={"bg-white"} />
       <Faq
         title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
         }
         accordionOptions={accordionOptions}
       />
@@ -148,4 +159,4 @@ const FraudRiskManagement = () => {
   );
 };
 
-export default FraudRiskManagement;
+export default eShop;

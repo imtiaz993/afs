@@ -4,7 +4,7 @@ import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
 import UsedTrustedBy from "app/common/UsedTrustedBy";
-import TestimonialSllider from "app/common/TestimonialSllider";
+import TestimonialSlider from "app/common/TestimonialSlider";
 import Faq from "app/common/Faq";
 import CommonCTA from "app/common/CommonCTA";
 import PageLayout from "app/common/PageLayout";
@@ -61,6 +61,48 @@ const CardIssuingProcessing = () => {
     },
   ];
 
+  const accordionOptions = [
+    {
+      title:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum is simply text printing and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title:
+        "Will I receive feedback on my application and what form will it take?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "Lorem Ipsum and typesetting industry?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+  ];
+
   const featuresCommonCTAData = {
     primaryContent: "Interested in our card and processing solutions?",
     secondaryContent:
@@ -90,8 +132,13 @@ const CardIssuingProcessing = () => {
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
       <UsedTrustedBy />
-      <TestimonialSllider />
-      <Faq />
+      <TestimonialSlider />
+      <Faq
+        title={
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+        accordionOptions={accordionOptions}
+      />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

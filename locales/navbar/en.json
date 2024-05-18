@@ -10,21 +10,30 @@
             "link": "/solutions/banks/card-issuing-processing"
           },
           { "title": "Digital banking", "link": "/" },
-          { "title": "Open banking", "link": "/" },
+          { "title": "Open banking", "link": "/solutions/banks/open-banking" },
           {
             "title": "Fraud & Risk management",
             "link": "/solutions/banks/fraud-risk-management"
           },
-          { "title": "Value added services", "link": "/" }
+          {
+            "title": "Value added services",
+            "link": "/solutions/banks/value-added-services"
+          }
         ]
       },
       "solutions for businesses": {
         "title": "Solutions for businesses",
         "links": [
-          { "title": "Payment gateway", "link": "/" },
-          { "title": "POS terminals", "link": "/" },
-          { "title": "SoftPOS", "link": "/" },
-          { "title": "eShop", "link": "/" },
+          {
+            "title": "Payment gateway",
+            "link": "/solutions/business/payment-gateway"
+          },
+          {
+            "title": "POS terminals",
+            "link": "/solutions/business/pos-terminals"
+          },
+          { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+          { "title": "eShop", "link": "/solutions/business/eshop" },
           { "title": "Merchant portal", "link": "/" },
           { "title": "Hospitality", "link": "/" },
           { "title": "Food and beverage (F&B)", "link": "/" },
@@ -32,7 +41,7 @@
         ]
       },
       "solutions for consumer": {
-        "title": "Solutions for businesses",
+        "title": "Solutions for consumers",
         "links": [{ "title": "BPay wallet", "link": "/" }]
       }
     },
@@ -41,7 +50,7 @@
       "links": [
         { "title": "About us", "link": "/about" },
         { "title": "Our partners", "link": "/partners" },
-        { "title": "Investor relations", "link": "//investor-relations" },
+        { "title": "Investor relations", "link": "/investor-relations" },
         { "title": "Careers", "link": "/careers" },
         { "title": "Contact", "link": "/contact" }
       ]

@@ -3,20 +3,35 @@
     "solutions for banks": {
       "title": "Solutions for banks",
       "links": [
-        { "title": "Card issuing & processing", "link": "/" },
+        {
+          "title": "Card issuing & processing",
+          "link": "/solutions/banks/card-issuing-processing"
+        },
         { "title": "Digital banking", "link": "/" },
-        { "title": "Open banking", "link": "/" },
-        { "title": "Fraud & Risk management", "link": "/" },
-        { "title": "Value added services", "link": "/" }
+        { "title": "Open banking", "link": "/solutions/banks/open-banking" },
+        {
+          "title": "Fraud & Risk management",
+          "link": "/solutions/banks/fraud-risk-management"
+        },
+        {
+          "title": "Value added services",
+          "link": "/solutions/banks/value-added-services"
+        }
       ]
     },
     "solutions for businesses": {
       "title": "Solutions for businesses",
       "links": [
-        { "title": "Payment gateway", "link": "/" },
-        { "title": "POS terminals", "link": "/" },
-        { "title": "SoftPOS", "link": "/" },
-        { "title": "eShop", "link": "/" },
+        {
+          "title": "Payment gateway",
+          "link": "/solutions/business/payment-gateway"
+        },
+        {
+          "title": "POS terminals",
+          "link": "/solutions/business/pos-terminals"
+        },
+        { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+        { "title": "eShop", "link": "/solutions/business/eshop" },
         { "title": "Merchant portal", "link": "/" },
         { "title": "Hospitality", "link": "/" },
         { "title": "Food and beverage (F&B)", "link": "/" },
@@ -30,12 +45,12 @@
     "company": {
       "title": "Company",
       "links": [
-        { "title": "About us", "link": "/" },
-        { "title": "Our partners", "link": "/" },
+        { "title": "About us", "link": "/about" },
+        { "title": "Our partners", "link": "/partners" },
         { "title": "Open banking", "link": "/" },
-        { "title": "Investor relations", "link": "/" },
-        { "title": "Careers", "link": "/" },
-        { "title": "Contact", "link": "/" }
+        { "title": "Investor relations", "link": "/investor-relations" },
+        { "title": "Careers", "link": "/careers" },
+        { "title": "Contact", "link": "/contact" }
       ]
     },
     "resources": {
@@ -44,7 +59,7 @@
         { "title": "News & Announcements", "link": "/" },
         { "title": "Become a vendor", "link": "/" },
         { "title": "ESG", "link": "/" },
-        { "title": "Certifications", "link": "/" }
+        { "title": "Certifications", "link": "/certifications" }
       ]
     },
     "join network": {

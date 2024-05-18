@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import PageLayout from "./PageLayout";
 import SingleNav from "./SingleNav";
 
-const TestimonialSllider = () => {
+const TestimonialSllider = ({ bgColor = "bg-subtle-neutral" }) => {
   const swiperRef = useRef();
   const [swiperIndex, setSwiperIndex] = useState(0);
   const slidesCount = 5;
@@ -48,11 +48,11 @@ const TestimonialSllider = () => {
   ];
 
   return (
-    <PageLayout bg={"bg-subtle-neutral"}>
-      <div className="py-10 lg:py-24 md:flex items-start">
+    <PageLayout bg={bgColor}>
+      <div className="py-10 lg:py-24 md:flex items-start ">
         <SingleNav title={"Testimonials"} />
         <div className="md:w-[calc(100%-192px)]">
-          <div className="bg-medium-brand p-6 md:p-10 relative md:max-h-[380px] solutions-swiper">
+          <div className="bg-medium-brand p-6 md:p-10 relative md:max-h-[380px] solutions-swiper sm:ml-[28px]">
             <Swiper
               ref={swiperRef}
               slidesPerView={1}
@@ -65,7 +65,7 @@ const TestimonialSllider = () => {
             >
               {reviews.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex justify-between xl:h-[300px]">
+                  <div className="flex justify-between xl:h-[300px] w-full">
                     <div className=" mr-5 xl:w-[600px]">
                       <h3 className="text-2xl leading-[130%] text-white">
                         {item.quote}

@@ -8,81 +8,69 @@ import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
-const FraudRiskManagement = () => {
+const OpenBanking = () => {
   const benefitsData = [
     {
-      title: "Enhanced security",
+      title: "Increased innovation",
       description:
-        "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+        "Collaborate with fintech companies to develop groundbreaking products and services.",
     },
     {
-      title: "Improved trust",
+      title: "Enhanced customer experience",
       description:
-        "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+        "Deliver personalized services and streamline processes to provide a seamless banking experience.",
     },
     {
-      title: "Operational efficiency",
+      title: "Regulatory compliance",
       description:
-        "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
+        "Navigate the complexities of financial regulations with confidence while meeting all regulatory requirements efficiently.",
     },
     {
-      title: "Strategic risk insights",
+      title: "Empowered decision-making",
       description:
-        "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+        "Leverage detailed insights from a broader range of financial data to make more informed decisions.",
     },
   ];
 
   const featuresData = [
     {
-      title: "On-hehalf fraud management",
+      title: "Secure data sharing",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+        "Our Open Banking APIs provide a secure framework for sharing financial data with third-party providers (TPPs), with robust encryption and authentication protocols to protect sensitive information.",
     },
     {
-      title: "Authentication services",
+      title: "Customer consent",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: true,
+        "At the core of Open Banking is the principle of customer consent. Customers have complete control over their data, choosing what to share and with whom, ensuring transparency and trust in the services provided.",
     },
     {
-      title: "24/7 risk monitoring",
+      title: "Enhanced Services",
       description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
-      secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
+        "With the integration of third-party data, banks can enhance their existing services or develop new ones that offer more personalized and efficient customer experiences. This includes everything from improved financial advice to faster loan processing.",
     },
   ];
 
-  const featuresCommonCTAData = {
-    primaryContent: "Interested in our fraud and risk management solutions?",
-    secondaryContent:
-      "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
-    primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
-    bgColor: "bg-surface-neutral",
-  };
-
   const accordionOptions = [
     {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
+      title: "What is Open Banking?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
+      title: "Can anyone access user data?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
       title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
+        "Can a third-party provider make a payment from my account without me authorizing it?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title:
+        "When I share my banking data via Open Banking, what information will companies be able to see?",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    },
+    {
+      title: "What is an Open Banking primary business contact?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
@@ -91,27 +79,36 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum and typesetting industry?",
+      title: "Is Open Banking safe?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title:
+        "Does AFS provide AISP (account information) or PISP (payment initiation) APIs?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum and typesetting industry?",
+      title: "How do I control who has access to my data?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
   ];
 
+  const featuresCommonCTAData = {
+    primaryContent: "Interested in our digital and open banking solution?",
+    secondaryContent:
+      "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+    primaryButtonLabel: "Contact our team",
+    primaryButtonLink: "/contact",
+    bgColor: "bg-surface-neutral",
+  };
   return (
     <>
       <Navbar />
       <CommonHero
-        title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        title={"Open banking - for banks"}
+        subtext={"Ensure full compliance and accelerate innovation"}
         description={
-          "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
+          "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that accelerate innovation and enhance customer experiences."
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
@@ -119,7 +116,7 @@ const FraudRiskManagement = () => {
       />
       <Benefits
         description={
-          "Unlock comprehensive protection and insights with our risk and fraud management solution, designed to secure transactions, enhance trust, and streamline your operations."
+          "Discover the strategic advantages of integrating Open Banking into your operations. Our platform not only ensures compliance with the latest financial regulations but also propels your service capabilities to new heights."
         }
         data={benefitsData}
       />
@@ -128,7 +125,7 @@ const FraudRiskManagement = () => {
       <TestimonialSllider />
       <Faq
         title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "Find answers to some key questions about our Open Banking solution"
         }
         accordionOptions={accordionOptions}
       />
@@ -148,4 +145,4 @@ const FraudRiskManagement = () => {
   );
 };
 
-export default FraudRiskManagement;
+export default OpenBanking;

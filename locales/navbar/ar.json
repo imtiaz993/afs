@@ -6,20 +6,41 @@
       "solutions for banks": {
         "title": "حلول للبنوك",
         "links": [
-          { "title": "إصدار ومعالجة البطاقات", "link": "/" },
-          { "title": "الخدمات المصرفية الرقمية", "link": "/" },
-          { "title": "المصرفية المفتوحة", "link": "/" },
-          { "title": "إدارة الاحتيال والمخاطر", "link": "/" },
-          { "title": "خدمات مضافة للقيمة", "link": "/" }
+          {
+            "title": "إصدار ومعالجة البطاقات",
+            "link": "/solutions/banks/card-issuing-processing"
+          },
+          {
+            "title": "الخدمات المصرفية الرقمية",
+            "link": ""
+          },
+          {
+            "title": "المصرفية المفتوحة",
+            "link": "/solutions/banks/open-banking"
+          },
+          {
+            "title": "إدارة الاحتيال والمخاطر",
+            "link": "/solutions/banks/fraud-risk-management"
+          },
+          {
+            "title": "خدمات مضافة للقيمة",
+            "link": "/solutions/banks/value-added-services"
+          }
         ]
       },
       "solutions for businesses": {
         "title": "حلول للشركات",
         "links": [
-          { "title": "بوابة الدفع", "link": "/" },
-          { "title": "أجهزة نقاط البيع", "link": "/" },
-          { "title": "SoftPOS", "link": "/" },
-          { "title": "متجر إلكتروني", "link": "/" },
+          {
+            "title": "بوابة الدفع",
+            "link": "/solutions/business/payment-gateway"
+          },
+          {
+            "title": "أجهزة نقاط البيع",
+            "link": "/solutions/business/pos-terminals"
+          },
+          { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+          { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
           { "title": "بوابة التجار", "link": "/" },
           { "title": "ضيافة", "link": "/" },
           { "title": "المأكولات والمشروبات (F&B)", "link": "/" },

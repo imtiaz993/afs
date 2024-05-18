@@ -8,59 +8,52 @@ import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
-const FraudRiskManagement = () => {
+const SoftPOS = () => {
   const benefitsData = [
     {
-      title: "Enhanced security",
+      title: "No new hardware",
       description:
-        "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+        "Use your existing Android devices without the need for additional hardware or complex configurations.",
     },
     {
-      title: "Improved trust",
+      title: "Secure transactions",
       description:
-        "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+        "Our solution is built with 3D secure technology, ensuring every transaction is protected against fraud.",
     },
     {
-      title: "Operational efficiency",
+      title: "Flexibility and mobility",
       description:
-        "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
+        "Conduct transactions on the go. Ideal for businesses that require mobility without compromising on functionality.",
     },
     {
-      title: "Strategic risk insights",
+      title: "Enhanced customer experience",
       description:
-        "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+        "With AFS Pay, enhance your customer interactions by offering a seamless and swift checkout process.",
     },
   ];
 
   const featuresData = [
     {
-      title: "On-hehalf fraud management",
+      title: "Multiple payment methods",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+        "Feature description lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
     },
     {
-      title: "Authentication services",
+      title: "Comprehensive dashboard",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: true,
+        "Gain insights into your business operations with our intuitive dashboard. Track and view transactions by type, access detailed history, and utilize helpful how-to videos.",
     },
     {
-      title: "24/7 risk monitoring",
+      title: "Support eco-friendly practices",
       description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
-      secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
+        "Embrace a paperless environment by sharing digital receipts via email or SMS. Generate and share payment links effortlessly across social media platforms like WhatsApp, Facebook Messenger, SMS, and email.",
+    },
+    {
+      title: "Easy download and setup",
+      description:
+        "Get started in no time! Simply download the AFS Pay SoftPOS app from the Google Play Store, set up your account, and you're good to go.",
     },
   ];
-
-  const featuresCommonCTAData = {
-    primaryContent: "Interested in our fraud and risk management solutions?",
-    secondaryContent:
-      "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
-    primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
-    bgColor: "bg-surface-neutral",
-  };
 
   const accordionOptions = [
     {
@@ -69,7 +62,7 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title: "Lorem Ipsum is simply text printing and typesetting industry?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
@@ -108,10 +101,10 @@ const FraudRiskManagement = () => {
     <>
       <Navbar />
       <CommonHero
-        title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        title={"SoftPOS"}
+        subtext={"Transform your smartphone into a smart payment terminal"}
         description={
-          "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
+          "Whether it's in-store purchases, home delivery, or online sales, our SoftPOS solution ensures you're ready for every customer scenario."
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
@@ -119,16 +112,26 @@ const FraudRiskManagement = () => {
       />
       <Benefits
         description={
-          "Unlock comprehensive protection and insights with our risk and fraud management solution, designed to secure transactions, enhance trust, and streamline your operations."
+          "AFS Pay app effortlessly turns any Android mobile phone or tablet into a sophisticated payment terminal, enabling your business to handle transactions in a variety of modern ways."
         }
         data={benefitsData}
       />
-      <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
+      <Features
+        data={featuresData}
+        commonCTAData={{
+          bgColor: "bg-surface-neutral",
+          primaryContent: "Interested in our SoftPOS solution?",
+          secondaryContent:
+            "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+          primaryButtonLabel: "Contact our team",
+          primaryButtonLink: "/contact",
+        }}
+      />
       <UsedTrustedBy />
-      <TestimonialSllider />
+      <TestimonialSllider bgColor={"bg-white"} />
       <Faq
         title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
         }
         accordionOptions={accordionOptions}
       />
@@ -139,7 +142,7 @@ const FraudRiskManagement = () => {
             text: ["revolutionize"],
             color: "text-brand-secondary",
           }}
-          secondaryContent={"Experience the power of AFS today!"}
+          secondaryContent={"Join the countless businesses that are optimizing their payment solutions with our AFS Pay app. Transform your transaction capabilities today!"}
           primaryButtonLabel={"Contact our team"}
           primaryButtonLink={"/contact"}
         />
@@ -148,4 +151,4 @@ const FraudRiskManagement = () => {
   );
 };
 
-export default FraudRiskManagement;
+export default SoftPOS;

@@ -1,64 +1,87 @@
 import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
-import Features from "app/common/Features";
+import CommonServices from "app/common/CommonServices";
 import UsedTrustedBy from "app/common/UsedTrustedBy";
-import TestimonialSllider from "app/common/TestimonialSlider";
+import TestimonialSlider from "app/common/TestimonialSlider";
 import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
-const FraudRiskManagement = () => {
+const PaymentGateway = () => {
   const benefitsData = [
+    {
+      title: "Versatile payment support",
+      description:
+        "Our gateway accommodates various payment methods, catering to all customer preferences.",
+    },
     {
       title: "Enhanced security",
       description:
-        "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+        "With advanced security protocols, we safeguard transaction data and minimize fraud risks.",
     },
     {
-      title: "Improved trust",
+      title: "Streamlined transactions",
       description:
-        "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+        "Quick, reliable processing enhances the checkout experience for your customers.",
     },
     {
-      title: "Operational efficiency",
+      title: "Insightful analytics",
       description:
-        "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
-    },
-    {
-      title: "Strategic risk insights",
-      description:
-        "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+        "Access to detailed analytics helps refine payment strategies and improve operational efficiency.",
     },
   ];
 
-  const featuresData = [
+  const servicesData = [
     {
-      title: "On-hehalf fraud management",
+      title: "Secure transaction processing",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+        "Boost your credibility with encrypted transactions, enhancing customer trust and data security.",
     },
     {
-      title: "Authentication services",
+      title: "Multi-currency support",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: true,
+        "Go global by accepting multiple currencies, broadening your market reach and accessibility.",
     },
     {
-      title: "24/7 risk monitoring",
+      title: "Fraud detection and prevention",
       description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
-      secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
+        "Minimize risks with our proactive fraud prevention, protecting your revenue and reputation.",
+    },
+    {
+      title: "Payment method integration:",
+      description:
+        "Cater to all customers by supporting various payment options, increasing satisfaction and loyalty.",
+    },
+    {
+      title: "Real-time processing",
+      description:
+        "Speed up transactions with real-time processing, offering instant payment confirmations and smoother checkouts.",
+    },
+    {
+      title: "Customizable checkout experience",
+      description:
+        "Automate recurring payments for subscriptions, ensuring consistent revenue and reducing manual effort.",
+    },
+    {
+      title: "Recurring billing",
+      description:
+        "Personalize your checkout to fit your brand, improving user experience and conversion rates.",
+    },
+    {
+      title: "Reporting and analytics",
+      description:
+        "Gain insights with detailed reports on sales and customer behavior, aiding in strategic decision-making and optimization.",
     },
   ];
 
-  const featuresCommonCTAData = {
-    primaryContent: "Interested in our fraud and risk management solutions?",
+  const servicesCTAData = {
+    primaryContent: "Interested in our payment gateway solution?",
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
     primaryButtonLink: "/contact",
+    lessPaddingVariant: true,
     bgColor: "bg-surface-neutral",
   };
 
@@ -69,7 +92,7 @@ const FraudRiskManagement = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
+      title: "Lorem Ipsum is simply text printing and typesetting industry?",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
@@ -108,10 +131,10 @@ const FraudRiskManagement = () => {
     <>
       <Navbar />
       <CommonHero
-        title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        title={"Payment gateway"}
+        subtext={"Seamless payment gateway solutions"}
         description={
-          "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
+          "Our payment gateway streamlines transactions with robust security and support for multiple payment methods, ensuring quick and reliable processing. It enhances checkout experiences and offers insights to optimize your payment strategy."
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
@@ -119,16 +142,20 @@ const FraudRiskManagement = () => {
       />
       <Benefits
         description={
-          "Unlock comprehensive protection and insights with our risk and fraud management solution, designed to secure transactions, enhance trust, and streamline your operations."
+          "Utilizing our payment gateway solution offers substantial benefits, ensuring your transactions are not only secure but also efficient and user-friendly."
         }
         data={benefitsData}
       />
-      <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
+      <CommonServices
+        navTitle={"Features"}
+        servicesData={servicesData}
+        ctaData={servicesCTAData}
+      />
       <UsedTrustedBy />
-      <TestimonialSllider />
+      <TestimonialSlider />
       <Faq
         title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
         }
         accordionOptions={accordionOptions}
       />
@@ -148,4 +175,4 @@ const FraudRiskManagement = () => {
   );
 };
 
-export default FraudRiskManagement;
+export default PaymentGateway;

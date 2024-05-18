@@ -1,17 +1,14 @@
-import Image from "next/image";
 import PageLayout from "./PageLayout";
 import SingleNav from "./SingleNav";
 
-const Benefits = ({ data }) => {
+const Benefits = ({ description, data }) => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24 md:flex items-start">
         <SingleNav title={"Benefits"} />
         <div className="md:w-[calc(100%-192px)]">
           <h3 className="text-[40px] leading-[120%] text-primary mb-16">
-            Our all-encompassing solution transforms the way banks issue and
-            manage cards, catering to a wide range of needs with credit, debit,
-            and prepaid card services for both consumers and businesses.
+            {description}
           </h3>
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             {data.map((item) => (
