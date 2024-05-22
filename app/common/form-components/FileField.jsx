@@ -28,7 +28,7 @@ const FileField = ({ file, setFile, placeholder }) => {
         {file ? file.name : ""}
       </p>
       <button
-        className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[7.2px] w-[82px] rounded-sm"
+        className=" text-center text-white bg-brand-secondary   border border-brand-secondary  py-[7.2px] w-[82px] rounded-sm"
         type="button"
       >
         Upload

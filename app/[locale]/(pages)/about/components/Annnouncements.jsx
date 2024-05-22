@@ -11,7 +11,7 @@ const Annnouncements = () => {
             <h3 className="text-2xl md:text-[40px] text-primary mr-4">
               Company announcements
             </h3>
-            <div className="flex items-center cursor-pointer">
+            <div className="flex items-center cursor-pointer border-b border-subtle-neutral hover:border-brand-secondary ">
               <p className="text-brand-secondary mr-2 whitespace-nowrap font-medium">
                 See all
               </p>

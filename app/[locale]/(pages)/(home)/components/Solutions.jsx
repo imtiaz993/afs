@@ -33,7 +33,7 @@ const Solutions = () => {
             {t("title")}
           </p>
           <h2
-            className={`text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[950px] leading-[120%]  ${
+            className={`text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[950px] leading-[120%]  ${
               isArabic ? "text-right" : "text-left"
             }`}
           >
@@ -42,7 +42,7 @@ const Solutions = () => {
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <div>
-            <div className="banks-home-gradient rounded">
+            <div className=" banks-home-gradient rounded">
               <div
                 className="p-6 md:p-10 lg:p-8 xl:p-10 rounded"
                 style={{
@@ -73,8 +73,8 @@ const Solutions = () => {
                   }`}
                 >
                   <button
-                    className={`transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mt-4 ${
-                      isArabic ? "ml-6" : "mr-6"
+                    className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white font-medium rounded-sm mt-4 ${
+                      isArabic ? "md:ml-6" : "md:mr-6"
                     }`}
                   >
                     {t("banks.button")}
@@ -153,7 +153,7 @@ const Solutions = () => {
                   {t("solutions.description")}
                 </p>
                 <div className={`${isArabic ? "flex justify-end" : ""}`}>
-                  <button className="transition-colors duration-500 text-center text-brand-secondary border border-brand-secondary hover:text-white hover:bg-brand-secondary py-[15px] w-[118px] bg-transparent font-medium rounded-sm">
+                  <button className=" text-center text-brand-secondary border border-brand-secondary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
                     {t("solutions.button")}
                   </button>
                 </div>
@@ -180,7 +180,7 @@ const Solutions = () => {
                   {t("consumers.description")}
                 </p>
                 <div className={`${isArabic ? "flex justify-end" : ""}`}>
-                  <button className="transition-colors duration-500 text-center text-brand-secondary  hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm">
+                  <button className=" text-center text-brand-secondary   py-3 md:py-4 w-full md:w-[118px] bg-white font-medium rounded-sm">
                     {t("consumers.button")}
                   </button>
                 </div>
@@ -232,8 +232,8 @@ const Solutions = () => {
                   }`}
                 >
                   <button
-                    className={`transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[118px] bg-white font-medium rounded-sm mt-4 ${
-                      isArabic ? "ml-4" : "mr-4"
+                    className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white font-medium rounded-sm mt-4 ${
+                      isArabic ? "md:ml-4" : "md:mr-4"
                     }`}
                   >
                     {t("businesses.button")}

@@ -17,29 +17,29 @@ const CommonHero = ({
   return (
     <PageLayout bg={"bg-subtle-neutral"} styles="!px-0">
       <div className="py-10 lg:py-24 pb-0 lg:pb-0">
-        <div className="px-10 md:px-16">
+        <div className="px-4 md:px-10 lg:px-16">
           <p className=" mb-6 text-secondary ">{title}</p>
-          <h1 className="text-primary text-center md:text-left text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[864px]">
+          <h1 className="text-primary text-left text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[864px]">
             {subtext}
           </h1>
           {description && (
-            <p className="mt-6 text-secondary text-center md:text-left text-lg md:text-2xl md:max-w-[500px] lg:max-w-[864px] ">
+            <p className="mt-6 text-secondary text-left text-lg md:text-2xl md:max-w-[500px] lg:max-w-[864px] ">
               {description}
             </p>
           )}
           {buttonText && (onClick || buttonLink) && (
-            <div className="flex justify-center md:justify-start mt-10 mb-10 lg:mb-0">
+            <div className="flex justify-start mt-10 mb-10 lg:mb-0">
               {onClick && (
                 <button
-                  className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] px-8 font-medium rounded-sm"
+                  className=" w-full md:w-auto text-center text-white bg-brand-secondary  border border-brand-secondary py-[11px] md:py-[15px] px-8 font-medium rounded-sm"
                   onClick={onClick}
                 >
                   {buttonText}
                 </button>
               )}
               {buttonLink && (
-                <Link href={buttonLink}>
-                  <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] px-8 font-medium rounded-sm">
+                <Link href={buttonLink} className="w-full md:w-auto">
+                  <button className="w-full md:w-auto text-center text-white bg-brand-secondary  border border-brand-secondary  py-[11px] md:py-[15px] px-8 font-medium rounded-sm">
                     {buttonText}
                   </button>
                 </Link>

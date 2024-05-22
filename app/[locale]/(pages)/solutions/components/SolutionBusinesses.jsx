@@ -65,6 +65,7 @@ const SolutionBusinesses = () => {
               "Experience the power of seamless transactions with our comprehensive suite of digital payment solutions, from robust card processing services to merchant acquiring we equip your business with the tools to thrive in the digital age."
             }
             primaryButtonLabel={"View all business solutions"}
+            primaryButtonLink={"/solutions/business"}
             secondaryButtonLabel={"Contact our team"}
             secondaryButtonLink={"/contact"}
           />
@@ -94,6 +95,7 @@ const SolutionBusinesses = () => {
             }
             primaryButtonLabel={"Contact our team"}
             secondaryButtonLabel={"View all business solutions"}
+            secondaryButtonLink={"/solutions/business"}
             primaryButtonLink={"/contact"}
             bgColor={"bg-surface-neutral"}
             rounded={true}

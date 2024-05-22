@@ -37,7 +37,7 @@ const About = () => {
                 {t("title")}
               </p>
               <h2
-                className={`text-primary text-2xl md:text-5xl mb-16 max-w-[845px] leading-[120%] ${
+                className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[845px] leading-[120%] ${
                   isArabic ? "text-right" : "text-left"
                 }`}
               >
@@ -50,14 +50,14 @@ const About = () => {
               }`}
             >
               <div
-                className={`lg:w-[45%] flex flex-col items-center ${
+                className={`lg:w-[45%] flex flex-col ${
                   isArabic
                     ? "text-right lg:items-end"
                     : "text-left lg:items-start"
                 }`}
               >
                 <p
-                  className={`text-center lg:text-left mb-4 text-secondary  flex items-center ${
+                  className={`text-left mb-4 text-secondary  flex items-center ${
                     isArabic
                       ? "text-right justify-start flex-row-reverse"
                       : "text-left justify-start"
@@ -74,21 +74,21 @@ const About = () => {
                   {t("sub title")}
                 </p>
                 <h3
-                  className={`text-center text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%] ${
-                    isArabic ? "lg:text-right" : "lg:text-left"
+                  className={`text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%] ${
+                    isArabic ? "text-right" : "text-left"
                   }`}
                 >
                   {t("sub headline")}
                 </h3>
                 <p
-                  className={`text-center text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] ${
-                    isArabic ? "lg:text-right" : "lg:text-left"
+                  className={`text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] ${
+                    isArabic ? "text-right" : "text-left"
                   }`}
                 >
                   {t("description")}
                 </p>
                 <Link href="/about">
-                  <button className="transition-colors duration-500 text-center text-brand-secondary py-[15px] w-52 border border-brand-secondary hover:text-white hover:bg-brand-secondary  font-medium rounded-sm">
+                  <button className=" text-center text-brand-secondary py-[11px] md:py-[15px] w-full md:w-52 border border-brand-secondary   font-medium rounded-sm">
                     {t("learn more")}
                   </button>
                 </Link>

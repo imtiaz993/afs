@@ -1,9 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const AppCTA = () => {
+const AppCTA = ({ bgColor }) => {
   return (
-    <div className="app-cta-gradient mt-6 md:h-[380px] relative p-6 md:py-16 md:px-10">
+    <div
+      className={`${
+        bgColor ? bgColor : "app-cta-gradient"
+      } mt-6 md:h-[380px] relative p-6 md:py-16 md:px-10`}
+    >
       <div className="sm:max-w-[438px] relative z-10">
         <h2 className="text-2xl md:text-[32px] leading-[28.8px] md:leading-[38.4px] text-primary">
           Download the best wallet solution in Bahrain

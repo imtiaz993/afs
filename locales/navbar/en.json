@@ -42,7 +42,7 @@
       },
       "solutions for consumer": {
         "title": "Solutions for consumers",
-        "links": [{ "title": "BPay wallet", "link": "/" }]
+        "links": [{ "title": "BPay wallet", "link": "/solutions/consumers/bpay" }]
       }
     },
     "company": {

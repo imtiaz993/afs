@@ -13,7 +13,7 @@ const Faq = ({ title, accordionOptions }) => {
       <div className="py-10 lg:py-24 md:flex items-start">
         <SingleNav title={"FAQ"} />
         <div className="md:w-[calc(100%-192px)]">
-          <h2 className="text-primary text-2xl md:text-[48px] mb-8 md:mb-10 max-w-[526px] leading-[57.6px]">
+          <h2 className="text-primary text-2xl md:text-[48px] mb-8 md:mb-10 max-w-[526px] md:leading-[57.6px]">
             {title}
           </h2>
           <div className="border-t border-default">
@@ -32,7 +32,7 @@ const Faq = ({ title, accordionOptions }) => {
             For any additional questions, please reach out to 
             <a
               href="mailto:questions@afs.com.bh"
-              className="text-brand-secondary"
+              className="text-brand-secondary hover:underline"
             >
               questions@afs.com.bh
             </a>

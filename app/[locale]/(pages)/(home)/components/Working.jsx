@@ -68,7 +68,7 @@ const Working = () => {
             {t("title")}
           </p>
           <h2
-            className={`text-primary text-2xl md:text-5xl mb-16 max-w-[950px] leading-[120%] ${
+            className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[950px] leading-[120%] ${
               isArabic ? "text-right" : "text-left"
             }`}
           >

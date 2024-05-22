@@ -1,8 +1,9 @@
 import PageLayout from "./PageLayout";
 import SingleNav from "./SingleNav";
 import CommonCTA from "./CommonCTA";
+import AppCTA from "app/common/AppCTA";
 
-const Features = ({ data, commonCTAData }) => {
+const Features = ({ data, commonCTAData, appCTA, appCTABgColor }) => {
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="py-10 lg:py-24 md:flex items-start">
@@ -49,15 +50,18 @@ const Features = ({ data, commonCTAData }) => {
               </div>
             </div>
           ))}
-          <CommonCTA
-            lessPaddingVariant={true}
-            rounded={true}
-            bgColor={commonCTAData?.bgColor}
-            primaryContent={commonCTAData?.primaryContent}
-            secondaryContent={commonCTAData?.secondaryContent}
-            primaryButtonLabel={commonCTAData?.primaryButtonLabel}
-            primaryButtonLink={commonCTAData?.primaryButtonLink}
-          />
+          {commonCTAData ? (
+            <CommonCTA
+              lessPaddingVariant={true}
+              rounded={true}
+              bgColor={commonCTAData?.bgColor}
+              primaryContent={commonCTAData?.primaryContent}
+              secondaryContent={commonCTAData?.secondaryContent}
+              primaryButtonLabel={commonCTAData?.primaryButtonLabel}
+              primaryButtonLink={commonCTAData?.primaryButtonLink}
+            />
+          ) : null}
+          {appCTA ? <AppCTA bgColor={appCTABgColor} /> : null}
         </div>
       </div>
     </PageLayout>

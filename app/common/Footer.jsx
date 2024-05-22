@@ -148,11 +148,11 @@ const Footer = () => {
                 type="email"
                 placeholder={t("join network.input placeholder")}
               />
-              <button className="text-white py-[11px] w-full bg-brand-secondary transition-colors duration-500  hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
+              <button className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
                 {t("join network.button")}
               </button>
             </div>
-            <p className="text-secondary mt-4 text-sm pb-10 mb-10 border-b border-default">
+            <p className="text-secondary text-center md:text-left mt-4 text-sm pb-10 mb-10 border-b border-default">
               {t("join network.privacy text")}{" "}
               <Link
                 className="text-primary hover:text-brand-secondary hover:underline"
@@ -162,11 +162,11 @@ const Footer = () => {
               </Link>
             </p>
             <div className="pb-10 mb-10 border-b border-default">
-              <h6 className="text-primary font-medium mb-4">
+              <h6 className="text-primary text-center md:text-left font-medium mb-4">
                 {t("social follow")}
               </h6>
               <div
-                className={`flex items-center ${
+                className={`flex justify-center md:justify-start items-center ${
                   isArabic ? "flex-row-reverse" : ""
                 }`}
               >
@@ -224,13 +224,13 @@ const Footer = () => {
             </div>
             <div className="pb-10">
               <h6
-                className={`text-primary font-medium mb-4 ${
+                className={`text-primary text-center md:text-left font-medium mb-4 ${
                   isArabic ? "text-right" : ""
                 }`}
               >
                 {t("certifications")}
               </h6>
-              <div className="flex">
+              <div className="flex justify-center md:justify-start">
                 <div className="border-r border-default p-1 flex items-center justify-center">
                   <Image
                     sizes="100vw"
@@ -265,9 +265,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-default text-sm mt-14 pt-10 text-secondary">
+        <div className="flex flex-col-reverse md:flex-col border-t border-default text-sm mt-14 pt-10 text-secondary">
           <div
-            className={`flex flex-wrap ${isArabic ? "flex-row-reverse" : ""}`}
+            className={`flex flex-col flex-wrap ${isArabic ? "md:flex-row-reverse" : "md:flex-row"}`}
           >
             {publicLinks.map((item, index) => (
               <Link
@@ -283,14 +283,14 @@ const Footer = () => {
           </div>
           <div>
             <p
-              className={`mt-6 font-normal text-sm ${
+              className={`md:mt-6 font-normal text-sm ${
                 isArabic ? "text-right" : ""
               }`}
             >
               {t("rights")}
             </p>
             <p
-              className={`mt-1 text-xs text-tertiary ${
+              className={`mb-6 md:mb-0 mt-1 text-xs text-tertiary ${
                 isArabic ? "text-right" : ""
               }`}
             >

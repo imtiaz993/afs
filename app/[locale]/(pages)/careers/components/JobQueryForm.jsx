@@ -20,18 +20,18 @@ const JobQueryForm = () => {
     <PageLayout styles={"!px-0"}>
       <div className="flex becomepartner-gradient">
         <div className="w-full py-10 lg:py-24 px-10 md:px-16 lg:pl-16 relative z-10 lg:flex justify-between">
-          <div className="flex flex-col lg:w-[46%]">
-            <div className="flex flex-col items-center lg:items-start">
-              <h2 className="text-center lg:text-left text-2xl md:text-5xl text-primary leading-[120%] max-w-[464px]">
+          <div className="flex flex-col lg:w-[464px]">
+            <div className="flex flex-col items-start">
+              <h2 className="text-left text-2xl md:text-5xl text-primary leading-[120%] lg:max-w-[464px]">
                 Couldn't find the right job for you?
               </h2>
-              <p className="text-center lg:text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px] ">
+              <p className="text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 lg:max-w-[464px] ">
                 Should our existing job openings not match your skills and
                 experience, please submit your personal information and resume.
                 We'll contact you when a fitting opportunity arises.
               </p>
             </div>
-            <div className="mt-6 lg:py-6 lg:pr-6 flex justify-center lg:justify-start items-center flex-wrap max-w-[464px] mx-auto lg:mx-0 box-content">
+            <div className="mt-6 lg:py-6 lg:pr-6 flex justify-start items-center flex-wrap lg:max-w-[464px] lg:mx-0 box-content">
               {Array.from({ length: 11 }).map((item, index) => (
                 <Image
                   sizes="100vw"
@@ -53,7 +53,7 @@ const JobQueryForm = () => {
               />
             </div>
           </div>
-          <div className="lgw-[54%] mt-10 lg:mt-0">
+          <div className="lg:w-[704px] mt-10 lg:mt-0">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -86,7 +86,7 @@ const JobQueryForm = () => {
                 </div>
                 <div className="flex justify-center lg:justify-start">
                   <button
-                    className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[197px] font-medium rounded-sm"
+                    className="mt-6  text-center text-white bg-brand-secondary   border border-brand-secondary  py-[11px] w-full md:w-[197px] font-medium rounded-sm"
                     type="submit"
                   >
                     Submit your details

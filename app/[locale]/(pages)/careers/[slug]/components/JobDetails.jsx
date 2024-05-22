@@ -19,7 +19,7 @@ const JobDetails = () => {
       </div>
       <button
         
-        className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[192px] rounded-sm"
+        className=" text-center text-white bg-brand-secondary  border border-brand-secondary  py-[11px] w-full md:w-[192px] rounded-sm"
         onClick={() => {
           const section = document.querySelector("#apply-form");
           section.scrollIntoView({ behavior: "smooth", block: "start" });

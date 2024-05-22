@@ -43,7 +43,7 @@
     },
     "solutions for consumer": {
       "title": "حلول للشركات",
-      "links": [{ "title": "محفظة BPay", "link": "/" }]
+      "links": [{ "title": "محفظة BPay", "link": "/solutions/consumers/bpay" }]
     },
     "company": {
       "title": "الشركة",

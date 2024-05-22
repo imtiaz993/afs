@@ -54,7 +54,7 @@ const Complaints = () => {
           </div>
           <div className="flex justify-center lg:justify-start">
             <button
-              className="mt-6 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-3 w-[197px] font-medium rounded-sm"
+              className="mt-6  text-center text-white bg-brand-secondary   border border-brand-secondary  py-3 w-full md:w-[197px] font-medium rounded-sm"
               type="submit"
             >
               Submit your details

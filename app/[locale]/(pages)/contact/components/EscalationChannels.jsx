@@ -24,7 +24,7 @@ const EscalationChannels = () => {
 
       <div>
         <h6 className="mb-2 text-primary text-lg font-regular">Contact us by email</h6>
-        <p className="text-brand-secondary ">
+        <p className="text-brand-secondary hover:underline">
           <a href="mailto:complaintsofficer@afs.com.bh">
             complaintsofficer@afs.com.bh
           </a>

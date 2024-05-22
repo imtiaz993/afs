@@ -3,7 +3,7 @@ import PageLayout from "app/common/PageLayout";
 import FeatureHighlightCard from "app/common/FeatureHighlightCard";
 import SolutionFeatures from "../../../../common/SolutionFeatures";
 import AvatarTestimonial from "./AvatarTestimonial";
-import AppCTA from "./AppCTA";
+import AppCTA from "../../../../common/AppCTA";
 
 const SolutionConsumers = () => {
   const consumerData = [
@@ -52,6 +52,7 @@ const SolutionConsumers = () => {
               "Transferring money abroad or making payments has never been easier with our fast and secure wallet solution that enables you to make transactions withough the need for cash or cards."
             }
             primaryButtonLabel={"Learn more about BPay"}
+            primaryButtonLink="/solutions/consumers/bpay"
             secondaryButtonLabel={"Download BPay"}
           />
           <div className="grid mt-16 md:grid-cols-2 gap-4 ">

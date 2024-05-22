@@ -85,19 +85,19 @@ const CommonCTA = ({
         } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
       >
         <div
-          className={`text-2xl  text-primary  ${
+          className={`text-[32px] leading-[38.4px] text-primary  ${
             lessPaddingVariant
-              ? "md:text-[32px] leading-[120%]"
-              : "md:text-[48px] leading-[57.6px] lg:max-w-[596px]"
+              ? "leading-[120%]"
+              : "md:text-[48px] md:leading-[57.6px] lg:max-w-[596px]"
           } ${isArabic ? "lg:text-right" : "text-left"}`}
         >
           {primaryContentNode}
         </div>
         <h4
-          className={`text-base mt-4 ${
+          className={`text-base mt-2 md:mt-4 mb-6 md:mb-10 ${
             lessPaddingVariant
               ? "text-primary lg:max-w-[438px]"
-              : "md:text-2xl text-brand-primary mb-10 lg:max-w-[768px]"
+              : "md:text-2xl text-brand-primary lg:max-w-[768px]"
           } ${isArabic ? "lg:text-right" : "text-left"}`}
         >
           {secondaryContent}
@@ -109,8 +109,8 @@ const CommonCTA = ({
         >
           <Link href={primaryButtonLink}>
             <button
-              className={`transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm w-full lg:w-auto px-8 ${
-                lessPaddingVariant ? "py-[11px] mt-10" : "py-[15px] "
+              className={`text-center text-white bg-brand-secondary border border-brand-secondary font-medium rounded-sm w-full lg:w-auto px-8 ${
+                lessPaddingVariant ? "py-[11px]" : "py-[11px] md:py-[15px] "
               }`}
             >
               {primaryButtonLabel}
@@ -119,7 +119,7 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`md:ml-4 transition-colors duration-500 text-center text-brand-secondary  hover:text-white border border-brand-secondary hover:bg-brand-secondary py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-10 w-full lg:w-auto ${bgColor}`}
+                className={`md:ml-4text-center text-brand-secondary   border border-brand-secondary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
               >
                 {secondaryButtonLabel}
               </button>

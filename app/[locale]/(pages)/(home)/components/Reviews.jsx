@@ -21,8 +21,8 @@ const Reviews = () => {
 
   return (
     <PageLayout styles={"!px-0 relative"} maxScreenBG={"bg-brand-primary"}>
-      <div className="px-4 md:px-10 lg:px-16 py-10 lg:py-24 bg-brand-primary lg:flex justify-between">
-        <div className="lg:w-[45%] relative z-10 home-reviews-swiper">
+      <div className="px-1 md:px-10 lg:px-16 py-12 pt-1 lg:py-24 bg-brand-primary flex flex-col-reverse lg:flex-row justify-between">
+        <div className="px-3 lg:w-[45%] relative z-10 home-reviews-swiper">
           <Swiper
             ref={swiperRef}
             slidesPerView={1}
@@ -37,22 +37,22 @@ const Reviews = () => {
               <SwiperSlide key={index}>
                 <div>
                   <h3
-                    className={`text-xl md:text-3xl text-center leading-[130%] text-white ${
-                      isArabic ? "lg:text-right" : "lg:text-left"
+                    className={`text-2xl md:text-3xl leading-[130%] text-white ${
+                      isArabic ? "text-right" : "text-left"
                     }`}
                   >
                     {item.quote}
                   </h3>
                   <p
-                    className={`font-medium text-center text-white mt-8 ${
-                      isArabic ? "lg:text-right" : "lg:text-left"
+                    className={`font-medium  text-white mt-8 ${
+                      isArabic ? "text-right" : "text-left"
                     }`}
                   >
                     {item.author}
                   </p>
                   <p
-                    className={`text-center  text-brand-tertiary mt-2 ${
-                      isArabic ? "lg:text-right" : "lg:text-left"
+                    className={`  text-brand-tertiary mt-2 ${
+                      isArabic ? "text-right" : "text-left"
                     }`}
                   >
                     {item.position}
@@ -61,9 +61,9 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
 
-            <div className="flex items-center  mt-16 ">
-              <div>
-                <div className="inline-flex justify-center lg:justify-start relative z-20 select-none">
+            <div className="flex items-center justify-between lg:justify-start  mt-8 lg:mt-16 ">
+              <div className="w-full lg:w-auto">
+                <div className="flex lg:inline-flex justify-between items-center lg:items-start md:justify-center lg:justify-start relative z-20 select-none">
                   <div
                     className="mr-4 w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer"
                     onClick={() => {
@@ -85,6 +85,9 @@ const Reviews = () => {
                       }
                       alt=""
                     />
+                  </div>
+                  <div className="inline-block lg:hidden">
+                    <div className="swiper-custom-pagination" />
                   </div>
                   <div
                     className="w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer"
@@ -110,19 +113,27 @@ const Reviews = () => {
                   </div>
                 </div>
               </div>
-              <div className="ml-10">
+              <div className="hidden lg:block ml-10">
                 <div className="swiper-custom-pagination" />
               </div>
             </div>
           </Swiper>
         </div>
-        <div className="absolute top-0 right-0 bottom-0 opacity-40 md:opacity-100">
+        <div className="mb-12 lg:mb-0 lg:absolute top-0 right-0 bottom-0">
           <Image
             sizes="100vw"
             width={0}
             height={0}
-            className="w-full h-full"
+            className="w-full h-full hidden lg:block"
             src="/assets/images/home/testimonial.png"
+            alt=""
+          />
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            className="w-full h-full lg:hidden"
+            src="/assets/images/home/testimonialMobile.png"
             alt=""
           />
         </div>

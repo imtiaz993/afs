@@ -16,7 +16,7 @@ const CommonCTA = () => {
             Experience the power of AFS today!
           </h4>
           <Link href="/contact">
-            <button className="transition-colors duration-500 text-center text-white py-[15.2px] w-44 bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white font-medium rounded-sm">
+            <button className=" text-center text-white py-[15.2px] w-44 bg-brand-secondary  border border-brand-secondary  font-medium rounded-sm">
               Contact our team
             </button>
           </Link>

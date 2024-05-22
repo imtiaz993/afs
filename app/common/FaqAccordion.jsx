@@ -12,10 +12,13 @@ const FaqAccordion = ({
   const openAnimation = useSpring({
     from: { maxHeight: "0px" },
     to: {
-      maxHeight: activeAccordion === index ? "200px" : "0px",
+      maxHeight: activeAccordion === index ? "400px" : "0px",
     },
     config: { duration: "400" },
   });
+
+  const type = typeof text;
+
   return (
     <div className="border-b border-default py-4">
       <div
@@ -43,9 +46,13 @@ const FaqAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p className="text-secondary mt-2 text-sm md:text-base">
-          {text}
-        </p>
+        {type == "string" ? (
+          <p className="text-secondary mt-2 text-sm md:text-base">{text}</p>
+        ) : (
+          text.map((item) => (
+            <p className="text-secondary text-sm md:text-base">{item}</p>
+          ))
+        )}
       </animated.div>
     </div>
   );

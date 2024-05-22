@@ -51,6 +51,12 @@
   );
 }
 
+@media screen and (max-width: 768px) {
+  .home-hero-gradient {
+    background: linear-gradient(212deg, #052460 35.12%, #036fd0 120.5%), #052460;
+  }
+}
+
 .cta-home-gradient {
   background: linear-gradient(215deg, #d4dfe9 31.99%, #f2f6fa 84.18%),
     linear-gradient(0deg, #d4dfe9 0%, #d4dfe9 100%),

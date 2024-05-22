@@ -131,13 +131,13 @@ const Team = () => {
           towards a successful future.
         </h2>
         <div>
-          <div className="flex border-b border-default">
+          <div className="grid grid-cols-2 md:flex border-b border-default">
             <button
               className={`transition-colors duration-300 text-center ${
                 activeTab === "team"
                   ? "text-white bg-brand-secondary"
                   : "text-brand-secondary bg-white"
-              }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
+              }   py-3 w-full md:w-[185px] font-medium rounded-sm`}
               onClick={() => {
                 setActiveTab("team");
               }}
@@ -149,7 +149,7 @@ const Team = () => {
                 activeTab === "bod"
                   ? "text-white bg-brand-secondary"
                   : "text-brand-secondary bg-white"
-              }   py-3 w-[160px] md:w-[185px] font-medium rounded-sm`}
+              }   py-3 w-full md:w-[185px] font-medium rounded-sm`}
               onClick={() => {
                 setActiveTab("bod");
               }}
@@ -157,59 +157,68 @@ const Team = () => {
               Board of directors
             </button>
           </div>
-          {activeTab === "team" ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-              {teams.team.map((item, index) => (
-                <div className="bg-brand-surface w-full" key={index}>
-                  <div className="m-2 mb-0">
-                    <Image
-                      sizes="100vw"
-                      width={0}
-                      height={0}
-                      className="w-full"
-                      src={item.image}
-                      alt=""
-                      priority={true}
-                    />
-                  </div>
-                  <div className="p-4 pt-2 lg:p-6 lg:pt-4">
-                    <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                      {item.name}
-                    </h4>
-                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                      {item.designation}
-                    </p>
-                  </div>
+          <div
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 placeholder: ${
+              activeTab === "bod"
+                ? "h-auto overflow-auto"
+                : "h-0 overflow-hidden"
+            }`}
+          >
+            {teams.bod.map((item, index) => (
+              <div className="bg-brand-surface w-full" key={index}>
+                <div className="m-2 mb-0">
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-full"
+                    src={item.image}
+                    alt=""
+                    priority={true}
+                  />
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-              {teams.bod.map((item, index) => (
-                <div className="bg-brand-surface w-full" key={index}>
-                  <div className="m-2 mb-0">
-                    <Image
-                      sizes="100vw"
-                      width={0}
-                      height={0}
-                      className="w-full"
-                      src={item.image}
-                      alt=""
-                      priority={true}
-                    />
-                  </div>
-                  <div className="p-4 pt-2 lg:p-6">
-                    <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
-                      {item.name}
-                    </h4>
-                    <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
-                      {item.designation}
-                    </p>
-                  </div>
+                <div className="p-4 pt-2 lg:p-6">
+                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                    {item.name}
+                  </h4>
+                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                    {item.designation}
+                  </p>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
+          <div
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 ${
+              activeTab === "team"
+                ? "h-auto overflow-auto"
+                : "h-0 overflow-hidden"
+            }`}
+          >
+            {teams.team.map((item, index) => (
+              <div className="bg-brand-surface w-full" key={index}>
+                <div className="m-2 mb-0">
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-full"
+                    src={item.image}
+                    alt=""
+                    priority={true}
+                  />
+                </div>
+                <div className="p-4 pt-2 lg:p-6">
+                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                    {item.name}
+                  </h4>
+                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                    {item.designation}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </PageLayout>

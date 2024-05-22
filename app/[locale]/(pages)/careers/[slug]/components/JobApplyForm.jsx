@@ -53,7 +53,7 @@ const JobApplyForm = () => {
           </div>
           <div className="flex justify-center md:justify-start">
             <button
-              className="mt-4 transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[11px] w-[105px] font-medium rounded-sm"
+              className="mt-4  text-center text-white bg-brand-secondary   border border-brand-secondary  py-[11px] w-full md:w-[105px] font-medium rounded-sm"
               type="submit"
             >
               Apply

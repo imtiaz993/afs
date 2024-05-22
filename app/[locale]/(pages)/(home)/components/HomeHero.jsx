@@ -10,30 +10,30 @@ const HomeHero = () => {
   const isArabic = locale === "ar";
 
   return (
-    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden md:!pr-0">
+    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden !px-2 md:!px-10 md:!pr-0 lg:!px-16 ">
       <div
-        className={`py-10 lg:py-32 flex relative text-center ${
-          isArabic ? "md:text-right" : "md:text-left"
+        className={`-mb-5 md:mb-0 pt-12 md:py-32 md:flex md:relative ${
+          isArabic ? "text-right" : "text-left"
         }`}
       >
         <div
-          className={`flex flex-col items-center  relative z-10 ${
-            isArabic ? "md:items-end" : "md:items-start"
+          className={`px-3 flex flex-col relative z-10 ${
+            isArabic ? "items-end" : "items-start"
           }`}
         >
-          <h1 className="text-white text-3xl md:text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
+          <h1 className="text-white text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
             {t("title")}
           </h1>
-          <p className="text-white text-base md:text-2xl md:max-w-[400px] lg:max-w-[640px] mt-6 opacity-80">
+          <p className="text-white text-2xl md:max-w-[400px] lg:max-w-[640px] mt-6 opacity-80">
             {t("description")}
           </p>
-          <Link href="/contact">
-            <button className="transition-colors duration-500 text-center text-brand-secondary hover:text-white hover:bg-brand-secondary py-4 w-[185px] bg-white font-medium rounded-sm mt-10">
+          <Link href="/contact" className="w-full md:mx-0 md:w-[185px]">
+            <button className=" text-center text-brand-secondary py-3 md:py-4 w-full md:w-[185px] bg-white font-medium rounded-sm mt-10">
               {t("contact team")}
             </button>
           </Link>
         </div>
-        <div className="absolute top-0 right-0 bottom-0 opacity-40 md:opacity-100">
+        <div className="bg-black md:bg-transparent relative -top-7 md:absolute md:top-0 md:right-0 md:bottom-0">
           <Image
             sizes="100vw"
             width={0}

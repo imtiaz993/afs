@@ -86,7 +86,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <LocaleSwitcher locale={locale} />
               <Link href="/contact">
-                <button className="transition-colors duration-500 text-center text-white bg-brand-secondary  hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
+                <button className=" text-center text-white bg-brand-secondary   border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
                   {t("contact team")}
                 </button>
               </Link>
@@ -173,7 +173,7 @@ const Navbar = () => {
                   </div>
                   <div className="mb-40">
                     <Link href="/contact">
-                      <button className="transition-colors duration-500 text-center text-white bg-brand-secondary hover:text-brand-secondary border border-brand-secondary hover:bg-white py-[15px] w-[185px] font-medium rounded-sm">
+                      <button className=" text-center text-white bg-brand-secondary  border border-brand-secondary py-[11px]  md:py-[15px] w-[185px] font-medium rounded-sm">
                         {t("contact team")}
                       </button>
                     </Link>
@@ -278,7 +278,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] block mt-4 ${
+                    className={`text-[15px] block hover:underline mt-4 ${
                       isArabic ? "text-right" : ""
                     }  `}
                   >
@@ -301,7 +301,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] block mt-4 ${
+                    className={`text-[15px] hover:underline block mt-4 ${
                       isArabic ? "text-right" : ""
                     } `}
                   >
@@ -324,7 +324,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] block mt-4 ${
+                    className={`text-[15px] hover:underline block mt-4 ${
                       isArabic ? "text-right" : ""
                     }  `}
                   >
@@ -417,7 +417,7 @@ const Company = () => {
                 <Link
                   key={index}
                   href={item.link}
-                  className={`text-[15px] whitespace-nowrap block ${
+                  className={`text-[15px] hover:underline whitespace-nowrap block ${
                     isArabic ? "text-right" : ""
                   }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
                 >
@@ -511,7 +511,7 @@ const Resources = () => {
                 <Link
                   key={index}
                   href={item.link}
-                  className={`text-[15px] whitespace-nowrap block ${
+                  className={`text-[15px] hover:underline whitespace-nowrap block ${
                     isArabic ? "text-right" : ""
                   }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
                 >

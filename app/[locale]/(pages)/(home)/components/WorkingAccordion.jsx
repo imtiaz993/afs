@@ -34,7 +34,7 @@ const WorkingAccordion = ({
         }`}
       >
         <h4
-          className={`text-lg md:text-2xl text-primary font-regular ${
+          className={`text-[20px] md:text-2xl text-primary font-regular ${
             isArabic ? "flex flex-row-reverse" : ""
           }`}
         >

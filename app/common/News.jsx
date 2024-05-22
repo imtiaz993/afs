@@ -14,15 +14,15 @@ const News = () => {
       <PageLayout>
         <div className="py-10 lg:py-24 ">
           <div
-            className={`mb-12 flex justify-between items-center sm:items-end ${
+            className={`mb-12 md:flex justify-between items-center sm:items-end ${
               isArabic ? "flex-row-reverse" : ""
             }`}
           >
-            <h3 className="text-2xl md:text-[40px] text-primary mr-4">
+            <h3 className="text-[40px] text-primary mr-4">
               {t("title")}
             </h3>
             <div
-              className={`flex items-center cursor-pointer ${
+              className={`mt-5 md:mt-0 flex items-center cursor-pointer border-b border-white hover:border-brand-secondary ${
                 isArabic ? "flex-row-reverse" : ""
               }`}
             >
@@ -33,7 +33,7 @@ const News = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
-                className={`w-full ${isArabic ? "rotate-180 mr-2" : ""}`}
+                className={`w-auto ${isArabic ? "rotate-180 mr-2" : ""}`}
                 src="/assets/icons/home/arrow-right.svg"
                 alt=""
               />
@@ -68,14 +68,14 @@ const News = () => {
                 </div>
               </div>
               <h4
-                className={`text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular ${
+                className={`text-primary text-[20px] sm:text-2xl mb-4 mt-2 font-regular ${
                   isArabic ? "text-right" : ""
                 }`}
               >
                 {t("highlighted.headline")}
               </h4>
               <p
-                className={`text-base sm:text-lg text-primary overflow-hidden text-ellipsis line-clamp-2 ${
+                className={`text-lg text-primary overflow-hidden text-ellipsis line-clamp-2 ${
                   isArabic ? "text-right" : ""
                 }`}
               >
@@ -116,7 +116,7 @@ const News = () => {
                     {item.headline}
                   </h4>
                   <p
-                    className={` text-base sm:text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis ${
+                    className={` text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis ${
                       isArabic ? "text-right" : ""
                     }`}
                   >
