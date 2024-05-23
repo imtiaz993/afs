@@ -21,7 +21,7 @@ const CareerDetailHero = () => {
             </div>
             <p className="ml-4 text-secondary hover:underline">Back to careers</p>
           </Link>
-          <h2 className="text-primary text-left text-2xl md:text-5xl leading-[100%]">
+          <h2 className="text-primary text-left text-[32px] md:text-5xl leading-[100%]">
             Head of Customer Due Diligence and Screening Unit 
           </h2>
         </div>

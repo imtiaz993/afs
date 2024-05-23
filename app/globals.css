@@ -25,6 +25,13 @@
 
 @font-face {
   font-family: "PP Montreal";
+  src: url("../public/Font/PPNeueMontreal-RegularItalic.ttf") format("truetype");
+  font-weight: 450;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PP Montreal";
   src: url("../public/Font/PPNeueMontreal-Book.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;

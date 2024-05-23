@@ -17,7 +17,7 @@ const Support = () => {
           />
           Support
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl max-w-[976px] leading-[120%]">
           Customer support channels
         </h2>
         <p className="text-lg md:text-2xl text-primary  mb-10 md:mb-16">

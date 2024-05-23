@@ -78,7 +78,7 @@ const History = () => {
             />{" "}
             Our history
           </p>
-          <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+          <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
             At AFS we take immense pride in our rich history and the milestones
             that have shaped us into the company we are today.
           </h2>

@@ -126,7 +126,7 @@ const Team = () => {
           />{" "}
           Our team
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
           Our seasoned team leads with vision and expertise, guiding our company
           towards a successful future.
         </h2>
@@ -178,10 +178,10 @@ const Team = () => {
                   />
                 </div>
                 <div className="p-4 pt-2 lg:p-6">
-                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
                   </h4>
-                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap">
                     {item.designation}
                   </p>
                 </div>
@@ -209,10 +209,10 @@ const Team = () => {
                   />
                 </div>
                 <div className="p-4 pt-2 lg:p-6">
-                  <h4 className="text-brand-secondary text-base md:text-2xl 2xl:whitespace-nowrap">
+                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap">
                     {item.name}
                   </h4>
-                  <p className="mt-2 text-brand-secondary text-xs md:text-sm xl:whitespace-nowrap">
+                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap">
                     {item.designation}
                   </p>
                 </div>

@@ -17,7 +17,7 @@ const WhyPartner = () => {
           />{" "}
           Why partner with us
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           Become part of a partnership community and reap the rewards of
           assisting driven companies in leveraging financial technologies.
         </h2>

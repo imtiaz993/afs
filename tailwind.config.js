@@ -17,6 +17,7 @@ module.exports = {
         "brand-secondary": "#036FD0",
         "brand-tertiary": "#00AEEF",
         "brand-surface": "#E6F1FA",
+        critical: "#DF1B41",
         "critical-primary": "#B3093C",
         "dark-neutral": "#002A52",
         "medium-brand": "#036FD0",

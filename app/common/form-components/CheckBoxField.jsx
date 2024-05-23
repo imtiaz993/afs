@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Checkbox from "react-custom-checkbox";
 
-const CheckBoxField = () => {
+const CheckBoxField = ({ isError }) => {
+  const [error, setError] = useState(isError);
   const [isHover, setIsHover] = useState(false);
   const [checked, setChecked] = useState(false);
 
@@ -48,7 +49,7 @@ const CheckBoxField = () => {
         onChange={(value) => {
           setChecked(value);
         }}
-        borderColor={checked ? "#036FD0" : "#D4DFE9"}
+        borderColor={checked ? "#036FD0" : error ? "#DF1B41" : "#D4DFE9"}
         className={`!border-[1px] !w-5 !h-5  cursor-pointer checkBoxElement ${
           checked ? "bg-brand-secondary" : "bg-white"
         }`}

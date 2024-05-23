@@ -17,7 +17,7 @@ const Commitment = () => {
           />{" "}
           Our commitment
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           We are committed to fast-tracking payments innovation and making
           superior digital payments experiences more accessible, secure,
           convenient, and seamless.

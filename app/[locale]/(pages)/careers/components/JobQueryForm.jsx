@@ -22,7 +22,7 @@ const JobQueryForm = () => {
         <div className="w-full py-10 lg:py-24 px-10 md:px-16 lg:pl-16 relative z-10 lg:flex justify-between">
           <div className="flex flex-col lg:w-[464px]">
             <div className="flex flex-col items-start">
-              <h2 className="text-left text-2xl md:text-5xl text-primary leading-[120%] lg:max-w-[464px]">
+              <h2 className="text-left text-[32px] md:text-5xl text-primary leading-[120%] lg:max-w-[464px]">
                 Couldn't find the right job for you?
               </h2>
               <p className="text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 lg:max-w-[464px] ">

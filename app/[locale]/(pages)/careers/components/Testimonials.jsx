@@ -38,7 +38,7 @@ const Testimonials = () => {
     <div className="bg-subtle-neutral">
       <div className="lg:w-10/12 mx-auto pt-10 lg:pt-24">
         <p className=" mb-4 text-secondary text-center ">Testimonials</p>
-        <h2 className="mb-10 md:mb-16 text-2xl md:text-5xl text-primary text-center max-w-[486px] mx-auto">
+        <h2 className="mb-10 md:mb-16 text-[32px] md:text-5xl text-primary text-center px-5 box-content max-w-[490px] mx-auto">
           Why our team members love to work here
         </h2>
       </div>

@@ -148,7 +148,7 @@ const Footer = () => {
                 type="email"
                 placeholder={t("join network.input placeholder")}
               />
-              <button className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary hover:bg-white font-medium mt-2 rounded-sm">
+              <button className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary font-medium mt-2 rounded-sm">
                 {t("join network.button")}
               </button>
             </div>

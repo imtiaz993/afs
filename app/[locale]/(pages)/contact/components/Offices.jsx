@@ -17,7 +17,7 @@ const Offices = () => {
           />
           Our offices
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           Find us at these locations
         </h2>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">

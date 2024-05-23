@@ -14,7 +14,7 @@ const BecomePartnerForm = () => {
         <div className="w-full py-10 lg:py-24 px-10 md:px-16 lg:pl-16 relative z-10 lg:flex justify-between">
           <div className="flex flex-col lg:w-[46%]">
             <div className="flex flex-col items-start">
-              <h2 className="text-left text-2xl md:text-5xl text-primary leading-[120%]">
+              <h2 className="text-left text-[32px] md:text-5xl text-primary leading-[120%]">
                 Become a partner
               </h2>
               <p className="text-left text-base md:text-lg text-brand-primary mt-4 md:mt-6 max-w-[464px] ">
@@ -41,23 +41,48 @@ const BecomePartnerForm = () => {
             >
               <div className="grid gap-2">
                 <div className="grid md:grid-cols-2 gap-2">
-                  <InputField type="text" placeholder="First name" />
-                  <InputField type="text" placeholder="Last name" />
+                  <InputField
+                    isError={true}
+                    type="text"
+                    placeholder="First name"
+                  />
+                  <InputField
+                    isError={true}
+                    type="text"
+                    placeholder="Last name"
+                  />
                 </div>
-                <InputField type="text" placeholder="Job description" />
-                <InputField type="email" placeholder="Company email address" />
-                <InputField type="text" placeholder="Company name" />
+                <InputField
+                  isError={true}
+                  type="text"
+                  placeholder="Job description"
+                />
+                <InputField
+                  isError={true}
+                  type="email"
+                  placeholder="Company email address"
+                />
+                <InputField
+                  isError={true}
+                  type="text"
+                  placeholder="Company name"
+                />
                 <Select
+                  isError={true}
                   label="Company headquarters location"
                   options={["Bahrain", "Egypt", "UAE", "Oman"]}
                 />
                 <Select
+                  isError={true}
                   label="Partnership type"
                   options={["Type 1", "Type 2", "Type 3", "Type 4"]}
                 />
-                <TextArea placeholder="Please tell us more about your needs" />
+                <TextArea
+                  isError={true}
+                  placeholder="Please tell us more about your needs"
+                />
                 <div className="flex items-start mt-6 ">
-                  <CheckBoxField />
+                  <CheckBoxField isError={true} />
                   <p className="text-secondary text-sm ml-3">
                     By sending your information you agree to our
                     <Link className="text-primary underline ml-1" href="/">

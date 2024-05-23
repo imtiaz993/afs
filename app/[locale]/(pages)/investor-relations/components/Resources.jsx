@@ -17,14 +17,14 @@ const Resources = () => {
           />{" "}
           Resources
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           Ensuring transparency with unrestricted access to key documents and
           statements.
         </h2>
         <div>
           <div className="flex flex-col md:flex-row lg:items-center">
             <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded mb-4 md:mb-0 md:mr-4">
-              <h4 className="text-lg md:text-2xl text-secondary">
+              <h4 className="text-xl md:text-2xl text-secondary">
                 Shareholders’ rights to participate and vote
               </h4>
               <div className="flex items-center cursor-pointer">
@@ -42,7 +42,7 @@ const Resources = () => {
               </div>
             </div>
             <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded">
-              <h4 className="text-lg md:text-2xl text-secondary">
+              <h4 className="text-xl md:text-2xl text-secondary">
                 AFS proxy form
               </h4>
               <div className="flex items-center cursor-pointer">

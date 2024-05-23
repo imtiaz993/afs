@@ -189,7 +189,7 @@ const OpenPositions = () => {
           />{" "}
           Open positions
         </p>
-        <h2 className="text-primary text-2xl md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
           Join us in building market-leading digital payments solutions
         </h2>
         <div className="lg:flex items-start">

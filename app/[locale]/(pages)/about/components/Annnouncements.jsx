@@ -42,7 +42,7 @@ const Annnouncements = () => {
                   <p className="text-xs text-secondary ">5 min read</p>
                 </div>
               </div>
-              <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular">
+              <h4 className="text-primary text-xl sm:text-2xl mb-4 mt-2 font-regular">
                 ACI Worldwide and AFS to drive payments modernization for banks
                 and merchants in the Middle East
               </h4>
@@ -63,7 +63,7 @@ const Annnouncements = () => {
                     <p className="text-xs text-secondary ">5 min read</p>
                   </div>
                 </div>
-                <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular">
+                <h4 className="text-primary text-xl sm:text-2xl mb-4 mt-2 font-regular">
                   AFS Transaction Index: Season-Opening Bahrain GP Delivers 66%
                   Surge in Spends
                 </h4>
@@ -86,7 +86,7 @@ const Annnouncements = () => {
                     <p className="text-xs text-secondary ">5 min read</p>
                   </div>
                 </div>
-                <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular">
+                <h4 className="text-primary text-xl sm:text-2xl mb-4 mt-2 font-regular">
                   AFS enter strategic alliance with Xpence to innovate SME
                   financial management in Bahrain
                 </h4>
@@ -106,7 +106,7 @@ const Annnouncements = () => {
                     <p className="text-xs text-secondary ">5 min read</p>
                   </div>
                 </div>
-                <h4 className="text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular">
+                <h4 className="text-primary text-xl sm:text-2xl mb-4 mt-2 font-regular">
                   AFS conducts media workshop to showcase latest cloud-based
                   restaurant-first solution
                 </h4>
