@@ -226,13 +226,21 @@ const About = () => {
           </div>
         </div>
       </PageLayout>
-      <div className="absolute top-0 right-0 bottom-0 lg:w-3/4 ml-7">
+      <div className="absolute top-0 left-0 lg:left-auto right-0 bottom-0 lg:w-3/4 lg:ml-7">
         <Image
           sizes="100vw"
           width={0}
           height={0}
-          className="w-full h-full"
+          className="w-full h-full hidden lg:block"
           src="/assets/images/home/about.png"
+          alt=""
+        />
+         <Image
+          sizes="100vw"
+          width={0}
+          height={0}
+          className="w-full h-full lg:hidden"
+          src="/assets/images/home/aboutMobile.png"
           alt=""
         />
       </div>

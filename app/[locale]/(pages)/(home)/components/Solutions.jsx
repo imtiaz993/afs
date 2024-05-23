@@ -1,14 +1,49 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import PageLayout from "app/common/PageLayout";
 
 const Solutions = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const locale = useLocale();
   const t = useTranslations("Home.Solutions");
   const bankFeatures = t.raw("banks.features");
   const businessFeatures = t.raw("businesses.features");
   const isArabic = locale === "ar";
+
+  const removeDivKeepChildren = () => {
+    const parentDiv = document.querySelector(".parent-div");
+    const childDiv = parentDiv.querySelector(".child-div");
+
+    while (childDiv && childDiv.firstChild) {
+      parentDiv.insertBefore(childDiv.firstChild, childDiv);
+    }
+
+    if (childDiv) {
+      parentDiv.removeChild(childDiv);
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        removeDivKeepChildren();
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <PageLayout>
@@ -40,9 +75,9 @@ const Solutions = () => {
             {t("headline")}
           </h2>
         </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div>
-            <div className=" banks-home-gradient rounded">
+        <div className="grid lg:grid-cols-2 gap-4 parent-div">
+          <div className="child-div">
+            <div className="order-1 banks-home-gradient rounded">
               <div
                 className="p-6 md:p-10 lg:p-8 xl:p-10 rounded"
                 style={{
@@ -127,17 +162,17 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-            <div className="all-solution-home-gradient mt-4 rounded overflow-hidden">
+            <div className="order-4 all-solution-home-gradient mt-4 rounded overflow-hidden">
               <div
-                className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded"
                 style={{
-                  background: `url('/assets/images/home/allSolutions.png') no-repeat top center`,
+                  background: `url('/assets/images/home/allSolutions.png')`,
                   backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
+                  backgroundSize: "700px auto",
                 }}
+                className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded back !bg-no-repeat !bg-right-top"
               >
                 <h3
-                  className={`text-2xl md:text-[40px] text-primary mb-5 ${
+                  className={`text-2xl md:text-[40px] text-primary mb-5 mt-[187px] lg:mt-0 ${
                     isArabic ? "text-right" : ""
                   }`}
                 >
@@ -160,11 +195,11 @@ const Solutions = () => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="bg-[#7A7A7A] rounded relative">
+          <div className="child-div">
+            <div className="order-3 bg-[#7A7A7A] rounded relative flex flex-col-reverse lg:flex-col overflow-hidden">
               <div className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded relative z-10">
                 <h3
-                  className={`text-2xl md:text-[40px] text-white mb-5 ${
+                  className={`text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0 ${
                     isArabic ? "text-right" : ""
                   }`}
                 >
@@ -187,7 +222,7 @@ const Solutions = () => {
               </div>
 
               <div
-                className={`absolute top-0 bottom-0 opacity-30 xl:opacity-100 ${
+                className={`w-full lg:w-auto absolute top-0 lg:bottom-0 ${
                   isArabic ? "left-0" : "right-0"
                 }`}
               >
@@ -195,94 +230,106 @@ const Solutions = () => {
                   sizes="100vw"
                   width={0}
                   height={0}
-                  className="w-full h-full"
+                  className="w-full h-full hidden lg:block"
                   src="/assets/images/home/forConsumers.png"
+                  alt=""
+                />
+                <Image
+                  sizes="100vw"
+                  width={0}
+                  height={0}
+                  className="w-full h-full lg:hidden"
+                  src="/assets/images/home/forConsumersMobile.png"
                   alt=""
                 />
               </div>
             </div>
-            <div className="bg-black mt-4 rounded">
+            <div className="order-2 bg-black mt-4 rounded">
               <div
-                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded"
+                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded w-full !bg-contain"
                 style={{
-                  background: `url('/assets/images/home/forBusiness.png') no-repeat top center`,
+                  background: isMobile
+                    ? `url('/assets/images/home/forBusinessMobile.png') no-repeat top center`
+                    : `url('/assets/images/home/forBusiness.png') no-repeat top center`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
               >
-                <h3
-                  className={`text-2xl md:text-[40px] text-white mb-5 ${
-                    isArabic ? "text-right" : ""
-                  }`}
-                >
-                  {t("businesses.title")}
-                </h3>
-                <p
-                  className={` text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80 ${
-                    isArabic
-                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
-                      : ""
-                  }`}
-                >
-                  {t("businesses.description")}
-                </p>
-                <div
-                  className={`flex items-center flex-wrap mb-[272px]  ${
-                    isArabic ? "justify-start flex-row-reverse" : ""
-                  }`}
-                >
-                  <button
-                    className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white font-medium rounded-sm mt-4 ${
-                      isArabic ? "md:ml-4" : "md:mr-4"
+                <div className="relative bottom-0">
+                  <h3
+                    className={`text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0 ${
+                      isArabic ? "text-right" : ""
                     }`}
                   >
-                    {t("businesses.button")}
-                  </button>
-                  <ul
-                    className={`flex flex-wrap mt-4 ${
-                      isArabic ? "w-[428px] justify-end" : ""
+                    {t("businesses.title")}
+                  </h3>
+                  <p
+                    className={` text-base md:text-lg text-white mb-4 max-w-[420px] opacity-80 ${
+                      isArabic
+                        ? "ml-auto text-right lg:!text-base xl:!text-lg"
+                        : ""
                     }`}
                   >
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
-                      <Image
-                        sizes="100vw"
-                        width={0}
-                        height={0}
-                        src="/assets/icons/home/check.svg"
-                        className="w-auto"
-                        alt=""
-                      />
-                      <span className="opacity-80  ml-1">
-                        {businessFeatures[0]}
-                      </span>
-                    </li>
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
-                      <Image
-                        sizes="100vw"
-                        width={0}
-                        height={0}
-                        src="/assets/icons/home/check.svg"
-                        className="w-auto"
-                        alt=""
-                      />
-                      <span className="opacity-80  ml-1">
-                        {businessFeatures[1]}
-                      </span>
-                    </li>
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
-                      <Image
-                        sizes="100vw"
-                        width={0}
-                        height={0}
-                        src="/assets/icons/home/check.svg"
-                        className="w-auto"
-                        alt=""
-                      />
-                      <span className="opacity-80  ml-1">
-                        {businessFeatures[2]}
-                      </span>
-                    </li>
-                  </ul>
+                    {t("businesses.description")}
+                  </p>
+                  <div
+                    className={`flex items-center flex-wrap md:mb-[272px]  ${
+                      isArabic ? "justify-start flex-row-reverse" : ""
+                    }`}
+                  >
+                    <button
+                      className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white font-medium rounded-sm mt-4 ${
+                        isArabic ? "md:ml-4" : "md:mr-4"
+                      }`}
+                    >
+                      {t("businesses.button")}
+                    </button>
+                    <ul
+                      className={`flex flex-wrap mt-4 ${
+                        isArabic ? "w-[428px] justify-end" : ""
+                      }`}
+                    >
+                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                        <Image
+                          sizes="100vw"
+                          width={0}
+                          height={0}
+                          src="/assets/icons/home/check.svg"
+                          className="w-auto"
+                          alt=""
+                        />
+                        <span className="opacity-80  ml-1">
+                          {businessFeatures[0]}
+                        </span>
+                      </li>
+                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                        <Image
+                          sizes="100vw"
+                          width={0}
+                          height={0}
+                          src="/assets/icons/home/check.svg"
+                          className="w-auto"
+                          alt=""
+                        />
+                        <span className="opacity-80  ml-1">
+                          {businessFeatures[1]}
+                        </span>
+                      </li>
+                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                        <Image
+                          sizes="100vw"
+                          width={0}
+                          height={0}
+                          src="/assets/icons/home/check.svg"
+                          className="w-auto"
+                          alt=""
+                        />
+                        <span className="opacity-80  ml-1">
+                          {businessFeatures[2]}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
