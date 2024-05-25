@@ -119,7 +119,7 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`md:ml-4text-center text-brand-secondary   border border-brand-secondary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
+                className={`md:ml-4 text-center text-brand-secondary   border border-brand-secondary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
               >
                 {secondaryButtonLabel}
               </button>
