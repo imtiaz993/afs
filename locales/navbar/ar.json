@@ -11,10 +11,6 @@
             "link": "/solutions/banks/card-issuing-processing"
           },
           {
-            "title": "الخدمات المصرفية الرقمية",
-            "link": ""
-          },
-          {
             "title": "المصرفية المفتوحة",
             "link": "/solutions/banks/open-banking"
           },
@@ -41,10 +37,7 @@
           },
           { "title": "SoftPOS", "link": "/solutions/business/softpos" },
           { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
-          { "title": "بوابة التجار", "link": "/" },
-          { "title": "ضيافة", "link": "/" },
-          { "title": "المأكولات والمشروبات (F&B)", "link": "/" },
-          { "title": "مجموعة خدمات للشركات الصغيرة والمتوسطة", "link": "/" }
+          { "title": "المأكولات والمشروبات (F&B)", "link": "/" }
         ]
       },
       "solutions for consumer": {

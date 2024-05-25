@@ -189,7 +189,7 @@ const OpenPositions = () => {
           />{" "}
           Open positions
         </p>
-        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] !leading-[120%]">
           Join us in building market-leading digital payments solutions
         </h2>
         <div className="lg:flex items-start">
@@ -232,13 +232,13 @@ const OpenPositions = () => {
                   index !== positions.length ? "border-b border-default" : ""
                 }  px-4 py-2 md:flex items-center justify-between w-full`}
               >
-                <h6 className="py-2 text-primary font-regular">{item.title}</h6>
+                <h6 className="py-2 text-primary font-regular !leading-[140%]">{item.title}</h6>
                 <div className="flex justify-between md:justify-start">
                   <div className="py-2 flex items-center mr-8">
-                    <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-base">
+                    <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-base !leading-6">
                       {item.department}
                     </p>
-                    <p className="text-primary text-sm md:text-base">
+                    <p className="text-primary text-sm md:text-base !leading-6">
                       {item.location}
                     </p>
                   </div>

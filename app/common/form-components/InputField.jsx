@@ -2,9 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 
-const InputField = ({ type, placeholder, isError }) => {
-  const [value, setValue] = useState("");
-  const [error, setError] = useState(isError);
+const InputField = ({ name, type, placeholder, error, value, onChange, onBlur }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const containerRef = useRef(null);
@@ -15,8 +13,10 @@ const InputField = ({ type, placeholder, isError }) => {
     inputRef.current.focus();
   };
 
-  const handleBlur = () => setIsFocused(false);
-  const handleChange = (e) => setValue(e.target.value);
+  const handleBlur = (e) => {
+    setIsFocused(false);
+    onBlur(e);
+  };
 
   const handleClickOutside = (event) => {
     if (containerRef.current && !containerRef.current.contains(event.target)) {
@@ -36,7 +36,7 @@ const InputField = ({ type, placeholder, isError }) => {
       {error && (
         <div className="flex justify-end">
           <p className="inline-block bg-critical py-0.5 px-1 text-[10px] text-white font-medium rounded-t-sm overflow-hidden">
-            Email is incorrect
+            {error}
           </p>
         </div>
       )}
@@ -44,7 +44,7 @@ const InputField = ({ type, placeholder, isError }) => {
         ref={containerRef}
         className={`relative bg-white border rounded-sm py-3 px-4 cursor-text ${
           isFocused ? "border-brand-secondary" : "border-default "
-        } ${error ? "border-critical" : ""}`}
+        } ${error && "!border-critical"}`}
         onClick={() => {
           handleFocus();
         }}
@@ -53,10 +53,11 @@ const InputField = ({ type, placeholder, isError }) => {
           className={`w-full text-primary placeholder:text-tertiary outline-none relative ${
             isFocused || value ? "top-1.5" : ""
           }`}
+          name={name}
           type={type}
-          required
           ref={inputRef}
-          onChange={handleChange}
+          value={value}
+          onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
         />
@@ -67,7 +68,7 @@ const InputField = ({ type, placeholder, isError }) => {
           className={`absolute left-4 transition-all cursor-text ${
             isFocused || value ? "text-[10px] top-[5px]  block select-none" : ""
           } ${isFocused ? "text-brand-secondary" : "text-tertiary"} ${
-            error ? "text-critical" : ""
+            error && "!text-critical"
           }`}
         >
           {placeholder}

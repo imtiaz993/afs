@@ -25,7 +25,7 @@ const SolutionFeatures = ({
           </p>
           {learnMoreLink ? (
             <Link href={learnMoreLink}>
-              <p className="mt-4 text-brand-secondary font-[530] leading-6">
+              <p className="mt-4 text-brand-secondary font-[530] !leading-6">
                 Learn more
                 <Image
                   sizes="100vw"

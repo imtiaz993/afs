@@ -17,7 +17,7 @@ const Commitment = () => {
           />{" "}
           Our commitment
         </p>
-        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] !leading-[120%]">
           We are committed to fast-tracking payments innovation and making
           superior digital payments experiences more accessible, secure,
           convenient, and seamless.
@@ -32,10 +32,10 @@ const Commitment = () => {
               src="/assets/images/about/commitment-card.png"
               alt=""
             />
-            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
+            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">
               Our vision
             </h4>
-            <p className="text-lg  text-secondary ">
+            <p className="text-lg  text-secondary !leading-7">
               To be the leading enabler for digital transaction transformation.
             </p>
           </div>
@@ -48,10 +48,10 @@ const Commitment = () => {
               src="/assets/images/about/commitment-card.png"
               alt=""
             />
-            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
+            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">
               Our mission
             </h4>
-            <p className="text-lg  text-secondary ">
+            <p className="text-lg  text-secondary !leading-7">
               Offer better, faster, and more secure products and services that
               support our customers’ growth.
             </p>
@@ -65,10 +65,10 @@ const Commitment = () => {
               src="/assets/images/about/commitment-card.png"
               alt=""
             />
-            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary">
+            <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">
               Our values
             </h4>
-            <p className="text-lg  text-secondary ">
+            <p className="text-lg  text-secondary !leading-7">
               A client centric, collaborative and consistent entity, committed
               to delivering superior experiences.
             </p>

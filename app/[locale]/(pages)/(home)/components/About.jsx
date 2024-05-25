@@ -37,7 +37,7 @@ const About = () => {
                 {t("title")}
               </p>
               <h2
-                className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[845px] leading-[120%] ${
+                className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[845px] !leading-[120%] ${
                   isArabic ? "text-right" : "text-left"
                 }`}
               >
@@ -74,21 +74,21 @@ const About = () => {
                   {t("sub title")}
                 </p>
                 <h3
-                  className={`text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] leading-[120%] ${
+                  className={`text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] !leading-[120%] ${
                     isArabic ? "text-right" : "text-left"
                   }`}
                 >
                   {t("sub headline")}
                 </h3>
                 <p
-                  className={`text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] ${
+                  className={`text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] !leading-7 ${
                     isArabic ? "text-right" : "text-left"
                   }`}
                 >
                   {t("description")}
                 </p>
                 <Link href="/about">
-                  <button className=" text-center text-brand-secondary py-[11px] md:py-[15px] w-full md:w-52 border border-brand-secondary   font-medium rounded-sm">
+                  <button className=" text-center text-brand-secondary py-[11px] md:py-[15px] w-full md:w-52 border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary  font-medium rounded-sm">
                     {t("learn more")}
                   </button>
                 </Link>
@@ -99,7 +99,7 @@ const About = () => {
                 }`}
               >
                 <div
-                  className={`mt-12 pb-12 border-b border-default w-full flex flex-col ${
+                  className={`mt-12 pb-8 lg:pb-12 border-b border-default w-full flex flex-col ${
                     isArabic ? "items-end" : "items-start"
                   }`}
                 >
@@ -122,7 +122,7 @@ const About = () => {
                   </p>
                 </div>
                 <div
-                  className={`mt-12 pb-12 border-b grid grid-cols-2 border-default gap-10 w-full `}
+                  className={`mt-8 lg:mt-12 pb-8 lg:pb-12 border-b grid grid-cols-2 border-default gap-10 w-full `}
                 >
                   <div
                     className={`flex flex-col ${
@@ -172,7 +172,7 @@ const About = () => {
                   </div>
                 </div>
                 <div
-                  className={`mt-12 pb-12 border-b grid grid-cols-2 border-default gap-10 w-full`}
+                  className={`mt-8 lg:mt-12 pb-12 border-b grid grid-cols-2 border-default gap-10 w-full`}
                 >
                   <div
                     className={`flex flex-col ${

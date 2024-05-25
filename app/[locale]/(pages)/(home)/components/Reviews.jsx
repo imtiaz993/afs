@@ -36,12 +36,20 @@ const Reviews = () => {
             {reviews.map((item, index) => (
               <SwiperSlide key={index}>
                 <div>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    src="/assets/icons/home/webflow.svg"
+                    className="w-auto mb-16 hidden lg:block"
+                    alt=""
+                  />
                   <h3
-                    className={`text-2xl md:text-3xl leading-[130%] text-white ${
+                    className={`text-2xl md:text-3xl !leading-[130%] text-white ${
                       isArabic ? "text-right" : "text-left"
                     }`}
                   >
-                    {item.quote}
+                    "{item.quote}
                   </h3>
                   <p
                     className={`font-medium  text-white mt-8 ${
@@ -63,7 +71,7 @@ const Reviews = () => {
 
             <div className="flex items-center justify-between lg:justify-start  mt-8 lg:mt-16 ">
               <div className="w-full lg:w-auto">
-                <div className="flex lg:inline-flex justify-between items-center lg:items-start md:justify-center lg:justify-start relative z-20 select-none">
+                <div className="flex lg:inline-flex justify-between items-center lg:items-start lg:justify-start relative z-20 select-none">
                   <div
                     className="mr-4 w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer"
                     onClick={() => {
@@ -86,9 +94,11 @@ const Reviews = () => {
                       alt=""
                     />
                   </div>
-                  <div className="inline-block lg:hidden">
-                    <div className="swiper-custom-pagination" />
-                  </div>
+                  {window.innerWidth < 1024 && (
+                    <div className="inline-block lg:hidden">
+                      <div className="swiper-custom-pagination" />
+                    </div>
+                  )}
                   <div
                     className="w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer"
                     onClick={() => {
@@ -113,9 +123,11 @@ const Reviews = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:block ml-10">
-                <div className="swiper-custom-pagination" />
-              </div>
+              {window.innerWidth >= 1024 && (
+                <div className="hidden lg:block ml-10">
+                  <div className="swiper-custom-pagination" />
+                </div>
+              )}
             </div>
           </Swiper>
         </div>

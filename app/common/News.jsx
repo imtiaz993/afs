@@ -18,7 +18,7 @@ const News = () => {
               isArabic ? "flex-row-reverse" : ""
             }`}
           >
-            <h3 className="text-[40px] text-primary mr-4">
+            <h3 className="text-[40px] text-primary mr-4 !leading-[120%]">
               {t("title")}
             </h3>
             <div
@@ -68,14 +68,14 @@ const News = () => {
                 </div>
               </div>
               <h4
-                className={`text-primary text-[20px] sm:text-2xl mb-4 mt-2 font-regular ${
+                className={`text-primary text-[20px] sm:text-2xl mb-4 mt-2 font-regular !leading-[130%] ${
                   isArabic ? "text-right" : ""
                 }`}
               >
                 {t("highlighted.headline")}
               </h4>
               <p
-                className={`text-lg text-primary overflow-hidden text-ellipsis line-clamp-2 ${
+                className={`text-lg text-primary overflow-hidden text-ellipsis line-clamp-2 !leading-7 ${
                   isArabic ? "text-right" : ""
                 }`}
               >
@@ -109,14 +109,14 @@ const News = () => {
                     </div>
                   </div>
                   <h4
-                    className={`text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular ${
+                    className={`text-primary text-lg sm:text-2xl mb-4 mt-2 font-regular !leading-[130%] ${
                       isArabic ? "text-right" : ""
                     }`}
                   >
                     {item.headline}
                   </h4>
                   <p
-                    className={` text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis ${
+                    className={` text-lg text-primary overflow-hidden whitespace-nowrap text-ellipsis !leading-7 ${
                       isArabic ? "text-right" : ""
                     }`}
                   >

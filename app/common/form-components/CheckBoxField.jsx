@@ -3,18 +3,16 @@
 import React, { useEffect, useState } from "react";
 import Checkbox from "react-custom-checkbox";
 
-const CheckBoxField = ({ isError }) => {
-  const [error, setError] = useState(isError);
+const CheckBoxField = ({ name, error, value, setFieldValue, onBlur }) => {
   const [isHover, setIsHover] = useState(false);
-  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     const src =
-      !isHover && checked
+      !isHover && value
         ? "/assets/icons/checkbox/checked.svg"
-        : isHover && checked
+        : isHover && value
         ? "/assets/icons/checkbox/checked-hover.svg"
-        : isHover && !checked
+        : isHover && !value
         ? "/assets/icons/checkbox/uncheck-hover.svg"
         : "";
 
@@ -33,7 +31,7 @@ const CheckBoxField = ({ isError }) => {
         checkBoxElement[0].appendChild(img);
       }
     }
-  }, [isHover, checked]);
+  }, [isHover, value]);
 
   return (
     <div
@@ -45,16 +43,20 @@ const CheckBoxField = ({ isError }) => {
       }}
     >
       <Checkbox
+        id={name}
         icon={<img src="" alt="" />}
-        onChange={(value) => {
-          setChecked(value);
-        }}
-        borderColor={checked ? "#036FD0" : error ? "#DF1B41" : "#D4DFE9"}
+        borderColor={value ? "#036FD0" : error ? "#DF1B41" : "#D4DFE9"}
         className={`!border-[1px] !w-5 !h-5  cursor-pointer checkBoxElement ${
-          checked ? "bg-brand-secondary" : "bg-white"
+          value ? "bg-brand-secondary" : "bg-white"
         }`}
         iconClassName="!hidden"
         iconStyle={{ display: "none" }}
+        name={name}
+        value={value}
+        onChange={(e) => {
+          setFieldValue([name], e);
+        }}
+        onBlur={onBlur}
       />
     </div>
   );

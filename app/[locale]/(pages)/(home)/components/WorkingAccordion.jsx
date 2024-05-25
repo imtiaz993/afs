@@ -62,7 +62,7 @@ const WorkingAccordion = ({
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
         <p
-          className={`text-secondary text-base md:text-lg mt-4 ${
+          className={`text-secondary text-base md:text-lg mt-4 !leading-[130%] ${
             isArabic ? "text-right" : ""
           }`}
         >

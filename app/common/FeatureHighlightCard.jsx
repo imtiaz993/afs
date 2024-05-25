@@ -10,7 +10,7 @@ const FeatureHighlightCard = ({
 }) => {
   return (
     <>
-      <h2 className="text-primary text-[32px] md:text-[48px] mb-6 md:mb-8 leading-[120%] ">
+      <h2 className="text-primary text-[32px] md:text-[48px] mb-6 md:mb-8 !leading-[120%] ">
         {message}
       </h2>
 

@@ -85,10 +85,10 @@ const CommonCTA = ({
         } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
       >
         <div
-          className={`text-[32px] leading-[38.4px] text-primary  ${
+          className={`text-[32px] !leading-[38.4px] text-primary  ${
             lessPaddingVariant
-              ? "leading-[120%]"
-              : "md:text-[48px] md:leading-[57.6px] lg:max-w-[596px]"
+              ? "!leading-[120%]"
+              : "md:text-[48px] md:!leading-[57.6px] lg:max-w-[596px]"
           } ${isArabic ? "lg:text-right" : "text-left"}`}
         >
           {primaryContentNode}
@@ -109,7 +109,7 @@ const CommonCTA = ({
         >
           <Link href={primaryButtonLink}>
             <button
-              className={`text-center text-white bg-brand-secondary border border-brand-secondary font-medium rounded-sm w-full lg:w-auto px-8 ${
+              className={`text-center text-white bg-brand-secondary border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary font-medium rounded-sm w-full lg:w-auto px-8 ${
                 lessPaddingVariant ? "py-[11px]" : "py-[11px] md:py-[15px] "
               }`}
             >
@@ -119,7 +119,7 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`md:ml-4 text-center text-brand-secondary   border border-brand-secondary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
+                className={`md:ml-4 text-center text-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
               >
                 {secondaryButtonLabel}
               </button>

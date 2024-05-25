@@ -2,9 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 
-const Select = ({ label, options, isError }) => {
-  const [value, setValue] = useState("");
-  const [error, setError] = useState(isError);
+const Select = ({ label, options, name, error, value, onChange, onBlur }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const containerRef = useRef(null);
@@ -12,8 +10,6 @@ const Select = ({ label, options, isError }) => {
   const handleFocus = () => {
     setIsFocused(true);
   };
-
-  const handleChange = (e) => setValue(e.target.value);
 
   const handleClickOutside = (event) => {
     if (containerRef.current && !containerRef.current.contains(event.target)) {
@@ -33,7 +29,7 @@ const Select = ({ label, options, isError }) => {
       {error && (
         <div className="flex justify-end">
           <p className="inline-block bg-critical py-0.5 px-1 text-[10px] text-white font-medium rounded-t-sm overflow-hidden">
-            Email is incorrect
+            {error}
           </p>
         </div>
       )}
@@ -41,7 +37,7 @@ const Select = ({ label, options, isError }) => {
         ref={containerRef}
         className={`relative bg-white border rounded-sm h-[49.6px] overflow-hidden ${
           isFocused ? "border-brand-secondary" : "border-default "
-        } ${error ? "border-critical" : ""}`}
+        } ${error ? "!border-critical" : ""}`}
         onClick={() => {
           handleFocus();
         }}
@@ -50,8 +46,11 @@ const Select = ({ label, options, isError }) => {
           className={`w-full px-4 text-primary outline-none bg-transparent absolute -left-[3px] bottom-0 top-0 z-10 ${
             value && isFocused ? "pt-2.5" : ""
           } ${value ? "pt-2.5" : ""}`}
-          required
-          onChange={handleChange}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={onBlur}
         >
           <option value=""></option>
           {options.map((item, index) => (
@@ -64,7 +63,7 @@ const Select = ({ label, options, isError }) => {
           className={`w-full h-full relative left-4 top-[12px] transition-all z-0 ${
             isFocused && value ? "text-brand-secondary" : "text-tertiary"
           }  ${value ? "top-[4px] block select-none text-[10px]" : ""} ${
-            error ? "text-critical" : ""
+            error ? "!text-critical" : ""
           }`}
         >
           {label}

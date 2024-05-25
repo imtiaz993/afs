@@ -6,38 +6,33 @@
       "contact team": "Contact our team"
     },
     "Working": {
-      "title": "Working with us",
+      "title": "Benefits of our products and services",
       "headline": "Our innovative financial solutions deliver numerous benefits for banks and businesses, designed to ensure success for all partners.",
       "accordion": [
         {
           "count": "01",
-          "title": "Secure transaction processing",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+          "title": "In-store, on-the-go and eShop payments",
+          "description": "Simplify your business operations, reach more customers, increase sales, and reduce costs with a comprehensive set of convenient and easy to use payments acceptance solutions by AFS. "
         },
         {
           "count": "02",
           "title": "Card issuing and processing",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+          "description": "Our issuing and processing platforms are designed to be modular, scalable, and flexible, allowing us to craft customized solutions for every payment use case to best serve your business needs."
         },
         {
           "count": "03",
-          "title": "Cross-border payments",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+          "title": "Fraud and risk management services",
+          "description": "Our proactive and market-leading fraud prevention technology solutions ensure your payments business stays safe and secure. "
         },
         {
           "count": "04",
-          "title": "Risk and fraud management",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+          "title": "Open Banking hub",
+          "description": "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that accelerate innovation and enhance customer experiences."
         },
         {
           "count": "05",
-          "title": "Real-time settlements",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
-        },
-        {
-          "count": "06",
-          "title": "Integration flexibility",
-          "description": "Experience the assurance of top-tier security with advanced encryption, tokenization, and adherence to global standards such as PCI DSS, safeguarding customer data during every transaction."
+          "title": "Value added services",
+          "description": "AFS introduces the latest value-added services and state-of-the-art security features to revolutionize your payments business while driving seamless integration and cardholder engagement."
         }
       ]
     },
@@ -49,10 +44,9 @@
         "description": "Gain access to state-of-the-art payment processing services, card issuance, risk management systems, and other tailored solutions.",
         "button": "Explore",
         "features": [
-          "Card processing",
-          "ATM & POS Driving",
-          "Card issuing",
-          "All Solutions"
+          "Card solutions",
+          "Support services",
+          "Value added services"
         ]
       },
       "solutions": {
@@ -70,7 +64,7 @@
         "description": "Boost growth and efficiency with all-in-one merchant services, POS terminals, and custom payment solutions tailored to your business needs.",
         "button": "Explore",
 
-        "features": ["POS Terminals", "Payroll solution", "Payment gateway"]
+        "features": ["POS Terminals", "Online payments", "SoftPOS solutions"]
       }
     },
     "About": {

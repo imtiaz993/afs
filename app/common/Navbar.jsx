@@ -56,7 +56,7 @@ const Navbar = () => {
   return (
     <div className="lg:sticky top-0 z-[999]">
       <div
-        className={`py-4 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-500  ${
+        className={`py-4 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-300  ${
           isHome
             ? colorChange
               ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
@@ -86,7 +86,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <LocaleSwitcher locale={locale} />
               <Link href="/contact">
-                <button className=" text-center text-white bg-brand-secondary   border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
+                <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
                   {t("contact team")}
                 </button>
               </Link>

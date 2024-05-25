@@ -64,7 +64,7 @@ const History = () => {
   }, [swiperIndex]);
 
   return (
-    <div className="history-swiper">
+    <div className="history-swiper max-w-[100vw] overflow-hidden">
       <PageLayout>
         <div className="pt-10 lg:pt-24">
           <p className="mb-4 text-secondary flex items-center ">
@@ -78,7 +78,7 @@ const History = () => {
             />{" "}
             Our history
           </p>
-          <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+          <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] !leading-[120%]">
             At AFS we take immense pride in our rich history and the milestones
             that have shaped us into the company we are today.
           </h2>
@@ -158,20 +158,27 @@ const History = () => {
             }}
           >
             {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div
-                  className={`bg-subtle-neutral py-10 px-8  min-h-[280px] rounded flex flex-col justify-between ${
-                    index + 1 === slides.length ? "mr-4" : ""
-                  }`}
-                >
-                  <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10">
-                    {slide.title}
-                  </h2>
-                  <p className="text-primary text-[17px] ">
-                    {slide.description}
-                  </p>
-                </div>
-              </SwiperSlide>
+              <>
+                <SwiperSlide key={index}>
+                  <div className="flex w-full">
+                    <div
+                      className={`w-full bg-subtle-neutral py-10 px-8  min-h-[280px] rounded flex flex-col justify-between ${
+                        index + 1 === slides.length ? "mr-5 md:mr-10 lg:mr-12" : ""
+                      }`}
+                    >
+                      <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10 !leading-[100%]">
+                        {slide.title}
+                      </h2>
+                      <p className="text-primary text-[17px] !leading-7">
+                        {slide.description}
+                      </p>
+                    </div>
+                    {index + 1 === slides.length && (
+                      <div className="w-10 h-10"></div>
+                    )}
+                  </div>
+                </SwiperSlide>
+              </>
             ))}
           </Swiper>
         </div>

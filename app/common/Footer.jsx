@@ -1,9 +1,17 @@
+"use client";
+
 import React from "react";
 import { Link } from "@/i18n.config";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import PageLayout from "./PageLayout";
 import InputField from "./form-components/InputField";
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().required("Email is required").email("Email is incorrect"),
+});
 
 const Footer = () => {
   const locale = useLocale();
@@ -15,6 +23,15 @@ const Footer = () => {
   const companyLinks = t.raw("company");
   const resourcesLinks = t.raw("resources");
   const publicLinks = t.raw("public links");
+
+  const { values, touched, errors, handleChange, handleBlur, handleSubmit } =
+    useFormik({
+      initialValues: { email: "" },
+      validationSchema: validationSchema,
+      onSubmit: (values, { resetForm }) => {
+        resetForm();
+      },
+    });
 
   return (
     <PageLayout>
@@ -144,13 +161,23 @@ const Footer = () => {
               {t("join network.description")}
             </p>
             <div className="flex flex-col">
-              <InputField
-                type="email"
-                placeholder={t("join network.input placeholder")}
-              />
-              <button className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary font-medium mt-2 rounded-sm">
-                {t("join network.button")}
-              </button>
+              <form onSubmit={handleSubmit}>
+                <InputField
+                  type="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={errors.email && touched.email ? errors.email : ""}
+                  placeholder={t("join network.input placeholder")}
+                />
+                <button
+                  type="submit"
+                  className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary font-medium mt-2 rounded-sm"
+                >
+                  {t("join network.button")}
+                </button>
+              </form>
             </div>
             <p className="text-secondary text-center md:text-left mt-4 text-sm pb-10 mb-10 border-b border-default">
               {t("join network.privacy text")}{" "}
@@ -236,7 +263,7 @@ const Footer = () => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    className="mx-5 w-full"
+                    className="mx-5 w-[70px]"
                     src="/assets/icons/certifications/certification1.svg"
                     alt=""
                   />
@@ -246,7 +273,7 @@ const Footer = () => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    className="mx-5 w-full"
+                    className="mx-5 w-[70px]"
                     src="/assets/icons/certifications/certification2.svg"
                     alt=""
                   />
@@ -267,7 +294,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-col-reverse md:flex-col border-t border-default text-sm mt-14 pt-10 text-secondary">
           <div
-            className={`flex flex-col flex-wrap ${isArabic ? "md:flex-row-reverse" : "md:flex-row"}`}
+            className={`flex flex-col flex-wrap ${
+              isArabic ? "md:flex-row-reverse" : "md:flex-row"
+            }`}
           >
             {publicLinks.map((item, index) => (
               <Link

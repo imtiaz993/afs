@@ -126,7 +126,7 @@ const Team = () => {
           />{" "}
           Our team
         </p>
-        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[1050px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[1050px] !leading-[120%]">
           Our seasoned team leads with vision and expertise, guiding our company
           towards a successful future.
         </h2>
@@ -135,7 +135,7 @@ const Team = () => {
             <button
               className={`transition-colors duration-300 text-center ${
                 activeTab === "team"
-                  ? "text-white bg-brand-secondary"
+                  ? "text-white bg-brand-secondary hover:bg-brand-primary"
                   : "text-brand-secondary bg-white"
               }   py-3 w-full md:w-[185px] font-medium rounded-sm`}
               onClick={() => {
@@ -147,7 +147,7 @@ const Team = () => {
             <button
               className={`transition-colors duration-300 text-center ${
                 activeTab === "bod"
-                  ? "text-white bg-brand-secondary"
+                  ? "text-white bg-brand-secondary hover:bg-brand-primary"
                   : "text-brand-secondary bg-white"
               }   py-3 w-full md:w-[185px] font-medium rounded-sm`}
               onClick={() => {
@@ -158,14 +158,14 @@ const Team = () => {
             </button>
           </div>
           <div
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 placeholder: ${
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 ${
               activeTab === "bod"
                 ? "h-auto overflow-auto"
                 : "h-0 overflow-hidden"
             }`}
           >
             {teams.bod.map((item, index) => (
-              <div className="bg-brand-surface w-full" key={index}>
+              <div className="bg-brand-surface w-full mt-4" key={index}>
                 <div className="m-2 mb-0">
                   <Image
                     sizes="100vw"
@@ -178,10 +178,10 @@ const Team = () => {
                   />
                 </div>
                 <div className="p-4 pt-2 lg:p-6">
-                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap">
+                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap !leading-[130%]">
                     {item.name}
                   </h4>
-                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap">
+                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap !leading-[18px]">
                     {item.designation}
                   </p>
                 </div>
@@ -209,10 +209,10 @@ const Team = () => {
                   />
                 </div>
                 <div className="p-4 pt-2 lg:p-6">
-                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap">
+                  <h4 className="text-brand-secondary text-xl md:text-2xl 2xl:whitespace-nowrap !leading-[130%]">
                     {item.name}
                   </h4>
-                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap">
+                  <p className="mt-2 text-brand-secondary text-sm xl:whitespace-nowrap !leading-[18pxs]">
                     {item.designation}
                   </p>
                 </div>

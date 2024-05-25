@@ -67,7 +67,7 @@ const TestimonialSllider = ({ bgColor = "bg-subtle-neutral" }) => {
                 <SwiperSlide key={index}>
                   <div className="flex justify-between xl:h-[300px] w-full">
                     <div className=" mr-5 xl:w-[600px]">
-                      <h3 className="text-2xl leading-[130%] text-white">
+                      <h3 className="text-2xl !leading-[130%] text-white">
                         {item.quote}
                       </h3>
                       <div className="pt-[30px] xl:pt-[88px] pb-[60px]">

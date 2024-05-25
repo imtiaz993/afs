@@ -1,10 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
-const FileField = ({ file, setFile, placeholder, isError }) => {
-  const [error, setError] = useState(isError);
-
+const FileField = ({
+  file,
+  setFile,
+  name,
+  placeholder,
+  error,
+  value,
+  onChange,
+  onBlur,
+}) => {
   const handleOpenFile = () => {
     document.getElementById(placeholder.replace(/ /g, "")).click();
   };
@@ -14,13 +21,13 @@ const FileField = ({ file, setFile, placeholder, isError }) => {
       {error && (
         <div className="flex justify-end">
           <p className="inline-block bg-critical py-0.5 px-1 text-[10px] text-white font-medium rounded-t-sm overflow-hidden">
-            Email is incorrect
+            {error}
           </p>
         </div>
       )}
       <div
         className={`relative bg-white border rounded-sm border-default  py-1 pl-4 pr-1 flex items-center justify-between cursor-pointer ${
-          error ? "border-critical" : ""
+          error ? "!border-critical" : ""
         }`}
         onClick={handleOpenFile}
       >
@@ -28,8 +35,12 @@ const FileField = ({ file, setFile, placeholder, isError }) => {
           type="file"
           id={placeholder.replace(/ /g, "")}
           className="hidden"
+          name={name}
+          value={value}
+          onBlur={onBlur}
           onChange={(e) => {
             setFile(e.target.files[0]);
+            onChange(e);
           }}
         />
         <p
@@ -40,7 +51,7 @@ const FileField = ({ file, setFile, placeholder, isError }) => {
           {file ? file.name : ""}
         </p>
         <button
-          className=" text-center text-white bg-brand-secondary   border border-brand-secondary  py-[7.2px] w-[82px] rounded-sm"
+          className=" text-center text-white bg-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[7.2px] w-[82px] rounded-sm"
           type="button"
         >
           Upload
@@ -48,7 +59,7 @@ const FileField = ({ file, setFile, placeholder, isError }) => {
         <label
           className={`absolute text-tertiary left-4 transition-all cursor-pointer ${
             file ? "text-[10px] top-[5px] block select-none" : ""
-          } ${error ? "text-critical" : ""}`}
+          } ${error ? "!text-critical" : ""}`}
         >
           {placeholder}
         </label>

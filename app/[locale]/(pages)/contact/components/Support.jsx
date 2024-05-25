@@ -17,10 +17,10 @@ const Support = () => {
           />
           Support
         </p>
-        <h2 className="text-primary text-[32px] md:text-5xl max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl max-w-[976px] !leading-[120%]">
           Customer support channels
         </h2>
-        <p className="text-lg md:text-2xl text-primary  mb-10 md:mb-16">
+        <p className="text-lg md:text-2xl text-secondary  mb-10 md:mb-16 !leading-8">
           Select the relevant channel and get in touch with our dedicated team.
         </p>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -35,12 +35,12 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary font-regular">
+                <h4 className="text-xl md:text-2xl text-primary font-regular !leading-[130%]">
                   AFS Merchant Support
                 </h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg font-regular">
+                <h5 className="mb-4 text-primary text-lg font-regular !leading-[140%]">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -85,7 +85,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg font-regular">
+              <h5 className="mb-2 text-primary text-lg font-regular !leading-[140%]">
                 Contact us by email
               </h5>
               <a
@@ -109,12 +109,12 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary font-regular">
+                <h4 className="text-xl md:text-2xl text-primary font-regular !leading-[130%]">
                   Al Rateb Support - WPS
                 </h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg font-regular">
+                <h5 className="mb-4 text-primary text-lg font-regular !leading-[140%]">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -141,7 +141,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg font-regular">
+              <h5 className="mb-2 text-primary text-lg font-regular !leading-[140%]">
                 Contact us by email
               </h5>
               <a
@@ -163,12 +163,12 @@ const Support = () => {
                   className="mr-4 w-auto"
                   alt=""
                 />
-                <h4 className="text-xl md:text-2xl text-primary font-regular">
+                <h4 className="text-xl md:text-2xl text-primary font-regular !leading-[130%]">
                   BPay
                 </h4>
               </div>
               <div>
-                <h5 className="mb-4 text-primary text-lg font-regular">
+                <h5 className="mb-4 text-primary text-lg font-regular !leading-[140%]">
                   Contact us by phone
                 </h5>
                 <div className="mb-8">
@@ -195,7 +195,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <h5 className="mb-2 text-primary text-lg font-regular">
+              <h5 className="mb-2 text-primary text-lg font-regular !leading-[140%]">
                 Contact us by email
               </h5>
               <a

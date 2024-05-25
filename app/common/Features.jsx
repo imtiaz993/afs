@@ -20,7 +20,7 @@ const Features = ({ data, commonCTAData, appCTA, appCTABgColor }) => {
                 }}
               ></div>
               <div className="lg:ml-8 lg:w-[416px]">
-                <h3 className="text-[40px] leading-[48px] text-primary mb-4">
+                <h3 className="text-[40px] !leading-[48px] text-primary mb-4">
                   {item.title}
                 </h3>
                 <p

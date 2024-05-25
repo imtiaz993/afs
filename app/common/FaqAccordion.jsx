@@ -31,7 +31,7 @@ const FaqAccordion = ({
           }
         }}
       >
-        <h5 className="text-primary md:text-lg mr-4 font-regular">{title}</h5>
+        <h5 className="text-primary md:text-lg mr-4 font-regular !leading-[140%]">{title}</h5>
         <Image
           sizes="100vw"
           width={0}
@@ -47,10 +47,10 @@ const FaqAccordion = ({
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
         {type == "string" ? (
-          <p className="text-secondary mt-2 text-sm md:text-base">{text}</p>
+          <p className="text-secondary mt-2 text-sm md:text-base !leading-[150%]">{text}</p>
         ) : (
           text.map((item) => (
-            <p className="text-secondary text-sm md:text-base">{item}</p>
+            <p className="text-secondary text-sm md:text-base !leading-[150%]">{item}</p>
           ))
         )}
       </animated.div>

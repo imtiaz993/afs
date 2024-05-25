@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "formik": "^2.4.6",
     "isotope-layout": "^3.0.6",
     "next": "14.2.2",
     "next-intl": "^3.12.2",
@@ -19,7 +20,8 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
     "react-spring": "^9.7.3",
-    "swiper": "^11.1.1"
+    "swiper": "^11.1.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "postcss": "^8.4.32",

@@ -38,7 +38,7 @@ const Testimonials = () => {
     <div className="bg-subtle-neutral">
       <div className="lg:w-10/12 mx-auto pt-10 lg:pt-24">
         <p className=" mb-4 text-secondary text-center ">Testimonials</p>
-        <h2 className="mb-10 md:mb-16 text-[32px] md:text-5xl text-primary text-center px-5 box-content max-w-[490px] mx-auto">
+        <h2 className="mb-10 md:mb-16 text-[32px] md:text-5xl text-primary text-center px-5 box-content max-w-[490px] mx-auto !leading-[120%]">
           Why our team members love to work here
         </h2>
       </div>
@@ -47,7 +47,7 @@ const Testimonials = () => {
           <div className="flex justify-between">
             {reviews.map((item, index) => (
               <div className="p-6 bg-white relative h-[316px] xl:h-[330px] 2xl:h-[316px] w-[300px] md:w-[540px] flex flex-col justify-between mr-2">
-                <h6 className="text-lg md:text-2xl text-primary">
+                <h6 className="text-lg md:text-2xl text-primary !leading-8">
                   {item.review}
                 </h6>
                 <div>

@@ -7,7 +7,6 @@
           "title": "Card issuing & processing",
           "link": "/solutions/banks/card-issuing-processing"
         },
-        { "title": "Digital banking", "link": "/" },
         { "title": "Open banking", "link": "/solutions/banks/open-banking" },
         {
           "title": "Fraud & Risk management",
@@ -32,10 +31,7 @@
         },
         { "title": "SoftPOS", "link": "/solutions/business/softpos" },
         { "title": "eShop", "link": "/solutions/business/eshop" },
-        { "title": "Merchant portal", "link": "/" },
-        { "title": "Hospitality", "link": "/" },
-        { "title": "Food and beverage (F&B)", "link": "/" },
-        { "title": "SME suite", "link": "/" }
+        { "title": "Food and beverage (F&B)", "link": "/" }
       ]
     },
     "solutions for consumer": {
@@ -47,7 +43,6 @@
       "links": [
         { "title": "About us", "link": "/about" },
         { "title": "Our partners", "link": "/partners" },
-        { "title": "Open banking", "link": "/" },
         { "title": "Investor relations", "link": "/investor-relations" },
         { "title": "Careers", "link": "/careers" },
         { "title": "Contact", "link": "/contact" }

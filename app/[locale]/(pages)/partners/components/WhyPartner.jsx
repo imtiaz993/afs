@@ -17,7 +17,7 @@ const WhyPartner = () => {
           />{" "}
           Why partner with us
         </p>
-        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] leading-[120%]">
+        <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] !leading-[120%]">
           Become part of a partnership community and reap the rewards of
           assisting driven companies in leveraging financial technologies.
         </h2>
@@ -31,10 +31,10 @@ const WhyPartner = () => {
               src="/assets/images/partners/1.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular !leading-[140%]">
               Access to cutting-edge technologies
             </h6>
-            <p className="text-secondary ">
+            <p className="text-secondary !leading-6">
               Gain exclusive access to the latest financial technologies,
               enhancing your services and propelling your business ahead of the
               curve.
@@ -49,10 +49,10 @@ const WhyPartner = () => {
               src="/assets/images/partners/2.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular !leading-[140%]">
               Increased revenue streams
             </h6>
-            <p className="text-secondary ">
+            <p className="text-secondary !leading-6">
               Unlock new revenue opportunities through commissions, referrals,
               and expanded offerings with our financial solutions.
             </p>
@@ -66,10 +66,10 @@ const WhyPartner = () => {
               src="/assets/images/partners/3.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular !leading-[140%]">
               Enhanced product offering
             </h6>
-            <p className="text-secondary ">
+            <p className="text-secondary !leading-6">
               Stand out with added value to your services by integrating our
               comprehensive financial tools and solutions.
             </p>
@@ -83,10 +83,10 @@ const WhyPartner = () => {
               src="/assets/images/partners/4.png"
               alt=""
             />
-            <h6 className="mt-6 mb-2 text-lg text-primary font-regular">
+            <h6 className="mt-6 mb-2 text-lg text-primary font-regular !leading-[140%]">
               Knowledge and expertise sharing
             </h6>
-            <p className="text-secondary ">
+            <p className="text-secondary !leading-6">
               Benefit from shared insights and expertise in financial trends and
               best practices, fostering business growth.
             </p>

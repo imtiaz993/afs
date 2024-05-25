@@ -21,14 +21,14 @@ const HomeHero = () => {
             isArabic ? "items-end" : "items-start"
           }`}
         >
-          <h1 className="text-white text-5xl lg:text-[88px] leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
+          <h1 className="text-white text-5xl lg:text-[88px] !leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
             {t("title")}
           </h1>
           <p className="text-white text-2xl md:max-w-[400px] lg:max-w-[640px] mt-6 opacity-80">
             {t("description")}
           </p>
           <Link href="/contact" className="w-full md:mx-0 md:w-[185px]">
-            <button className=" text-center text-brand-secondary py-3 md:py-4 w-full md:w-[185px] bg-white font-medium rounded-sm mt-10">
+            <button className=" text-center text-brand-secondary py-3 md:py-4 w-full md:w-[185px] bg-white transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-10">
               {t("contact team")}
             </button>
           </Link>

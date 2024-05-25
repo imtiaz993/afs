@@ -39,11 +39,6 @@ const Working = () => {
       text: accordion[4].description,
       image: "/assets/images/home/accordion.png",
     },
-    {
-      title: accordion[5].title,
-      text: accordion[5].description,
-      image: "/assets/images/home/accordion1.jpg",
-    },
   ];
 
   return (
@@ -68,7 +63,7 @@ const Working = () => {
             {t("title")}
           </p>
           <h2
-            className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[950px] leading-[120%] ${
+            className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[950px] !leading-[120%] ${
               isArabic ? "text-right" : "text-left"
             }`}
           >
