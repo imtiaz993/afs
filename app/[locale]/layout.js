@@ -10,8 +10,9 @@ export const metadata = {
 
 export default function LocaleLayout({ children, params: { locale } }) {
   const messages = useMessages();
+  const isArabic = locale === "ar";
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={isArabic ? "rtl" : "ltr"}>
       <body>
         <Head>
           <link

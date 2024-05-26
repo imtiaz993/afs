@@ -49,19 +49,11 @@ const Footer = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="flex flex-col items-start">
-            <h6
-              className={`mb-6 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
-              {bankLinks.title}
-            </h6>
+            <h6 className="mb-6 font-medium text-primary">{bankLinks.title}</h6>
             {bankLinks.links.map((item, index) => (
               <Link
                 key={index}
-                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
                 href={item.link}
               >
                 {item.title}
@@ -69,37 +61,25 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex flex-col items-start">
-            <h6
-              className={`mb-6 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <h6 className="mb-6 font-medium text-primary">
               {businessLinks.title}
             </h6>
             {businessLinks.links.map((item, index) => (
               <Link
                 key={index}
-                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
                 href="/"
               >
                 {item.title}
               </Link>
             ))}
-            <h6
-              className={`mt-8 mb-6 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <h6 className="mt-8 mb-6 font-medium text-primary">
               {consumerLinks.title}
             </h6>
             {consumerLinks.links.map((item, index) => (
               <Link
                 key={index}
-                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
                 href="/"
               >
                 {item.title}
@@ -107,57 +87,37 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex flex-col items-start sm:mt-10 lg:mt-0">
-            <h6
-              className={`mb-6 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <h6 className="mb-6 font-medium text-primary">
               {companyLinks.title}
             </h6>
             {companyLinks.links.map((item, index) => (
               <Link
                 key={index}
-                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
                 href="/"
               >
                 {item.title}
               </Link>
             ))}
 
-            <h6
-              className={`mt-8 mb-6 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <h6 className="mt-8 mb-6 font-medium text-primary">
               {resourcesLinks.title}
             </h6>
             {resourcesLinks.links.map((item, index) => (
               <Link
                 key={index}
-                className={`mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
                 href="/"
               >
                 {item.title}
               </Link>
             ))}
           </div>
-          <div className={`sm:mt-10 lg:mt-0 ${isArabic ? "text-right" : ""}`}>
-            <h6
-              className={`mb-2 font-medium text-primary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+          <div className="sm:mt-10 lg:mt-0">
+            <h6 className="mb-2 font-medium text-primary">
               {t("join network.title")}
             </h6>
-            <p
-              className={`mb-6 text-sm text-secondary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <p className="mb-6 text-sm text-secondary">
               {t("join network.description")}
             </p>
             <div className="flex flex-col">
@@ -189,15 +149,11 @@ const Footer = () => {
               </Link>
             </p>
             <div className="pb-10 mb-10 border-b border-default">
-              <h6 className="text-primary text-center md:text-left font-medium mb-4">
+              <h6 className="text-primary text-center font-medium mb-4">
                 {t("social follow")}
               </h6>
-              <div
-                className={`flex justify-center md:justify-start items-center ${
-                  isArabic ? "flex-row-reverse" : ""
-                }`}
-              >
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+              <div className="flex justify-center md:justify-start items-center">
+                <a href="#" className="mr-3">
                   <Image
                     sizes="100vw"
                     width={0}
@@ -207,7 +163,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a href="#" className="mr-3">
                   <Image
                     sizes="100vw"
                     width={0}
@@ -217,7 +173,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a href="#" className="mr-3">
                   <Image
                     sizes="100vw"
                     width={0}
@@ -227,7 +183,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a href="#" className="mr-3">
                   <Image
                     sizes="100vw"
                     width={0}
@@ -250,11 +206,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="pb-10">
-              <h6
-                className={`text-primary text-center md:text-left font-medium mb-4 ${
-                  isArabic ? "text-right" : ""
-                }`}
-              >
+              <h6 className="text-primary text-center md:text-left font-medium mb-4">
                 {t("certifications")}
               </h6>
               <div className="flex justify-center md:justify-start">
@@ -293,17 +245,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-col border-t border-default text-sm mt-14 pt-10 text-secondary">
-          <div
-            className={`flex flex-col flex-wrap ${
-              isArabic ? "md:flex-row-reverse" : "md:flex-row"
-            }`}
-          >
+          <div className="flex flex-col md:flex-row flex-wrap">
             {publicLinks.map((item, index) => (
               <Link
                 key={index}
-                className={`mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline ${
-                  isArabic ? "text-right" : ""
-                }`}
+                className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
                 href="/"
               >
                 {item.title}
@@ -311,18 +257,8 @@ const Footer = () => {
             ))}
           </div>
           <div>
-            <p
-              className={`md:mt-6 font-normal text-sm ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
-              {t("rights")}
-            </p>
-            <p
-              className={`mb-6 md:mb-0 mt-1 text-xs text-tertiary ${
-                isArabic ? "text-right" : ""
-              }`}
-            >
+            <p className="md:mt-6 font-normal text-sm">{t("rights")}</p>
+            <p className="mb-6 md:mb-0 mt-1 text-xs text-tertiary">
               {t("license")}
             </p>
           </div>

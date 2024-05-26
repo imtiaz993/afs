@@ -48,30 +48,20 @@ const Solutions = () => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24">
-        <div className={`${isArabic ? "flex flex-col items-end" : ""}`}>
-          <p
-            className={`mb-4 text-secondary flex items-center  ${
-              isArabic
-                ? "text-right justify- end flex-row-reverse"
-                : "text-left justify-start"
-            }`}
-          >
+        <div>
+          <p className="mb-4 text-secondary flex items-center justify-start">
             {" "}
             <Image
               sizes="100vw"
               width={10}
               height={10}
               src="/assets/icons/home/diamond.svg"
-              className={` ${isArabic ? "ml-2" : "mr-2"}`}
+              className="mr-2"
               alt=""
             />{" "}
             {t("title")}
           </p>
-          <h2
-            className={`text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[950px] !leading-[120%]  ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
+          <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[950px] !leading-[120%]">
             {t("headline")}
           </h2>
         </div>
@@ -86,39 +76,17 @@ const Solutions = () => {
                   backgroundSize: "cover",
                 }}
               >
-                <h3
-                  className={`text-2xl md:text-[40px] text-white mb-5 mt-[272px] ${
-                    isArabic ? "text-right" : ""
-                  }`}
-                >
+                <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[272px]">
                   {t("banks.title")}
                 </h3>
-                <p
-                  className={` text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80 ${
-                    isArabic
-                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
-                      : ""
-                  }`}
-                >
+                <p className="text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80">
                   {t("banks.description")}
                 </p>
-                <div
-                  className={`flex items-center flex-wrap ${
-                    isArabic ? "justify-start flex-row-reverse" : ""
-                  }`}
-                >
-                  <button
-                    className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
-                      isArabic ? "md:ml-6" : "md:mr-6"
-                    }`}
-                  >
+                <div className="flex items-center flex-wrap">
+                  <button className="text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 md:mr-6">
                     {t("banks.button")}
                   </button>
-                  <ul
-                    className={`flex flex-wrap mt-4 ${
-                      isArabic ? "lg:flex-nowrap w-[420px] justify-end" : ""
-                    }`}
-                  >
+                  <ul className="flex flex-wrap mt-4">
                     <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                       <Image
                         sizes="100vw"
@@ -171,23 +139,13 @@ const Solutions = () => {
                 }}
                 className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded back !bg-no-repeat !bg-right-top"
               >
-                <h3
-                  className={`text-2xl md:text-[40px] text-primary mb-5 mt-[187px] lg:mt-0 ${
-                    isArabic ? "text-right" : ""
-                  }`}
-                >
+                <h3 className="text-2xl md:text-[40px] text-primary mb-5 mt-[187px] lg:mt-0">
                   {t("solutions.title")}
                 </h3>
-                <p
-                  className={`text-base md:text-lg !leading-7 text-primary mb-8 max-w-[425px] opacity-80 ${
-                    isArabic
-                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
-                      : ""
-                  }`}
-                >
+                <p className="text-base md:text-lg !leading-7 text-primary mb-8 max-w-[425px] opacity-80">
                   {t("solutions.description")}
                 </p>
-                <div className={`${isArabic ? "flex justify-end" : ""}`}>
+                <div>
                   <button className=" text-center text-brand-secondary border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
                     {t("solutions.button")}
                   </button>
@@ -198,34 +156,20 @@ const Solutions = () => {
           <div className="child-div">
             <div className="order-3 bg-[#7A7A7A] rounded relative flex flex-col-reverse lg:flex-col overflow-hidden">
               <div className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded relative z-10">
-                <h3
-                  className={`text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0 ${
-                    isArabic ? "text-right" : ""
-                  }`}
-                >
+                <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0">
                   {t("consumers.title")}
                 </h3>
-                <p
-                  className={`text-base md:text-lg !leading-7 text-white mb-8 max-w-[420px] opacity-80 ${
-                    isArabic
-                      ? "ml-auto text-right lg:!text-base xl:!text-lg"
-                      : ""
-                  }`}
-                >
+                <p className="text-base md:text-lg !leading-7 text-white mb-8 max-w-[420px] opacity-80">
                   {t("consumers.description")}
                 </p>
-                <div className={`${isArabic ? "flex justify-end" : ""}`}>
+                <div>
                   <button className=" text-center text-brand-secondary   py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm">
                     {t("consumers.button")}
                   </button>
                 </div>
               </div>
 
-              <div
-                className={`w-full lg:w-auto absolute top-0 lg:bottom-0 ${
-                  isArabic ? "left-0" : "right-0"
-                }`}
-              >
+              <div className="w-full lg:w-auto absolute top-0 lg:bottom-0 right-0">
                 <Image
                   sizes="100vw"
                   width={0}
@@ -256,39 +200,17 @@ const Solutions = () => {
                 }}
               >
                 <div className="relative bottom-0">
-                  <h3
-                    className={`text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0 ${
-                      isArabic ? "text-right" : ""
-                    }`}
-                  >
+                  <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-">
                     {t("businesses.title")}
                   </h3>
-                  <p
-                    className={` text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80 ${
-                      isArabic
-                        ? "ml-auto text-right lg:!text-base xl:!text-lg"
-                        : ""
-                    }`}
-                  >
+                  <p className="text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80">
                     {t("businesses.description")}
                   </p>
-                  <div
-                    className={`flex items-center flex-wrap md:mb-[272px]  ${
-                      isArabic ? "justify-start flex-row-reverse" : ""
-                    }`}
-                  >
-                    <button
-                      className={` text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
-                        isArabic ? "md:ml-4" : "md:mr-4"
-                      }`}
-                    >
+                  <div className="flex items-center flex-wrap md:mb-[272px]">
+                    <button className="text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 md:mr-4">
                       {t("businesses.button")}
                     </button>
-                    <ul
-                      className={`flex flex-wrap mt-4 ${
-                        isArabic ? "w-[428px] justify-end" : ""
-                      }`}
-                    >
+                    <ul className="flex flex-wrap mt-4">
                       <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
                         <Image
                           sizes="100vw"

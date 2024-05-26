@@ -44,37 +44,23 @@ const Working = () => {
   return (
     <PageLayout>
       <div className="py-10 lg:py-24">
-        <div className={`${isArabic ? "flex flex-col items-end" : ""}`}>
-          <p
-            className={`mb-4 text-secondary flex items-center ${
-              isArabic
-                ? "text-right justify- end flex-row-reverse"
-                : "text-left justify-start"
-            }`}
-          >
+        <div>
+          <p className="mb-4 text-secondary text-left justify-start flex items-center">
             <Image
               sizes="100vw"
               width={10}
               height={10}
               src="/assets/icons/home/diamond.svg"
-              className={` ${isArabic ? "ml-2" : "mr-2"}`}
+              className="mr-2"
               alt=""
             />{" "}
             {t("title")}
           </p>
-          <h2
-            className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[950px] !leading-[120%] ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
+          <h2 className="text-primary text-[32px] md:text-5xl mb-16 max-w-[950px] !leading-[120%]">
             {t("headline")}
           </h2>
         </div>
-        <div
-          className={`flex justify-between flex-col-reverse  ${
-            isArabic ? "lg:flex-row-reverse" : "lg:flex-row"
-          }`}
-        >
+        <div className="flex justify-between flex-col-reverse lg:flex-row">
           <div className="lg:w-2/5 border-t border-default">
             {accordionContent.map((item, index) => (
               <WorkingAccordion

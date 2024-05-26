@@ -78,18 +78,18 @@ const CommonCTA = ({
       } h-[537px] md:h-full`}
     >
       <div
-        className={`w-full py-12 md:py-[56px] px-4 md:px-10 relative z-10 items-center ${
+        className={`w-full py-12 md:py-[56px] px-4 md:px-10 relative z-10 items-center lg:items-start ${
           lessPaddingVariant
             ? "lg:max-w-[600px] lg:py-14 lg:pl-10"
             : "lg:max-w-[872px] lg:py-24 lg:pl-16"
-        } ${isArabic ? "lg:items-end" : "lg:items-start"}`}
+        }`}
       >
         <div
           className={`text-[32px] !leading-[38.4px] text-primary  ${
             lessPaddingVariant
               ? "!leading-[120%]"
               : "md:text-[48px] md:!leading-[57.6px] lg:max-w-[596px]"
-          } ${isArabic ? "lg:text-right" : "text-left"}`}
+          }`}
         >
           {primaryContentNode}
         </div>
@@ -98,15 +98,11 @@ const CommonCTA = ({
             lessPaddingVariant
               ? "text-primary lg:max-w-[438px]"
               : "md:text-2xl text-brand-primary lg:max-w-[768px]"
-          } ${isArabic ? "lg:text-right" : "text-left"}`}
+          }`}
         >
           {secondaryContent}
         </h4>
-        <div
-          className={`block md:flex ${
-            isArabic ? "justify-end" : "justify-start"
-          }`}
-        >
+        <div className="block md:flex justify-start">
           <Link href={primaryButtonLink}>
             <button
               className={`text-center text-white bg-brand-secondary border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary font-medium rounded-sm w-full lg:w-auto px-8 ${

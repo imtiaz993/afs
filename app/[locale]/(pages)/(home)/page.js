@@ -13,6 +13,7 @@ import PageLayout from "app/common/PageLayout";
 
 const Home = () => {
   const t = useTranslations("Home.CTA");
+
   return (
     <>
       <Navbar />

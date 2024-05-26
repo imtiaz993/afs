@@ -17,74 +17,40 @@ const About = () => {
       <PageLayout>
         <div className="py-10 lg:py-24">
           <div className="relative z-10">
-            <div className={`${isArabic ? "flex flex-col items-end" : ""}`}>
-              <p
-                className={`mb-4 text-secondary max-w-[845px] flex items-center  ${
-                  isArabic
-                    ? "text-right justify- end flex-row-reverse"
-                    : "text-left justify-start"
-                }`}
-              >
+            <div>
+              <p className="mb-4 text-secondary max-w-[845px] flex items-center  justify-start">
                 {" "}
                 <Image
                   sizes="100vw"
                   width={10}
                   height={10}
                   src="/assets/icons/home/diamond.svg"
-                  className={` ${isArabic ? "ml-2" : "mr-2"}`}
+                  className="mr-2"
                   alt=""
                 />{" "}
                 {t("title")}
               </p>
-              <h2
-                className={`text-primary text-[32px] md:text-5xl mb-16 max-w-[845px] !leading-[120%] ${
-                  isArabic ? "text-right" : "text-left"
-                }`}
-              >
+              <h2 className="text-primary text-[32px] md:text-5xl mb-16 max-w-[845px] !leading-[120%]">
                 {t("headline")}
               </h2>
             </div>
-            <div
-              className={`lg:flex justify-between ${
-                isArabic ? "flex-row-reverse" : ""
-              }`}
-            >
-              <div
-                className={`lg:w-[45%] flex flex-col ${
-                  isArabic
-                    ? "text-right lg:items-end"
-                    : "text-left lg:items-start"
-                }`}
-              >
-                <p
-                  className={`text-left mb-4 text-secondary  flex items-center ${
-                    isArabic
-                      ? "text-right justify-start flex-row-reverse"
-                      : "text-left justify-start"
-                  }`}
-                >
+            <div className="lg:flex justify-between">
+              <div className="lg:w-[45%] flex flex-col lg:items-start">
+                <p className="text-left mb-4 text-secondary  flex items-center justify-start">
                   <Image
                     sizes="100vw"
                     width={10}
                     height={10}
                     src="/assets/icons/home/diamond.svg"
-                    className={` ${isArabic ? "ml-2" : "mr-2"}`}
+                    className="mr-2"
                     alt=""
                   />{" "}
                   {t("sub title")}
                 </p>
-                <h3
-                  className={`text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] !leading-[120%] ${
-                    isArabic ? "text-right" : "text-left"
-                  }`}
-                >
+                <h3 className="text-2xl md:text-[40px] text-primary mb-4 lg:max-w-[450px] !leading-[120%]">
                   {t("sub headline")}
                 </h3>
-                <p
-                  className={`text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] !leading-7 ${
-                    isArabic ? "text-right" : "text-left"
-                  }`}
-                >
+                <p className="text-base md:text-lg text-secondary mb-8 lg:max-w-[450px] !leading-7">
                   {t("description")}
                 </p>
                 <Link href="/about">
@@ -93,16 +59,8 @@ const About = () => {
                   </button>
                 </Link>
               </div>
-              <div
-                className={`lg:w-1/2 flex flex-col items-center ${
-                  isArabic ? "lg:items-end" : "lg:items-start"
-                }`}
-              >
-                <div
-                  className={`mt-12 pb-8 lg:pb-12 border-b border-default w-full flex flex-col ${
-                    isArabic ? "items-end" : "items-start"
-                  }`}
-                >
+              <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div className="mt-12 pb-8 lg:pb-12 border-b border-default w-full flex flex-col items-start">
                   <h1 className="stats-home-gradient text-7xl md:text-9xl mb-2">
                     <CountUp
                       enableScrollSpy
@@ -124,11 +82,7 @@ const About = () => {
                 <div
                   className={`mt-8 lg:mt-12 pb-8 lg:pb-12 border-b grid grid-cols-2 border-default gap-10 w-full `}
                 >
-                  <div
-                    className={`flex flex-col ${
-                      isArabic ? "items-end" : "items-start"
-                    }`}
-                  >
+                  <div className="flex flex-col items-start">
                     <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
                       <CountUp
                         enableScrollSpy
@@ -147,11 +101,7 @@ const About = () => {
                       {t("statistics.transactions.text")}
                     </p>
                   </div>
-                  <div
-                    className={`flex flex-col ${
-                      isArabic ? "items-end" : "items-start"
-                    }`}
-                  >
+                  <div className="flex flex-col items-start">
                     <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
                       <CountUp
                         enableScrollSpy
@@ -174,11 +124,7 @@ const About = () => {
                 <div
                   className={`mt-8 lg:mt-12 pb-12 border-b grid grid-cols-2 border-default gap-10 w-full`}
                 >
-                  <div
-                    className={`flex flex-col ${
-                      isArabic ? "items-end" : "items-start"
-                    }`}
-                  >
+                  <div className="flex flex-col items-start">
                     <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
                       <CountUp
                         enableScrollSpy
@@ -197,11 +143,7 @@ const About = () => {
                       {t("statistics.cards.text")}
                     </p>
                   </div>
-                  <div
-                    className={`flex flex-col ${
-                      isArabic ? "items-end" : "items-start"
-                    }`}
-                  >
+                  <div className="flex flex-col items-start">
                     <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">
                       <CountUp
                         enableScrollSpy
@@ -235,7 +177,7 @@ const About = () => {
           src="/assets/images/home/about.png"
           alt=""
         />
-         <Image
+        <Image
           sizes="100vw"
           width={0}
           height={0}

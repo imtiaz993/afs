@@ -10,17 +10,9 @@ const HomeHero = () => {
   const isArabic = locale === "ar";
 
   return (
-    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden !px-2 md:!px-10 md:!pr-0 lg:!px-16 ">
-      <div
-        className={`-mb-5 md:mb-0 pt-12 md:py-32 md:flex md:relative ${
-          isArabic ? "text-right" : "text-left"
-        }`}
-      >
-        <div
-          className={`px-3 flex flex-col relative z-10 ${
-            isArabic ? "items-end" : "items-start"
-          }`}
-        >
+    <PageLayout styles="home-hero-gradient md:rounded overflow-hidden !px-2 md:!px-10 md:!pr-0 lg:!px-16 lg:!pr-0 ">
+      <div className="-mb-5 md:mb-0 pt-12 md:py-32 md:flex md:relative">
+        <div className="px-3 flex flex-col items-start relative z-10">
           <h1 className="text-white text-5xl lg:text-[88px] !leading-[100%] md:max-w-[500px] lg:max-w-[670px]">
             {t("title")}
           </h1>

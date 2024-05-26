@@ -44,27 +44,11 @@ const Reviews = () => {
                     className="w-auto mb-16 hidden lg:block"
                     alt=""
                   />
-                  <h3
-                    className={`text-2xl md:text-3xl !leading-[130%] text-white ${
-                      isArabic ? "text-right" : "text-left"
-                    }`}
-                  >
+                  <h3 className="text-2xl md:text-3xl !leading-[130%] text-white">
                     "{item.quote}
                   </h3>
-                  <p
-                    className={`font-medium  text-white mt-8 ${
-                      isArabic ? "text-right" : "text-left"
-                    }`}
-                  >
-                    {item.author}
-                  </p>
-                  <p
-                    className={`  text-brand-tertiary mt-2 ${
-                      isArabic ? "text-right" : "text-left"
-                    }`}
-                  >
-                    {item.position}
-                  </p>
+                  <p className="font-medium  text-white mt-8">{item.author}</p>
+                  <p className="text-brand-tertiary mt-2">{item.position}</p>
                 </div>
               </SwiperSlide>
             ))}
