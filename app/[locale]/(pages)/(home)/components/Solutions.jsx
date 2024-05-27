@@ -229,7 +229,7 @@ const Solutions = () => {
                 }}
               >
                 <div className="relative bottom-0">
-                  <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-">
+                  <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[187px] lg:mt-0">
                     {t("businesses.title")}
                   </h3>
                   <p className="text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80">
