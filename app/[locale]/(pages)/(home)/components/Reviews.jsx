@@ -57,7 +57,9 @@ const Reviews = () => {
               <div className="w-full lg:w-auto">
                 <div className="flex lg:inline-flex justify-between items-center lg:items-start lg:justify-start relative z-20 select-none">
                   <div
-                    className="mr-4 w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer"
+                    className={`w-10 h-10 flex justify-center items-center border border-brand-secondary rounded-full cursor-pointer  ${
+                      isArabic ? "ml-4" : "mr-4"
+                    }`}
                     onClick={() => {
                       swiperRef.current.swiper.slidePrev();
                       setSwiperIndex(swiperRef.current.swiper.activeIndex);
@@ -67,8 +69,8 @@ const Reviews = () => {
                       sizes="100vw"
                       width={0}
                       height={0}
-                      className={`rotate-180  ${
-                        swiperIndex > 0 ? "w-6 h-6" : "w-5 h-5"
+                      className={`${swiperIndex > 0 ? "w-6 h-6" : "w-5 h-5"}  ${
+                        isArabic ? "" : "rotate-180"
                       }`}
                       src={
                         swiperIndex > 0
@@ -96,7 +98,7 @@ const Reviews = () => {
                       height={0}
                       className={`${
                         swiperIndex < slidesCount - 1 ? "w-6 h-6" : "w-5 h-5"
-                      }`}
+                      }  ${isArabic ? "rotate-180" : ""}`}
                       src={
                         swiperIndex < slidesCount - 1
                           ? "/assets/icons/home/chevron-right.svg"
@@ -108,19 +110,28 @@ const Reviews = () => {
                 </div>
               </div>
               {window.innerWidth >= 1024 && (
-                <div className="hidden lg:block ml-10">
+                <div
+                  className={`hidden lg:block ml-10 ${
+                    isArabic ? "mr-10" : "ml-10"
+                  }`}
+                >
                   <div className="swiper-custom-pagination" />
                 </div>
               )}
             </div>
           </Swiper>
         </div>
-        <div className="mb-12 lg:mb-0 lg:absolute top-0 right-0 bottom-0">
+        <div
+          className={`mb-12 lg:mb-0 lg:absolute top-0 bottom-0 ${
+            isArabic ? "left-0" : "right-0"
+          }`}
+        >
           <Image
             sizes="100vw"
             width={0}
             height={0}
             className="w-full h-full hidden lg:block"
+            style={isArabic ? { transform: "scaleX(-1)" } : {}}
             src="/assets/images/home/testimonial.png"
             alt=""
           />

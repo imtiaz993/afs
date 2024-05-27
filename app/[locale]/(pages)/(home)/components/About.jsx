@@ -25,7 +25,7 @@ const About = () => {
                   width={10}
                   height={10}
                   src="/assets/icons/home/diamond.svg"
-                  className="mr-2"
+                  className={` ${isArabic ? "ml-2" : "mr-2"}`}
                   alt=""
                 />{" "}
                 {t("title")}
@@ -42,7 +42,7 @@ const About = () => {
                     width={10}
                     height={10}
                     src="/assets/icons/home/diamond.svg"
-                    className="mr-2"
+                    className={` ${isArabic ? "ml-2" : "mr-2"}`}
                     alt=""
                   />{" "}
                   {t("sub title")}

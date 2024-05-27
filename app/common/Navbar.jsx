@@ -226,7 +226,9 @@ const Solutions = () => {
 
   return (
     <div
-      className="lg:ml-12 outline-none bg-transparent relative"
+      className={`outline-none bg-transparent relative ${
+        isArabic ? "lg:mr-12" : "lg:ml-12"
+      }`}
       ref={solutionsDropdownRef}
       onMouseLeave={() => {
         if (window.innerWidth > 1024) {
@@ -250,9 +252,9 @@ const Solutions = () => {
           sizes="100vw"
           width={12}
           height={6}
-          className={`ml-2 transition-all duration-200 ${
+          className={`transition-all duration-200 ${
             solutionsMenu ? "-rotate-180" : "rotate-0"
-          }`}
+          } ${isArabic ? "mr-2" : "ml-2"}`}
           src="/assets/icons/navbar/chevron.svg"
           alt=""
         />
@@ -266,11 +268,7 @@ const Solutions = () => {
         <div className="lg:absolute top-6 text-secondary lg:rounded-md navbar-dropdown-shadow">
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
-              <p
-                className={`text-base font-medium text-primary mt-6 ${
-                  isArabic ? "text-right" : ""
-                }`}
-              >
+              <p className="text-base font-medium text-primary mt-6">
                 {solutionsLinks["solutions for banks"].title}
               </p>
               {solutionsLinks["solutions for banks"].links.map(
@@ -278,9 +276,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] block hover:underline mt-4 ${
-                      isArabic ? "text-right" : ""
-                    }  `}
+                    className="text-[15px] block hover:underline mt-4"
                   >
                     {item.title}
                   </Link>
@@ -289,11 +285,7 @@ const Solutions = () => {
             </div>
 
             <div>
-              <p
-                className={`text-base font-medium text-primary mt-6 ${
-                  isArabic ? "text-right" : ""
-                }`}
-              >
+              <p className="text-base font-medium text-primary mt-6">
                 {solutionsLinks["solutions for businesses"].title}
               </p>
               {solutionsLinks["solutions for businesses"].links.map(
@@ -301,9 +293,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] hover:underline block mt-4 ${
-                      isArabic ? "text-right" : ""
-                    } `}
+                    className="text-[15px] hover:underline block mt-4"
                   >
                     {item.title}
                   </Link>
@@ -312,11 +302,7 @@ const Solutions = () => {
             </div>
 
             <div>
-              <p
-                className={`text-base font-medium text-primary mt-6 ${
-                  isArabic ? "text-right" : ""
-                }`}
-              >
+              <p className="text-base font-medium text-primary mt-6">
                 {solutionsLinks["solutions for consumer"].title}
               </p>
               {solutionsLinks["solutions for consumer"].links.map(
@@ -324,9 +310,7 @@ const Solutions = () => {
                   <Link
                     key={index}
                     href={item.link}
-                    className={`text-[15px] hover:underline block mt-4 ${
-                      isArabic ? "text-right" : ""
-                    }  `}
+                    className="text-[15px] hover:underline block mt-4"
                   >
                     {item.title}
                   </Link>
@@ -375,7 +359,9 @@ const Company = () => {
 
   return (
     <div
-      className="lg:ml-6 outline-none bg-transparent relative"
+      className={`outline-none bg-transparent relative ${
+        isArabic ? "lg:mr-6" : "lg:ml-6"
+      }`}
       ref={companyDropdownRef}
       onMouseLeave={() => {
         if (window.innerWidth > 1024) {
@@ -399,9 +385,9 @@ const Company = () => {
           sizes="100vw"
           width={12}
           height={6}
-          className={`ml-2 transition-all duration-200 ${
-            companyMenu ? "-rotate-180" : "rotate-0"
-          }`}
+          className={`transition-all duration-200 ${
+            isArabic ? "mr-2" : "ml-2"
+          } ${companyMenu ? "-rotate-180" : "rotate-0"}`}
           src="/assets/icons/navbar/chevron.svg"
           alt=""
         />
@@ -418,8 +404,8 @@ const Company = () => {
                   key={index}
                   href={item.link}
                   className={`text-[15px] hover:underline whitespace-nowrap block ${
-                    isArabic ? "text-right" : ""
-                  }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
+                    index === 0 ? "mt-4 lg:mt-0" : "mt-4"
+                  }`}
                 >
                   {item.title}
                 </Link>
@@ -467,7 +453,9 @@ const Resources = () => {
 
   return (
     <div
-      className="lg:ml-6 outline-none bg-transparent relative"
+      className={`outline-none bg-transparent relative ${
+        isArabic ? "lg:mr-6" : "lg:ml-6"
+      }`}
       ref={resourcesDropdownRef}
       onMouseLeave={() => {
         if (window.innerWidth > 1024) {
@@ -491,9 +479,9 @@ const Resources = () => {
           sizes="100vw"
           width={12}
           height={6}
-          className={`ml-2 transition-all duration-200 ${
-            resourcesMenu ? "-rotate-180" : "rotate-0"
-          }`}
+          className={`transition-all duration-200 ${
+            isArabic ? "mr-2" : "ml-2"
+          } ${resourcesMenu ? "-rotate-180" : "rotate-0"}`}
           src="/assets/icons/navbar/chevron.svg"
           alt=""
         />
@@ -512,8 +500,8 @@ const Resources = () => {
                   key={index}
                   href={item.link}
                   className={`text-[15px] hover:underline whitespace-nowrap block ${
-                    isArabic ? "text-right" : ""
-                  }  ${index === 0 ? "mt-4 lg:mt-0" : "mt-4"}`}
+                    index === 0 ? "mt-4 lg:mt-0" : "mt-4"
+                  }`}
                 >
                   {item.title}
                 </Link>

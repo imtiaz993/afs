@@ -139,7 +139,11 @@ const Footer = () => {
                 </button>
               </form>
             </div>
-            <p className="text-secondary text-center md:text-left mt-4 text-sm pb-10 mb-10 border-b border-default">
+            <p
+              className={`text-secondary text-center mt-4 text-sm pb-10 mb-10 border-b border-default ${
+                isArabic ? "md:text-right" : "md:text-left"
+              }`}
+            >
               {t("join network.privacy text")}{" "}
               <Link
                 className="text-primary hover:text-brand-secondary hover:underline"
@@ -149,11 +153,15 @@ const Footer = () => {
               </Link>
             </p>
             <div className="pb-10 mb-10 border-b border-default">
-              <h6 className="text-primary text-center font-medium mb-4">
+              <h6
+                className={`text-primary text-center font-medium mb-4 ${
+                  isArabic ? "md:text-right" : "md:text-left"
+                }`}
+              >
                 {t("social follow")}
               </h6>
               <div className="flex justify-center md:justify-start items-center">
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -163,7 +171,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -173,7 +181,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -183,7 +191,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className="mr-3">
+                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -206,11 +214,19 @@ const Footer = () => {
               </div>
             </div>
             <div className="pb-10">
-              <h6 className="text-primary text-center md:text-left font-medium mb-4">
+              <h6
+                className={`text-primary text-center font-medium mb-4 ${
+                  isArabic ? "md:text-right" : "md:text-left"
+                }`}
+              >
                 {t("certifications")}
               </h6>
               <div className="flex justify-center md:justify-start">
-                <div className="border-r border-default p-1 flex items-center justify-center">
+                <div
+                  className={`border-default p-1 flex items-center justify-center ${
+                    isArabic ? "" : "border-r"
+                  }`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -230,7 +246,11 @@ const Footer = () => {
                     alt=""
                   />
                 </div>
-                <div className="p-1 flex items-center justify-center">
+                <div
+                  className={`p-1 flex items-center justify-center ${
+                    isArabic ? "border-r" : ""
+                  }`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -249,7 +269,9 @@ const Footer = () => {
             {publicLinks.map((item, index) => (
               <Link
                 key={index}
-                className="mr-4 mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline"
+                className={`mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline ${
+                  isArabic ? "ml-4" : "mr-4"
+                }`}
                 href="/"
               >
                 {item.title}

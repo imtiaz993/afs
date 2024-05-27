@@ -115,7 +115,9 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`md:ml-4 text-center text-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor}`}
+                className={`text-center text-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor} ${
+                  isArabic ? "md:mr-4" : "md:ml-4"
+                }`}
               >
                 {secondaryButtonLabel}
               </button>
@@ -126,10 +128,14 @@ const CommonCTA = ({
         </div>
       </div>
       <div
-        className={`md:hidden lg:block absolute -left-[60px] bottom-0 right-0 ${
+        className={`md:hidden lg:block absolute bottom-0 ${
           gridVariant
-            ? "lg:-left-[50px] xl:-left-[90px] lg:top-[210px]"
-            : "lg:w-1/2  md:left-auto top-auto md:top-0"
+            ? isArabic
+              ? "lg:-left-[50px] xl:-left-[90px] lg:top-[210px]"
+              : "lg:-left-[50px] xl:-left-[90px] lg:top-[210px]"
+            : isArabic
+            ? "lg:w-1/2 top-auto md:top-0 left-0 -right-[60px] md:right-auto"
+            : "lg:w-1/2 top-auto md:top-0 right-0 -left-[60px] md:left-auto"
         }`}
       >
         <Image
@@ -137,6 +143,7 @@ const CommonCTA = ({
           width={0}
           height={0}
           className="h-full w-full"
+          style={isArabic ? { transform: "scaleX(-1)" } : {}}
           src="/assets/images/home/CTA.png"
           alt=""
         />

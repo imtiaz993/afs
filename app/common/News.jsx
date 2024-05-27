@@ -14,18 +14,26 @@ const News = () => {
       <PageLayout>
         <div className="py-10 lg:py-24 ">
           <div className="mb-12 md:flex justify-between items-center sm:items-end">
-            <h3 className="text-[40px] text-primary mr-4 !leading-[120%]">
+            <h3
+              className={`text-[40px] text-primary  !leading-[120%] ${
+                isArabic ? "ml-4" : "mr-4"
+              }`}
+            >
               {t("title")}
             </h3>
             <div className="mt-5 md:mt-0 flex items-center cursor-pointer border-b border-white hover:border-brand-secondary">
-              <p className="text-brand-secondary mr-2 whitespace-nowrap font-medium">
+              <p
+                className={`text-brand-secondary  whitespace-nowrap font-medium ${
+                  isArabic ? "ml-2" : "mr-2"
+                }`}
+              >
                 {t("see all")}
               </p>
               <Image
                 sizes="100vw"
                 width={0}
                 height={0}
-                className="w-auto"
+                className={`w-auto ${isArabic ? "rotate-180" : ""}`}
                 src="/assets/icons/home/arrow-right.svg"
                 alt=""
               />
@@ -45,7 +53,11 @@ const News = () => {
                 <p className=" text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center">
                   {t("highlighted.tag")}
                 </p>
-                <div className="flex items-center ml-4">
+                <div
+                  className={`flex items-center ml-4 ${
+                    isArabic ? "mr-4" : "ml-4"
+                  }`}
+                >
                   <p className="text-xs  text-secondary ">
                     {t("highlighted.date")}
                   </p>
@@ -73,7 +85,11 @@ const News = () => {
                     <p className=" text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center">
                       {item.tag}
                     </p>
-                    <div className="flex items-center ml-4">
+                    <div
+                      className={`flex items-center ${
+                        isArabic ? "mr-4" : "ml-4"
+                      }`}
+                    >
                       <p className="text-xs  text-secondary ">{item.date}</p>
                       <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
                       <p className="text-xs  text-secondary ">

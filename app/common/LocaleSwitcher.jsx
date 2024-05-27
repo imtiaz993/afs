@@ -8,6 +8,7 @@ import { localeNames, locales, usePathname, useRouter } from "@/i18n.config";
 
 export default function LocaleSwitcher({ locale }) {
   const t = useTranslations();
+  const isArabic = locale === "ar";
   const currentLocale = t.locale;
   // `pathname` will contain the current
   // route without the locale e.g. `/about`...
@@ -53,7 +54,9 @@ export default function LocaleSwitcher({ locale }) {
 
   return (
     <div
-      className="mr-6 lg:mr-8 outline-none lg:relative"
+      className={` outline-none lg:relative ${
+        isArabic ? "ml-6 lg:ml-8" : "mr-6 lg:mr-8"
+      }`}
       ref={localesDropdownRef}
       onMouseLeave={() => {
         if (window.innerWidth > 1024) {
@@ -87,9 +90,9 @@ export default function LocaleSwitcher({ locale }) {
           sizes="100vw"
           width={12}
           height={6}
-          className={`ml-2 transition-all duration-200 ${
-            localesMenu ? "-rotate-180" : "rotate-0"
-          }`}
+          className={`transition-all duration-200 ${
+            isArabic ? "mr-2" : "ml-2"
+          } ${localesMenu ? "-rotate-180" : "rotate-0"}`}
           src="/assets/icons/navbar/chevron.svg"
           alt=""
         />

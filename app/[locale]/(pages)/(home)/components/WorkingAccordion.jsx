@@ -28,16 +28,8 @@ const WorkingAccordion = ({
         setActiveAccordion(index);
       }}
     >
-      <div
-        className={`flex justify-between items-start select-none ${
-          isArabic ? "flex-row-reverse" : ""
-        }`}
-      >
-        <h4
-          className={`text-[20px] md:text-2xl text-primary font-regular ${
-            isArabic ? "flex flex-row-reverse" : ""
-          }`}
-        >
+      <div className="flex justify-between items-start select-none">
+        <h4 className="text-[20px] md:text-2xl text-primary font-regular">
           <span
             className={`${isArabic ? "ml-4" : "mr-4"} ${
               activeAccordion === index
@@ -61,11 +53,7 @@ const WorkingAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        <p
-          className={`text-secondary text-base md:text-lg mt-4 !leading-[130%] ${
-            isArabic ? "text-right" : ""
-          }`}
-        >
+        <p className="text-secondary text-base md:text-lg mt-4 !leading-[130%]">
           {item.text}
         </p>
       </animated.div>

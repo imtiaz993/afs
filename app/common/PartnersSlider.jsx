@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const PartnersSlider = ({ gradient, gradientColor }) => {
   return (
-    <div className="relative">
+    <div className="relative" dir="ltr">
       <Marquee
         gradient={gradient == false ? gradient : true}
         gradientWidth={100}

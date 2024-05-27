@@ -56,7 +56,7 @@ const Solutions = () => {
               width={10}
               height={10}
               src="/assets/icons/home/diamond.svg"
-              className="mr-2"
+              className={`${isArabic ? "ml-2" : "mr-2"}`}
               alt=""
             />{" "}
             {t("title")}
@@ -83,11 +83,19 @@ const Solutions = () => {
                   {t("banks.description")}
                 </p>
                 <div className="flex items-center flex-wrap">
-                  <button className="text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 md:mr-6">
+                  <button
+                    className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
+                      isArabic ? "md:ml-6" : " md:mr-6"
+                    }`}
+                  >
                     {t("banks.button")}
                   </button>
                   <ul className="flex flex-wrap mt-4">
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                    <li
+                      className={`flex items-center text-sm text-white whitespace-nowrap ${
+                        isArabic ? "ml-3" : "mr-3"
+                      }`}
+                    >
                       <Image
                         sizes="100vw"
                         width={0}
@@ -96,11 +104,17 @@ const Solutions = () => {
                         className="w-auto"
                         alt=""
                       />
-                      <span className="opacity-80  ml-1">
+                      <span
+                        className={`opacity-80 ${isArabic ? "mr-1" : "ml-1"}`}
+                      >
                         {bankFeatures[0]}
                       </span>
                     </li>
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                    <li
+                      className={`flex items-center text-sm text-white whitespace-nowrap ${
+                        isArabic ? "ml-3" : "mr-3"
+                      }`}
+                    >
                       <Image
                         sizes="100vw"
                         width={0}
@@ -109,11 +123,17 @@ const Solutions = () => {
                         className="w-auto"
                         alt=""
                       />
-                      <span className="opacity-80  ml-1">
+                      <span
+                        className={`opacity-80  ${isArabic ? "mr-1" : "ml-1"}`}
+                      >
                         {bankFeatures[1]}
                       </span>
                     </li>
-                    <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                    <li
+                      className={`flex items-center text-sm text-white whitespace-nowrap ${
+                        isArabic ? "ml-3" : "mr-3"
+                      }`}
+                    >
                       <Image
                         sizes="100vw"
                         width={0}
@@ -122,7 +142,9 @@ const Solutions = () => {
                         className="w-auto"
                         alt=""
                       />
-                      <span className="opacity-80  ml-1">
+                      <span
+                        className={`opacity-80  ${isArabic ? "mr-1" : "ml-1"}`}
+                      >
                         {bankFeatures[2]}
                       </span>
                     </li>
@@ -136,19 +158,22 @@ const Solutions = () => {
                   background: `url('/assets/images/home/allSolutions.png')`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "700px auto",
+                  transform: isArabic ? "scaleX(-1)" : "",
                 }}
                 className="p-6 md:px-10 lg:px-8 xl:px-10 py-12 rounded back !bg-no-repeat !bg-right-top"
               >
-                <h3 className="text-2xl md:text-[40px] text-primary mb-5 mt-[187px] lg:mt-0">
-                  {t("solutions.title")}
-                </h3>
-                <p className="text-base md:text-lg !leading-7 text-primary mb-8 max-w-[425px] opacity-80">
-                  {t("solutions.description")}
-                </p>
-                <div>
-                  <button className=" text-center text-brand-secondary border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
-                    {t("solutions.button")}
-                  </button>
+                <div style={isArabic ? { transform: "scaleX(-1)" } : {}}>
+                  <h3 className="text-2xl md:text-[40px] text-primary mb-5 mt-[187px] lg:mt-0">
+                    {t("solutions.title")}
+                  </h3>
+                  <p className="text-base md:text-lg !leading-7 text-primary mb-8 max-w-[425px] opacity-80">
+                    {t("solutions.description")}
+                  </p>
+                  <div>
+                    <button className=" text-center text-brand-secondary border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
+                      {t("solutions.button")}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -169,7 +194,11 @@ const Solutions = () => {
                 </div>
               </div>
 
-              <div className="w-full lg:w-auto absolute top-0 lg:bottom-0 right-0">
+              <div
+                className={`w-full lg:w-auto absolute top-0 lg:bottom-0 ${
+                  isArabic ? "left-0" : " right-0"
+                }`}
+              >
                 <Image
                   sizes="100vw"
                   width={0}
@@ -207,11 +236,19 @@ const Solutions = () => {
                     {t("businesses.description")}
                   </p>
                   <div className="flex items-center flex-wrap md:mb-[272px]">
-                    <button className="text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 md:mr-4">
+                    <button
+                      className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
+                        isArabic ? "md:ml-4" : " md:mr-4"
+                      }`}
+                    >
                       {t("businesses.button")}
                     </button>
                     <ul className="flex flex-wrap mt-4">
-                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                      <li
+                        className={`flex items-center text-sm text-white whitespace-nowrap ${
+                          isArabic ? "ml-3" : "mr-3"
+                        }`}
+                      >
                         <Image
                           sizes="100vw"
                           width={0}
@@ -220,11 +257,19 @@ const Solutions = () => {
                           className="w-auto"
                           alt=""
                         />
-                        <span className="opacity-80  ml-1">
+                        <span
+                          className={`opacity-80  ${
+                            isArabic ? "mr-1" : "ml-1"
+                          }`}
+                        >
                           {businessFeatures[0]}
                         </span>
                       </li>
-                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                      <li
+                        className={`flex items-center text-sm text-white whitespace-nowrap ${
+                          isArabic ? "ml-3" : "mr-3"
+                        }`}
+                      >
                         <Image
                           sizes="100vw"
                           width={0}
@@ -233,11 +278,19 @@ const Solutions = () => {
                           className="w-auto"
                           alt=""
                         />
-                        <span className="opacity-80  ml-1">
+                        <span
+                          className={`opacity-80  ${
+                            isArabic ? "mr-1" : "ml-1"
+                          }`}
+                        >
                           {businessFeatures[1]}
                         </span>
                       </li>
-                      <li className="flex items-center text-sm text-white mr-3 whitespace-nowrap">
+                      <li
+                        className={`flex items-center text-sm text-white whitespace-nowrap ${
+                          isArabic ? "ml-3" : "mr-3"
+                        }`}
+                      >
                         <Image
                           sizes="100vw"
                           width={0}
@@ -246,7 +299,11 @@ const Solutions = () => {
                           className="w-auto"
                           alt=""
                         />
-                        <span className="opacity-80  ml-1">
+                        <span
+                          className={`opacity-80  ${
+                            isArabic ? "mr-1" : "ml-1"
+                          }`}
+                        >
                           {businessFeatures[2]}
                         </span>
                       </li>
