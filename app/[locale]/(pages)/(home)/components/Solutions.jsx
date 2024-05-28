@@ -219,7 +219,7 @@ const Solutions = () => {
             </div>
             <div className="order-2 bg-black lg:mt-4 rounded">
               <div
-                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded w-full !bg-contain"
+                className="p-6 md:p-10 lg:p-8 xl:p-10 rounded w-full !bg-contain lg:!bg-cover"
                 style={{
                   background: isMobile
                     ? `url('/assets/images/home/forBusinessMobile.png') no-repeat top center`

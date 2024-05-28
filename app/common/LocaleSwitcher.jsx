@@ -101,7 +101,13 @@ export default function LocaleSwitcher({ locale }) {
         className={`overflow-hidden ${localesMenu ? "block" : "hidden"}`}
         style={openAnimation}
       >
-        <div className="w-24 absolute z-[999999999px] right-11 md:right-16 lg:-right-[14px] top-14 lg:top-6 text-secondary locale-dropdown-shadow rounded-md">
+        <div
+          className={`w-24 absolute z-[999999999px] top-14 lg:top-6 text-secondary locale-dropdown-shadow rounded-md ${
+            isArabic
+              ? "left-11 md:left-16 lg:-left-[14px]"
+              : "right-11 md:right-16 lg:-right-[14px]"
+          }`}
+        >
           <ul className="w-full py-2 bg-white text-dark flex flex-col justify-between rounded-md">
             {locales.map((loc) => (
               <li
