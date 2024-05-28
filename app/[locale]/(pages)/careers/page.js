@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Navbar from "app/common/Navbar";
@@ -19,7 +19,7 @@ const Careers = () => {
         description={
           "Build the future of payments with us! Join the team that is revolutionizing digital payments technology and driving innovation."
         }
-        image={"/assets/images/careers/hero.png"}
+        image={"/assets/images/careers/career.png"}
         buttonText={"See our open positions"}
         onClick={() => {
           const section = document.querySelector("#position-table");

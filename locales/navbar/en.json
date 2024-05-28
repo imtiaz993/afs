@@ -4,6 +4,7 @@
       "title": "Solutions",
       "solutions for banks": {
         "title": "Solutions for banks",
+        "link": "/solutions/banks",
         "links": [
           {
             "title": "Card issuing & processing",
@@ -22,6 +23,7 @@
       },
       "solutions for businesses": {
         "title": "Solutions for businesses",
+        "link": "/solutions/business",
         "links": [
           {
             "title": "Payment gateway",
@@ -38,7 +40,9 @@
       },
       "solutions for consumer": {
         "title": "Solutions for consumers",
-        "links": [{ "title": "BPay wallet", "link": "/solutions/consumers/bpay" }]
+        "links": [
+          { "title": "BPay wallet", "link": "/solutions/consumers/bpay" }
+        ]
       }
     },
     "company": {

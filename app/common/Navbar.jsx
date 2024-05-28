@@ -268,9 +268,11 @@ const Solutions = () => {
         <div className="lg:absolute top-6 text-secondary lg:rounded-md navbar-dropdown-shadow">
           <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
             <div>
-              <p className="text-base font-medium text-primary mt-6">
-                {solutionsLinks["solutions for banks"].title}
-              </p>
+              <Link href={solutionsLinks["solutions for banks"].link}>
+                <p className="text-base font-medium text-primary mt-6 hover:underline">
+                  {solutionsLinks["solutions for banks"].title}
+                </p>
+              </Link>
               {solutionsLinks["solutions for banks"].links.map(
                 (item, index) => (
                   <Link
@@ -285,9 +287,11 @@ const Solutions = () => {
             </div>
 
             <div>
-              <p className="text-base font-medium text-primary mt-6">
-                {solutionsLinks["solutions for businesses"].title}
-              </p>
+              <Link href={solutionsLinks["solutions for businesses"].link}>
+                <p className="text-base font-medium text-primary mt-6 hover:underline">
+                  {solutionsLinks["solutions for businesses"].title}
+                </p>
+              </Link>
               {solutionsLinks["solutions for businesses"].links.map(
                 (item, index) => (
                   <Link

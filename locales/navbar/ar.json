@@ -5,6 +5,7 @@
 
       "solutions for banks": {
         "title": "حلول للبنوك",
+        "link": "/solutions/banks",
         "links": [
           {
             "title": "إصدار ومعالجة البطاقات",
@@ -26,6 +27,7 @@
       },
       "solutions for businesses": {
         "title": "حلول للشركات",
+        "link": "/solutions/business",
         "links": [
           {
             "title": "بوابة الدفع",
