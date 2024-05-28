@@ -115,7 +115,7 @@ const CommonCTA = ({
           {secondaryButtonLabel ? (
             <Link href={secondaryButtonLink}>
               <button
-                className={`text-center text-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor} ${
+                className={`text-center text-brand-secondary hover:text-brand-primary  border border-brand-secondary transition-colors duration-300 hover:${bgColor} hover:border-brand-primary  py-[11px] px-8 font-medium rounded-sm mt-2 md:mt-0 w-full lg:w-auto ${bgColor} ${
                   isArabic ? "md:mr-4" : "md:ml-4"
                 }`}
               >

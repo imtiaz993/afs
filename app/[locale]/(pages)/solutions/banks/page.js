@@ -14,9 +14,9 @@ const Banks = () => {
         description={
           "Leverage cutting-edge technology to drive growth, improve customer satisfaction, endure secure, efficient, and compliant operations"
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/banks/solutions-for-banks.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <CardIssuingProcessing />
       <RiskFraudManagement />

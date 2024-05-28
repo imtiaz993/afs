@@ -37,17 +37,23 @@ const FraudRiskManagement = () => {
       title: "On-hehalf fraud management",
       description:
         "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+      image:
+        "/assets/images/solutions/banks/fraud-risk-management/on-hehalf-fraud-management.png",
     },
     {
       title: "Authentication services",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
+      image:
+        "/assets/images/solutions/banks/fraud-risk-management/authentication-services.png",
       descriptionCritical: true,
     },
     {
       title: "24/7 risk monitoring",
       description:
         "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
+      image:
+        "/assets/images/solutions/banks/fraud-risk-management/247-risk-monitoring.png",
       secondaryDescription:
         "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
     },
@@ -58,7 +64,7 @@ const FraudRiskManagement = () => {
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-team",
     bgColor: "bg-surface-neutral",
   };
 
@@ -113,9 +119,11 @@ const FraudRiskManagement = () => {
         description={
           "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/banks/fraud-risk-management/fraud-risk-management.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -141,7 +149,7 @@ const FraudRiskManagement = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

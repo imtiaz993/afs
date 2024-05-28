@@ -39,6 +39,7 @@ const eShop = () => {
         "Streamline your billing process with our advanced eInvoicing system. This feature not only automates invoice generation but also facilitates faster payment processing, helping you manage cash flow more efficiently. ",
       secondaryDescription:
         "Tailor invoice templates to your brand, send automatic payment reminders to customers, and reduce administrative overhead by keeping all your billing digital and centralized.",
+      image: "/assets/images/solutions/business/eshop/einvoicing.png",
     },
     {
       title: "Reporting dashboard",
@@ -46,6 +47,7 @@ const eShop = () => {
         "Gain actionable insights with our comprehensive reporting dashboards. Track key performance indicators (KPIs) such as sales growth, customer retention rates, and product popularity.",
       secondaryDescription:
         "Use these insights to adjust your sales strategies, optimize your marketing campaigns, and improve overall business performance.",
+      image: "/assets/images/solutions/business/eshop/reporting.png",
     },
     {
       title: "Recurring billing",
@@ -53,6 +55,7 @@ const eShop = () => {
         "Ideal for businesses that offer subscription-based services, our recurring billing feature automates the billing cycle, ensuring consistent revenue and improving customer retention. ",
       secondaryDescription:
         "This tool is designed to handle all aspects of subscription management, including upgrades, downgrades, pauses, and cancellations, providing a flexible and user-friendly experience for both you and your customers.",
+      image: "/assets/images/solutions/business/eshop/recurring.png",
     },
     {
       title: "Payment versatility",
@@ -60,6 +63,7 @@ const eShop = () => {
         "Our platform supports a diverse range of payment methods to ensure you never miss a sale. Accept payments via credit cards, digital wallets, bank transfers, and more.",
       secondaryDescription:
         "This versatility not only enhances customer convenience but also ensures you can cater to local and international markets with ease.",
+      image: "/assets/images/solutions/business/eshop/versatile.png",
     },
   ];
 
@@ -114,9 +118,9 @@ const eShop = () => {
         description={
           "Sell online effortlessly with eShop, your complete eCommerce solution integrated with the AFS payment gateway."
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/business/eshop/eshop.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -132,7 +136,7 @@ const eShop = () => {
           secondaryContent:
             "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
-          primaryButtonLink: "/contact",
+          primaryButtonLink: "/contact-team",
         }}
       />
       <UsedTrustedBy />
@@ -152,7 +156,7 @@ const eShop = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

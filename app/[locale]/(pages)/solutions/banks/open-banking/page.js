@@ -37,16 +37,21 @@ const OpenBanking = () => {
       title: "Secure data sharing",
       description:
         "Our Open Banking APIs provide a secure framework for sharing financial data with third-party providers (TPPs), with robust encryption and authentication protocols to protect sensitive information.",
+      image:
+        "/assets/images/solutions/banks/open-banking/secure-data-sharing.png",
     },
     {
       title: "Customer consent",
       description:
         "At the core of Open Banking is the principle of customer consent. Customers have complete control over their data, choosing what to share and with whom, ensuring transparency and trust in the services provided.",
+      image: "/assets/images/solutions/banks/open-banking/customer-consent.png",
     },
     {
       title: "Enhanced Services",
       description:
         "With the integration of third-party data, banks can enhance their existing services or develop new ones that offer more personalized and efficient customer experiences. This includes everything from improved financial advice to faster loan processing.",
+      image:
+        "/assets/images/solutions/banks/open-banking/enhanced-services.png",
     },
   ];
 
@@ -98,7 +103,7 @@ const OpenBanking = () => {
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-team",
     bgColor: "bg-surface-neutral",
   };
   return (
@@ -110,9 +115,9 @@ const OpenBanking = () => {
         description={
           "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that accelerate innovation and enhance customer experiences."
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/banks/open-banking/open-banking.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -138,7 +143,7 @@ const OpenBanking = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

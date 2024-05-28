@@ -11,12 +11,14 @@ const OtherSolutions = () => {
       description:
         "Unlock the potential of financial innovation with our simple, integrated Open Banking APIs. Drive new payment flows and enhance your business model.",
       learnMoreLink: "/solutions/business/open-banking",
+      image: "/assets/images/solutions/business/open-banking.png",
     },
     {
       title: "Digital payroll",
       description:
         "Unlock the potential of financial innovation with our simple, integrated Open Banking APIs. Drive new payment flows and enhance your business model.",
       learnMoreLink: "/",
+      image: "/assets/images/solutions/business/digital-payroll.png",
     },
     {
       title: "Food and beverage (F&B)",
@@ -44,8 +46,11 @@ const OtherSolutions = () => {
                   description={data.description}
                   learnMoreLink={data.learnMoreLink}
                   backgroundColor={"bg-white"}
-                  imageSrc={"/assets/images/solutions/productIllustration2.png"}
-                  key={data.title}
+                  imageSrc={
+                    data.image
+                      ? data.image
+                      : "/assets/images/solutions/productIllustration2.png"
+                  }
                 />
               ))}
               <CommonCTA
@@ -54,7 +59,7 @@ const OtherSolutions = () => {
                   "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
                 }
                 primaryButtonLabel={"Contact our team"}
-                primaryButtonLink={"/contact"}
+                primaryButtonLink={"/contact-team"}
                 lessPaddingVariant={true}
                 bgColor={"bg-white"}
                 gridVariant={true}

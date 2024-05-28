@@ -13,7 +13,7 @@ const Solutions = () => {
       <CommonHero
         title={"Solution overview"}
         subtext={"Amplify your business financial opportunity"}
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/solutions-overview.png"}
       />
       <div className="relative border-b border-default" id="solutions-observer">
         <PageNav />

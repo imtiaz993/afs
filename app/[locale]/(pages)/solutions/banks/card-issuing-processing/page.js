@@ -108,7 +108,7 @@ const CardIssuingProcessing = () => {
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-team",
     bgColor: "bg-surface-neutral",
   };
   return (
@@ -120,9 +120,11 @@ const CardIssuingProcessing = () => {
         description={
           "Our service revolutionizes bank card operations by enhancing efficiency and streamlining processes. We offer a comprehensive solution that simplifies card issuance and processing, making complex tasks more manageable."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/banks/card-issuing-processing/card-issuing-processing.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -148,7 +150,7 @@ const CardIssuingProcessing = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

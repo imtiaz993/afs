@@ -34,24 +34,37 @@ const SoftPOS = () => {
 
   const featuresData = [
     {
-      title: "Multiple payment methods",
+      title: "Convenient and mobile",
       description:
-        "Feature description lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Accept payments anywhere, any time with a secure and convenient means of payment for customers.",
+      image: "/assets/images/solutions/business/soft-pos/convineant.png",
     },
     {
-      title: "Comprehensive dashboard",
+      title: "Broad payments acceptance",
       description:
-        "Gain insights into your business operations with our intuitive dashboard. Track and view transactions by type, access detailed history, and utilize helpful how-to videos.",
+        "Accept multiple local and international payment methods, from contactless credit and debit cards, Samsung Pay, Apple Pay, Google Pay, and Smart Link payments via email, SMS.",
+      image:
+        "/assets/images/solutions/business/soft-pos/broad-payment-acceptance.png",
     },
     {
-      title: "Support eco-friendly practices",
+      title: "Electronic receipts",
       description:
-        "Embrace a paperless environment by sharing digital receipts via email or SMS. Generate and share payment links effortlessly across social media platforms like WhatsApp, Facebook Messenger, SMS, and email.",
+        "Opt out of paper receipts and enjoy the convenience of electronic receipts (eReceipts). Share eReceipts with customers via SMS and email. Give customers the convenience of a faster, paperless shopping experience.",
+      image:
+        "/assets/images/solutions/business/soft-pos/electronic-payment-receipt.png",
+    },
+    {
+      title: "Comprehensive merchant portal",
+      description:
+        "Our advanced merchant portal helps you review transaction reports, see detailed transaction history and review transactions made on each device. With AFS Pay you can also raise a ticket for queries and do much more.",
+      image:
+        "/assets/images/solutions/business/soft-pos/comprehensive-merchant-portal.png",
     },
     {
       title: "Easy download and setup",
       description:
-        "Get started in no time! Simply download the AFS Pay SoftPOS app from the Google Play Store, set up your account, and you're good to go.",
+        "Get started in no time! Simply download the AFS Pay softPOS app from the Google Play Store, set up your account, and you’re good to go.",
+      image: "/assets/images/solutions/business/soft-pos/easy-download.png",
     },
   ];
 
@@ -106,9 +119,9 @@ const SoftPOS = () => {
         description={
           "Whether it's in-store purchases, home delivery, or online sales, our SoftPOS solution ensures you're ready for every customer scenario."
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/business/soft-pos/soft-pos.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -124,7 +137,7 @@ const SoftPOS = () => {
           secondaryContent:
             "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
-          primaryButtonLink: "/contact",
+          primaryButtonLink: "/contact-team",
         }}
       />
       <UsedTrustedBy />
@@ -142,9 +155,11 @@ const SoftPOS = () => {
             text: ["revolutionize"],
             color: "text-brand-secondary",
           }}
-          secondaryContent={"Join the countless businesses that are optimizing their payment solutions with our AFS Pay app. Transform your transaction capabilities today!"}
+          secondaryContent={
+            "Join the countless businesses that are optimizing their payment solutions with our AFS Pay app. Transform your transaction capabilities today!"
+          }
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

@@ -41,7 +41,7 @@ const RiskFraudManagement = () => {
             primaryButtonLabel={"Learn more"}
             primaryButtonLink={"/solutions/banks/fraud-risk-management"}
             secondaryButtonLabel={"Contact our team"}
-            secondaryButtonLink={"/contact"}
+            secondaryButtonLink={"/contact-team"}
           />
           <div className="grid mt-16 mb-6 md:grid-cols-2 gap-4">
             {riskFraudData.map((data) => (
@@ -67,7 +67,7 @@ const RiskFraudManagement = () => {
               "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
             }
             primaryButtonLabel={"Contact our team"}
-            primaryButtonLink={"/contact"}
+            primaryButtonLink={"/contact-team"}
             secondaryButtonLabel={"Learn more"}
             secondaryButtonLink={"/solutions/banks/fraud-risk-management"}
             bgColor={"bg-subtle-neutral"}

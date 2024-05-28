@@ -11,38 +11,24 @@ const SolutionBusinesses = () => {
   const tailwindColorsModule = tailwindConfig.theme.extend.colors;
   const businessData = [
     {
-      title: "Payment Gateway",
+      title: "POS, miniPOS and SoftPOS terminals",
       description:
-        "Utilizing our payment gateway solution offers substantial benefits, ensuring your transactions are not only secure but also efficient.",
+        "Using our next-generation point-of-sale terminals brings a transformative advantage to your business.",
     },
     {
-      title: "POS & SoftPOS Terminals",
+      title: "POS financing",
       description:
-        "Using our next-generation POS terminals brings a transformative advantage to your business.",
+        "Finance your business expansion, grow your workforce or fund any operational expense with our convenient loan application.",
     },
     {
-      title: "Merchant portal",
+      title: "eShop",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: "true",
+        "Sell online via a tailored eCommerce website, pre-integrated with our payment gateway.",
     },
     {
-      title: "Payroll solution",
+      title: "Food and beverage solutions",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: "true",
-    },
-    {
-      title: "SME Suite of products",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: "true",
-    },
-    {
-      title: "DValue added services HoReCa",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: "true",
+        "Take and accept orders, perform card payment transactions in one full-featured point-of-sale application.",
     },
   ];
   return (

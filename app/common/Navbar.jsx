@@ -85,7 +85,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <LocaleSwitcher locale={locale} />
-              <Link href="/contact">
+              <Link href="/contact-team">
                 <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
                   {t("contact team")}
                 </button>
@@ -172,7 +172,7 @@ const Navbar = () => {
                     <Resources />
                   </div>
                   <div className="mb-40">
-                    <Link href="/contact">
+                    <Link href="/contact-team">
                       <button className=" text-center text-white bg-brand-secondary  border border-brand-secondary py-[11px]  md:py-[15px] w-[185px] font-medium rounded-sm">
                         {t("contact team")}
                       </button>

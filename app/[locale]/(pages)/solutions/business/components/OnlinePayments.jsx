@@ -17,6 +17,7 @@ const OnlinePayments = () => {
       description:
         "Experience the advantages of a platform that grows with your needs. Use powerful tools designed to enhance your online business presence and operational efficiency.",
       learnMoreLink: "/solutions/business/eshop",
+      image: "/assets/images/solutions/business/eshop.png",
     },
   ];
   return (
@@ -37,7 +38,11 @@ const OnlinePayments = () => {
                   description={data.description}
                   learnMoreLink={data.learnMoreLink}
                   backgroundColor={"bg-white"}
-                  imageSrc={"/assets/images/solutions/productIllustration2.png"}
+                  imageSrc={
+                    data.image
+                      ? data.image
+                      : "/assets/images/solutions/productIllustration2.png"
+                  }
                   key={data.title}
                 />
               ))}
@@ -52,7 +57,7 @@ const OnlinePayments = () => {
                 "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
               }
               primaryButtonLabel={"Contact our team"}
-              primaryButtonLink={"/contact"}
+              primaryButtonLink={"/contact-team"}
               bgColor={"bg-white"}
               rounded={true}
               lessPaddingVariant={true}

@@ -37,6 +37,8 @@ const OpenBanking = () => {
       title: "Secure data access",
       description:
         "Our APIs provide a safe conduit for businesses to access essential financial data from customers' bank accounts, enabling a wealth of innovative services and enhancing data-driven decision-making.",
+      image:
+        "/assets/images/solutions/business/open-banking/secure-data-access.png",
     },
     {
       title: "Direct payments",
@@ -44,6 +46,8 @@ const OpenBanking = () => {
         "Facilitate direct payments using real-time payment rails, which are not only faster but also more efficient than traditional methods.",
       secondaryDescription:
         "This ensures that transactions are smooth and immediate, enhancing customer satisfaction.",
+      image:
+        "/assets/images/solutions/business/open-banking/direct-payments.png",
     },
     {
       title: "Customizable financial insights",
@@ -51,11 +55,14 @@ const OpenBanking = () => {
         "Utilize the financial data accessed through Open Banking to gain valuable insights into your customers’ financial behaviors.",
       secondaryDescription:
         "Tailor your services to better fit their needs and preferences, enabling a more customized approach to service delivery.",
+      image: "/assets/images/solutions/business/open-banking/customizable.png",
     },
     {
       title: "Versatile payment options",
       description:
         "Create and offer versatile payment options that make use of direct bank account access. This not only simplifies the payment process by eliminating the need for card details and extensive data entry but also enhances the overall user experience.",
+      image:
+        "/assets/images/solutions/business/open-banking/versatile-payment.png",
     },
   ];
 
@@ -110,9 +117,11 @@ const OpenBanking = () => {
         description={
           "Unlock the potential of financial innovation with our simple, integrated Open Banking APIs. Drive new payment flows and enhance your business model."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/business/open-banking/open-banking.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -129,7 +138,7 @@ const OpenBanking = () => {
           secondaryContent:
             "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
-          primaryButtonLink: "/contact",
+          primaryButtonLink: "/contact-team",
         }}
       />
       <UsedTrustedBy />
@@ -151,7 +160,7 @@ const OpenBanking = () => {
             "Embrace the future of payments with our Open Banking solutions."
           }
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

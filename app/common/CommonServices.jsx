@@ -15,7 +15,11 @@ const CommonServices = ({ navTitle, servicesData, ctaData }) => {
                 <SolutionFeatures
                   title={item.title}
                   description={item.description}
-                  imageSrc={"/assets/images/solutions/productIllustration2.png"}
+                  imageSrc={
+                    item.image
+                      ? item.image
+                      : "/assets/images/solutions/productIllustration2.png"
+                  }
                   key={item.title}
                 />
               ))}

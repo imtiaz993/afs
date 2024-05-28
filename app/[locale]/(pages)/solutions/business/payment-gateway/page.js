@@ -37,41 +37,57 @@ const PaymentGateway = () => {
       title: "Secure transaction processing",
       description:
         "Boost your credibility with encrypted transactions, enhancing customer trust and data security.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/secure-transaction.png",
     },
     {
       title: "Multi-currency support",
       description:
         "Go global by accepting multiple currencies, broadening your market reach and accessibility.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/multi-currency-support.png",
     },
     {
       title: "Fraud detection and prevention",
       description:
         "Minimize risks with our proactive fraud prevention, protecting your revenue and reputation.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/fraud-detection.png",
     },
     {
       title: "Payment method integration:",
       description:
         "Cater to all customers by supporting various payment options, increasing satisfaction and loyalty.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/payment-method-integration.png",
     },
     {
       title: "Real-time processing",
       description:
         "Speed up transactions with real-time processing, offering instant payment confirmations and smoother checkouts.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/real-time-processing.png",
     },
     {
       title: "Customizable checkout experience",
       description:
         "Automate recurring payments for subscriptions, ensuring consistent revenue and reducing manual effort.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/customizable-checkout-experience.png",
     },
     {
       title: "Recurring billing",
       description:
         "Personalize your checkout to fit your brand, improving user experience and conversion rates.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/recurring-bill.png",
     },
     {
       title: "Reporting and analytics",
       description:
         "Gain insights with detailed reports on sales and customer behavior, aiding in strategic decision-making and optimization.",
+      image:
+        "/assets/images/solutions/business/payment-gateway/reporting-analytics.png",
     },
   ];
 
@@ -80,7 +96,7 @@ const PaymentGateway = () => {
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-team",
     lessPaddingVariant: true,
     bgColor: "bg-surface-neutral",
   };
@@ -136,9 +152,11 @@ const PaymentGateway = () => {
         description={
           "Our payment gateway streamlines transactions with robust security and support for multiple payment methods, ensuring quick and reliable processing. It enhances checkout experiences and offers insights to optimize your payment strategy."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/business/payment-gateway/payment-gateway.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -168,7 +186,7 @@ const PaymentGateway = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

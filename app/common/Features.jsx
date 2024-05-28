@@ -12,9 +12,9 @@ const Features = ({ data, commonCTAData, appCTA, appCTABgColor }) => {
           {data.map((item) => (
             <div className="flex flex-col lg:flex-row gap-8 mb-24">
               <div
-                className="lg:w-[608px] h-[450px] bg-white"
+                className="lg:w-[608px] h-[450px]"
                 style={{
-                  backgroundImage: "",
+                  backgroundImage: `url(${item.image})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}

@@ -29,7 +29,7 @@ const Commitment = () => {
               width={0}
               height={0}
               className="rounded w-full"
-              src="/assets/images/about/commitment-card.png"
+              src="/assets/images/about/our-vision.png"
               alt=""
             />
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">
@@ -45,7 +45,7 @@ const Commitment = () => {
               width={0}
               height={0}
               className="rounded w-full"
-              src="/assets/images/about/commitment-card.png"
+              src="/assets/images/about/our-mission.png"
               alt=""
             />
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">
@@ -62,7 +62,7 @@ const Commitment = () => {
               width={0}
               height={0}
               className="rounded w-full"
-              src="/assets/images/about/commitment-card.png"
+              src="/assets/images/about/our-values.png"
               alt=""
             />
             <h4 className="mt-4 mb-2 text-xl md:text-2xl text-primary !leading-[130%]">

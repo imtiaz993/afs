@@ -79,41 +79,57 @@ const ValueAddedServices = () => {
       title: "API services",
       description:
         "Enable seamless integration and automation of banking services, enhancing the user experience with our robust API suite.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/api-services.png",
     },
     {
       title: "Loyality solutions",
       description:
         "Cultivate customer loyalty and retention by offering personalized rewards and benefits that incentivize continued engagement.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/loyality-solutions.png",
     },
     {
       title: "Instalment processing",
       description:
         "Simplify the management of installment payments, providing customers with flexible payment options that fit their financial needs.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/installment-processing.png",
     },
     {
       title: "Data analitycs",
       description:
         "Unlock valuable insights from your data to make informed decisions, optimize operations, and deliver tailored services to your customers.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/data-analytics.png",
     },
     {
       title: "Real time data streeming",
       description:
         "Access and analyze data in real-time, allowing for immediate responses to market changes and customer behavior.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/real-time-data-streaming.png",
     },
     {
       title: "Tokenization solutions",
       description:
         "Enhance payment security and convenience by offering tokenized  payments, including Apple Pay, Samsung Pay, and Google Pay.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/tokenization-solutions.png",
     },
     {
       title: "Interactive e-statement",
       description:
         "Engage customers with interactive electronic statements that offer detailed insights into their transactions and financial health.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/interactive-estatement.png",
     },
     {
       title: "SMS Gateway",
       description:
         "Communicate effectively with customers through SMS notifications and alerts, ensuring timely and secure information exchange.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/sms-gateway.png",
     },
   ];
 
@@ -122,7 +138,7 @@ const ValueAddedServices = () => {
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-team",
     lessPaddingVariant: true,
     bgColor: "bg-surface-neutral",
   };
@@ -136,9 +152,11 @@ const ValueAddedServices = () => {
         description={
           "Enhance your offerings with our suite of value-added services, elevate your customer experience and operational efficiency in one go."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/banks/value-added-services/value-added-services.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -168,7 +186,7 @@ const ValueAddedServices = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

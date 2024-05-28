@@ -11,12 +11,14 @@ const InPersonPayments = () => {
       description:
         "Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics.",
       learnMoreLink: "/solutions/business/pos-terminals",
+      image: "/assets/images/solutions/business/pos-terminals.png",
     },
     {
       title: "SoftPOS",
       description:
         "Whether it’s for in-store purchases, home delivery, or online sales, our SoftPOS solution ensures you’re equipped to handle every customer scenario with ease.",
       learnMoreLink: "/solutions/business/softpos",
+      image: "/assets/images/solutions/business/softpos.png",
     },
   ];
 
@@ -38,7 +40,7 @@ const InPersonPayments = () => {
                   description={data.description}
                   learnMoreLink={data.learnMoreLink}
                   backgroundColor={"bg-subtle-neutral"}
-                  imageSrc={"/assets/images/solutions/productIllustration.png"}
+                  imageSrc={data.image}
                   key={data.title}
                 />
               ))}
@@ -55,7 +57,7 @@ const InPersonPayments = () => {
                 "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
               }
               primaryButtonLabel={"Contact our team"}
-              primaryButtonLink={"/contact"}
+              primaryButtonLink={"/contact-team"}
               bgColor={"bg-subtle-neutral"}
               rounded={true}
               lessPaddingVariant={true}

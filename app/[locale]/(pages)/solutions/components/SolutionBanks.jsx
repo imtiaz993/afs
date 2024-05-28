@@ -9,35 +9,40 @@ import CommonCTA from "../../../../common/CommonCTA";
 const SolutionBanks = () => {
   const banksData = [
     {
-      title: "Card issuing",
-      description:
-        "Instantly issue personalized debit, credit, and prepaid cards at branch locations within minutes enhancing overall service efficiency.",
-    },
-    {
       title: "Card processing",
       description:
-        "End-to-end and cost-effective card processing solutions to financial and non-financial institutions.",
+        "Deliver versatile card solutions, for all requirements, ensuring convenience and security in every payment.",
+      image: "/assets/images/solutions/card-processing.png",
     },
     {
-      title: "Card personalization",
+      title: "Operational support",
       description:
-        "From custom designs to enhanced security options like EMV chips and contactless technology",
+        "Streamline processes and optimize performance while ensuring continuous customer assistance.",
+      image: "/assets/images/solutions/operational-support.png",
     },
     {
-      title: "Sharia compliant",
+      title: "Authentification",
       description:
-        "Our Sharia-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards.",
+        "Our proprietary advanced security measures and tools give you complete protection in stopping fraudulent activities.",
+      image: "/assets/images/solutions/authentification.png",
     },
     {
-      title: "Fraud & Risk management",
+      title: "Fraud management",
       description:
-        "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats.",
+        "Employ advanced and cutting-edge technology to secure your financial transactions, allowing you to focus on your business.",
+      image: "/assets/images/solutions/fraud-management.png",
     },
     {
-      title: "Digital & Open banking",
+      title: "Value added services",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
-      descriptionCritical: "true",
+        "Enhance your offerings with our suite of value-added services and security features to revolutionize your payments business.",
+      image: "/assets/images/solutions/value-added-services.png",
+    },
+    {
+      title: "Additional services",
+      description:
+        "Our add-ons help streamline operations with tailored branding, efficient communication, and convenient account information.",
+      image: "/assets/images/solutions/additional-services.png",
     },
   ];
   return (
@@ -57,12 +62,12 @@ const SolutionBanks = () => {
           </p>
           <FeatureHighlightCard
             message={
-              "We put at your disposal a wide range of solutions design to meet the evolving need of the banking sector, our services ensure secure, efficient and compliant operations"
+              "We put at your disposal a wide range of solutions design to meet the evolving need of the banking sector, our services ensure secure, efficient and compliant operations."
             }
             primaryButtonLabel={"View all banking solutions"}
             primaryButtonLink={"/solutions/banks"}
             secondaryButtonLabel={"Contact our team"}
-            secondaryButtonLink={"/contact"}
+            secondaryButtonLink={"/contact-team"}
           />
           <BgImageTestimonial />
           <PartnersSlider gradient={false} />
@@ -73,21 +78,22 @@ const SolutionBanks = () => {
                 description={data.description}
                 descriptionCritical={data.descriptionCritical}
                 backgroundColor={"bg-subtle-neutral"}
-                imageSrc={"/assets/images/solutions/productIllustration.png"}
+                imageSrc={data.image}
                 key={data.title}
               />
             ))}
           </div>
           <CommonCTA
             primaryContent={
-              "Want to learn more about our solutions and how we can help your business?"
+              "Want to learn more about our solutions and how we can help your bank?"
             }
             secondaryContent={
               "Our dedicated business development team are ready to help guide you on the best solution for your business."
             }
             primaryButtonLabel={"Contact our team"}
-            secondaryButtonLabel={"View all business solutions"}
-            primaryButtonLink={"/contact"}
+            secondaryButtonLabel={"View all bank solutions"}
+            primaryButtonLink={"/contact-team"}
+            secondaryButtonLink={"/solutions/banks"}
             bgColor={"bg-surface-neutral"}
             rounded={true}
             lessPaddingVariant={true}

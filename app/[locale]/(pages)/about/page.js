@@ -18,7 +18,7 @@ const About = () => {
         subtext={
           "The region’s leading digital payment solutions provider and fintech enabler"
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/about/about-us.png"}
       />
       <Story />
       <Commitment />

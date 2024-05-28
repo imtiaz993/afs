@@ -18,17 +18,21 @@ const FeatureHighlightCard = ({
         <div className="flex flex-col sm:flex-row">
           <Link href={primaryButtonLink}>
             <button
-              className="  text-center text-white bg-brand-secondary   border border-brand-secondary  py-3 md:py-4 px-8 font-medium rounded-sm w-full "
+              className="  text-center text-white bg-brand-secondary hover:bg-brand-primary  border border-brand-secondary hover:border-brand-primary py-3 md:py-4 px-8 font-medium rounded-sm w-full "
               type="submit"
             >
               {primaryButtonLabel}
             </button>
           </Link>
-          <Link href={secondaryButtonLink}>
-            <button className="mt-2 sm:mt-0 sm:ml-4  text-center bg-transparent text-brand-secondary   border border-brand-secondary py-3 md:py-4 px-8 font-medium rounded-sm w-full">
-              {secondaryButtonLabel}
-            </button>
-          </Link>
+          {secondaryButtonLabel ? (
+            <Link href={secondaryButtonLink}>
+              <button className="mt-2 sm:mt-0 sm:ml-4  text-center bg-transparent text-brand-secondary hover:text-brand-primary  border border-brand-secondary hover:border-brand-primary py-3 md:py-4 px-8 font-medium rounded-sm w-full">
+                {secondaryButtonLabel}
+              </button>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       ) : (
         ""

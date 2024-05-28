@@ -38,9 +38,9 @@ const Business = () => {
         description={
           "Leverage our versatile range of payment solutions to empower every aspect of your business transactions. "
         }
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/solutions/business/solution-business.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={

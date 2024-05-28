@@ -12,7 +12,7 @@ const DigitalOpenBank = () => {
       title: "Open banking",
       description:
         "Explore Open Banking opportunities for businesses and deliver outstanding payment services to your clients and customers",
-      learnMore: "/linktolearnmore",
+      learnMore: "/solutions/banks/open-banking",
     },
     {
       title: "Digital banking",
@@ -57,7 +57,7 @@ const DigitalOpenBank = () => {
               "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
             }
             primaryButtonLabel={"Contact our team"}
-            primaryButtonLink={"/contact"}
+            primaryButtonLink={"/contact-team"}
             bgColor={"bg-white"}
             rounded={true}
             lessPaddingVariant={true}

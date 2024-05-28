@@ -37,26 +37,34 @@ const POSTerminals = () => {
       title: "Smart integrated POS terminals",
       description:
         "everage the flexibility and efficiency of Android with our smart, integrated POS terminals. These devices offer intuitive operation, extensive app compatibility, and easy customization to fit your unique business needs.",
+      image:
+        "/assets/images/solutions/business/pos-terminals/smart-integrated.png",
     },
     {
       title: "Accept all major card schemes",
       description:
         "Ensure you never miss a sale by accepting all major credit and debit cards. Our terminals are designed to support a wide range of card schemes, catering to a diverse customer base.",
+      image: "/assets/images/solutions/business/pos-terminals/accept-major.png",
     },
     {
       title: "Secure payment experience",
       description:
         "Combine speed with security in your payment process. Our terminals provide quick transaction times without compromising on data protection, offering a seamless checkout experience for customers.",
+      image:
+        "/assets/images/solutions/business/pos-terminals/secure-payment.png",
     },
     {
       title: "Loan on POS",
       description:
         "This service simplifies the borrowing process, integrating credit options seamlessly into the transaction flow, which can boost sales and improve customer satisfaction by providing instant access to credit at critical buying moments.",
+      image: "/assets/images/solutions/business/pos-terminals/loan-pos.png",
     },
     {
       title: "Dynamic currency conversion",
       description:
         "Enhance the shopping experience for international customers by offering the convenience of paying in their home currency. This feature not only simplifies transactions but also provides transparency in currency exchange rates.",
+      image:
+        "/assets/images/solutions/business/pos-terminals/dynamic-currency.png",
     },
   ];
 
@@ -101,7 +109,7 @@ const POSTerminals = () => {
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
   ];
-  
+
   return (
     <>
       <Navbar />
@@ -111,9 +119,11 @@ const POSTerminals = () => {
         description={
           "Elevate your retail experience with our advanced POS terminals. Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics."
         }
-        image={"/assets/images/about/hero.png"}
+        image={
+          "/assets/images/solutions/business/pos-terminals/pos-terminals.png"
+        }
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={
@@ -129,7 +139,7 @@ const POSTerminals = () => {
           secondaryContent:
             "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
-          primaryButtonLink: "/contact",
+          primaryButtonLink: "/contact-team",
         }}
       />
       <UsedTrustedBy />
@@ -149,7 +159,7 @@ const POSTerminals = () => {
           }}
           secondaryContent={"Experience the power of AFS today!"}
           primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
     </>

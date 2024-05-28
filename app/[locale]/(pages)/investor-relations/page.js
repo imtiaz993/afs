@@ -13,7 +13,7 @@ const InvestorRelations = () => {
       <CommonHero
         title={"Investor relations"}
         subtext={"Building trust and driving value"}
-        image={"/assets/images/about/hero.png"}
+        image={"/assets/images/investor/investor.png"}
         description={
           "At AFS we believe in transparency, accountability, and open communications with our shareholders and diverse stakeholders."
         }

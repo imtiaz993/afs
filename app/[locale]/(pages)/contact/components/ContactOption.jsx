@@ -2,6 +2,7 @@
 
 import React from "react";
 import PageLayout from "app/common/PageLayout";
+import Link from "next/link";
 
 const ContactOption = () => {
   return (
@@ -26,18 +27,11 @@ const ContactOption = () => {
                 commercial enquiries, our team is committed to finding the best
                 solutions for your business needs.
               </p>
-              <button
-                className=" text-center bg-white text-brand-secondary transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary  py-3 w-full md:w-[185px] font-medium rounded-sm"
-                onClick={() => {
-                  const section = document.querySelector("#contact-form");
-                  section.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-              >
-                Contact our team
-              </button>
+              <Link href={"/contact-team"}>
+                <button className=" text-center bg-white text-brand-secondary transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary  py-3 w-full md:w-[185px] font-medium rounded-sm">
+                  Contact our team
+                </button>
+              </Link>
             </div>
           </div>
           <div className="rounded py-10 px-8 border border-default">

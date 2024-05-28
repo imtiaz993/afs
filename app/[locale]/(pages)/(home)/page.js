@@ -34,7 +34,7 @@ const Home = () => {
           }}
           secondaryContent={t("description")}
           primaryButtonLabel={t("contact team")}
-          primaryButtonLink={"/contact"}
+          primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
       <News />
