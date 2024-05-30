@@ -39,6 +39,10 @@
           },
           { "title": "SoftPOS", "link": "/solutions/business/softpos" },
           { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
+          {
+            "title": "المصرفية المفتوحة",
+            "link": "/solutions/business/open-banking"
+          },
           { "title": "المأكولات والمشروبات (F&B)", "link": "/" }
         ]
       },
@@ -53,7 +57,6 @@
       "title": "الشركة",
       "links": [
         { "title": "نبذة عنا", "link": "/about" },
-        { "title": "شركاؤنا", "link": "/partners" },
         { "title": "علاقات المستثمرين", "link": "/investor-relations" },
         { "title": "وظائف", "link": "/careers" },
         { "title": "اتصل", "link": "/contact" }
@@ -63,7 +66,7 @@
       "title": "الموارد",
       "links": [
         { "title": "أخبار وإعلانات", "link": "/" },
-        { "title": "كن موردًا", "link": "/" },
+        { "title": "قانوني", "link": "/legal" },
         { "title": "ESG", "link": "/" },
         { "title": "الشهادات", "link": "/certifications" }
       ]

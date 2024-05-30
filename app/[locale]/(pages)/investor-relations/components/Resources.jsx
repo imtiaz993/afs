@@ -43,7 +43,7 @@ const Resources = () => {
             </div>
             <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded">
               <h4 className="text-xl md:text-2xl text-secondary !leading-[130%]">
-                AFS proxy form
+                Shareholder list
               </h4>
               <div className="flex items-center cursor-pointer">
                 <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">

@@ -119,7 +119,7 @@ const BPay = () => {
         }
         image={"/assets/images/about/hero.png"}
         buttonText={"Contact our team"}
-        buttonLink={"/contact"}
+        buttonLink={"/contact-team"}
       />
       <Benefits
         description={

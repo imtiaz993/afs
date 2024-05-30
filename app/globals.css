@@ -124,8 +124,8 @@
 }
 
 .becomepartner-gradient {
-  background: linear-gradient(0deg, #d4dfe9 0%, #d4dfe9 100%),
-    linear-gradient(0deg, #d4dfe9 0%, #d4dfe9 100%), #f2f6fa;
+  background: linear-gradient(215deg, #d4dfe9 31.99%, #f2f6fa 84.18%),
+    linear-gradient(0deg, #d4dfe9 0%, #d4dfe9 100%), #d4dfe9;
 }
 
 .app-cta-gradient {

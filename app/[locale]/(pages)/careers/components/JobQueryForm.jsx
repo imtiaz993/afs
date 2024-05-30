@@ -22,7 +22,6 @@ const validationSchema = Yup.object().shape({
 });
 
 const JobQueryForm = () => {
-  
   const {
     values,
     touched,
@@ -71,7 +70,7 @@ const JobQueryForm = () => {
                   height={0}
                   key={index}
                   className="w-12 h-12 rounded-full my-3 mr-3 lg:my-4 lg:mr-4"
-                  src={`/assets/icons/about/cta/${index + 1}.svg`}
+                  src={`/assets/icons/careers/testimonial${index + 1}.svg`}
                   alt=""
                 />
               ))}
@@ -115,7 +114,9 @@ const JobQueryForm = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   error={
-                    errors.headquarter && touched.headquarter ? errors.headquarter : ""
+                    errors.headquarter && touched.headquarter
+                      ? errors.headquarter
+                      : ""
                   }
                   label="Company headquarters location"
                   options={["Bahrain", "Egypt", "UAE", "Oman"]}

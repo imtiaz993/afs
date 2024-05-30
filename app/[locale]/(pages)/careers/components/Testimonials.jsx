@@ -6,31 +6,80 @@ const Testimonials = () => {
   const reviews = [
     {
       review:
+        "AJoining AFS broadened my financial expertise into regional markets like UAE, Oman, & Kuwait. Collaborative efforts across these geographies showcased learning and adaptation in this dynamic industry.",
+      name: "David Joshua ",
+      company: "Processing",
+      image: "/assets/icons/careers/testimonial1.svg",
+    },
+    {
+      review:
+        "AFS has served as a platform for my personal growth, enabling me to lead, innovate, and grow within the organization.",
+      name: "Ameena Albinali",
+      company: "Customer Service Excellence",
+      image: "/assets/icons/careers/testimonial2.svg",
+    },
+    {
+      review:
+        "Working at AFS helped me gain diverse knowledge, perfect essential skills while also tackling various projects that have enriched my understanding of the cards and payments sector.",
+      name: "Marwa Ahmed",
+      company: "Delivery Management",
+      image: "/assets/icons/careers/testimonial3.svg",
+    },
+    {
+      review:
+        "My career at AFS has been not only rewarding but also the perfect fit for me, thanks to the unmatched opportunities for learning and professional development.",
+      name: "Sara Alsarraf",
+      company: "Marketing & Communications",
+      image: "/assets/icons/careers/testimonial4.svg",
+    },
+    {
+      review:
         "AFS has helped deepen my understanding of payment systems, from traditional card-based transactions to cutting edge digital innovations.",
       name: "Reem AlHusaini",
       company: "Processing",
-      image: "/assets/icons/careers/testimonial1.png",
+      image: "/assets/icons/careers/testimonial5.svg",
     },
     {
       review:
         "Being part of a well-established company with 40 years of experience gave me the opportunity to grow with confidence in a very professional environment.",
       name: "Rana Sinousi",
       company: "Marketing & Communications",
-      image: "/assets/icons/careers/testimonial2.svg",
+      image: "/assets/icons/careers/testimonial6.svg",
     },
     {
       review:
         "Through ongoing training and hands-on experience, I have developed a deep understanding of payment technology trends and best practices.",
       name: "Husain Al Adhab",
       company: "Processing",
-      image: "/assets/icons/careers/testimonial3.svg",
+      image: "/assets/icons/careers/testimonial7.svg",
     },
     {
       review:
         "From navigating complex regulatory frameworks to spearheading innovative solutions, I am proud to be part of a team that pushes boundaries and sets new standards in digital payments.",
       name: "Arwa AlSharqawi",
       company: "Legal",
-      image: "/assets/icons/careers/testimonial4.svg",
+      image: "/assets/icons/careers/testimonial8.svg",
+    },
+    {
+      review:
+        "Working at AFS broadens horizons, being part of an organization that comprises many highly specialized units exposes one to a wealth of experience and many talented people.",
+      name: "Wael Abdullatif",
+      company: "Information Technology",
+      image: "/assets/icons/careers/testimonial9.svg",
+    },
+    {
+      review:
+        "From pioneering digital payments solutions to navigating complex regulatory landscapes, I have always worked collaboratively with our diverse team, and cultivated invaluable skills.",
+      name: "Buthaina Al Shuhaibi",
+      company: "Acquiring Oman",
+      image: "/assets/icons/careers/testimonial10.svg",
+    },
+    {
+      review:
+        "As a Senior HR Officer handling recruitment, onboarding, and employee relations I am engaged in the dynamic world of the payments industry and market which has greatly enhanced my professional journey and skills.",
+      name: "Nawara AlSaffar",
+      company: "Human resources",
+      image: "/assets/icons/careers/testimonial11.svg",
     },
   ];
 

@@ -4,6 +4,10 @@
       "title": "حلول للبنوك",
       "links": [
         {
+          "title": "نظره عامه",
+          "link": "/solutions/banks"
+        },
+        {
           "title": "إصدار ومعالجة البطاقات",
           "link": "/solutions/banks/card-issuing-processing"
         },
@@ -25,6 +29,10 @@
       "title": "حلول للشركات",
       "links": [
         {
+          "title": "نظره عامه",
+          "link": "/solutions/business"
+        },
+        {
           "title": "بوابة الدفع",
           "link": "/solutions/business/payment-gateway"
         },
@@ -34,18 +42,21 @@
         },
         { "title": "SoftPOS", "link": "/solutions/business/softpos" },
         { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
+        {
+          "title": "المصرفية المفتوحة",
+          "link": "/solutions/business/open-banking"
+        },
         { "title": "المأكولات والمشروبات (F&B)", "link": "/" }
       ]
     },
     "solutions for consumer": {
-      "title": "حلول للشركات",
+      "title": "حلول للمستهلك",
       "links": [{ "title": "محفظة BPay", "link": "/solutions/consumers/bpay" }]
     },
     "company": {
       "title": "الشركة",
       "links": [
         { "title": "نبذة عنا", "link": "/about" },
-        { "title": "شركاؤنا", "link": "/partners" },
         { "title": "علاقات المستثمرين", "link": "/investor-relations" },
         { "title": "وظائف", "link": "/careers" },
         { "title": "اتصل", "link": "/contact" }
@@ -55,7 +66,6 @@
       "title": "الموارد",
       "links": [
         { "title": "أخبار وإعلانات", "link": "/" },
-        { "title": "كن موردًا", "link": "/" },
         { "title": "ESG", "link": "/" },
         { "title": "الشهادات", "link": "/certifications" }
       ]

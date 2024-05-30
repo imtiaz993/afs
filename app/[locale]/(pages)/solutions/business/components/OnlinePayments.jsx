@@ -11,6 +11,7 @@ const OnlinePayments = () => {
       description:
         "Enhances checkout experiences and offers insights to optimize your payment strategy with streamlines transactions, robust security and support for multiple payment methods",
       learnMoreLink: "/solutions/business/payment-gateway",
+      image: "/assets/images/solutions/business/payment-gateway.png",
     },
     {
       title: "eShop",

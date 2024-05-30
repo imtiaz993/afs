@@ -16,43 +16,60 @@ const History = () => {
   const slides = [
     {
       title: "2024",
-      description:
-        "Received in-principle approval for a retail payments services and card schemes license from the Central Bank of UAE",
+      description: "Inaugurated a data center in Egypt.",
     },
     {
       title: "2023",
-      description:
-        "Secured a PF/PSP license from the Central Bank of Egypt, expanding its permitted scope of activity in the Egyptian market.",
+      description: "Launched the AFS Open Banking Hub.",
     },
     {
-      title: "2021",
-      description: "Launched merchant acquiring business in Egypt.",
+      title: "2022",
+      description: "Commenced merchant acquiring business in Egypt.",
+    },
+    {
+      title: "2019",
+      description: "Launched Bahrain's first digital payroll solution.",
     },
     {
       title: "2018",
-      description: "Launch of merchant acquiring business in Bahrain",
+      description: "Launched Bahrain's first digital mobile wallet.",
+    },
+    {
+      title: "2018",
+      description: "Commenced merchant acquiring business in Bahrain.",
     },
     {
       title: "2017",
-      description: "Launch of merchant acquiring business in Oman",
+      description: "Commenced merchant acquiring business in Oman.",
     },
     {
       title: "2011",
-      description: "United Arab Emirates data center is set up.",
+      description: "Inaugurated a data center in the UAE.",
     },
     {
       title: "2005",
+      description: "Began debit card processing services.",
+    },
+    {
+      title: "2003",
       description:
-        "AFS adds debit card processing services to portfolio of work.",
+        "Significant technology upgrade to Vision Plus card management system.",
+    },
+    {
+      title: "1999",
+      description: "Launched a card personalization center.",
+    },
+    {
+      title: "1991",
+      description: "Traveller's cheques sales surpassed $1 Billion.",
     },
     {
       title: "1987",
-      description: "AFS begins third party card processing.",
+      description: "Began third party credit card processing.",
     },
     {
       title: "1984",
-      description:
-        "AFS is established. Visa Travelers Cheques issuance commences.",
+      description: "AFS is established. Travelers Cheques issuance commences.",
     },
   ];
 
@@ -163,7 +180,9 @@ const History = () => {
                   <div className="flex w-full">
                     <div
                       className={`w-full bg-subtle-neutral py-10 px-8  min-h-[280px] rounded flex flex-col justify-between ${
-                        index + 1 === slides.length ? "mr-5 md:mr-10 lg:mr-12" : ""
+                        index + 1 === slides.length
+                          ? "mr-5 md:mr-10 lg:mr-12"
+                          : ""
                       }`}
                     >
                       <h2 className="text-brand-secondary text-4xl md:text-5xl mb-10 !leading-[100%]">

@@ -68,7 +68,7 @@ const Footer = () => {
               <Link
                 key={index}
                 className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-                href="/"
+                href={item.link}
               >
                 {item.title}
               </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
               <Link
                 key={index}
                 className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-                href="/"
+                href={item.link}
               >
                 {item.title}
               </Link>
@@ -94,7 +94,7 @@ const Footer = () => {
               <Link
                 key={index}
                 className="mb-3 text-sm text-secondary hover:text-brand-secondary hover:underline"
-                href="/"
+                href={item.link}
               >
                 {item.title}
               </Link>

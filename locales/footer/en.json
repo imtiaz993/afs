@@ -4,6 +4,10 @@
       "title": "Solutions for banks",
       "links": [
         {
+          "title": "Overview",
+          "link": "/solutions/banks"
+        },
+        {
           "title": "Card issuing & processing",
           "link": "/solutions/banks/card-issuing-processing"
         },
@@ -22,6 +26,10 @@
       "title": "Solutions for businesses",
       "links": [
         {
+          "title": "Overview",
+          "link": "/solutions/business"
+        },
+        {
           "title": "Payment gateway",
           "link": "/solutions/business/payment-gateway"
         },
@@ -31,18 +39,21 @@
         },
         { "title": "SoftPOS", "link": "/solutions/business/softpos" },
         { "title": "eShop", "link": "/solutions/business/eshop" },
+        {
+          "title": "Open banking",
+          "link": "/solutions/business/open-banking"
+        },
         { "title": "Food and beverage (F&B)", "link": "/" }
       ]
     },
     "solutions for consumer": {
-      "title": "Solutions for businesses",
+      "title": "Solutions for consumer",
       "links": [{ "title": "BPay wallet", "link": "/solutions/consumers/bpay" }]
     },
     "company": {
       "title": "Company",
       "links": [
         { "title": "About us", "link": "/about" },
-        { "title": "Our partners", "link": "/partners" },
         { "title": "Investor relations", "link": "/investor-relations" },
         { "title": "Careers", "link": "/careers" },
         { "title": "Contact", "link": "/contact" }
@@ -52,7 +63,6 @@
       "title": "Resources",
       "links": [
         { "title": "News & Announcements", "link": "/" },
-        { "title": "Become a vendor", "link": "/" },
         { "title": "ESG", "link": "/" },
         { "title": "Certifications", "link": "/certifications" }
       ]

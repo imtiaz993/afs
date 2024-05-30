@@ -2,7 +2,7 @@
   "Home": {
     "Hero": {
       "title": "Secure, smart and simplified financial solutions",
-      "description": "Gain access to enterprise-grade tools designed to streamline your day-to-day financial operations, tailored for banks, fintechs, businesses and consumers.",
+      "description": "Gain access to enterprise-grade tools designed to streamline your day-to-day financial operations and transactions, tailored for banks, fintechs, businesses and consumers.",
       "contact team": "Contact our team"
     },
     "Working": {
@@ -41,7 +41,7 @@
       "headline": "Unlock financial opportunities for growth and global expansion, accessible to banks and businesses of any size.",
       "banks": {
         "title": "For Banks",
-        "description": "Gain access to state-of-the-art payment processing services, card issuance, risk management systems, and other tailored solutions.",
+        "description": "Gain access to AFS's issuing processing and payments platform and cutting-edge end-to-end card payment system.",
         "button": "Explore",
         "features": [
           "Card solutions",
@@ -51,12 +51,12 @@
       },
       "solutions": {
         "title": "All Solutions",
-        "description": "Unsure which solution best fits your business needs? Dive into our comprehensive range of financial tools and services, tailored to empower your business success.",
+        "description": "Unsure which solution best fits your business needs? Dive into our comprehensive range of financial tools and services, to empower your business success.",
         "button": "Explore"
       },
       "consumers": {
         "title": "For Consumers",
-        "description": "Effortlessly receive your salary, access your personalized card, and securely transfer funds to others. Simplify your finances with BPay wallet.",
+        "description": "Use our digital wallet solution to purchase goods or services, send and receive money, send money internationally, pay bills and more. ",
         "button": "Explore"
       },
       "businesses": {
@@ -72,7 +72,7 @@
       "headline": "Founded in 1984, AFS is owned by 37 banks and supports over 60 clients in 20+ countries, providing issuing, merchant acquiring, and various financial services.",
       "sub title": "By the numbers",
       "sub headline": "Leveraging the power of digital payments",
-      "description": "Discover how we are revolutionizing the financial sector through our relentless commitment to harnessing the potential of digital payments.",
+      "description": "Discover how we are revolutionizing the financial and payments sector through our relentless commitment to harnessing the potential of digital payments.",
       "statistics": {
         "volume": {
           "count": "$3.2B",
@@ -111,7 +111,7 @@
     ],
     "CTA": {
       "title": "Ready to revolutionize your financial transactions?",
-      "highlighted":"revolutionize",
+      "highlighted": "revolutionize",
       "description": "Experience the power of AFS today!",
       "contact team": "Contact our team"
     }

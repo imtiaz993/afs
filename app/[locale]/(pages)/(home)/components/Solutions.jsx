@@ -4,6 +4,7 @@ import React, { useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import PageLayout from "app/common/PageLayout";
+import { Link } from "i18n.config";
 
 const Solutions = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -83,13 +84,15 @@ const Solutions = () => {
                   {t("banks.description")}
                 </p>
                 <div className="flex items-center flex-wrap">
-                  <button
-                    className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
-                      isArabic ? "md:ml-6" : " md:mr-6"
-                    }`}
-                  >
-                    {t("banks.button")}
-                  </button>
+                  <Link href={"/solutions/banks"}>
+                    <button
+                      className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
+                        isArabic ? "md:ml-6" : " md:mr-6"
+                      }`}
+                    >
+                      {t("banks.button")}
+                    </button>
+                  </Link>
                   <ul className="flex flex-wrap mt-4">
                     <li
                       className={`flex items-center text-sm text-white whitespace-nowrap ${
@@ -170,9 +173,11 @@ const Solutions = () => {
                     {t("solutions.description")}
                   </p>
                   <div>
-                    <button className=" text-center text-brand-secondary border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
-                      {t("solutions.button")}
-                    </button>
+                    <Link href={"/solutions"}>
+                      <button className=" text-center text-brand-secondary border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] md:py-[15px] w-full md:w-[118px] bg-transparent font-medium rounded-sm">
+                        {t("solutions.button")}
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -188,9 +193,11 @@ const Solutions = () => {
                   {t("consumers.description")}
                 </p>
                 <div>
-                  <button className=" text-center text-brand-secondary   py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm">
-                    {t("consumers.button")}
-                  </button>
+                  <Link href={"/solutions/consumers/bpay"}>
+                    <button className=" text-center text-brand-secondary   py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm">
+                      {t("consumers.button")}
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -236,13 +243,15 @@ const Solutions = () => {
                     {t("businesses.description")}
                   </p>
                   <div className="flex items-center flex-wrap md:mb-[272px]">
-                    <button
-                      className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
-                        isArabic ? "md:ml-4" : " md:mr-4"
-                      }`}
-                    >
-                      {t("businesses.button")}
-                    </button>
+                    <Link href={"/solutions/business"}>
+                      <button
+                        className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
+                          isArabic ? "md:ml-4" : " md:mr-4"
+                        }`}
+                      >
+                        {t("businesses.button")}
+                      </button>
+                    </Link>
                     <ul className="flex flex-wrap mt-4">
                       <li
                         className={`flex items-center text-sm text-white whitespace-nowrap ${

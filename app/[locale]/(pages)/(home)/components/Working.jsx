@@ -21,8 +21,8 @@ const Working = () => {
     },
     {
       title: accordion[1].title,
-      text: accordion[2].description,
-      image: "/assets/images/home/accordion1.jpg",
+      text: accordion[1].description,
+      image: "/assets/images/home/accordion2.png",
     },
     {
       title: accordion[2].title,

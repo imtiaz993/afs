@@ -29,23 +29,23 @@ const Team = () => {
         image: "/assets/images/team/4.png",
       },
       {
-        name: "Amira Ismail",
-        designation: "Head of Acquiring Bahrain",
+        name: "Rizwan Khan ",
+        designation: "Managing Director, UAE & Oman",
         image: "/assets/images/team/5.png",
       },
       {
-        name: "Rizwan Khan ",
-        designation: "Head of Acquiring UAE & Oman",
+        name: "Tawfik Mahmoud",
+        designation: "Managing Director, Egypt",
         image: "/assets/images/team/6.png",
       },
       {
-        name: "Tawfik Mahmoud",
-        designation: "Head of Acquiring Egypt",
+        name: "Amira Ismail",
+        designation: "Head of Acquiring Bahrain",
         image: "/assets/images/team/7.png",
       },
       {
-        name: "Ebrahim Jassim",
-        designation: "Advisor to the CEO",
+        name: "Ajmal Basheer",
+        designation: "Head of Processing Business",
         image: "/assets/images/team/8.png",
       },
       {
@@ -64,8 +64,8 @@ const Team = () => {
         image: "/assets/images/team/11.png",
       },
       {
-        name: "Azza Matar",
-        designation: "Head of Marketing and Communications",
+        name: "Ebrahim Jassim",
+        designation: "Advisor to the CEO",
         image: "/assets/images/team/12.png",
       },
       {
@@ -74,9 +74,14 @@ const Team = () => {
         image: "/assets/images/team/13.png",
       },
       {
-        name: "Ajmal Basheer",
-        designation: "Head of Processing Business",
+        name: "Prajay Patel",
+        designation: "Head of Information Technology",
         image: "/assets/images/team/14.png",
+      },
+      {
+        name: "Asif Meghani",
+        designation: "Head of Internal Audit",
+        image: "/assets/images/team/15.png",
       },
     ],
     bod: [
