@@ -39,7 +39,11 @@ const SolutionFeatures = ({
           ) : null}
         </div>
         <Image
-          src={imageSrc}
+          src={`${
+            imageSrc
+              ? imageSrc
+              : "/assets/images/solutions/productIllustration.png"
+          }`}
           sizes="100vw"
           className="rounded w-full mt-8"
           alt=""

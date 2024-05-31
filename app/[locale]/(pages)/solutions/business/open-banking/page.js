@@ -141,8 +141,6 @@ const OpenBanking = () => {
           primaryButtonLink: "/contact-team",
         }}
       />
-      <UsedTrustedBy />
-      <TestimonialSllider bgColor={"bg-white"} />
       <Faq
         title={
           "Find answers to some key questions about our Open Banking solution"

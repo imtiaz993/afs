@@ -10,7 +10,7 @@ const CommonServices = ({ navTitle, servicesData, ctaData }) => {
         <div className="py-10 lg:py-24 md:flex items-start">
           <SingleNav title={navTitle} />
           <div className="md:w-[calc(100%-192px)]">
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
               {servicesData.map((item) => (
                 <SolutionFeatures
                   title={item.title}

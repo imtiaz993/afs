@@ -2,7 +2,7 @@ import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import CardIssuingProcessing from "./components/CardIssuingProcessing";
 import RiskFraudManagement from "./components/RiskFraudManagement";
-import DigitalOpenBank from "./components/DigitalOpenBank";
+import OtherProductsServices from "./components/OtherProductsServices";
 
 const Banks = () => {
   return (
@@ -12,7 +12,7 @@ const Banks = () => {
         title={"Solution for banks"}
         subtext={"Stay ahead of the competition"}
         description={
-          "Leverage cutting-edge technology to drive growth, improve customer satisfaction, endure secure, efficient, and compliant operations"
+          "Leverage cutting-edge issuer processing technology to drive your digital transformation, business growth, customer satisfaction, operational efficiency and compliance."
         }
         image={"/assets/images/solutions/banks/solutions-for-banks.png"}
         buttonText={"Contact our team"}
@@ -20,7 +20,7 @@ const Banks = () => {
       />
       <CardIssuingProcessing />
       <RiskFraudManagement />
-      <DigitalOpenBank />
+      <OtherProductsServices />
     </>
   );
 };

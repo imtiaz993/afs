@@ -36,26 +36,16 @@ const FraudRiskManagement = () => {
     {
       title: "On-hehalf fraud management",
       description:
-        "We actively monitors and mitigates fraud, leveraging our expertise to protect your transactions and customer trust. This hands-on approach allows your team to focus on your core business with peace of mind.",
+        "We offer bespoke fraud & risk management services that harness advanced and cutting-edge technology to protect your financial transactions. Our services are designed to detect and prevent fraudulent activities accurately and efficiently. We equip your operations with the latest fraud monitoring and analysis tools, ensuring robust defense against emerging threats and safeguarding your business assets.",
       image:
         "/assets/images/solutions/banks/fraud-risk-management/on-hehalf-fraud-management.png",
     },
     {
       title: "Authentication services",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit dolor sit amet.",
+        "AFS Key Authentication Services employ proprietary advanced security measures and tools to provide complete protection against fraudulent activities. Our services prioritize both security and user experience by embedding vital security layers to verify user identities and ensure secure access to sensitive data and systems. Safeguard your assets and data, ensuring your business operations are secure and trustworthy.",
       image:
         "/assets/images/solutions/banks/fraud-risk-management/authentication-services.png",
-      descriptionCritical: true,
-    },
-    {
-      title: "24/7 risk monitoring",
-      description:
-        "Experience round-the-clock protection with our 24/7 Monitoring feature. Our dedicated team vigilantly oversees your transactions and systems, ready to detect and respond to any suspicious activity at a moment's notice.",
-      image:
-        "/assets/images/solutions/banks/fraud-risk-management/247-risk-monitoring.png",
-      secondaryDescription:
-        "This constant surveillance ensures that your operations are safeguarded against threats, day and night, providing you and your customers with uninterrupted peace of mind.",
     },
   ];
 
@@ -68,54 +58,14 @@ const FraudRiskManagement = () => {
     bgColor: "bg-surface-neutral",
   };
 
-  const accordionOptions = [
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-  ];
-
   return (
     <>
       <Navbar />
       <CommonHero
         title={"Fraud & risk management"}
-        subtext={"Enhance your defense with advanced risk and fraud management"}
+        subtext={
+          "Enhance your defense with advanced fraud & risk management services"
+        }
         description={
           "Using cutting-edge detection technology, we proactively safeguard transactions and build trust by identifying and neutralizing threats. Streamlined analytics support continuous security improvements, keeping you ahead of risks."
         }
@@ -133,13 +83,7 @@ const FraudRiskManagement = () => {
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
       <UsedTrustedBy />
-      <TestimonialSllider />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-        accordionOptions={accordionOptions}
-      />
+      <TestimonialSllider bgColor={"bg-white"} />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

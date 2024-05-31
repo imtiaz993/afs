@@ -13,9 +13,9 @@ const AppCTA = ({ bgColor }) => {
           Download the best wallet solution in Bahrain
         </h2>
         <p className="pt-2 md:pt-4 text-base text-secondary sm:opacity-85">
-          If you are based in Bahrain, take advantage of the fastest and most
-          secure wallet solution and download our BPay app on Google play or App
-          Store
+          If you are based in Bahrain, download BPay now to make and receive
+          payments in an easy, fast, and secure way via smartphone instead of
+          cash or card.
         </p>
         <div
           className="sm:flex mt-6 md:my-10 "

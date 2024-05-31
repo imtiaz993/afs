@@ -48,12 +48,12 @@ const SolutionBusinesses = () => {
           </p>
           <FeatureHighlightCard
             message={
-              "Experience the power of seamless transactions with our comprehensive suite of digital payment solutions, from robust card processing services to merchant acquiring we equip your business with the tools to thrive in the digital age."
+              "Experience the power of seamless secure and efficient transactions with our comprehensive suite of digital payments acceptance solutions that equip your business with the tools to thrive in the digital age."
             }
             primaryButtonLabel={"View all business solutions"}
             primaryButtonLink={"/solutions/business"}
             secondaryButtonLabel={"Contact our team"}
-            secondaryButtonLink={"/contact"}
+            secondaryButtonLink={"/contact-team"}
           />
           <BgImageTestimonial />
           <PartnersSlider
@@ -77,12 +77,12 @@ const SolutionBusinesses = () => {
               "Want to learn more about our solutions and how we can help your business?"
             }
             secondaryContent={
-              "Our dedicated business development team are ready to help guide you on the best solution for your business."
+              "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
             }
             primaryButtonLabel={"Contact our team"}
+            primaryButtonLink={"/contact-team"}
             secondaryButtonLabel={"View all business solutions"}
             secondaryButtonLink={"/solutions/business"}
-            primaryButtonLink={"/contact"}
             bgColor={"bg-surface-neutral"}
             rounded={true}
             lessPaddingVariant={true}

@@ -34,9 +34,9 @@ const Business = () => {
       <Navbar />
       <CommonHero
         title={"Solutions for businesses"}
-        subtext={"Experience the power of seamleass transactions"}
+        subtext={"Experience the power of seamless digital payments acceptance"}
         description={
-          "Leverage our versatile range of payment solutions to empower every aspect of your business transactions. "
+          "Leverage our versatile range of payment solutions to empower every aspect of your business transactions, for every payment type, and every customer."
         }
         image={"/assets/images/solutions/business/solution-business.png"}
         buttonText={"Contact our team"}

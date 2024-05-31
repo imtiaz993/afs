@@ -85,30 +85,23 @@ const ValueAddedServices = () => {
     {
       title: "Loyality solutions",
       description:
-        "Cultivate customer loyalty and retention by offering personalized rewards and benefits that incentivize continued engagement.",
+        "Boost customer engagement and retention with our tailored loyalty solutions designed to foster card loyalty and drive repeat business.",
       image:
         "/assets/images/solutions/banks/value-added-services/loyality-solutions.png",
     },
     {
-      title: "Instalment processing",
+      title: "Installment processing services",
       description:
-        "Simplify the management of installment payments, providing customers with flexible payment options that fit their financial needs.",
+        "Simplify large purchases for your customers with our flexible installment payment options.",
       image:
         "/assets/images/solutions/banks/value-added-services/installment-processing.png",
     },
     {
-      title: "Data analitycs",
+      title: "Data analytics & real-time streaming",
       description:
-        "Unlock valuable insights from your data to make informed decisions, optimize operations, and deliver tailored services to your customers.",
+        "Leverage our advanced capabilities to gain instant insights, optimize operations, and secure a competitive advantage.",
       image:
         "/assets/images/solutions/banks/value-added-services/data-analytics.png",
-    },
-    {
-      title: "Real time data streeming",
-      description:
-        "Access and analyze data in real-time, allowing for immediate responses to market changes and customer behavior.",
-      image:
-        "/assets/images/solutions/banks/value-added-services/real-time-data-streaming.png",
     },
     {
       title: "Tokenization solutions",
@@ -118,18 +111,23 @@ const ValueAddedServices = () => {
         "/assets/images/solutions/banks/value-added-services/tokenization-solutions.png",
     },
     {
+      title: "Instant card issuance",
+      description:
+        "Our efficient services enable on-the-spot card issuance, providing convenience and security for your customers",
+    },
+    {
+      title: "SMS Gateway",
+      description:
+        "Enhance customer engagement by seamlessly integrating instant SMS notifications and alerts into your payment flows.",
+      image:
+        "/assets/images/solutions/banks/value-added-services/sms-gateway.png",
+    },
+    {
       title: "Interactive e-statement",
       description:
         "Engage customers with interactive electronic statements that offer detailed insights into their transactions and financial health.",
       image:
         "/assets/images/solutions/banks/value-added-services/interactive-estatement.png",
-    },
-    {
-      title: "SMS Gateway",
-      description:
-        "Communicate effectively with customers through SMS notifications and alerts, ensuring timely and secure information exchange.",
-      image:
-        "/assets/images/solutions/banks/value-added-services/sms-gateway.png",
     },
   ];
 
@@ -171,12 +169,6 @@ const ValueAddedServices = () => {
       />
       <UsedTrustedBy />
       <TestimonialSlider bgColor={"bg-white"} />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        }
-        accordionOptions={accordionOptions}
-      />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

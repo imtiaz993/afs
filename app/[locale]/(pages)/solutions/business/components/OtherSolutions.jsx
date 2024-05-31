@@ -13,19 +13,6 @@ const OtherSolutions = () => {
       learnMoreLink: "/solutions/business/open-banking",
       image: "/assets/images/solutions/business/open-banking.png",
     },
-    {
-      title: "Digital payroll",
-      description:
-        "Unlock the potential of financial innovation with our simple, integrated Open Banking APIs. Drive new payment flows and enhance your business model.",
-      learnMoreLink: "/",
-      image: "/assets/images/solutions/business/digital-payroll.png",
-    },
-    {
-      title: "Food and beverage (F&B)",
-      description:
-        "Full-featured point-of-sale (POS) software designed for any restaurant, bar, or cafe.",
-      learnMoreLink: "/",
-    },
   ];
 
   return (
@@ -39,7 +26,7 @@ const OtherSolutions = () => {
                 "Our suite of payment solutions, provides your business with streamlined operations, this comprehensive approach ensures you are well-equipped to meet diverse industry demands efficiently."
               }
             />
-            <div className="grid mt-16 mb-6 md:grid-cols-2 gap-4">
+            <div className="mt-16 mb-4 gap-4">
               {cardData.map((data) => (
                 <SolutionFeatures
                   title={data.title}
@@ -53,18 +40,18 @@ const OtherSolutions = () => {
                   }
                 />
               ))}
-              <CommonCTA
-                primaryContent={"Looking for a bespoke solution?"}
-                secondaryContent={
-                  "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
-                }
-                primaryButtonLabel={"Contact our team"}
-                primaryButtonLink={"/contact-team"}
-                lessPaddingVariant={true}
-                bgColor={"bg-white"}
-                gridVariant={true}
-              />
             </div>
+            <CommonCTA
+              primaryContent={"Looking for a bespoke solution?"}
+              secondaryContent={
+                "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
+              }
+              primaryButtonLabel={"Contact our team"}
+              primaryButtonLink={"/contact-team"}
+              lessPaddingVariant={true}
+              bgColor={"bg-white"}
+              rounded={true}
+            />
           </div>
         </div>
       </PageLayout>

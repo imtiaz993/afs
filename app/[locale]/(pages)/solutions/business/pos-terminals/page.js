@@ -23,7 +23,7 @@ const POSTerminals = () => {
     {
       title: "Versatile payment options",
       description:
-        "From traditional cards to contactless and mobile payments, accommodates all customer preferences.",
+        "From traditional cards to contactless and mobile payments, our solutions accommodate all customer preferences.",
     },
     {
       title: "Detailed sales analytics",
@@ -36,7 +36,7 @@ const POSTerminals = () => {
     {
       title: "Smart integrated POS terminals",
       description:
-        "everage the flexibility and efficiency of Android with our smart, integrated POS terminals. These devices offer intuitive operation, extensive app compatibility, and easy customization to fit your unique business needs.",
+        "Leverage the flexibility and efficiency of Android with our smart, integrated POS terminals. These devices offer intuitive operation, extensive app compatibility,  easy customization and back-end integration to fit your unique business needs.",
       image:
         "/assets/images/solutions/business/pos-terminals/smart-integrated.png",
     },
@@ -47,17 +47,16 @@ const POSTerminals = () => {
       image: "/assets/images/solutions/business/pos-terminals/accept-major.png",
     },
     {
+      title: "Support multiple payment methods",
+      description:
+        "From traditional magnetic stripe and chip cards to contactless NFC payments, our terminals accommodate various payment methods, making transactions convenient for every customer.",
+    },
+    {
       title: "Secure payment experience",
       description:
         "Combine speed with security in your payment process. Our terminals provide quick transaction times without compromising on data protection, offering a seamless checkout experience for customers.",
       image:
         "/assets/images/solutions/business/pos-terminals/secure-payment.png",
-    },
-    {
-      title: "Loan on POS",
-      description:
-        "This service simplifies the borrowing process, integrating credit options seamlessly into the transaction flow, which can boost sales and improve customer satisfaction by providing instant access to credit at critical buying moments.",
-      image: "/assets/images/solutions/business/pos-terminals/loan-pos.png",
     },
     {
       title: "Dynamic currency conversion",
@@ -68,54 +67,14 @@ const POSTerminals = () => {
     },
   ];
 
-  const accordionOptions = [
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-  ];
-
   return (
     <>
       <Navbar />
       <CommonHero
         title={"POS Terminals"}
-        subtext={"Next-generation POS terminals for your business"}
+        subtext={
+          "Next-generation point-of-sale (POS) terminals for your business"
+        }
         description={
           "Elevate your retail experience with our advanced POS terminals. Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics."
         }
@@ -135,21 +94,16 @@ const POSTerminals = () => {
         data={featuresData}
         commonCTAData={{
           bgColor: "bg-surface-neutral",
-          primaryContent: "Interested in our next-gen POS terminals?",
+          primaryContent:
+            "Want to learn more about our next-generation POS solutions and how we can help your business?",
           secondaryContent:
-            "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+            "Our dedicated regional managers are ready to help guide you on the best solution for your business.",
           primaryButtonLabel: "Contact our team",
           primaryButtonLink: "/contact-team",
         }}
       />
       <UsedTrustedBy />
       <TestimonialSllider bgColor={"bg-white"} />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        }
-        accordionOptions={accordionOptions}
-      />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

@@ -123,7 +123,7 @@ const BPay = () => {
       />
       <Benefits
         description={
-          "Embrace a streamlined approach to managing your finances with BPay. Whether for personal use or business, BPay offers a suite of benefits tailored to enhance your transaction experience."
+          "BPay exists to be the first-choice digital payments, commerce and financial services app offering instant, global and local payment solutions that all consumers and businesses can use to serve their everyday needs."
         }
         data={benefitsData}
       />

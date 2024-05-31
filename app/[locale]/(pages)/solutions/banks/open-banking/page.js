@@ -126,8 +126,6 @@ const OpenBanking = () => {
         data={benefitsData}
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
-      <UsedTrustedBy />
-      <TestimonialSllider />
       <Faq
         title={
           "Find answers to some key questions about our Open Banking solution"

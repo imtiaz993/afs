@@ -36,30 +36,16 @@ const PaymentGateway = () => {
     {
       title: "Secure transaction processing",
       description:
-        "Boost your credibility with encrypted transactions, enhancing customer trust and data security.",
+        "Protect sensitive customer data with encryption technology that reduces the risk of fraud, enhances customer trust and ensures secure digital payments transactions.",
       image:
         "/assets/images/solutions/business/payment-gateway/secure-transaction.png",
     },
     {
       title: "Multi-currency support",
       description:
-        "Go global by accepting multiple currencies, broadening your market reach and accessibility.",
+        "Accept multiple digital payment methods, broadening your market reach and accessibility and allowing your customers to choose the most convenient and suitable payment option for them.",
       image:
         "/assets/images/solutions/business/payment-gateway/multi-currency-support.png",
-    },
-    {
-      title: "Fraud detection and prevention",
-      description:
-        "Minimize risks with our proactive fraud prevention, protecting your revenue and reputation.",
-      image:
-        "/assets/images/solutions/business/payment-gateway/fraud-detection.png",
-    },
-    {
-      title: "Payment method integration:",
-      description:
-        "Cater to all customers by supporting various payment options, increasing satisfaction and loyalty.",
-      image:
-        "/assets/images/solutions/business/payment-gateway/payment-method-integration.png",
     },
     {
       title: "Real-time processing",
@@ -160,7 +146,7 @@ const PaymentGateway = () => {
       />
       <Benefits
         description={
-          "Utilizing our payment gateway solution offers substantial benefits, ensuring your transactions are not only secure but also efficient and user-friendly."
+          "Utilizing our payment gateway solution offers substantial benefits, ensuring your customer transactions are not only secure but also efficient and user-friendly."
         }
         data={benefitsData}
       />

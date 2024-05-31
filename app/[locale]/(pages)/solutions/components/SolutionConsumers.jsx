@@ -21,7 +21,7 @@ const SolutionConsumers = () => {
           </p>
           <FeatureHighlightCard
             message={
-              "Transferring money abroad or making payments has never been easier with our fast and secure wallet solution that enables you to make transactions withough the need for cash or cards."
+              "Transferring money abroad or making payments has never been easier with BPay, our fast and secure wallet solution that enables you to make transactions without the need for cash or cards."
             }
             primaryButtonLabel={"Learn more about BPay"}
             primaryButtonLink="/solutions/consumers/bpay"

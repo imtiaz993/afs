@@ -115,9 +115,11 @@ const SoftPOS = () => {
       <Navbar />
       <CommonHero
         title={"SoftPOS"}
-        subtext={"Transform your smartphone into a smart payment terminal"}
+        subtext={
+          "Transform your Android device into a smart point-of-sale terminal"
+        }
         description={
-          "Whether it's in-store purchases, home delivery, or online sales, our SoftPOS solution ensures you're ready for every customer scenario."
+          "Whether it is in-store purchases, home delivery or on the go, our AFS Pay Android application is your dedicated softPOS solution that ensures you are ready to accept digital payments for every customer scenario."
         }
         image={"/assets/images/solutions/business/soft-pos/soft-pos.png"}
         buttonText={"Contact our team"}
@@ -133,35 +135,12 @@ const SoftPOS = () => {
         data={featuresData}
         commonCTAData={{
           bgColor: "bg-surface-neutral",
-          primaryContent: "Interested in our SoftPOS solution?",
-          secondaryContent:
-            "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
+          primaryContent:
+            "Want to learn more about AFS Pay, our softPOS solution?",
           primaryButtonLabel: "Contact our team",
           primaryButtonLink: "/contact-team",
         }}
       />
-      <UsedTrustedBy />
-      <TestimonialSllider bgColor={"bg-white"} />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        }
-        accordionOptions={accordionOptions}
-      />
-      <PageLayout>
-        <CommonCTA
-          primaryContent={"Ready to revolutionize your financial transactions?"}
-          primaryContentTextTarget={{
-            text: ["revolutionize"],
-            color: "text-brand-secondary",
-          }}
-          secondaryContent={
-            "Join the countless businesses that are optimizing their payment solutions with our AFS Pay app. Transform your transaction capabilities today!"
-          }
-          primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact-team"}
-        />
-      </PageLayout>
     </>
   );
 };

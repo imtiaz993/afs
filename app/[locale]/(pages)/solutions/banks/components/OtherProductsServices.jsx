@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
 import FeatureHighlightCard from "app/common/FeatureHighlightCard";
@@ -5,45 +6,33 @@ import SolutionFeatures from "app/common/SolutionFeatures";
 import CommonCTA from "app/common/CommonCTA";
 import SingleNav from "app/common/SingleNav";
 
-const CardIssuingProcessing = () => {
-  const cardData = [
+const OtherProductsServices = () => {
+  const otherProductsServicesData = [
     {
-      title: "Card processing solutions",
+      title: "Open banking",
       description:
-        "Our versatile card solutions, for all requirements, ensuring convenience and security in every payment.",
+        "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that enhance customer experiences.",
+      learnMore: "/solutions/banks/open-banking",
     },
     {
-      title: "Operational support services",
+      title: "Value added services",
       description:
-        "Streamline your processes and optimize performance while ensuring continuous customer assistance.",
-    },
-    {
-      title: "Sharia compliant cards",
-      description:
-        "Our Sharia-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards.",
-    },
-    {
-      title: "Personalized cards",
-      description:
-        "We empower your bank to offer personalized cards that resonate with your customers' preferences and needs.",
+        "Enhance your offerings with our suite of value-added services and security features to revolutionize your payments business.",
+      learnMore: "/solutions/banks/value-added-services",
     },
   ];
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="py-10 lg:py-24 md:flex items-start">
-        <SingleNav title={"Card issuing & processing"} />
+        <SingleNav title={"Other product & services"} />
         <div className="md:w-[calc(100%-192px)]">
           <FeatureHighlightCard
             message={
-              "Revolutionize your bank card operations by enhancing efficiency and streamlining processes with a comprehensive solution that simplifies card issuance and processing."
+              "Tailored to empower banks with the tools they need to exceed customer expectations and stay ahead in the competitive financial landscape."
             }
-            primaryButtonLabel={"Learn more"}
-            primaryButtonLink={"/solutions/banks/card-issuing-processing"}
-            secondaryButtonLabel={"Contact our team"}
-            secondaryButtonLink={"/contact-team"}
           />
           <div className="grid mt-16 mb-6 md:grid-cols-2 gap-4">
-            {cardData.map((data) => (
+            {otherProductsServicesData.map((data) => (
               <SolutionFeatures
                 title={data.title}
                 description={data.description}
@@ -51,15 +40,16 @@ const CardIssuingProcessing = () => {
                 backgroundColor={"bg-white"}
                 imageSrc={"/assets/images/solutions/productIllustration2.png"}
                 key={data.title}
+                learnMoreLink={data.learnMore}
               />
             ))}
           </div>
           <CommonCTA
             primaryContent={
-              "Interested in our card issuing and processing solutions?"
+              "Want to learn more about our products and services solutions?"
             }
             primaryContentTextTarget={{
-              text: ["card issuing and processing"],
+              text: ["products and services"],
               color: "text-brand-secondary",
             }}
             secondaryContent={
@@ -67,8 +57,6 @@ const CardIssuingProcessing = () => {
             }
             primaryButtonLabel={"Contact our team"}
             primaryButtonLink={"/contact-team"}
-            secondaryButtonLabel={"Learn more"}
-            secondaryButtonLink={"/solutions/banks/card-issuing-processing"}
             bgColor={"bg-white"}
             rounded={true}
             lessPaddingVariant={true}
@@ -79,4 +67,4 @@ const CardIssuingProcessing = () => {
   );
 };
 
-export default CardIssuingProcessing;
+export default OtherProductsServices;

@@ -2,11 +2,6 @@ import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
-import UsedTrustedBy from "app/common/UsedTrustedBy";
-import TestimonialSllider from "app/common/TestimonialSlider";
-import Faq from "app/common/Faq";
-import PageLayout from "app/common/PageLayout";
-import CommonCTA from "app/common/CommonCTA";
 
 const eShop = () => {
   const benefitsData = [
@@ -67,48 +62,6 @@ const eShop = () => {
     },
   ];
 
-  const accordionOptions = [
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-  ];
-
   return (
     <>
       <Navbar />
@@ -139,26 +92,6 @@ const eShop = () => {
           primaryButtonLink: "/contact-team",
         }}
       />
-      <UsedTrustedBy />
-      <TestimonialSllider bgColor={"bg-white"} />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        }
-        accordionOptions={accordionOptions}
-      />
-      <PageLayout>
-        <CommonCTA
-          primaryContent={"Ready to revolutionize your financial transactions?"}
-          primaryContentTextTarget={{
-            text: ["revolutionize"],
-            color: "text-brand-secondary",
-          }}
-          secondaryContent={"Experience the power of AFS today!"}
-          primaryButtonLabel={"Contact our team"}
-          primaryButtonLink={"/contact-team"}
-        />
-      </PageLayout>
     </>
   );
 };

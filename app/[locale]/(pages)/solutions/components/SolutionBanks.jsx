@@ -62,7 +62,7 @@ const SolutionBanks = () => {
           </p>
           <FeatureHighlightCard
             message={
-              "We put at your disposal a wide range of solutions design to meet the evolving need of the banking sector, our services ensure secure, efficient and compliant operations."
+              "We put at your disposal a wide range of solutions designed to meet the evolving needs of the banking sector. Our services ensure secure, efficient and compliant operations."
             }
             primaryButtonLabel={"View all banking solutions"}
             primaryButtonLink={"/solutions/banks"}
@@ -88,7 +88,7 @@ const SolutionBanks = () => {
               "Want to learn more about our solutions and how we can help your bank?"
             }
             secondaryContent={
-              "Our dedicated business development team are ready to help guide you on the best solution for your business."
+              "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution."
             }
             primaryButtonLabel={"Contact our team"}
             secondaryButtonLabel={"View all bank solutions"}

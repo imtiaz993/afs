@@ -35,19 +35,19 @@ const CardIssuingProcessing = () => {
 
   const featuresData = [
     {
-      title: "Credit and debit cards",
+      title: "Card processing solutions",
       description:
-        "Tailored to promote financial freedom and ease of use, our cards are designed to integrate seamlessly with your bank's existing services, offering a reliable and secure way to access funds, make purchases, and manage finances efficiently.",
+        "Make use of our versatile card solutions, for all requirements, ensuring convenience and security in every payment, from credit, debit, prepaid, virtual, tokenized cards, Shariah compliant and more we have them all.",
     },
     {
-      title: "Prepaid cards",
+      title: "Operational support services",
       description:
-        "With easy loading options and controlled spending, customers can enjoy the benefits of cashless transactions without the risk of debt. Our prepaid solutions cater to a wide range of uses, from gift cards to travel budgets, ensuring versatility and user satisfaction.",
+        "We deliver essential operational support for your business. Our services streamline processes and optimize performance while ensuring continuous customer assistance with digital onboarding, ATM & POS driving, back-office support, and 24/7 contact center.",
     },
     {
       title: "Sharia compliant solutions",
       description:
-        "Understanding the importance of adherence to Islamic banking principles, our Sharia-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards of Islamic law.",
+        "Understanding the importance of adherence to Islamic banking principles, our Shariah-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards of Islamic regulation.",
     },
     {
       title: "Card personalization",
@@ -57,54 +57,12 @@ const CardIssuingProcessing = () => {
     {
       title: "Instant issuance",
       description:
-        "Meet customer expectations for immediacy with instant card issuance, enabling them to start transacting right away.",
-    },
-  ];
-
-  const accordionOptions = [
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "Meet customer expectations with our instant card issuance services, enabling immediate transaction capability and providing instant access to payment cards. Our efficient process offers on-the-spot card issuance, ensuring convenience and security for your customers.",
     },
   ];
 
   const featuresCommonCTAData = {
-    primaryContent: "Interested in our card and processing solutions?",
+    primaryContent: "Interested in our card issuing and processing solutions?",
     secondaryContent:
       "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
     primaryButtonLabel: "Contact our team",
@@ -134,13 +92,7 @@ const CardIssuingProcessing = () => {
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
       <UsedTrustedBy />
-      <TestimonialSlider />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-        accordionOptions={accordionOptions}
-      />
+      <TestimonialSlider bgColor={"bg-white"} />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

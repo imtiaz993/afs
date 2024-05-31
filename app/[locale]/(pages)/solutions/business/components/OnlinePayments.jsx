@@ -9,14 +9,14 @@ const OnlinePayments = () => {
     {
       title: "Payment gateway",
       description:
-        "Enhances checkout experiences and offers insights to optimize your payment strategy with streamlines transactions, robust security and support for multiple payment methods",
+        "Seamlessly add payments acceptance to any website, process your online transactions, with a stable, robust, compliant, secure & future-proof online payment solution.",
       learnMoreLink: "/solutions/business/payment-gateway",
       image: "/assets/images/solutions/business/payment-gateway.png",
     },
     {
       title: "eShop",
       description:
-        "Experience the advantages of a platform that grows with your needs. Use powerful tools designed to enhance your online business presence and operational efficiency.",
+        "Easy-to-use website builder coupled with an intuitive solution to manage your dedicated eCommerce website, fully integrated with our payment gateway, reporting dashboard and e-Invoicing.",
       learnMoreLink: "/solutions/business/eshop",
       image: "/assets/images/solutions/business/eshop.png",
     },
@@ -29,7 +29,7 @@ const OnlinePayments = () => {
           <div className="md:w-[calc(100%-192px)]">
             <FeatureHighlightCard
               message={
-                "Experience the combined advantages of robust security protocols, diverse payment options, and a customizable eCommerce platform that grows with your business needs."
+                "Experience the combined advantages of robust security protocols, diverse digital payments acceptance, and a customizable eCommerce platform that grows with your business needs."
               }
             />
             <div className="grid mt-16 mb-6 md:grid-cols-2 gap-4">
