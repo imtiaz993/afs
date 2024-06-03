@@ -32,7 +32,7 @@ const InPersonPayments = () => {
 			description:
 				"Full-featured point-of-sale (POS) software engineered to streamline both front and back of house operations for any full-service restaurant, fast casual, quick serve or delivery.",
 			learnMoreLink: "/",
-      image: "/assets/images/solutions/business/food-beverages.png",
+      image: "/assets/images/solutions/business/food-and-beverage.png",
       
 		},
 	];

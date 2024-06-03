@@ -118,7 +118,7 @@ const ValueAddedServices = () => {
 			title: "Instant card issuance",
 			description:
 				"Our efficient services enable on-the-spot card issuance, providing convenience and security for your customers",
-			image: "/assets/images/solutions/instant-issuance.png",
+			image: "/assets/images/solutions/banks/value-added-services/instant-card-issuance.png",
 		},
 		{
 			title: "SMS Gateway",

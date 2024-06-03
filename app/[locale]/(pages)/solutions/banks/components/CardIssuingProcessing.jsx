@@ -11,25 +11,25 @@ const CardIssuingProcessing = () => {
 			title: "Card processing solutions",
 			description:
 				"Our versatile card solutions, for all requirements, ensuring convenience and security in every payment.",
-			imgSrc: "/assets/images/solutions/card-processing.png",
+			imgSrc: "/assets/images/solutions/banks/card-processing-solutions.png",
 		},
 		{
 			title: "Operational support services",
 			description:
 				"Streamline your processes and optimize performance while ensuring continuous customer assistance.",
-			imgSrc: "/assets/images/solutions/operational-support.png",
+			imgSrc: "/assets/images/solutions/banks/operational-support-services.png",
 		},
 		{
 			title: "Sharia compliant cards",
 			description:
 				"Our Sharia-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards.",
-			imgSrc: "/assets/images/solutions/sharia-compliant-cards.png",
+			imgSrc: "/assets/images/solutions/banks/sharia-compliant-cards.png",
 		},
 		{
 			title: "Personalized cards",
 			description:
 				"We empower your bank to offer personalized cards that resonate with your customers' preferences and needs.",
-			imgSrc: "/assets/images/solutions/personalized-cards.png",
+			imgSrc: "/assets/images/solutions/banks/personalized-cards.png",
 		},
 	];
 	return (
