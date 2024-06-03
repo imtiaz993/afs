@@ -14,21 +14,25 @@ const FraudRiskManagement = () => {
       title: "Enhanced security",
       description:
         "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
     {
       title: "Improved trust",
       description:
         "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
     {
       title: "Operational efficiency",
       description:
         "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
     },
     {
       title: "Strategic risk insights",
       description:
         "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
   ];
 

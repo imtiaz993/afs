@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import PageLayout from "./PageLayout";
 
-const Story = ({ bg }) => {
+const Story = ({ bg, content }) => {
   return (
     <div className={`relative`}>
       <PageLayout bg={bg ? "bg-subtle-neutral" : ""}>
@@ -19,38 +19,23 @@ const Story = ({ bg }) => {
             Our story
           </p>
           <h2 className="text-primary text-[32px] md:text-5xl mb-10 md:mb-16 max-w-[976px] !leading-[120%]">
-            At AFS we are changing the way people use and interact with
-            technology and shaping the future of digital payments experiences.
+            {content.primaryContent}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="hidden lg:block"></div>
             <div>
-              <p className="text-lg md:text-2xl text-primary !leading-8">
-                Founded in 1984, AFS is owned by 37 banks and supports over 60
-                clients in 20+ countries across the Middle East, Africa and
-                beyond.
-              </p>
-              <p className="text-lg md:text-2xl text-primary mt-4 !leading-8">
-                Our digital payments products and services portfolio offers a
-                diverse selection of issuing, processing, merchant acquiring and
-                fintech innovation solutions.
-              </p>
+              {content.secondaryContent.map((item) => (
+                <p className="text-lg md:text-2xl text-primary mb-4 !leading-8">
+                  {item}
+                </p>
+              ))}
             </div>
             <div>
-              <p className="text-base md:text-lg text-primary !leading-7">
-                As a regional leader in payments innovation, we drive progress
-                by integrating exciting digital solutions that add significant
-                value to businesses, banks, and consumers.
-              </p>
-              <p className="text-base md:text-lg text-primary mt-4 !leading-7">
-                Our customers and our people stand at the core of our
-                operations. Our human capital across various markets is our most
-                valuable asset. We prioritize a positive, inclusive work
-                environment that fosters growth, contribution, and well-being.
-                Joining us means being part of an innovative team committed to
-                making a difference, valuing collaboration, creativity, and
-                continuous learning, and offering rewarding challenges.
-              </p>
+              {content.tertiaryContent.map((item) => (
+                <p className="text-base md:text-lg mb-4 text-primary !leading-7">
+                  {item}
+                </p>
+              ))}
             </div>
           </div>
         </div>

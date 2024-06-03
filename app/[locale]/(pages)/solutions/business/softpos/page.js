@@ -14,21 +14,25 @@ const SoftPOS = () => {
       title: "No new hardware",
       description:
         "Use your existing Android devices without the need for additional hardware or complex configurations.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
       title: "Secure transactions",
       description:
         "Our solution is built with 3D secure technology, ensuring every transaction is protected against fraud.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
     {
       title: "Flexibility and mobility",
       description:
         "Conduct transactions on the go. Ideal for businesses that require mobility without compromising on functionality.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
     {
       title: "Enhanced customer experience",
       description:
         "With AFS Pay, enhance your customer interactions by offering a seamless and swift checkout process.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
   ];
 

@@ -19,7 +19,7 @@ const Footer = () => {
   const isArabic = locale === "ar";
   const bankLinks = t.raw("solutions for banks");
   const businessLinks = t.raw("solutions for businesses");
-  const consumerLinks = t.raw("solutions for consumer");
+  const consumerLinks = t.raw("solutions for consumers");
   const companyLinks = t.raw("company");
   const resourcesLinks = t.raw("resources");
   const publicLinks = t.raw("public links");

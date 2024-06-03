@@ -14,21 +14,25 @@ const POSTerminals = () => {
       title: "Increased transaction speed",
       description:
         "Improved customer satisfaction and increased sales opportunities.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
       title: "Advanced security",
       description:
         "Protect your business against data breaches and fraud with state-of-the-art encryption and security protocols.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
     {
       title: "Versatile payment options",
       description:
         "From traditional cards to contactless and mobile payments, our solutions accommodate all customer preferences.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
     {
       title: "Detailed sales analytics",
       description:
         "Gain valuable insights into your sales trends and customer preferences with built-in analytics features.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
   ];
 
@@ -50,6 +54,7 @@ const POSTerminals = () => {
       title: "Support multiple payment methods",
       description:
         "From traditional magnetic stripe and chip cards to contactless NFC payments, our terminals accommodate various payment methods, making transactions convenient for every customer.",
+        image: "/assets/images/solutions/business/pos-terminals/support-multiple-payment-methods.png",
     },
     {
       title: "Secure payment experience",

@@ -13,12 +13,14 @@ const OtherProductsServices = () => {
       description:
         "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that enhance customer experiences.",
       learnMore: "/solutions/banks/open-banking",
+      imgSrc: "/assets/images/solutions/open-banking.png",
     },
     {
       title: "Value added services",
       description:
         "Enhance your offerings with our suite of value-added services and security features to revolutionize your payments business.",
       learnMore: "/solutions/banks/value-added-services",
+      imgSrc: "/assets/images/solutions/value-added-services.png",
     },
   ];
   return (
@@ -38,7 +40,8 @@ const OtherProductsServices = () => {
                 description={data.description}
                 descriptionCritical={data.descriptionCritical}
                 backgroundColor={"bg-white"}
-                imageSrc={"/assets/images/solutions/productIllustration2.png"}
+                // imageSrc={"/assets/images/solutions/productIllustration2.png"}
+                imageSrc={data.imgSrc}
                 key={data.title}
                 learnMoreLink={data.learnMore}
               />

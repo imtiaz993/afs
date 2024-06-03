@@ -14,21 +14,25 @@ const OpenBanking = () => {
       title: "Increased innovation",
       description:
         "Collaborate with fintech companies to develop groundbreaking products and services.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
     },
     {
       title: "Enhanced customer experience",
       description:
         "Deliver personalized services and streamline processes to provide a seamless banking experience.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
       title: "Regulatory compliance",
       description:
         "Navigate the complexities of financial regulations with confidence while meeting all regulatory requirements efficiently.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
     {
       title: "Empowered decision-making",
       description:
         "Leverage detailed insights from a broader range of financial data to make more informed decisions.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
   ];
 

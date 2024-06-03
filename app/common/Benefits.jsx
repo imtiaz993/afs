@@ -13,7 +13,17 @@ const Benefits = ({ description, data }) => {
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             {data.map((item) => (
               <div className="min-w-[248px]">
-                <div className="bg-surface-neutral w-10 h-10 mb-6"></div>
+                <div
+                  className={` ${
+                    item.icon ? "" : "bg-surface-neutral"
+                  } w-10 h-10 mb-6`}
+                  style={{
+                    backgroundImage: `url(${item.icon})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "contain",
+                    backgroundPosition: "bottom",
+                  }}
+                ></div>
                 <p className="text-[16px] !leading-[150%] text-primary font-[530] mb-2">
                   {item.title}
                 </p>

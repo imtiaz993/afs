@@ -2,8 +2,6 @@ import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
-import UsedTrustedBy from "app/common/UsedTrustedBy";
-import TestimonialSllider from "app/common/TestimonialSlider";
 import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
@@ -14,21 +12,25 @@ const OpenBanking = () => {
       title: "Enhanced payment flows",
       description:
         "Enable direct bank-to-bank transactions that bypass traditional payment methods, reducing costs and simplifying processes.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
       title: "Personalized financial services",
       description:
         "As a fintech or third-party provider (TPP), gain secure access to customer bank account information to offer tailored financial services.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
     {
       title: "Cost-Effective Solutions",
       description:
         "For merchants and acquirers, reduce transaction fees significantly by accepting payments directly from bank accounts.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
     },
     {
       title: "Secure and compliant",
       description:
         "Our solutions are designed with advanced security measures to protect customer data and reduce the risk of fraud, ensuring compliance with regulatory requirements.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
   ];
 

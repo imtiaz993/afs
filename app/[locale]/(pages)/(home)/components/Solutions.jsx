@@ -84,7 +84,7 @@ const Solutions = () => {
                   {t("banks.description")}
                 </p>
                 <div className="flex items-center flex-wrap">
-                  <Link href={"/solutions/banks"}>
+                  <Link href={"/solutions/banks"} className="w-full">
                     <button
                       className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
                         isArabic ? "md:ml-6" : " md:mr-6"
@@ -243,7 +243,7 @@ const Solutions = () => {
                     {t("businesses.description")}
                   </p>
                   <div className="flex items-center flex-wrap md:mb-[272px]">
-                    <Link href={"/solutions/business"}>
+                    <Link href={"/solutions/business"} className="w-full">
                       <button
                         className={`text-center text-brand-secondary  py-3 md:py-4 w-full md:w-[118px] bg-white  transition-colors duration-300 hover:bg-surface-neutral hover:text-brand-primary font-medium rounded-sm mt-4 ${
                           isArabic ? "md:ml-4" : " md:mr-4"

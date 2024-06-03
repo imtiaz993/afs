@@ -14,21 +14,26 @@ const PaymentGateway = () => {
       title: "Versatile payment support",
       description:
         "Our gateway accommodates various payment methods, catering to all customer preferences.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
     {
       title: "Enhanced security",
       description:
         "With advanced security protocols, we safeguard transaction data and minimize fraud risks.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
     },
     {
       title: "Streamlined transactions",
       description:
         "Quick, reliable processing enhances the checkout experience for your customers.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
+
     {
       title: "Insightful analytics",
       description:
         "Access to detailed analytics helps refine payment strategies and improve operational efficiency.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
   ];
 
@@ -61,20 +66,6 @@ const PaymentGateway = () => {
       image:
         "/assets/images/solutions/business/payment-gateway/customizable-checkout-experience.png",
     },
-    {
-      title: "Recurring billing",
-      description:
-        "Personalize your checkout to fit your brand, improving user experience and conversion rates.",
-      image:
-        "/assets/images/solutions/business/payment-gateway/recurring-bill.png",
-    },
-    {
-      title: "Reporting and analytics",
-      description:
-        "Gain insights with detailed reports on sales and customer behavior, aiding in strategic decision-making and optimization.",
-      image:
-        "/assets/images/solutions/business/payment-gateway/reporting-analytics.png",
-    },
   ];
 
   const servicesCTAData = {
@@ -86,48 +77,6 @@ const PaymentGateway = () => {
     lessPaddingVariant: true,
     bgColor: "bg-surface-neutral",
   };
-
-  const accordionOptions = [
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum is simply text  printing and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Lorem Ipsum and typesetting industry?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-  ];
 
   return (
     <>
@@ -156,13 +105,7 @@ const PaymentGateway = () => {
         ctaData={servicesCTAData}
       />
       <UsedTrustedBy />
-      <TestimonialSlider />
-      <Faq
-        title={
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        }
-        accordionOptions={accordionOptions}
-      />
+      <TestimonialSlider bgColor={"bg-white"} />
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

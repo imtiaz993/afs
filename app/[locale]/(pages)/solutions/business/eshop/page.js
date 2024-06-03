@@ -9,21 +9,25 @@ const eShop = () => {
       title: "Wider customer reach",
       description:
         "Expand your market by connecting with customers globally. eShop helps you tap into new demographics and increase your sales footprint.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
     },
     {
       title: "Secure and efficient transactions",
       description:
         "With pre-integration of the AFS payment gateway, your transactions are secure, reliable, and quick, ensuring customer trust and satisfaction.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
     },
     {
       title: "Tailored online store",
       description:
         "Customize your eCommerce site to reflect your brand and cater to specific business requirements, enhancing the shopping experience for your customers.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
       title: "Streamlined operations",
       description:
         "From billing to customer management, eShop simplifies your daily operations so you can focus on growth and customer engagement.",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
     },
   ];
 

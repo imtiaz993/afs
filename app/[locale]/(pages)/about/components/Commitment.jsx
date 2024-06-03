@@ -28,7 +28,7 @@ const Commitment = () => {
               sizes="100vw"
               width={0}
               height={0}
-              className="rounded w-full"
+              className="rounded w-full max-h-[326px] object-cover"
               src="/assets/images/about/our-vision.png"
               alt=""
             />
@@ -44,7 +44,7 @@ const Commitment = () => {
               sizes="100vw"
               width={0}
               height={0}
-              className="rounded w-full"
+              className="rounded w-full max-h-[326px] object-cover"
               src="/assets/images/about/our-mission.png"
               alt=""
             />
@@ -61,7 +61,7 @@ const Commitment = () => {
               sizes="100vw"
               width={0}
               height={0}
-              className="rounded w-full"
+              className="rounded w-full max-h-[326px] object-cover"
               src="/assets/images/about/our-values.png"
               alt=""
             />

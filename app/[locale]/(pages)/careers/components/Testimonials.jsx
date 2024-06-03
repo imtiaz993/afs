@@ -6,7 +6,7 @@ const Testimonials = () => {
   const reviews = [
     {
       review:
-        "AJoining AFS broadened my financial expertise into regional markets like UAE, Oman, & Kuwait. Collaborative efforts across these geographies showcased learning and adaptation in this dynamic industry.",
+        "Joining AFS broadened my financial expertise into regional markets like UAE, Oman, & Kuwait. Collaborative efforts across these geographies showcased learning and adaptation in this dynamic industry.",
       name: "David Joshua ",
       company: "Processing",
       image: "/assets/icons/careers/testimonial1.svg",
