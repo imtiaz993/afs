@@ -45,10 +45,11 @@ const SolutionFeatures = ({
               : "/assets/images/solutions/productIllustration.png"
           }`}
           sizes="100vw"
-          className="rounded w-full mt-8"
+          className="rounded w-full md:h-[336px] mt-8"
           alt=""
           width={0}
           height={0}
+          style={{ objectFit: "cover" }}
         />
       </div>
     </>

@@ -43,7 +43,10 @@
             "title": "المصرفية المفتوحة",
             "link": "/solutions/business/open-banking"
           },
-          { "title": "المأكولات والمشروبات (F&B)", "link": "/" }
+          {
+            "title": "المأكولات والمشروبات (F&B)",
+            "link": "/solutions/business/food-beverage"
+          }
         ]
       },
       "solutions for consumer": {

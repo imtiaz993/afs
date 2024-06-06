@@ -45,7 +45,10 @@
             "title": "Open banking",
             "link": "/solutions/business/open-banking"
           },
-          { "title": "Food and beverage (F&B)", "link": "/" }
+          {
+            "title": "Food and beverage (F&B)",
+            "link": "/solutions/business/food-beverage"
+          }
         ]
       },
       "solutions for consumer": {
