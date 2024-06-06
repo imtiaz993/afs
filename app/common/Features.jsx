@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import PageLayout from "./PageLayout";
 import SingleNav from "./SingleNav";
 import CommonCTA from "./CommonCTA";
@@ -48,6 +50,20 @@ const Features = ({ data, commonCTAData, appCTA, appCTABgColor }) => {
                       </p>
                     </div>
                   </>
+                ) : null}
+                {item.googlePlayButton ? (
+                  <Link href={"https://play.google.com/"} target="_blank">
+                    <div className="mt-8">
+                      <Image
+                        sizes="100vw"
+                        width={0}
+                        height={0}
+                        src="\assets\icons\solutions\googleplay.svg"
+                        alt=""
+                        className="w-auto"
+                      ></Image>
+                    </div>
+                  </Link>
                 ) : null}
               </div>
             </div>

@@ -3,6 +3,7 @@ import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
 import Faq from "app/common/Faq";
+import { faqContentData } from "./faqContentData";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
@@ -68,48 +69,6 @@ const OpenBanking = () => {
     },
   ];
 
-  const accordionOptions = [
-    {
-      title: "What is Open Banking?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Can anyone access user data?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Can a third-party provider make a payment from my account without me authorizing it?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "When I share my banking data via Open Banking, what information will companies be able to see?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "What is an Open Banking primary business contact?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Will I receive feedback on my application and what form will it take?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "Is Open Banking safe?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title:
-        "Does AFS provide AISP (account information) or PISP (payment initiation) APIs?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-    {
-      title: "How do I control who has access to my data?",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-    },
-  ];
   return (
     <>
       <Navbar />
@@ -147,7 +106,7 @@ const OpenBanking = () => {
         title={
           "Find answers to some key questions about our Open Banking solution"
         }
-        accordionOptions={accordionOptions}
+        accordionOptions={faqContentData}
       />
       <PageLayout>
         <CommonCTA

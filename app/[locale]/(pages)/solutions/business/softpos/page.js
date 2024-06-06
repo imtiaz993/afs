@@ -2,11 +2,6 @@ import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
-import UsedTrustedBy from "app/common/UsedTrustedBy";
-import TestimonialSllider from "app/common/TestimonialSlider";
-import Faq from "app/common/Faq";
-import PageLayout from "app/common/PageLayout";
-import CommonCTA from "app/common/CommonCTA";
 
 const SoftPOS = () => {
   const benefitsData = [
@@ -69,6 +64,7 @@ const SoftPOS = () => {
       description:
         "Get started in no time! Simply download the AFS Pay softPOS app from the Google Play Store, set up your account, and you’re good to go.",
       image: "/assets/images/solutions/business/soft-pos/easy-download.png",
+      googlePlayButton: true,
     },
   ];
 

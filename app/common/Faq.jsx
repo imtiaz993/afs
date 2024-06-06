@@ -20,11 +20,11 @@ const Faq = ({ title, accordionOptions }) => {
             {accordionOptions.map((item, index) => (
               <FaqAccordion
                 title={item.title}
-                text={item.text}
                 index={index}
                 activeAccordion={activeAccordion}
                 setActiveAccordion={setActiveAccordion}
                 key={item.title}
+                content={item.content}
               />
             ))}
           </div>

@@ -1,33 +1,28 @@
 "use client";
 import { useState } from "react";
 import NavigationMenu from "./NavigationMenu";
+import { legalContentData } from "../legalContentData";
 import Content from "./Content";
 
 const NavAndContent = () => {
-  const [navSelected, setNavSelected] = useState("AFS legal statement");
-
-  const navItems = [
-    "AFS legal statement",
-    "Privacy Policy",
-    "Cookies Settings",
-    "Anti money laundering",
-    "Business terms & conditions",
-    "Merchant terms & conditions",
-  ];
+  const [navSelected, setNavSelected] = useState(legalContentData[0].title);
 
   return (
     <>
       <NavigationMenu
         navSelected={navSelected}
         setNavSelected={setNavSelected}
-        navItems={navItems}
+        navItems={legalContentData.map((item) => item.title)}
       />
+
       <div className="hidden md:block md:w-[calc(100%-304px)]">
-        <Content title={navSelected} />
+        <Content
+          data={legalContentData.find((item) => item.title == navSelected)}
+        />
       </div>
       <div className="md:hidden">
-        {navItems.map((item) => (
-          <Content title={item} />
+        {legalContentData.map((item) => (
+          <Content data={item} />
         ))}
       </div>
     </>

@@ -4,7 +4,7 @@ import { useSpring, animated } from "react-spring";
 
 const FaqAccordion = ({
   title,
-  text,
+  content,
   index,
   activeAccordion,
   setActiveAccordion,
@@ -12,12 +12,10 @@ const FaqAccordion = ({
   const openAnimation = useSpring({
     from: { maxHeight: "0px" },
     to: {
-      maxHeight: activeAccordion === index ? "800px" : "0px",
+      maxHeight: activeAccordion === index ? "1600px" : "0px",
     },
     config: { duration: "400" },
   });
-
-  const type = typeof text;
 
   return (
     <div className="border-b border-default py-4">
@@ -48,17 +46,7 @@ const FaqAccordion = ({
         />
       </div>
       <animated.div className="overflow-hidden" style={openAnimation}>
-        {type == "string" ? (
-          <p className="text-secondary mt-2 text-sm md:text-base !leading-[150%]">
-            {text}
-          </p>
-        ) : (
-          text.map((item) => (
-            <p className="text-secondary mt-4 text-sm md:text-base !leading-[150%]">
-              {item}
-            </p>
-          ))
-        )}
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </animated.div>
     </div>
   );

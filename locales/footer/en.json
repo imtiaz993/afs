@@ -80,9 +80,9 @@
     "public links": [
       { "title": "AFS legal statement", "link": "/" },
       { "title": "Privacy Policy", "link": "/" },
-      { "title": "Cookies Settings", "link": "/" },
+      { "title": "Cookies Policy", "link": "/" },
       { "title": "Anti money laundering", "link": "/" },
-      { "title": "Business terms & conditions", "link": "/" },
+      { "title": "BPay terms & conditions", "link": "/" },
       { "title": "Merchant terms & conditions", "link": "/" }
     ],
 
