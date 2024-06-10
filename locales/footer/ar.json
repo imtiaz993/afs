@@ -69,7 +69,7 @@
       "title": "الموارد",
       "links": [
         { "title": "أخبار وإعلانات", "link": "/" },
-        { "title": "ESG", "link": "/" },
+        { "title": "ESG", "link": "/esg" },
         { "title": "الشهادات", "link": "/certifications" }
       ]
     },

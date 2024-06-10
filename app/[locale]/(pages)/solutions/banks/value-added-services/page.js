@@ -4,7 +4,6 @@ import Benefits from "app/common/Benefits";
 import CommonServices from "../../../../../common/CommonServices";
 import UsedTrustedBy from "app/common/UsedTrustedBy";
 import TestimonialSlider from "app/common/TestimonialSlider";
-import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 

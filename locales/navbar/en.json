@@ -72,7 +72,7 @@
       "links": [
         { "title": "News & Announcements", "link": "/" },
         { "title": "Legal", "link": "/legal" },
-        { "title": "ESG", "link": "/" },
+        { "title": "ESG", "link": "/esg" },
         { "title": "Certifications", "link": "/certifications" }
       ]
     },

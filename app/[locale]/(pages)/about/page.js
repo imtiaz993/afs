@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import Story from "app/common/Story";
-import Commitment from "./components/Commitment";
+import CommitmentApproach from "./components/CommitmentApproach";
 import History from "./components/History";
 import Team from "./components/Team";
 import AboutCTA from "./components/AboutCTA";
@@ -24,6 +24,28 @@ const About = () => {
       "We fast-track payments innovation and make superior digital payments experiences a more accessible, secure, convenient, and seamless reality, regionally.",
     ],
   };
+
+  const commitmentData = [
+    {
+      title: "Our vision",
+      description:
+        "To be the leading enabler for digital transaction transformation.",
+      image: "/assets/images/about/our-vision.png",
+    },
+    {
+      title: "Our mission",
+      description:
+        "Offer better, faster, and more secure products and services that support our customers’ growth.",
+      image: "/assets/images/about/our-mission.png",
+    },
+    {
+      title: "Our values",
+      description:
+        "A client centric, collaborative and consistent entity, committed to delivering superior experiences.",
+      image: "/assets/images/about/our-values.png",
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -35,7 +57,14 @@ const About = () => {
         image={"/assets/images/about/about-us.png"}
       />
       <Story content={storyContent} />
-      <Commitment />
+      <CommitmentApproach
+        title={"Our commitment"}
+        subtext={
+          "We are committed to fast-tracking payments innovation and making superior digital payments experiences more accessible, secure, convenient, and seamless."
+        }
+        content={commitmentData}
+        bg
+      />
       <History />
       <Team />
       <AboutCTA />
