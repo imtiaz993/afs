@@ -1,12 +1,10 @@
 import Image from "next/image";
 
 const NavigationMenu = ({ navSelected, setNavSelected, navItems }) => {
-
-
   const onNavChanged = (clickedNavElement) => setNavSelected(clickedNavElement);
 
   return (
-    <div className="hidden md:block md:w-[304px] md:mr-8">
+    <div className="hidden md:block md:w-[304px] md:mr-8 md:sticky top-[110px]">
       {navItems.map((item) => (
         <div
           className={`${

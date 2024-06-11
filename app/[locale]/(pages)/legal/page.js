@@ -8,7 +8,7 @@ const Legal = () => {
     <>
       <Navbar />
       <Header />
-      <PageLayout styles="flex p-16">
+      <PageLayout styles="flex p-16 items-start">
         <NavAndContent />
       </PageLayout>
     </>
