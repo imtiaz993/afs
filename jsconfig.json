@@ -4,7 +4,7 @@
     "paths": {
       // "@/*": ["./*"],
       "@/components/*": ["components/*"],
-      "@/public/*": ["public/*"],
+      "@/public/*": ["public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.jS", "**/*.jsx"]

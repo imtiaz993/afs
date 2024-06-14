@@ -272,7 +272,7 @@ const Footer = () => {
                 className={`mt-2 whitespace-nowrap hover:text-brand-secondary hover:underline ${
                   isArabic ? "ml-4" : "mr-4"
                 }`}
-                href="/"
+                href={item.link}
               >
                 {item.title}
               </Link>

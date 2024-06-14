@@ -37,7 +37,7 @@
           "title": "POS terminals",
           "link": "/solutions/business/pos-terminals"
         },
-        { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+        { "title": "AFS Pay (softPOS)", "link": "/solutions/business/softpos" },
         { "title": "eShop", "link": "/solutions/business/eshop" },
         {
           "title": "Open banking",
@@ -46,6 +46,10 @@
         {
           "title": "Food and beverage (F&B)",
           "link": "/solutions/business/food-beverage"
+        },
+        {
+          "title": "AFS Pro",
+          "link": "/solutions/business/afs-pro"
         }
       ]
     },
@@ -81,12 +85,27 @@
     "social follow": "Follow us on social media",
     "certifications": "Our certifications",
     "public links": [
-      { "title": "AFS legal statement", "link": "/" },
-      { "title": "Privacy Policy", "link": "/" },
-      { "title": "Cookies Policy", "link": "/" },
-      { "title": "Anti money laundering", "link": "/" },
-      { "title": "BPay terms & conditions", "link": "/" },
-      { "title": "Merchant terms & conditions", "link": "/" }
+      {
+        "title": "AFS legal statement",
+        "link": "/legal/?section=afs-legal-statement"
+      },
+      {
+        "title": "Privacy Policy",
+        "link": "/legal/?section=privacy-policy"
+      },
+      { "title": "Cookies Policy", "link": "/legal/?section=cookies-policy" },
+      {
+        "title": "Anti money laundering",
+        "link": "/legal/?section=anti-money-laundering"
+      },
+      {
+        "title": "BPay terms & conditions",
+        "link": "/legal/?section=bpay-terms-conditions"
+      },
+      {
+        "title": "Merchant terms & conditions",
+        "link": "/legal/?section=merchant-terms-conditions"
+      }
     ],
 
     "rights": "© 2024 Arab Financial Services. All rights reserved.",

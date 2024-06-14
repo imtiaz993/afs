@@ -118,8 +118,8 @@ const JobQueryForm = () => {
                       ? errors.headquarter
                       : ""
                   }
-                  label="Company headquarters location"
-                  options={["Bahrain", "Egypt", "UAE", "Oman"]}
+                  label="Preferred office location"
+                  options={["Oman", "Bahrain", "Egypt", "UAE"]}
                 />
                 <FileField
                   name="resume"

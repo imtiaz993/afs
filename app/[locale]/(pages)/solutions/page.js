@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "app/common/Navbar";
 import CommonHero from "app/common/CommonHero";
 import PageNav from "./components/PageNav";

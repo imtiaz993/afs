@@ -65,7 +65,9 @@ const Complaints = () => {
           AFS will endeavor to address all complaints within twenty (20)
           business days.
         </p>
-        <h5 className="mb-5 text-lg font-regular !leading-[140%]">Submit your details below</h5>
+        <h5 className="mb-5 text-lg font-regular !leading-[140%]">
+          Submit your details below
+        </h5>
         <div className="grid gap-2">
           <div className="grid md:grid-cols-2 gap-2">
             <InputField
@@ -129,7 +131,7 @@ const Complaints = () => {
             onBlur={handleBlur}
             error={errors.category && touched.category ? errors.category : ""}
             label="Select a complaints category *"
-            options={["Category 1", "Category 2", "Category 3", "Category 4"]}
+            options={["Merchant support", "BPay", "Al Rateb support - WPS"]}
           />
           <TextArea
             name="details"

@@ -39,7 +39,7 @@
             "title": "POS terminals",
             "link": "/solutions/business/pos-terminals"
           },
-          { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+          { "title": "AFS Pay (softPOS)", "link": "/solutions/business/softpos" },
           { "title": "eShop", "link": "/solutions/business/eshop" },
           {
             "title": "Open banking",
@@ -48,6 +48,10 @@
           {
             "title": "Food and beverage (F&B)",
             "link": "/solutions/business/food-beverage"
+          },
+          {
+            "title": "AFS Pro",
+            "link": "/solutions/business/afs-pro"
           }
         ]
       },

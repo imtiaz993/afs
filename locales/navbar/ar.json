@@ -37,7 +37,10 @@
             "title": "أجهزة نقاط البيع",
             "link": "/solutions/business/pos-terminals"
           },
-          { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+          {
+            "title": "AFS الدفع (softPOS)",
+            "link": "/solutions/business/softpos"
+          },
           { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
           {
             "title": "المصرفية المفتوحة",
@@ -46,6 +49,10 @@
           {
             "title": "المأكولات والمشروبات (F&B)",
             "link": "/solutions/business/food-beverage"
+          },
+          {
+            "title": "أفس برو",
+            "link": "/solutions/business/afs-pro"
           }
         ]
       },

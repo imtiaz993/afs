@@ -40,7 +40,10 @@
           "title": "أجهزة نقاط البيع",
           "link": "/solutions/business/pos-terminals"
         },
-        { "title": "SoftPOS", "link": "/solutions/business/softpos" },
+        {
+          "title": "AFS الدفع (softPOS)",
+          "link": "/solutions/business/softpos"
+        },
         { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
         {
           "title": "المصرفية المفتوحة",
@@ -49,6 +52,10 @@
         {
           "title": "المأكولات والمشروبات (F&B)",
           "link": "/solutions/business/food-beverage"
+        },
+        {
+          "title": "أفس برو",
+          "link": "/solutions/business/afs-pro"
         }
       ]
     },
@@ -84,12 +91,24 @@
     "social follow": "تابعنا على وسائل التواصل الاجتماعي",
     "certifications": "شهاداتنا",
     "public links": [
-      { "title": "بيان قانوني لشركة AFS", "link": "/" },
-      { "title": "سياسة الخصوصية", "link": "/" },
-      { "title": "إعدادات الكوكيز", "link": "/" },
-      { "title": "مكافحة غسل الأموال", "link": "/" },
-      { "title": "شروط وأحكام باي", "link": "/" },
-      { "title": "شروط وأحكام التاجر", "link": "/" }
+      {
+        "title": "بيان قانوني لشركة AFS",
+        "link": "/legal/?section=afs-legal-statement"
+      },
+      { "title": "سياسة الخصوصية", "link": "/legal/?section=privacy-policy" },
+      { "title": "إعدادات الكوكيز", "link": "/legal/?section=cookies-policy" },
+      {
+        "title": "مكافحة غسل الأموال",
+        "link": "/legal/?section=anti-money-laundering"
+      },
+      {
+        "title": "شروط وأحكام باي",
+        "link": "/legal/?section=bpay-terms-conditions"
+      },
+      {
+        "title": "شروط وأحكام التاجر",
+        "link": "/legal/?section=merchant-terms-conditions"
+      }
     ],
 
     "rights": "© 2024 Arab Financial Services. كل الحقوق محفوظة.",
