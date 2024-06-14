@@ -1,6 +1,6 @@
 "use client";
-import Navbar from "./common/Navbar";
-import CommonHero from "./common/CommonHero";
+import Navbar from "../common/Navbar";
+import CommonHero from "../common/CommonHero";
 
 export default function NotFound() {
   return (
