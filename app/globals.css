@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @font-face {
   font-family: "PP Montreal";
@@ -45,7 +48,6 @@
 }
 
 * {
-  font-family: "PP Montreal" !important;
   -webkit-font-smoothing: antialiased;
 }
 

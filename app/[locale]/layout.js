@@ -13,7 +13,9 @@ export default function LocaleLayout({ children, params: { locale } }) {
   const isArabic = locale === "ar";
   return (
     <html lang={locale} dir={isArabic ? "rtl" : "ltr"}>
-      <body>
+      <body
+        style={{ fontFamily: isArabic ? "'Noto Kufi Arabic'" : "'PP Montreal'" }}
+      >
         <Head>
           <link
             rel="stylesheet"
