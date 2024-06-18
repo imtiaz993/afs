@@ -1,7 +1,8 @@
 export const legalContentData = [
-	{
-		title: "AFS legal statement",
-		content: `
+  {
+    title: "AFS legal statement",
+    id: "legal-afs-legal-statement",
+    content: `
     <p class="text-secondary mt-4 text-[18px] font-[400] !leading-[28px]">
         Please read this legal statement carefully. If you continue to use this website (and that expression includes each of its pages as well as the content of those pages and (where relevant) the arrangement of that content), you agree to the terms of use in this statement. If you do not agree to be bound by this statement, please exit this website immediately. Certain sections of this website or other websites accessed through it may contain separate terms of use, which are in addition to this statement. Users should read those separate terms carefully. If they conflict with this statement, those separate terms will govern access to and use of those sections and websites.
     </p>
@@ -96,10 +97,11 @@ export const legalContentData = [
         The above terms of use are governed by the laws of the Kingdom of Bahrain.
     </p>
     `,
-	},
-	{
-		title: "Privacy Policy",
-		content: `
+  },
+  {
+    title: "Privacy Policy",
+    id: "legal-privacy-policy",
+    content: `
     <h5 class="text-[18px] font-[400] !leading-[25.2px] text-primary mt-4">
       Purpose
     </h5>
@@ -771,10 +773,11 @@ export const legalContentData = [
     </p>
 
     `,
-	},
-	{
-		title: "Cookies Policy",
-		content: `
+  },
+  {
+    title: "Cookies Policy",
+    id: "legal-cookies-policy",
+    content: `
     
     <h5 class="text-[20px] font-[400] !leading-[25.2px] text-primary mt-8">
       <b>PLEASE READ THIS POLICY CAREFULLY BEFORE USING OUR WEBSITE </b>
@@ -914,10 +917,11 @@ export const legalContentData = [
 
 
     `,
-	},
-	{
-		title: "Anti money laundering",
-		content: `
+  },
+  {
+    title: "Anti money laundering",
+    id: "legal-anti-money-laundering",
+    content: `
      <h5 class="text-[20px] font-[400] !leading-[25.2px] text-primary mt-8">
       Anti-Money Laundering & Anti-Terrorism Financing Policy & Procedures
     </h5>
@@ -969,10 +973,11 @@ export const legalContentData = [
     </p>
 
     `,
-	},
-	{
-		title: "BPay terms & conditions",
-		content: `
+  },
+  {
+    title: "BPay terms & conditions",
+    id: "legal-bpay-terms-conditions",
+    content: `
     <p class="text-secondary mt-4 text-[18px] font-[400] !leading-[28px]">
         By using BPay, you agree to the terms and conditions below which form a binding agreement between you and Arab Financial Services Company B.S.C. (c) (“<b>AFS</b>”).  
     </p>
@@ -1579,10 +1584,11 @@ export const legalContentData = [
               The value of all Transactions made via BPay Card will be charged to your Wallet Account in the currency of your Wallet Account. Transactions that are effected in currencies other than the currency of Wallet Account will be debited to the Wallet Account after conversion into Wallet Account’s currency at a rate of exchange to be determined by AFS from time to time. All Transactions that are conducted or contracted in currencies other than US Dollar will ﬁrst be settled in US Dollar and then converted to and settled in the currency of Wallet Account. All non-BHD Transactions whether made at point of sale, online or on ecommerce gateway, shall be subject to levy of forex mark-up on the exchange rate as notified by AFS through it its Wallet App. The current forex mark-up is 3.5%, which is subject to change.
             </p>
     `,
-	},
-	{
-		title: "Merchant terms & conditions",
-		content: `
+  },
+  {
+    title: "Merchant terms & conditions",
+    id: "legal-merchant-terms-conditions",
+    content: `
     <p class="text-secondary mt-4 text-[18px] font-[400] !leading-[28px]">
        This AFS MERCHANT AGREEMENT as amended by AFS from time to time, is a contract between Arab Financial Services Co. B.S.C (c) (“AFS”) and the Merchant, containing terms and conditions that govern the supply of Services to the Merchant.This AFS Merchant Agreement will be effective for all Merchants as of
     </p>
@@ -3477,5 +3483,5 @@ export const legalContentData = [
      
 
     `,
-	},
+  },
 ];

@@ -7,7 +7,10 @@ const Content = ({ data }) => {
       <h3 className="text-[40px] font-[400] !leading-[48px] text-primary">
         {data?.title}
       </h3>
-      <div dangerouslySetInnerHTML={{ __html: data?.content }}></div>
+      <div
+        id={data?.id}
+        dangerouslySetInnerHTML={{ __html: data?.content }}
+      ></div>
     </div>
   );
 };

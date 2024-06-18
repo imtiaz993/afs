@@ -6,31 +6,37 @@ import { legalContentData } from "../legalContentData";
 import Content from "./Content";
 
 const NavAndContent = () => {
-  const [navSelected, setNavSelected] = useState(legalContentData[0].title);
+  const [navSelected, setNavSelected] = useState(legalContentData[0].id);
   const searchParam = useSearchParams().get("section");
 
+  const setNavAndScrollToView = (id) => {
+    setNavSelected(id);
+    const barHeight = 240;
+    const location = document.getElementById(id).offsetTop;
+    window.scrollTo({ top: location - barHeight, behavior: "smooth" });
+  };
   useEffect(() => {
     switch (searchParam) {
       case "afs-legal-statement":
-        setNavSelected(legalContentData[0].title);
+        setNavAndScrollToView(legalContentData[0].id);
         break;
       case "privacy-policy":
-        setNavSelected(legalContentData[1].title);
+        setNavAndScrollToView(legalContentData[1].id);
         break;
       case "cookies-policy":
-        setNavSelected(legalContentData[2].title);
+        setNavAndScrollToView(legalContentData[2].id);
         break;
       case "anti-money-laundering":
-        setNavSelected(legalContentData[3].title);
+        setNavAndScrollToView(legalContentData[3].id);
         break;
       case "bpay-terms-conditions":
-        setNavSelected(legalContentData[4].title);
+        setNavAndScrollToView(legalContentData[4].id);
         break;
       case "merchant-terms-conditions":
-        setNavSelected(legalContentData[5].title);
+        setNavAndScrollToView(legalContentData[5].id);
         break;
       default:
-        setNavSelected(legalContentData[0].title);
+        setNavAndScrollToView(legalContentData[0].id);
     }
   }, [searchParam]);
 
@@ -38,18 +44,18 @@ const NavAndContent = () => {
     <>
       <NavigationMenu
         navSelected={navSelected}
-        setNavSelected={setNavSelected}
-        navItems={legalContentData.map((item) => item.title)}
+        setNavAndScrollToView={setNavAndScrollToView}
+        data={legalContentData}
       />
 
       <div className="hidden md:block md:w-[calc(100%-304px)]">
         <Content
-          data={legalContentData.find((item) => item.title == navSelected)}
+          data={legalContentData.find((item) => item.id == navSelected)}
         />
       </div>
       <div className="md:hidden">
         {legalContentData.map((item) => (
-          <Content data={item} />
+          <Content data={item} key={item.id} />
         ))}
       </div>
     </>
