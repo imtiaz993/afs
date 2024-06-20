@@ -4,6 +4,7 @@ import PageLayout from "app/common/PageLayout";
 import NavAndContent from "./components/NavAndContent";
 
 const Legal = () => {
+  
   return (
     <>
       <Navbar />

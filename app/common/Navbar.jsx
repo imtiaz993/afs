@@ -448,7 +448,7 @@ const SolutionsMenu = () => {
   return (
     <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
       <div className="flex w-[1312px] bg-white ">
-        <div className="w-[336px] py-8 pr-4">
+        <div className="w-[336px] py-8 pr-4 border-r border-default">
           <div className="mb-6">
             <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
               Solutions
@@ -493,7 +493,7 @@ const CompanyMenu = () => {
   return (
     <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
       <div className="flex w-[1312px] bg-white ">
-        <div className="w-[336px] py-8 pr-4">
+        <div className="w-[336px] py-8 pr-4 border-r border-default">
           <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-6 px-3">
             Introduction
           </p>
@@ -613,7 +613,7 @@ const ResourcesMenu = () => {
   return (
     <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
       <div className="flex w-[1312px] bg-white ">
-        <div className="w-[336px] py-8 pr-4">
+        <div className="w-[336px] py-8 pr-4 border-r border-default">
           <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
             Resources
           </p>

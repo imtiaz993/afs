@@ -1,7 +1,10 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import MultiSelect from "react-select";
+import tailwindConfig from "../../../../../tailwind.config";
 import InputField from "app/common/form-components/InputField";
 import Select from "app/common/form-components/Select";
 import TextArea from "app/common/form-components/TextArea";
@@ -19,6 +22,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const ContactTeamForm = () => {
+  const tailwindColorsModule = tailwindConfig.theme.extend;
   const {
     values,
     touched,
@@ -44,6 +48,15 @@ const ContactTeamForm = () => {
       resetForm();
     },
   });
+
+  const [locationOptions, setLocationOptions] = useState([]);
+  const [interestOptions, setInterestOptions] = useState([]);
+  const handleLocationChange = (locationOptions) => {
+    setLocationOptions(locationOptions);
+  };
+  const handleInterestChange = (interestOptions) => {
+    setInterestOptions(interestOptions);
+  };
 
   return (
     <div className="bg-white p-8">
@@ -111,7 +124,7 @@ const ContactTeamForm = () => {
             placeholder="Business name *"
           />
           <div>
-            <Select
+            {/* <Select
               name="location"
               value={values.location}
               onChange={handleChange}
@@ -125,7 +138,36 @@ const ContactTeamForm = () => {
                 "United Arab Emirates",
                 "Other",
               ]}
-            />
+            /> */}
+            <div className="">
+              <MultiSelect
+                placeholder={
+                  <p className="text-tertiary">Chose your location(s) *</p>
+                }
+                isMulti={true}
+                options={[
+                  { value: "bahrain", label: "Bahrain" },
+                  { value: "egypt", label: "Egypt" },
+                  { value: "oman", label: "Oman" },
+                  {
+                    value: "unitedarabemirates",
+                    label: "United Arab Emirates",
+                  },
+                  { value: "other", label: "Other" },
+                ]}
+                value={locationOptions}
+                onChange={handleLocationChange}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderColor: tailwindColorsModule.borderColor.default,
+                    borderRadius: 2,
+                    height: 50,
+                    paddingLeft: 8,
+                  }),
+                }}
+              />
+            </div>
             <p className="text-[12px] font-[400] !leading-[18px] text-tertiary mt-2 pb-6 border-b border-default ">
               Chose the location(s) where you have legal entities
             </p>
@@ -134,7 +176,7 @@ const ContactTeamForm = () => {
             How can AFS help?
           </h5>
           <div>
-            <Select
+            {/* <Select
               name="solution"
               value={values.solution}
               onChange={handleChange}
@@ -146,7 +188,39 @@ const ContactTeamForm = () => {
                 "Solutions for businesses",
                 "Digital wallets",
               ]}
-            />
+            /> */}
+            <div className="">
+              <MultiSelect
+                placeholder={
+                  <p className="text-tertiary">
+                    What solutions are you interested in? *
+                  </p>
+                }
+                isMulti={true}
+                options={[
+                  { value: "solution-banks", label: "Solutions for banks" },
+                  {
+                    value: "solution-businesses",
+                    label: "Solutions for businesses",
+                  },
+                  {
+                    value: "solution-digital-wallets",
+                    label: "Digital wallets",
+                  },
+                ]}
+                value={interestOptions}
+                onChange={handleInterestChange}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderColor: tailwindColorsModule.borderColor.default,
+                    borderRadius: 2,
+                    height: 50,
+                    paddingLeft: 8,
+                  }),
+                }}
+              />
+            </div>
             <p className="text-[12px] font-[400] !leading-[18px] text-tertiary my-2">
               Chose all the solutions from the drop down list
             </p>

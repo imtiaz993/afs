@@ -19,6 +19,7 @@
     "react-custom-checkbox": "^3.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
+    "react-select": "^5.8.0",
     "react-spring": "^9.7.3",
     "swiper": "^11.1.1",
     "yup": "^1.4.0"
