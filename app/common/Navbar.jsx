@@ -1,517 +1,649 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import { usePathname } from "@/i18n.config";
-import { Link } from "@/i18n.config";
-import Image from "next/image";
-import { useSpring, animated } from "react-spring";
-import PageLayout from "./PageLayout";
+import { useState, useRef } from "react";
+import { usePathname, Link } from "i18n.config";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+
+import PageLayout from "./PageLayout";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("Navbar");
-
   const pathname = usePathname();
-  const [showOptions, setShowOptions] = useState(false);
+  const [colorChange, setColorchange] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (showOptions && window) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-    }
-  }, [showOptions]);
+  const [solutionsMenu, setSolutionsMenu] = useState(true);
+  const [navbarMenu, setNavbarMenu] = useState("");
 
   const isHome = pathname === "/";
-
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 10) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", changeNavbarColor);
-
-      return () => window.removeEventListener("scroll", changeNavbarColor);
-    }
-  }, []);
-
-  const openAnimation = useSpring({
-    from: { maxHeight: "44px" },
-    to: {
-      maxHeight: showOptions ? "1500px" : "44px",
-    },
-    config: { duration: "500" },
-  });
-
+  const isArabic = locale === "ar";
   return (
-    <div className="lg:sticky top-0 z-[999]">
-      <div
-        className={`py-4 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-300  ${
-          isHome
-            ? colorChange
+    <div className="relative lg:sticky top-0 z-[999]">
+      <div className="">
+        <div
+          className={`pt-5 pb-6 fixed top-0 left-0 right-0 lg:sticky z-[999] transition-all duration-300  ${
+            isHome
+              ? colorChange
+                ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+                : "bg-white"
+              : colorChange
               ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
-              : "bg-white"
-            : colorChange
-            ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
-            : "bg-subtle-neutral"
-        } `}
-      >
-        <PageLayout>
-          <div className="hidden lg:flex justify-between items-center">
-            <div className="flex items-center">
-              <Link href="/">
+              : "bg-subtle-neutral"
+          } `}
+        >
+          <PageLayout>
+            <div className="hidden lg:flex justify-between items-center">
+              <div className="flex items-center">
+                <Link href="/">
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-full"
+                    src="/assets/icons/navbar/nav-logo.svg"
+                    alt=""
+                  />
+                </Link>
+                <div className={`${isArabic ? "lg:mr-12" : "lg:ml-12"}`}>
+                  <button
+                    className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
+                    onClick={() => {
+                      setNavbarMenu(
+                        navbarMenu?.length == 0
+                          ? "Solutions"
+                          : navbarMenu == "Solutions"
+                          ? ""
+                          : "Solutions"
+                      );
+                    }}
+                  >
+                    Solutions
+                    <Image
+                      sizes="100vw"
+                      width={12}
+                      height={6}
+                      className={`transition-all duration-200 ${
+                        navbarMenu == "Solutions" ? "-rotate-180" : "rotate-0"
+                      } ${isArabic ? "mr-2" : "ml-2"}`}
+                      src="/assets/icons/navbar/chevron.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}>
+                  <button
+                    className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
+                    onClick={() => {
+                      setNavbarMenu(
+                        navbarMenu?.length == 0
+                          ? "Company"
+                          : navbarMenu == "Company"
+                          ? ""
+                          : "Company"
+                      );
+                    }}
+                  >
+                    Company
+                    <Image
+                      sizes="100vw"
+                      width={12}
+                      height={6}
+                      className={`transition-all duration-200 ${
+                        navbarMenu == "Company" ? "-rotate-180" : "rotate-0"
+                      } ${isArabic ? "mr-2" : "ml-2"}`}
+                      src="/assets/icons/navbar/chevron.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}>
+                  <button
+                    className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
+                    onClick={() => {
+                      setNavbarMenu(
+                        navbarMenu?.length == 0
+                          ? "Resources"
+                          : navbarMenu == "Resources"
+                          ? ""
+                          : "Resources"
+                      );
+                    }}
+                  >
+                    Resources
+                    <Image
+                      sizes="100vw"
+                      width={12}
+                      height={6}
+                      className={`transition-all duration-200 ${
+                        navbarMenu == "Resources" ? "-rotate-180" : "rotate-0"
+                      } ${isArabic ? "mr-2" : "ml-2"}`}
+                      src="/assets/icons/navbar/chevron.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <LocaleSwitcher locale={locale} />
+                <Link href="/contact-team">
+                  <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
+                    {t("contact team")}
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </PageLayout>
+        </div>
+      </div>
+      {navbarMenu == "Solutions" ? <SolutionsMenu /> : ""}
+      {navbarMenu == "Company" ? <CompanyMenu /> : ""}
+      {navbarMenu == "Resources" ? <ResourcesMenu /> : ""}
+    </div>
+  );
+};
+
+const MenuItem = ({ title, setSelected, selected }) => {
+  return (
+    <div
+      className={`flex justify-between py-2 pr-2 pl-3 ${
+        selected == title
+          ? "bg-subtle-neutral text-brand-secondary"
+          : "text-primary"
+      } hover:cursor-pointer`}
+      onMouseEnter={() => setSelected(title)}
+    >
+      <p className="text-[18px] font-normal leading-[28px]">{title}</p>
+      <Image
+        sizes="100vw"
+        width={12}
+        height={6}
+        className="mr-2 -rotate-90"
+        src="/assets/icons/navbar/chevron.svg"
+        alt=""
+      />
+    </div>
+  );
+};
+
+const SubMenuItem = ({ title, description, link }) => {
+  return (
+    <div>
+      <div className="p-2 w-[302px]">
+        <Link href={link}>
+          <div className="flex mb-1">
+            <p className="text-[14px] font-medium leading-[18px] text-primary">
+              {title}
+            </p>
+            <Image
+              sizes="100vw"
+              width={16}
+              height={16}
+              src="/assets/icons/navbar/arrow-right.svg"
+              className="rounded ml-1"
+            />
+          </div>
+          <p className="text-[14px] font-normal leading-[18px] text-secondary">
+            {description}
+          </p>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const SolutionsOverview = () => {
+  return (
+    <div className="flex">
+      <div className="w-[316px]">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Overview
+        </p>
+        <div className="p-2 ">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src="/assets/images/navbar/solutions-overview.png"
+            className="h-full w-full rounded mb-3"
+          />
+          <p className="text-[14px] font-normal leading-[18px] text-primary mb-3">
+            <span className="font-medium">Solutions overview - </span> Take a
+            glance at our extensive company offering.
+          </p>
+          <Link href={"/solutions"} className="flex">
+            <p className="text-brand-secondary text-[14px] font-normal leading-[18px]">
+              Learn more{" "}
+            </p>
+            <Image
+              sizes="100vw"
+              width={13}
+              height={11}
+              src="/assets/icons/home/arrow-right.svg"
+              className="rounded ml-2"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BanksOverview = () => {
+  return (
+    <div className="flex justify-between">
+      <div className="w-[316px]">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Overview
+        </p>
+        <div className="p-2">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src="/assets/images/navbar/banks-overview.png"
+            className="h-full w-full rounded mb-3"
+          />
+          <p className="text-[14px] font-normal leading-[18px] text-primary mb-3">
+            <span className="font-medium">Solutions for banks - </span>{" "}
+            Revolutionize your bank financial operations.
+          </p>
+          <Link href={"/solutions/banks"} className="flex">
+            <p className="text-brand-secondary text-[14px] font-normal leading-[18px]">
+              Learn more{" "}
+            </p>
+            <Image
+              sizes="100vw"
+              width={13}
+              height={11}
+              src="/assets/icons/home/arrow-right.svg"
+              className="rounded ml-2"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="w-[612px] ml-6">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Solutions & Services
+        </p>
+        <div className="grid md:grid-cols-2 gap-1">
+          <SubMenuItem
+            title={"Card issuing & proccesing"}
+            description={"Streamlined and efficient card management."}
+            link={"/solutions/banks/card-issuing-processing"}
+          />
+          <SubMenuItem
+            title={"Risk & fraud management"}
+            description={"Safeguard transactions, neutralize threats."}
+            link={"/solutions/banks/fraud-risk-management"}
+          />
+          <SubMenuItem
+            title={"Open Banking"}
+            description={"Unlock the potential of financial data sharing."}
+            link={"/solutions/banks/open-banking"}
+          />
+          <SubMenuItem
+            title={"Value added services"}
+            description={
+              "Elevate your customer experience and operational efficiency in one go."
+            }
+            link={"/solutions/banks/value-added-services"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BusinessesOverview = () => {
+  return (
+    <div className="flex justify-between">
+      <div className="w-[316px]">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Overview
+        </p>
+        <div className="p-2">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src="/assets/images/navbar/businesses-overview.png"
+            className="h-full w-full rounded mb-3"
+          />
+          <p className="text-[14px] font-normal leading-[18px] text-primary mb-3">
+            <span className="font-medium">Solutions for businesses - </span>
+            Leverage our versatile range of payment solutions.
+          </p>
+          <Link href={"/solutions/business"} className="flex">
+            <p className="text-brand-secondary text-[14px] font-normal leading-[18px]">
+              Learn more{" "}
+            </p>
+            <Image
+              sizes="100vw"
+              width={13}
+              height={11}
+              src="/assets/icons/home/arrow-right.svg"
+              className="rounded ml-2"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="w-[612px] ml-6">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Solutions & Services
+        </p>
+        <div className="grid md:grid-cols-2 gap-2">
+          <SubMenuItem
+            title={"Payment gateway"}
+            description={"Enhance your checkout flows."}
+            link={"/solutions/business/payment-gateway"}
+          />
+          <SubMenuItem
+            title={"POS terminals"}
+            description={"Elevate your retail experience."}
+            link={"/solutions/business/pos-terminals"}
+          />
+          <SubMenuItem
+            title={"AFS One (SoftPOS)"}
+            description={"Smart point-of-sale in your pocket."}
+            link={"/solutions/business/softpos"}
+          />
+          <SubMenuItem
+            title={"AFS Pro"}
+            description={"A unique mobile payment ecosystem."}
+            link={"/solutions/business/afs-pro"}
+          />
+          <SubMenuItem
+            title={"Open Banking"}
+            description={"Drive new payment flows."}
+            link={"/solutions/business/open-banking"}
+          />
+          <SubMenuItem
+            title={"eShop"}
+            description={"Complete eCommerce solution."}
+            link={"/solutions/business/eshop"}
+          />
+          <SubMenuItem
+            title={"Food & beverage"}
+            description={"Your restaurant-first full featured point-of-sale."}
+            link={"/solutions/business/food-beverage"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ConsumersOverview = () => {
+  return (
+    <div className="flex justify-between">
+      <div className="w-[316px]">
+        <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+          Overview
+        </p>
+        <div className="p-2">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src="/assets/images/navbar/consumers-overview.png"
+            className="h-full w-full rounded mb-3"
+          />
+          <p className="text-[14px] font-normal leading-[18px] text-primary mb-3">
+            <span className="font-medium">BPay wallet - </span>
+            Your one-stop digital wallet app for secure, instant, local and
+            global payments.
+          </p>
+          <Link href={"/solutions/consumers/bpay"} className="flex">
+            <p className="text-brand-secondary text-[14px] font-normal leading-[18px]">
+              Learn more{" "}
+            </p>
+            <Image
+              sizes="100vw"
+              width={13}
+              height={11}
+              src="/assets/icons/home/arrow-right.svg"
+              className="rounded ml-2"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="w-[612px] ml-6">
+        <div className="p-2 w-[302px]">
+          <p className="text-primary text-[14px] font-medium leading-[18px] mb-2">
+            Download BPay
+          </p>
+          <p className="text-secondary text-[14px] font-normal leading-[18px]">
+            Make and receive payments in an easy, fast, and secure way.
+          </p>
+        </div>
+        <div className="p-2 flex">
+          <Image
+            src={"/assets/icons/solutions/appstore.svg"}
+            width={113}
+            height={32}
+            sizes="100vw"
+            className=""
+            alt=""
+          />
+
+          <Image
+            src={"/assets/icons/solutions/googleplay.svg"}
+            width={113}
+            height={32}
+            sizes="100vw"
+            className="ml-2"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SolutionsMenu = () => {
+  const [solutionsMenuSelected, setSolutionsMenuSelected] =
+    useState("Overview");
+  return (
+    <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
+      <div className="flex w-[1312px] bg-white ">
+        <div className="w-[336px] py-8 pr-4">
+          <div className="mb-6">
+            <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
+              Solutions
+            </p>
+            <MenuItem
+              title={"Overview"}
+              setSelected={setSolutionsMenuSelected}
+              selected={solutionsMenuSelected}
+            />
+          </div>
+          <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
+            Solutions For
+          </p>
+          <MenuItem
+            title={"Banks"}
+            setSelected={setSolutionsMenuSelected}
+            selected={solutionsMenuSelected}
+          />
+          <MenuItem
+            title={"Businesses"}
+            setSelected={setSolutionsMenuSelected}
+            selected={solutionsMenuSelected}
+          />
+          <MenuItem
+            title={"Consumers"}
+            setSelected={setSolutionsMenuSelected}
+            selected={solutionsMenuSelected}
+          />
+        </div>
+        <div className="py-8 pl-6">
+          {solutionsMenuSelected == "Overview" && <SolutionsOverview />}
+          {solutionsMenuSelected == "Banks" && <BanksOverview />}
+          {solutionsMenuSelected == "Businesses" && <BusinessesOverview />}
+          {solutionsMenuSelected == "Consumers" && <ConsumersOverview />}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CompanyMenu = () => {
+  return (
+    <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
+      <div className="flex w-[1312px] bg-white ">
+        <div className="w-[336px] py-8 pr-4">
+          <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-6 px-3">
+            Introduction
+          </p>
+          <h5 className="px-3 text-[18px] font-normal leading-[25.2px] text-primary">
+            Our company provides numerous end-to-end digital payment products,
+            services and solutions to banks, businesses, and consumers.
+          </h5>
+        </div>
+        <div className="py-8 pl-6">
+          <div className="flex justify-between">
+            <div className="w-[316px]">
+              <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+                About Us
+              </p>
+              <div className="p-2">
                 <Image
                   sizes="100vw"
                   width={0}
                   height={0}
-                  className="w-full"
-                  src="/assets/icons/navbar/nav-logo.svg"
-                  alt=""
+                  src="/assets/images/navbar/solutions-overview.png"
+                  className="h-full w-full rounded mb-3"
                 />
-              </Link>
-              <Solutions />
-              <Company />
-              <Resources />
+                <p className="text-[14px] font-normal leading-[18px] text-primary mb-3">
+                  <span className="font-medium">About us - </span>
+                  Read our journey to become region’s leading digital payment
+                  solutions provider.
+                </p>
+                <Link href={"/about"} className="flex">
+                  <p className="text-brand-secondary text-[14px] font-normal leading-[18px]">
+                    Learn more{" "}
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={13}
+                    height={11}
+                    src="/assets/icons/home/arrow-right.svg"
+                    className="rounded ml-2"
+                  />
+                </Link>
+              </div>
             </div>
-            <div className="flex items-center">
-              <LocaleSwitcher locale={locale} />
-              <Link href="/contact-team">
-                <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
-                  {t("contact team")}
-                </button>
-              </Link>
+            <div className="w-[612px] ml-6">
+              <div className="grid gap-2 mt-[34px]">
+                <SubMenuItem
+                  title={"Investor relations"}
+                  description={"Building trust and driving value."}
+                  link={"/investor-relations"}
+                />
+                <SubMenuItem
+                  title={"Careers"}
+                  description={"Join us as."}
+                  link={"/careers"}
+                />
+                <SubMenuItem
+                  title={"Contact us"}
+                  description={"How can we help?"}
+                  link={"/contact"}
+                />
+              </div>
             </div>
           </div>
-          <animated.div className="overflow-hidden" style={openAnimation}>
-            <div className={`lg:hidden h-[calc(100vh-16px)] overflow-auto`}>
-              <div className="flex items-center justify-between">
-                <div>
-                  {!showOptions && (
-                    <Link href="/">
-                      <Image
-                        sizes="100vw"
-                        width={0}
-                        height={0}
-                        className="w-full"
-                        src="/assets/icons/navbar/nav-logo.svg"
-                        alt=""
-                      />
-                    </Link>
-                  )}
-                </div>
-                <div className="flex items-center">
-                  <div className={`${showOptions ? "mt-4" : ""}`}>
-                    <LocaleSwitcher locale={locale} />
-                  </div>
-                  {!showOptions && (
-                    <Image
-                      sizes="100vw"
-                      width={22}
-                      height={22}
-                      onClick={() => {
-                        setShowOptions(!showOptions);
-                      }}
-                      src="/assets/icons/navbar/NavbarToggle.svg"
-                      alt=""
-                    />
-                  )}
-                  {showOptions && (
-                    <Image
-                      sizes="100vw"
-                      width={22}
-                      height={22}
-                      onClick={() => {
-                        setShowOptions(!showOptions);
-                      }}
-                      className="mt-4"
-                      src="/assets/icons/navbar/NavbarClose.svg"
-                      alt=""
-                    />
-                  )}
-                </div>
-              </div>
-              {showOptions && (
-                <div className="flex justify-center items-center mt-10">
-                  <Link href="/">
-                    <Image
-                      sizes="100vw"
-                      width={0}
-                      height={0}
-                      className="w-full"
-                      src="/assets/icons/navbar/nav-logo.svg"
-                      alt=""
-                    />
-                  </Link>
-                </div>
-              )}
-              <div
-                className={`flex flex-col justify-start items-center  ${
-                  showOptions
-                    ? "h-auto mt-28 overflow-auto"
-                    : "h-0 overflow-hidden"
-                }`}
-              >
-                <ul className="flex flex-col w-[185px] justify-center">
-                  <div className="mb-6">
-                    <Solutions />
-                  </div>
-                  <div className="mb-6">
-                    <Company />
-                  </div>
-                  <div className="mb-6">
-                    <Resources />
-                  </div>
-                  <div className="mb-40">
-                    <Link href="/contact-team">
-                      <button className=" text-center text-white bg-brand-secondary  border border-brand-secondary py-[11px]  md:py-[15px] w-[185px] font-medium rounded-sm">
-                        {t("contact team")}
-                      </button>
-                    </Link>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </animated.div>
-        </PageLayout>
+        </div>
       </div>
-      <div className="mb-[76px] lg:hidden"></div>
+    </div>
+  );
+};
+
+const LatestNewsItem = ({ image, description }) => {
+  return (
+    <div className="p-2 w-[301px]">
+      <Image
+        sizes="100vw"
+        width={285}
+        height={160}
+        src={image}
+        className="rounded mb-4"
+      />
+      <p className="text-[14px] font-normal leading-[18px] text-primary line-clamp-2">
+        {description}
+      </p>
+    </div>
+  );
+};
+
+const LatestNews = () => {
+  return (
+    <div className="">
+      <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
+        Latest News
+      </p>
+      <div className="grid grid-cols-3 gap-6">
+        <LatestNewsItem
+          image={"/assets/images/navbar/news1.png"}
+          description={
+            "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
+          }
+        />
+        <LatestNewsItem
+          image={"/assets/images/navbar/news2.png"}
+          description={
+            "AFS Transaction Index: season-opening Bahrain GP delivers 66% surge in spends"
+          }
+        />
+        <LatestNewsItem
+          image={"/assets/images/navbar/news3.png"}
+          description={
+            "AFS enter strategic alliance with Xpence to innovate SME financial management in Bahrain"
+          }
+        />
+      </div>
+    </div>
+  );
+};
+
+const ResourcesMenu = () => {
+  const [resourcesMenuSelected, setResourcesMenuSelected] = useState("News");
+  return (
+    <div className="flex absolute bg-white top-[100px] z-[999] w-full justify-center">
+      <div className="flex w-[1312px] bg-white ">
+        <div className="w-[336px] py-8 pr-4">
+          <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
+            Resources
+          </p>
+          <MenuItem
+            title={"News & Announcements"}
+            setSelected={setResourcesMenuSelected}
+            selected={resourcesMenuSelected}
+          />
+          <MenuItem
+            title={"ESG"}
+            setSelected={setResourcesMenuSelected}
+            selected={resourcesMenuSelected}
+          />
+          <MenuItem
+            title={"Certifications"}
+            setSelected={setResourcesMenuSelected}
+            selected={resourcesMenuSelected}
+          />
+          <MenuItem
+            title={"Legal"}
+            setSelected={setResourcesMenuSelected}
+            selected={resourcesMenuSelected}
+          />
+        </div>
+        <div className="py-8 pl-6">
+          <LatestNews />
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Navbar;
-
-const Solutions = () => {
-  const locale = useLocale();
-  const t = useTranslations("Navbar");
-  const solutionsLinks = t.raw("solutions");
-  const isArabic = locale === "ar";
-
-  const solutionsDropdownRef = useRef(null);
-  const [solutionsMenu, setSolutionsMenu] = useState(false);
-
-  const handleClickOutside = (event) => {
-    if (
-      solutionsDropdownRef.current &&
-      !solutionsDropdownRef.current.contains(event.target)
-    ) {
-      setSolutionsMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
-
-  const openAnimation = useSpring({
-    from: { maxHeight: "0px" },
-    to: {
-      maxHeight: solutionsMenu ? "1000px" : "0px",
-    },
-    config: { duration: "750" },
-  });
-
-  return (
-    <div
-      className={`outline-none bg-transparent relative ${
-        isArabic ? "lg:mr-12" : "lg:ml-12"
-      }`}
-      ref={solutionsDropdownRef}
-      onMouseLeave={() => {
-        if (window.innerWidth > 1024) {
-          setSolutionsMenu(false);
-        }
-      }}
-      onMouseEnter={() => {
-        if (window.innerWidth > 1024) {
-          setSolutionsMenu(true);
-        }
-      }}
-    >
-      <button
-        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
-        onClick={() => {
-          setSolutionsMenu(!solutionsMenu);
-        }}
-      >
-        {solutionsLinks.title}
-        <Image
-          sizes="100vw"
-          width={12}
-          height={6}
-          className={`transition-all duration-200 ${
-            solutionsMenu ? "-rotate-180" : "rotate-0"
-          } ${isArabic ? "mr-2" : "ml-2"}`}
-          src="/assets/icons/navbar/chevron.svg"
-          alt=""
-        />
-      </button>
-      <animated.div
-        className={`overflow-hidden ${
-          solutionsMenu ? "lg:block" : "lg:hidden"
-        }`}
-        style={openAnimation}
-      >
-        <div className="lg:absolute top-6 text-secondary lg:rounded-md navbar-dropdown-shadow">
-          <div className="lg:p-6 lg:bg-white text-dark flex flex-col lg:flex-row justify-between lg:w-[816px] rounded-md">
-            <div>
-              <p className="text-base font-medium text-primary mt-6 ">
-                {solutionsLinks["solutions for banks"].title}
-              </p>
-
-              {solutionsLinks["solutions for banks"].links.map(
-                (item, index) => (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    className="text-[15px] block hover:underline mt-4"
-                  >
-                    {item.title}
-                  </Link>
-                )
-              )}
-            </div>
-
-            <div>
-              <p className="text-base font-medium text-primary mt-6">
-                {solutionsLinks["solutions for businesses"].title}
-              </p>
-
-              {solutionsLinks["solutions for businesses"].links.map(
-                (item, index) => (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    className="text-[15px] hover:underline block mt-4"
-                  >
-                    {item.title}
-                  </Link>
-                )
-              )}
-            </div>
-
-            <div>
-              <p className="text-base font-medium text-primary mt-6">
-                {solutionsLinks["solutions for consumer"].title}
-              </p>
-              {solutionsLinks["solutions for consumer"].links.map(
-                (item, index) => (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    className="text-[15px] hover:underline block mt-4"
-                  >
-                    {item.title}
-                  </Link>
-                )
-              )}
-            </div>
-          </div>
-        </div>
-      </animated.div>
-    </div>
-  );
-};
-
-const Company = () => {
-  const locale = useLocale();
-  const t = useTranslations("Navbar");
-  const companyLinks = t.raw("company");
-  const isArabic = locale === "ar";
-
-  const companyDropdownRef = useRef(null);
-  const [companyMenu, setCompanyMenu] = useState(false);
-
-  const handleClickOutside = (event) => {
-    if (
-      companyDropdownRef.current &&
-      !companyDropdownRef.current.contains(event.target)
-    ) {
-      setCompanyMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
-
-  const openAnimation = useSpring({
-    from: { maxHeight: "0px" },
-    to: {
-      maxHeight: companyMenu ? "200px" : "0px",
-    },
-    config: { duration: "300" },
-  });
-
-  return (
-    <div
-      className={`outline-none bg-transparent relative ${
-        isArabic ? "lg:mr-6" : "lg:ml-6"
-      }`}
-      ref={companyDropdownRef}
-      onMouseLeave={() => {
-        if (window.innerWidth > 1024) {
-          setCompanyMenu(false);
-        }
-      }}
-      onMouseEnter={() => {
-        if (window.innerWidth > 1024) {
-          setCompanyMenu(true);
-        }
-      }}
-    >
-      <button
-        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium "
-        onClick={() => {
-          setCompanyMenu(!companyMenu);
-        }}
-      >
-        {companyLinks.title}
-        <Image
-          sizes="100vw"
-          width={12}
-          height={6}
-          className={`transition-all duration-200 ${
-            isArabic ? "mr-2" : "ml-2"
-          } ${companyMenu ? "-rotate-180" : "rotate-0"}`}
-          src="/assets/icons/navbar/chevron.svg"
-          alt=""
-        />
-      </button>
-      <animated.div
-        className={`overflow-hidden ${companyMenu ? "lg:block" : "lg:hidden"}`}
-        style={openAnimation}
-      >
-        <div className="lg:absolute top-6 text-secondary navbar-dropdown-shadow lg:rounded-md">
-          <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
-            <div>
-              {companyLinks.links.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  className={`text-[15px] hover:underline whitespace-nowrap block ${
-                    index === 0 ? "mt-4 lg:mt-0" : "mt-4"
-                  }`}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </animated.div>
-    </div>
-  );
-};
-
-const Resources = () => {
-  const locale = useLocale();
-  const t = useTranslations("Navbar");
-  const resourcesLink = t.raw("resources");
-  const isArabic = locale === "ar";
-
-  const resourcesDropdownRef = useRef(null);
-  const [resourcesMenu, setResourcesMenu] = useState(false);
-
-  const handleClickOutside = (event) => {
-    if (
-      resourcesDropdownRef.current &&
-      !resourcesDropdownRef.current.contains(event.target)
-    ) {
-      setResourcesMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  });
-
-  const openAnimation = useSpring({
-    from: { maxHeight: "0px" },
-    to: {
-      maxHeight: resourcesMenu ? "200px" : "0px",
-    },
-    config: { duration: "300" },
-  });
-
-  return (
-    <div
-      className={`outline-none bg-transparent relative ${
-        isArabic ? "lg:mr-6" : "lg:ml-6"
-      }`}
-      ref={resourcesDropdownRef}
-      onMouseLeave={() => {
-        if (window.innerWidth > 1024) {
-          setResourcesMenu(false);
-        }
-      }}
-      onMouseEnter={() => {
-        if (window.innerWidth > 1024) {
-          setResourcesMenu(true);
-        }
-      }}
-    >
-      <button
-        className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
-        onClick={() => {
-          setResourcesMenu(!resourcesMenu);
-        }}
-      >
-        {resourcesLink.title}
-        <Image
-          sizes="100vw"
-          width={12}
-          height={6}
-          className={`transition-all duration-200 ${
-            isArabic ? "mr-2" : "ml-2"
-          } ${resourcesMenu ? "-rotate-180" : "rotate-0"}`}
-          src="/assets/icons/navbar/chevron.svg"
-          alt=""
-        />
-      </button>
-      <animated.div
-        className={`overflow-hidden ${
-          resourcesMenu ? "lg:block" : "lg:hidden"
-        }`}
-        style={openAnimation}
-      >
-        <div className="lg:absolute top-6 text-secondary  navbar-dropdown-shadow lg:rounded-md">
-          <div className="lg:p-6 lg:bg-white text-dark flex justify-between w-fit rounded-md">
-            <div>
-              {resourcesLink.links.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  className={`text-[15px] hover:underline whitespace-nowrap block ${
-                    index === 0 ? "mt-4 lg:mt-0" : "mt-4"
-                  }`}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </animated.div>
-    </div>
-  );
-};

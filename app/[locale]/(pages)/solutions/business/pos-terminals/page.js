@@ -4,7 +4,6 @@ import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
 import UsedTrustedBy from "app/common/UsedTrustedBy";
 import TestimonialSllider from "app/common/TestimonialSlider";
-import Faq from "app/common/Faq";
 import PageLayout from "app/common/PageLayout";
 import CommonCTA from "app/common/CommonCTA";
 
@@ -54,7 +53,8 @@ const POSTerminals = () => {
       title: "Support multiple payment methods",
       description:
         "From traditional magnetic stripe and chip cards to contactless NFC payments, our terminals accommodate various payment methods, making transactions convenient for every customer.",
-        image: "/assets/images/solutions/business/pos-terminals/support-multiple-payment-method1.png",
+      image:
+        "/assets/images/solutions/business/pos-terminals/support-multiple-payment-method1.png",
     },
     {
       title: "Secure payment experience",
