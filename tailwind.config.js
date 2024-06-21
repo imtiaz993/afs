@@ -10,7 +10,7 @@ module.exports = {
         regular: "450",
       },
       colors: {
-        primary: "#002A52", 
+        primary: "#002A52",
         secondary: "#2E577C",
         tertiary: "#6D91B2",
         "brand-primary": "#052460",

@@ -14,7 +14,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={isArabic ? "rtl" : "ltr"}>
       <body
-        style={{ fontFamily: isArabic ? "'Noto Kufi Arabic'" : "'PP Montreal'" }}
+        style={{ fontFamily: isArabic ? "'Noto Kufi Arabic' !important" : "PP Montreal" }}
       >
         <Head>
           <link
