@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
-import Subscribe from "./Subscribe";
+import NewsLetter from "app/common/NewsLetter";
+
 
 
 const AllPosts = ({ data }) => {
@@ -34,7 +35,7 @@ const AllPosts = ({ data }) => {
                   </span>
                   <div className="text-xs text-secondary space-x-2 flex items-center">
                     <span>{post.date}</span>
-                    <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
+                    <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
                     <span>{post.timeToRead}</span>
                   </div>
                 </div>
@@ -63,7 +64,7 @@ const AllPosts = ({ data }) => {
             </div>
           ))}
         </div>
-        <Subscribe />
+        <NewsLetter/>
         <div className="flex flex-col space-y-8">
           {secondPart.map((post) => (
             <div className="flex flex-column md:flex-row md:space-y-0 space-y-4  justify-between align-center md:flex-nowrap flex-wrap space-x-0 md:space-x-5 lg:space-x-10">

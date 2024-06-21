@@ -46,7 +46,7 @@ const LatestArticles = ({ data }) => {
                 </span>
                 <div className="text-xs text-secondary space-x-2 flex items-center">
                   <span>{featuredArticle.date}</span>
-                  <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
+                  <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
                   <span>{featuredArticle.timeToRead} read</span>
                 </div>
               </div>

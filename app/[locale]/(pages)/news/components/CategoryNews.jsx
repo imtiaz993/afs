@@ -47,7 +47,7 @@ const CategoryNews = ({ data, title, bg }) => {
                   <div className="text-xs text-secondary space-x-2 flex items-center">
                     <div className="text-xs text-secondary space-x-2 flex items-center">
                       <span>{featuredCategoryNews.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
+                      <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
                       <span>{featuredCategoryNews.timeToRead}</span>
                     </div>
                   </div>
