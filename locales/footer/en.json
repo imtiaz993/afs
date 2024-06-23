@@ -69,7 +69,7 @@
     "resources": {
       "title": "Resources",
       "links": [
-        { "title": "News & Announcements", "link": "/" },
+        { "title": "News & Announcements", "link": "/news" },
         { "title": "ESG", "link": "/esg" },
         { "title": "Certifications", "link": "/certifications" }
       ]

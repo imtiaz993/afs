@@ -4,11 +4,7 @@ import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
 import NewsLetter from "app/common/NewsLetter";
 
-
-
 const AllPosts = ({ data }) => {
-
-
   // Define the number of items after which the subscribe section will be shown
   const SUBSCRIBE_SECTION_INDEX = 4;
 
@@ -40,7 +36,7 @@ const AllPosts = ({ data }) => {
                   </div>
                 </div>
 
-                <Link href="/">
+                <Link href={post.newsLink}>
                   <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral max-w-full">
                     {post.title}
                   </h4>
@@ -50,7 +46,7 @@ const AllPosts = ({ data }) => {
               </div>
 
               <div className="w-full md:w-[300px] lg:w-[350px] xl:w-[416px]">
-                <Link href="/">
+                <Link href={post.newsLink}>
                   <Image
                     sizes="100vw"
                     width={0}

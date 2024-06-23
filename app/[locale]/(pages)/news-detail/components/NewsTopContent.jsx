@@ -5,7 +5,7 @@ import PageLayout from "app/common/PageLayout";
 const NewsTopContent = () => {
   return (
     <div>
-      <div className="pt-16  pb-40 lg:pb-80 bg-subtle-neutral">
+      <div className="pt-16  pb-40 md:pb-80 bg-subtle-neutral">
         <PageLayout>
           <div className="max-w-100 xl:max-w-[864px] mx-auto flex flex-col space-y-6">
             <Link href="/" className="flex items-center space-x-4">

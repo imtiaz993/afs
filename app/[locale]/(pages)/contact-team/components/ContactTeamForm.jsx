@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import MultiSelect from "react-select";
 import tailwindConfig from "../../../../../tailwind.config";
 import InputField from "app/common/form-components/InputField";
-import Select from "app/common/form-components/Select";
 import TextArea from "app/common/form-components/TextArea";
 import CheckBoxField from "app/common/form-components/CheckBoxField";
 
@@ -142,7 +141,9 @@ const ContactTeamForm = () => {
             <div className="">
               <MultiSelect
                 placeholder={
-                  <p className="text-tertiary">Chose your location(s) *</p>
+                  <p className="text-tertiary">
+                    Chose your company location(s) *
+                  </p>
                 }
                 isMulti={true}
                 options={[
@@ -162,7 +163,7 @@ const ContactTeamForm = () => {
                     ...baseStyles,
                     borderColor: tailwindColorsModule.borderColor.default,
                     borderRadius: 2,
-                    height: 50,
+                    minHeight: 50,
                     paddingLeft: 8,
                   }),
                 }}
@@ -215,7 +216,7 @@ const ContactTeamForm = () => {
                     ...baseStyles,
                     borderColor: tailwindColorsModule.borderColor.default,
                     borderRadius: 2,
-                    height: 50,
+                    minHeight: 50,
                     paddingLeft: 8,
                   }),
                 }}

@@ -1,15 +1,9 @@
 "use client";
-
-import { useState } from "react";
 import NewsCommonBanner from "./NewsCommonBanner";
 import LatestArticles from "./LatestArticles";
 import CategoryNews from "./CategoryNews";
+import { allPostsData } from "../allPostsData";
 import AllPosts from "./AllPosts";
-import { latestArticleData } from "../LatestArticleData";
-import { companyAnnouncementData } from "../companyAnnouncementData";
-import { caseStudiesData } from "../caseStudiesData";
-import { productNewsData } from "../productNewsData";
-import { allPostsData } from "../allPostData";
 
 const NewsMainPage = () => {
   const newsCategoriesData = [
@@ -23,22 +17,18 @@ const NewsMainPage = () => {
     "Acquiring",
     "Partnerships",
   ];
-  const [categoryNews, setCategoryNews] = useState("Allposts");
+
   return (
     <>
       <NewsCommonBanner categories={newsCategoriesData} />
-      <LatestArticles data={latestArticleData} />
+      <LatestArticles latestNews={allPostsData} />
       <CategoryNews
-        title="Company announcements"
-        data={companyAnnouncementData}
+        posts={allPostsData}
+        category="Company announcements"
         bg="bg-subtle-neutral"
       />
-      <CategoryNews title="Case studies" data={caseStudiesData} bg="bg-white" />
-      <CategoryNews
-        title="Product news"
-        data={productNewsData}
-        bg="bg-subtle-neutral"
-      />
+      <CategoryNews posts={allPostsData} bg="bg-white"  category="Case studies" />
+      <CategoryNews posts={allPostsData} bg="bg-subtle-neutral"  category="Product news"/>
       <AllPosts data={allPostsData} />
     </>
   );

@@ -1,5 +1,4 @@
 import PageLayout from "app/common/PageLayout";
-import Image from "next/image";
 const NewsTestimonial = () => {
   return (
     <PageLayout>

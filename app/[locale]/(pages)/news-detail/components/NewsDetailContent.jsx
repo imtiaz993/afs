@@ -9,7 +9,7 @@ const NewsDetailContent = () => {
   return (
     <div>
       <NewsTopContent />
-      <div className="pb-12 pt-24 lg:pt-52 bg-white">
+      <div className="pb-12 pt-24  md:pt-40 lg:pt-52 bg-white">
         <PageLayout>
           <div className="max-w-100 xl:max-w-[864px] mx-auto">
             <h2 className="text-[32px] lg:text-5xl !leading-[120%] text-primary mb-7">
@@ -88,7 +88,7 @@ const NewsDetailContent = () => {
       <NewsTestimonial />
 
       <PageLayout>
-        <div className="max-w-100 xl:max-w-[864px] mx-auto">
+        <div className="max-w-100 xl:max-w-[864px] mx-auto pb-24">
           <p className="text-primary leading-7 text-lg mb-4">
             “Arab Financial Services is thrilled to embark on a strategic
             partnership with ACI Worldwide. As the payments landscape becomes
