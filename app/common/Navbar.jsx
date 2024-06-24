@@ -176,6 +176,12 @@ const Navbar = () => {
       {mobileMenu.currentMenu == "solutions-overview" && (
         <MobileSolutionsOverviewMenu setState={setMobileMenu} />
       )}
+      {mobileMenu.currentMenu == "company-menu" && (
+        <MobileCompanyMenu setState={setMobileMenu} />
+      )}
+      {mobileMenu.currentMenu == "resources-menu" && (
+        <MobileResourcesMenu setState={setMobileMenu} />
+      )}
     </div>
   );
 };
@@ -565,17 +571,23 @@ const CompanyMenu = () => {
   );
 };
 
-const LatestNewsItem = ({ image, description }) => {
+const LatestNewsItem = ({ image, description, mobile }) => {
   return (
-    <div className="p-2 w-[301px]">
+    <div className={`${mobile ? "w-full p-4" : "w-[301px] p-2"}`}>
       <Image
         sizes="100vw"
-        width={285}
-        height={160}
+        width={0}
+        height={0}
         src={image}
-        className="rounded mb-4"
+        className={`${
+          mobile ? "w-full min-h-[200px]" : "w-[285px] h-[160px]"
+        } rounded mb-4`}
       />
-      <p className="text-[14px] font-normal leading-[18px] text-primary line-clamp-2">
+      <p
+        className={` ${
+          mobile ? "text-[16px] leading-[24px]" : "text-[14px] leading-[18px]"
+        } font-normal  text-primary line-clamp-2`}
+      >
         {description}
       </p>
     </div>
@@ -683,7 +695,7 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
 
 const MobileMainMenu = ({ setState }) => {
   return (
-    <div className=" flex flex-col justify-between absolute bg-white top-[80px] z-[-1] w-full h-[calc(100vh-80px)]">
+    <div className="flex flex-col justify-between absolute bg-white top-[80px] z-[-1] w-full h-[calc(100vh-80px)]">
       <div>
         <MobileMenuItem
           title="Solutions"
@@ -714,7 +726,7 @@ const MobileMainMenu = ({ setState }) => {
 
 const MobileSolutionsMenu = ({ setState }) => {
   return (
-    <div className="bg-white top-[80px] z-[-1] w-full h-screen">
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -745,9 +757,9 @@ const MobileSolutionsMenu = ({ setState }) => {
   );
 };
 
-const MobileSolutionsOverviewMenu = ({ setState }) => {
+const MobileSolutionsOverviewMenu = () => {
   return (
-    <div className="bg-white top-[80px] z-[-1] w-full h-screen">
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -762,4 +774,83 @@ const MobileSolutionsOverviewMenu = ({ setState }) => {
   );
 };
 
+const MobileCompanyMenu = () => {
+  return (
+    <div className="absolute bg-white z-[-1] w-full h-screen overflow-auto">
+      <h4 className="text-primary text-[20px] font-normal leading-[26px] py-6 px-4 border-b border-default">
+        Our company provides numerous end-to-end digital payment products,
+        services and solutions to banks, businesses, and consumers.
+      </h4>
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Company
+      </p>
+      <div className="border-b border-default">
+        <ImageSubMenuItem
+          image={"/assets/images/navbar/solutions-overview.png"}
+          title={"About us"}
+          description={
+            "Read our journey to become region’s leading digital payment solutions provider."
+          }
+          link={"/about"}
+          mobile={true}
+        />
+      </div>
+      <div className="pt-4 px-2 pb-6 flex flex-col gap-4">
+        <SubMenuItem
+          title={"Investor relations"}
+          description={"Building trust and driving value."}
+          link={"/investor-relations"}
+        />
+        <SubMenuItem
+          title={"Careers"}
+          description={"Join us as."}
+          link={"/careers"}
+        />
+        <SubMenuItem
+          title={"Contact us"}
+          description={"How can we help?"}
+          link={"/contact"}
+        />
+      </div>
+    </div>
+  );
+};
+
+const MobileResourcesMenu = () => {
+  return (
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Resources
+      </p>
+      <MobileMenuItem title="News & Announcements" />
+      <MobileMenuItem title="ESG" />
+      <MobileMenuItem title="Certifications" />
+      <MobileMenuItem title="Legal" />
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        From the blog
+      </p>
+      <LatestNewsItem
+        image={"/assets/images/navbar/news1.png"}
+        description={
+          "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
+        }
+        mobile={true}
+      />
+      <LatestNewsItem
+        image={"/assets/images/navbar/news2.png"}
+        description={
+          "AFS Transaction Index: season-opening Bahrain GP delivers 66% surge in spends"
+        }
+        mobile={true}
+      />
+      <LatestNewsItem
+        image={"/assets/images/navbar/news3.png"}
+        description={
+          "AFS enter strategic alliance with Xpence to innovate SME financial management in Bahrain"
+        }
+        mobile={true}
+      />
+    </div>
+  );
+};
 export default Navbar;

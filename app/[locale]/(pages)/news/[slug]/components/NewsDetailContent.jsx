@@ -9,7 +9,7 @@ const NewsDetailContent = ({ slug }) => {
   return (
     <div>
       <NewsTopContent data={data} />
-      <div className="py-8 xl:py-16 bg-white">
+      <div className="pt-32 md:pt-40 lg:pt-60 xl:pt-96 mt-10 md:mt-16 lg:mt-20 bg-white">
         <PageLayout>
           <div className="max-w-100 xl:max-w-[864px] mx-auto">
             {data?.content.map((paragraph) => (
@@ -22,7 +22,7 @@ const NewsDetailContent = ({ slug }) => {
       </div>
 
       <PageLayout>
-        <div className="max-w-100 xl:max-w-[864px] mx-auto pb-24">
+        <div className="max-w-100 xxl:max-w-[864px] mx-auto pb-24">
           <div className="flex justify-between items-center">
             <Link href="/">
               <Image
