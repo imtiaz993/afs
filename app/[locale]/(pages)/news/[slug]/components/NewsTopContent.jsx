@@ -4,10 +4,10 @@ import PageLayout from "app/common/PageLayout";
 
 const NewsTopContent = ({ data }) => {
   return (
-    <div>
-      <div className="pt-16  pb-40 md:pb-80 bg-subtle-neutral">
+    <>
+      <div className="pt-16 pb-0 bg-subtle-neutral">
         <PageLayout>
-          <div className="max-w-100 xl:max-w-[864px] mx-auto flex flex-col space-y-6">
+          <div className="max-w-100 xl:max-w-[864px] mx-auto flex flex-col space-y-6 pb-7 xl:pb-14 ">
             <Link href="/news" className="flex items-center space-x-4">
               <div className="w-6 h-6 rounded-sm grid place-content-center bg-surface-neutral">
                 <Image
@@ -41,23 +41,20 @@ const NewsTopContent = ({ data }) => {
             </div>
           </div>
         </PageLayout>
-      </div>
-
-      <div className="">
         <PageLayout>
-          <div className="mt-16 max-w-100 xl:max-w-[864px] mx-auto relative">
+          <div className="max-w-100 mx-auto h-auto xl:h-[750px] relative">
             <Image
               sizes="100vw"
               width={0}
               height={0}
               src={data?.image}
               alt={data?.title}
-              className="w-full max-h-auto xl:max-h-[750px] rounded absolute top-0 transform -translate-y-3/4 lg:-translate-y-2/3"
+              className="w-full h-full object-contain xl:object-cover rounded"
             />
           </div>
         </PageLayout>
       </div>
-    </div>
+    </>
   );
 };
 

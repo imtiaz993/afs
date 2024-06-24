@@ -49,7 +49,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
                   sizes="100vw"
                   width={0}
                   height={0}
-                  className="w-full min-h-[360px] object-cover rounded"
+                  className="w-full lg:min-h-[360px] object-cover rounded"
                   src={firstArticle.image}
                   alt={firstArticle.title}
                 />
@@ -63,7 +63,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
                 </div>
               </div>
 
-              <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-2">
+              <h4 className="text-xl sm:text-2xl !leading-[120%] text-primary mb-4 max-w-full lg:max-w-md line-clamp-2">
                 {firstArticle.title}
               </h4>
 
@@ -89,7 +89,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
                   </div>
                 </div>
 
-                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-2">
+                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-1">
                   {article.title}
                 </h4>
 

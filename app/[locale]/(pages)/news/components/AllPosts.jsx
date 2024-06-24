@@ -36,7 +36,7 @@ const AllPosts = ({ data, category }) => {
                 </div>
 
                 <Link href={pathname + "/" + post.slug}>
-                  <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral max-w-full">
+                  <h4 className="text-xl xl:text-2xl !leading-[120%] text-primary max-w-full line-clamp-2">
                     {post.title}
                   </h4>
                 </Link>
@@ -52,7 +52,7 @@ const AllPosts = ({ data, category }) => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    className="w-full md:max-h-[233px] rounded object-cover"
+                    className="w-full md:h-[233px] rounded object-cover"
                     src={post.image}
                     alt={post.title}
                   />
@@ -78,7 +78,7 @@ const AllPosts = ({ data, category }) => {
                 </div>
 
                 <Link href={pathname + "/" + post.slug}>
-                  <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral max-w-full">
+                  <h4 className="text-xl xl:text-2xl !leading-[120%] text-primary max-w-full line-clamp-2">
                     {post.title}
                   </h4>
                 </Link>
@@ -94,7 +94,7 @@ const AllPosts = ({ data, category }) => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    className="w-full md:max-h-[233px] rounded object-cover"
+                    className="w-full md:h-[233px] rounded object-cover"
                     src={post.image}
                     alt={post.title}
                   />

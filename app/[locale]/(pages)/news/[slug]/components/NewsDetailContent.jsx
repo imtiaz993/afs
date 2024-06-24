@@ -9,7 +9,7 @@ const NewsDetailContent = ({ slug }) => {
   return (
     <div>
       <NewsTopContent data={data} />
-      <div className="pb-12 pt-24  md:pt-40 lg:pt-52 bg-white">
+      <div className="py-8 xl:py-16 bg-white">
         <PageLayout>
           <div className="max-w-100 xl:max-w-[864px] mx-auto">
             {data?.content.map((paragraph) => (
