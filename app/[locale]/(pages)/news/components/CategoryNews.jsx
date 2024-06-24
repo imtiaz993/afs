@@ -49,7 +49,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
                   sizes="100vw"
                   width={0}
                   height={0}
-                  className="w-full max-h-[360px] object-cover rounded"
+                  className="w-full min-h-[360px] object-cover rounded"
                   src={firstArticle.image}
                   alt={firstArticle.title}
                 />
@@ -78,7 +78,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
             {articles.map((article, index) => (
               <Link
                 key={article.id}
-                className="pb-8 mb-8 border-b border-default"
+                className="pb-8 mb-8 border-b border-default block last:border-b-0 "
                 href={pathname + "/" + article.slug}
               >
                 <div className="flex items-center space-x-2 mb-4">

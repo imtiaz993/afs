@@ -29,22 +29,25 @@ const LatestArticles = ({ data, setCategory }) => {
           </button>
         </div>
 
-        <div className="flex md:flex-row flex-column space-y-4  md:spce-y-0 justify-between md:space-x-8 flex-wrap md:flex-nowrap">
-          <div className="w-full lg:max-[864px]:">
-            <Link href={pathname + "/" + data[0].slug}>
+        <div className="flex flex-column  md:flex-row  space-y-4 md:spce-y-0 justify-between xl:space-x-8 lg:space-x-4 flex-wrap md:flex-nowrap">
+          <div className="max-w-full  lg:max-w-[600px] xl:max-w-[864px] w-full lg:w-3/5 xl:w-3/4">
+            <Link
+              href={pathname + "/" + data[0].slug}
+              className="block h-full w-full"
+            >
               <Image
                 sizes="100vw"
                 width={0}
                 height={0}
-                className="w-full md:max-h-[480px] rounded"
+                className="w-full h-auto md:max-h-[480px] rounded object-cover"
                 src={data[0].image}
                 alt={data[0].title}
               />
             </Link>
           </div>
-          <div className="w-full md:w-auto space-y-4">
+          <div className="w-100 lg:w-2/5  xl:w-1/4 space-y-4 ">
             <div className="flex items-center space-x-2">
-              <span className="subtle-neutral text-dark-neutral text-sm font-normal me-2 px-2 py-1 rounded bg-subtle-neutral">
+              <span className="subtle-neutral text-dark-neutral text-sm font-normal px-2 py-1 rounded bg-subtle-neutral">
                 {data[0].newsCategory}
               </span>
               <div className="text-xs text-secondary space-x-2 flex items-center">
@@ -78,18 +81,18 @@ const LatestArticles = ({ data, setCategory }) => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    className="w-full max-h-[231px] object-cover rounded"
+                    className="w-full min-h-[231px] object-cover rounded"
                     src={article.image}
                     alt={article.title}
                   />
                 </div>
 
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="text-xs text-secondary md:space-x-1 xl:space-x-2 flex items-center">
+                  <div className="text-xs text-secondary space-x-2 flex items-center">
                     <span className="subtle-neutral text-dark-neutral text-sm font-normal px-2 py-1 rounded bg-subtle-neutral">
                       {article.newsCategory}
                     </span>
-                    <div className="text-xs text-secondary md:space-x-1 xl:space-x-2 flex items-center">
+                    <div className="text-xs text-secondary space-x-2 flex items-center">
                       <span>{article.date}</span>
                       <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
                       <span>{article.timeToRead} read</span>
