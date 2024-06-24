@@ -1,7 +1,11 @@
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
 
-const NewsCommonBanner = ({ categories }) => {
+const NewsCommonBanner = ({
+  categoriesList,
+  selectedCategory,
+  setCategory,
+}) => {
   return (
     <div className="py-8 lg:py-16 bg-subtle-neutral">
       <PageLayout>
@@ -33,10 +37,16 @@ const NewsCommonBanner = ({ categories }) => {
         </form>
 
         <div className="flex flex-wrap space-x-1 5 items-center mt-6">
-          {categories.map((category) => (
+          {categoriesList.map((category) => (
             <button
               type="button"
-              className="text-primary leading-[18px] font-normal bg-white border border-[surface-neutral] rounded-sm text-sm px-5 py-2.5 text-center mb-2"
+              className={`${
+                selectedCategory == category
+                  ? "text-white bg-medium-brand"
+                  : "text-primary bg-white"
+              } leading-[18px] font-normal  border border-[surface-neutral] rounded-sm text-sm px-5 py-2.5 text-center mb-2`}
+              key={category}
+              onClick={() => setCategory(category)}
             >
               {category}
             </button>

@@ -1,49 +1,17 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import PageLayout from "app/common/PageLayout";
 
-const CategoryNews = ({ posts, bg, category }) => {
-  const [articles, setArticles] = useState([]);
+const CategoryNews = ({ posts, bg, category, setCategory }) => {
+  const pathname = usePathname();
 
-  useEffect(() => {
-    // Simulated fetching of articles (replace with actual async fetch if needed)
-    const fetchData = async () => {
-      try {
-        console.log("Posts:", posts); // Log posts to check if data is received
-        setArticles(posts);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  const filteredPosts = posts.filter((item) => item.newsCategory == category);
+  const sortedByLatest = filteredPosts.sort((a, b) => b.id - a.id);
+  const firstArticle = sortedByLatest[0];
+  const articles = sortedByLatest.slice(1, 4);
 
-    fetchData();
-  }, []);
-
-    // Example category selection (replace with actual logic to select category)
-    const selectedCategory = category;
-
-
-  // Function to find the latest featured article in a given category
-  const findFeaturedArticle = (category) => {
-    return articles
-      .filter((article) => article.newsCategory === category && article.isFeatured)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-  };
-
-  // Function to find latest 3 non-featured articles in a given category
-  const findLatestArticles = (category) => {
-    return articles
-      .filter((article) => article.newsCategory === category && !article.isFeatured)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-      .slice(0, 3);
-  };
-
-
-  // Find featured and other articles in selected category
-  const featuredArticle = findFeaturedArticle(selectedCategory);
-  const otherArticles = findLatestArticles(selectedCategory);
-
+  // console.log("firstarticles >>", filteredPosts);
   return (
     <div className={`py-10 lg:py-24 ${bg}`}>
       <PageLayout>
@@ -51,7 +19,12 @@ const CategoryNews = ({ posts, bg, category }) => {
           <h3 className="text-2xl lg:text-[40px] text-dark-neutral">
             {category}
           </h3>
-          <Link href="/">
+          <button
+            onClick={() => {
+              setCategory(category);
+              window.scrollTo(0, 0);
+            }}
+          >
             <span className="text-brand-secondary text-base font-medium">
               See All
             </span>
@@ -63,55 +36,50 @@ const CategoryNews = ({ posts, bg, category }) => {
               alt="Right Arrow"
               className="inline ms-2"
             />
-          </Link>
+          </button>
         </div>
         <div className="lg:flex justify-between">
-          {featuredArticle && (
-            <div className="lg:w-1/2">
-              <Link
-                href={featuredArticle.newsLink}
-                className="flex flex-col space-y-4"
-              >
-                <div>
-                  <Image
-                    sizes="100vw"
-                    width={0}
-                    height={0}
-                    className="w-full max-h-[360px] object-cover rounded"
-                    src={featuredArticle.image}
-                    alt={featuredArticle.title}
-                  />
+          <div className="lg:w-1/2">
+            <Link
+              href={pathname + "/" + firstArticle.slug}
+              className="flex flex-col space-y-4"
+            >
+              <div>
+                <Image
+                  sizes="100vw"
+                  width={0}
+                  height={0}
+                  className="w-full max-h-[360px] object-cover rounded"
+                  src={firstArticle.image}
+                  alt={firstArticle.title}
+                />
+              </div>
+
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="text-xs text-secondary space-x-2 flex items-center">
+                  <span>{firstArticle.date}</span>
+                  <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
+                  <span>{firstArticle.timeToRead}</span>
                 </div>
+              </div>
 
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="text-xs text-secondary space-x-2 flex items-center">
-                    <span>{featuredArticle.date}</span>
-                    <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
-                    <span>{featuredArticle.timeToRead}</span>
-                  </div>
-                </div>
+              <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-2">
+                {firstArticle.title}
+              </h4>
 
-                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md">
-                  {featuredArticle.title}
-                </h4>
-
-                <p className="text-base text-secondary">
-                  {featuredArticle.description}
-                </p>
-              </Link>
-            </div>
-          )}
+              <p className="text-base text-secondary line-clamp-2">
+                {firstArticle.content[0]}
+              </p>
+            </Link>
+          </div>
 
           {/* Render latest 3 non-featured articles */}
           <div className="mt-16 lg:mt-0 lg:w-2/5">
-            {otherArticles.map((article, index) => (
-              <div
+            {articles.map((article, index) => (
+              <Link
                 key={article.id}
-                className={`pb-8 mb-8 ${
-                  index === otherArticles.length - 1
-                    ? "lg:border-b"
-                    : "border-b"
-                } border-default`}
+                className="pb-8 mb-8 border-b border-default"
+                href={pathname + "/" + article.slug}
               >
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="text-xs text-secondary space-x-2 flex items-center">
@@ -121,14 +89,14 @@ const CategoryNews = ({ posts, bg, category }) => {
                   </div>
                 </div>
 
-                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md">
+                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-2">
                   {article.title}
                 </h4>
 
-                <p className="text-lg overflow-hidden whitespace-nowrap text-ellipsis !leading-7 text-secondary">
-                  {article.description}
+                <p className="text-lg overflow-hidden !leading-7 text-secondary line-clamp-2">
+                  {article.content[0]}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

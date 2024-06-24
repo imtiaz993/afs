@@ -1,41 +1,12 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import PageLayout from "app/common/PageLayout";
-const LatestArticles = ({ latestNews }) => {
-  const [data, setData] = useState([]);
-  const [latestArticles, setLatestArticles] = useState([]);
-  const [latestFeatured, setLatestFeatured] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      setData(latestNews);
-    };
 
-    fetchData();
-    
-  }, []);
+const LatestArticles = ({ data, setCategory }) => {
+  const pathname = usePathname();
+  const remainingFourData = data.slice(1, 4);
 
-  useEffect(() => {
-    if (data.length > 0) {
-      // Filter for featured items
-      const featuredData = data.filter((item) => item.isFeatured);
-      // Sort the filtered data by date in descending order
-      const sortedFeaturedData = featuredData.sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
-      );
-      // Set the latest featured item
-      setLatestFeatured(sortedFeaturedData[0]);
-
-      // Filter out featured items
-      const nonFeaturedData = data.filter((item) => !item.isFeatured);
-      // Sort the non-featured data by date in descending order
-      const sortedNonFeaturedData = nonFeaturedData.sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
-      );
-      // Get the latest 3 non-featured articles
-      setLatestArticles(sortedNonFeaturedData.slice(0, 3));
-    }
-  }, [data]);
   return (
     <div className="py-12 lg:py-24 bg-white">
       <PageLayout>
@@ -43,7 +14,7 @@ const LatestArticles = ({ latestNews }) => {
           <h3 className="text-2xl xl:text-[40px] text-dark-neutral">
             Latest articles
           </h3>
-          <Link href="/">
+          <button onClick={() => setCategory("Latest articles")}>
             <span className="text-brand-secondary text-base font-medium">
               See All
             </span>
@@ -55,51 +26,53 @@ const LatestArticles = ({ latestNews }) => {
               alt="Right Arrow"
               className="inline ms-2"
             />
-          </Link>
+          </button>
         </div>
-        {latestFeatured && (
-          <div className="flex md:flex-row flex-column space-y-4  md:spce-y-0 justify-between md:space-x-8 flex-wrap md:flex-nowrap">
-            <div className="w-full lg:max-[864px]:">
-              <Link href={latestFeatured.newsLink}>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-full md:max-h-[480px] rounded"
-                  src={latestFeatured.image}
-                  alt={latestFeatured.title}
-                />
-              </Link>
-            </div>
-            <div className="w-full md:w-auto space-y-4">
-              <div className="flex items-center space-x-2">
-                <span className="subtle-neutral text-dark-neutral text-sm font-normal me-2 px-2 py-1 rounded bg-subtle-neutral">
-                  {latestFeatured.newsCategory}
-                </span>
-                <div className="text-xs text-secondary space-x-2 flex items-center">
-                  <span>{latestFeatured.date}</span>
-                  <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
-                  <span>{latestFeatured.timeToRead} read</span>
-                </div>
-              </div>
 
-              <Link href={latestFeatured.newsLink}>
-                <h3 className="text-2xl xl:text-[40px] leading-[120%] text-dark-neutral max-w-full lg:max-w-md">
-                  {latestFeatured.title}
-                </h3>
-              </Link>
-
-              <p className="text-lg text-secondary">
-                {latestFeatured.description}
-              </p>
-            </div>
+        <div className="flex md:flex-row flex-column space-y-4  md:spce-y-0 justify-between md:space-x-8 flex-wrap md:flex-nowrap">
+          <div className="w-full lg:max-[864px]:">
+            <Link href={pathname + "/" + data[0].slug}>
+              <Image
+                sizes="100vw"
+                width={0}
+                height={0}
+                className="w-full md:max-h-[480px] rounded"
+                src={data[0].image}
+                alt={data[0].title}
+              />
+            </Link>
           </div>
-        )}
+          <div className="w-full md:w-auto space-y-4">
+            <div className="flex items-center space-x-2">
+              <span className="subtle-neutral text-dark-neutral text-sm font-normal me-2 px-2 py-1 rounded bg-subtle-neutral">
+                {data[0].newsCategory}
+              </span>
+              <div className="text-xs text-secondary space-x-2 flex items-center">
+                <span>{data[0].date}</span>
+                <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
+                <span>{data[0].timeToRead} read</span>
+              </div>
+            </div>
+
+            <Link href={pathname + "/" + data[0].slug}>
+              <h3 className="text-2xl xl:text-[40px] leading-[120%] text-dark-neutral max-w-full lg:max-w-md line-clamp-5">
+                {data[0].title}
+              </h3>
+            </Link>
+
+            <p className="text-lg text-secondary line-clamp-2">
+              {data[0].content[0]}
+            </p>
+          </div>
+        </div>
 
         <div className="mt-10 flex md:flex-row flex-column space-y-10 md:space-y-0 md:space-x-4 xl:space-x-8 flex-wrap md:flex-nowrap">
-          {latestArticles.map((article) => (
+          {remainingFourData.map((article) => (
             <div className="flex flex-col w-full md:w-2/4 xl:w-1/3">
-              <Link href={article.newsLink} className="flex flex-col space-y-4">
+              <Link
+                href={pathname + "/" + article.slug}
+                className="flex flex-col space-y-4"
+              >
                 <div key={article}>
                   <Image
                     sizes="100vw"
@@ -124,12 +97,12 @@ const LatestArticles = ({ latestNews }) => {
                   </div>
                 </div>
 
-                <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md">
+                <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-2">
                   {article.title}
                 </h4>
 
-                <p className="text-base text-secondary">
-                  {article.description}
+                <p className="text-base text-secondary line-clamp-2">
+                  {article.content[0]}
                 </p>
               </Link>
             </div>

@@ -1,13 +1,13 @@
-import Navbar from "app/common/Navbar"
+import Navbar from "app/common/Navbar";
 import NewsMainPage from "./components/NewsMainPage";
 
 const News = () => {
   return (
     <>
-    <Navbar />
-    <NewsMainPage/>
+      <Navbar />
+      <NewsMainPage/>
     </>
-  )
-}
+  );
+};
 
 export default News;

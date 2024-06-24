@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "app/common/Navbar";
 import PageLayout from "app/common/PageLayout";
 import CareerDetailHero from "./components/CareerDetailHero";

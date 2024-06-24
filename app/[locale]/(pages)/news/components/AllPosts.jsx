@@ -1,25 +1,24 @@
-
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import PageLayout from "app/common/PageLayout";
 import NewsLetter from "app/common/NewsLetter";
 
-const AllPosts = ({ data }) => {
+const AllPosts = ({ data, category }) => {
+  const pathname = usePathname();
   // Define the number of items after which the subscribe section will be shown
   const SUBSCRIBE_SECTION_INDEX = 4;
 
   // Split the news items into two parts
   const firstPart = data.slice(0, SUBSCRIBE_SECTION_INDEX);
- 
 
   const secondPart = data.slice(SUBSCRIBE_SECTION_INDEX);
-
 
   return (
     <div className="py-12 lg:py-24 bg-white">
       <PageLayout>
         <h3 className="text-2xl xl:text-[40px] text-dark-neutral md:mb-12 mb-6">
-          All posts
+          {category == "All" ? "All posts" : category}
         </h3>
         <div className="flex flex-col md:space-y-8 space-y-16">
           {firstPart.map((post) => (
@@ -36,17 +35,19 @@ const AllPosts = ({ data }) => {
                   </div>
                 </div>
 
-                <Link href={post.newsLink}>
+                <Link href={pathname + "/" + post.slug}>
                   <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral max-w-full">
                     {post.title}
                   </h4>
                 </Link>
 
-                <p className="text-lg text-secondary">{post.description}</p>
+                <p className="text-lg text-secondary line-clamp-2">
+                  {post.content[0]}
+                </p>
               </div>
 
               <div className="w-full md:w-[300px] lg:w-[350px] xl:w-[416px]">
-                <Link href={post.newsLink}>
+                <Link href={pathname + "/" + post.slug}>
                   <Image
                     sizes="100vw"
                     width={0}
@@ -60,7 +61,7 @@ const AllPosts = ({ data }) => {
             </div>
           ))}
         </div>
-        <NewsLetter/>
+        <NewsLetter />
         <div className="flex flex-col space-y-8">
           {secondPart.map((post) => (
             <div className="flex flex-column md:flex-row md:space-y-0 space-y-4  justify-between align-center md:flex-nowrap flex-wrap space-x-0 md:space-x-5 lg:space-x-10">
@@ -76,17 +77,19 @@ const AllPosts = ({ data }) => {
                   </div>
                 </div>
 
-                <Link href="/">
+                <Link href={pathname + "/" + post.slug}>
                   <h4 className="text-xl xl:text-2xl !leading-[120%] text-dark-neutral max-w-full">
                     {post.title}
                   </h4>
                 </Link>
 
-                <p className="text-lg text-secondary">{post.description}</p>
+                <p className="text-lg text-secondary line-clamp-2">
+                  {post.content[0]}
+                </p>
               </div>
 
               <div className="w-full md:w-[300px] lg:w-[350px] xl:w-[416px]">
-                <Link href="/">
+                <Link href={pathname + "/" + post.slug}>
                   <Image
                     sizes="100vw"
                     width={0}
