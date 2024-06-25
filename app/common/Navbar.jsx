@@ -39,16 +39,53 @@ const Navbar = () => {
           <PageLayout>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
-                <Link href="/">
-                  <Image
-                    sizes="100vw"
-                    width={0}
-                    height={0}
-                    className="w-[66.66px] xl:w-[73.3px] h-[40px] xl:h-[44px]"
-                    src="/assets/icons/navbar/nav-logo.svg"
-                    alt=""
-                  />
-                </Link>
+                {mobileMenu?.stack.length < 1 ? (
+                  <Link href="/">
+                    <Image
+                      sizes="100vw"
+                      width={0}
+                      height={0}
+                      className="w-[66.66px] xl:w-[73.3px] h-[40px] xl:h-[44px]"
+                      src="/assets/icons/navbar/nav-logo.svg"
+                      alt=""
+                    />
+                  </Link>
+                ) : (
+                  <button
+                    className="h-[40px]"
+                    onClick={() => {
+                      setMobileMenu((prevState) => {
+                        const array = [...prevState.stack];
+                        const newArray = array.slice(0, -1);
+                        let newCurrentMenu = array[array.length - 1];
+
+                        if (!newCurrentMenu) newCurrentMenu = "";
+
+                        const newState = {
+                          ...prevState,
+                          stack: newArray,
+                          currentMenu: newCurrentMenu,
+                        };
+                        console.log("newState >> ", newState);
+                        return newState;
+                      });
+                    }}
+                  >
+                    <div className="flex">
+                      <Image
+                        sizes="100vw"
+                        width={16}
+                        height={16}
+                        src="/assets/icons/navbar/arrow-right.svg"
+                        alt="arrow-left"
+                        className="rotate-180"
+                      />
+                      <p className="text-[1lpx] font-medium leading-[24px] text-primary ml-2">
+                        Back
+                      </p>
+                    </div>
+                  </button>
+                )}
                 <div className="hidden xl:flex">
                   <div className={`${isArabic ? "lg:mr-12" : "lg:ml-12"}`}>
                     <button
@@ -143,19 +180,20 @@ const Navbar = () => {
                 onClick={() =>
                   setMobileMenu((prevMenu) => ({
                     ...prevMenu,
-                    currentMenu: prevMenu.currentMenu == "" ? "main-menu" : "",
+                    stack: [],
+                    currentMenu: prevMenu?.currentMenu == "" ? "main-menu" : "",
                   }))
                 }
               >
                 <p className="text-[16px] font-medium leading-[24px] text-primary mr-2">
-                  {mobileMenu.currentMenu.length == 0 ? "Menu" : "Close"}
+                  {mobileMenu?.currentMenu.length == 0 ? "Menu" : "Close"}
                 </p>
                 <Image
                   sizes="100vw"
                   width={32}
                   height={22}
                   src={`/assets/icons/navbar/NavbarToggle${
-                    mobileMenu.currentMenu.length == 0 ? "" : "2"
+                    mobileMenu?.currentMenu.length == 0 ? "" : "2"
                   }.svg`}
                   alt=""
                 />
@@ -167,20 +205,29 @@ const Navbar = () => {
       {navbarMenu == "Solutions" && <SolutionsMenu />}
       {navbarMenu == "Company" && <CompanyMenu />}
       {navbarMenu == "Resources" && <ResourcesMenu />}
-      {mobileMenu.currentMenu == "main-menu" && (
+      {mobileMenu?.currentMenu == "main-menu" && (
         <MobileMainMenu setState={setMobileMenu} />
       )}
-      {mobileMenu.currentMenu == "solutions-menu" && (
+      {mobileMenu?.currentMenu == "solutions-menu" && (
         <MobileSolutionsMenu setState={setMobileMenu} />
       )}
-      {mobileMenu.currentMenu == "solutions-overview" && (
+      {mobileMenu?.currentMenu == "solutions-overview" && (
         <MobileSolutionsOverviewMenu setState={setMobileMenu} />
       )}
-      {mobileMenu.currentMenu == "company-menu" && (
+      {mobileMenu?.currentMenu == "company-menu" && (
         <MobileCompanyMenu setState={setMobileMenu} />
       )}
-      {mobileMenu.currentMenu == "resources-menu" && (
+      {mobileMenu?.currentMenu == "resources-menu" && (
         <MobileResourcesMenu setState={setMobileMenu} />
+      )}
+      {mobileMenu?.currentMenu == "solutions-banks-menu" && (
+        <MobileSolutionBanksMenu setState={setMobileMenu} />
+      )}
+      {mobileMenu?.currentMenu == "solutions-businesses-menu" && (
+        <MobileSolutionBusinessesMenu setState={setMobileMenu} />
+      )}
+      {mobileMenu?.currentMenu == "solutions-consumers-menu" && (
+        <MobileSolutionConsumersMenu setState={setMobileMenu} />
       )}
     </div>
   );
@@ -625,7 +672,7 @@ const LatestNews = () => {
 };
 
 const ResourcesMenu = () => {
-  const [resourcesMenuSelected, setResourcesMenuSelected] = useState("News");
+  const [resourcesMenuSelected, setResourcesMenuSelected] = useState("");
   return (
     <div className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]">
       <div className="flex w-[1312px] bg-white ">
@@ -633,26 +680,34 @@ const ResourcesMenu = () => {
           <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">
             Resources
           </p>
-          <MenuItem
-            title={"News & Announcements"}
-            setSelected={setResourcesMenuSelected}
-            selected={resourcesMenuSelected}
-          />
-          <MenuItem
-            title={"ESG"}
-            setSelected={setResourcesMenuSelected}
-            selected={resourcesMenuSelected}
-          />
-          <MenuItem
-            title={"Certifications"}
-            setSelected={setResourcesMenuSelected}
-            selected={resourcesMenuSelected}
-          />
-          <MenuItem
-            title={"Legal"}
-            setSelected={setResourcesMenuSelected}
-            selected={resourcesMenuSelected}
-          />
+          <Link href={"/news"}>
+            <MenuItem
+              title={"News & Announcements"}
+              setSelected={setResourcesMenuSelected}
+              selected={resourcesMenuSelected}
+            />
+          </Link>
+          <Link href={"/esg"}>
+            <MenuItem
+              title={"ESG"}
+              setSelected={setResourcesMenuSelected}
+              selected={resourcesMenuSelected}
+            />
+          </Link>
+          <Link href={"/certifications"}>
+            <MenuItem
+              title={"Certifications"}
+              setSelected={setResourcesMenuSelected}
+              selected={resourcesMenuSelected}
+            />
+          </Link>
+          <Link href={"/legal"}>
+            <MenuItem
+              title={"Legal"}
+              setSelected={setResourcesMenuSelected}
+              selected={resourcesMenuSelected}
+            />
+          </Link>
         </div>
         <div className="py-8 pl-6">
           <LatestNews />
@@ -666,18 +721,20 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
   return (
     <div
       className="flex justify-between py-6 px-4 border-b border-default"
-      onClick={() =>
-        setState((prevState) => {
-          const newArray = [...prevState.stack, prevState.currentMenu];
-          const newState = {
-            ...prevState,
-            stack: newArray,
-            currentMenu: onClickSetState,
-          };
+      onClick={() => {
+        if (onClickSetState) {
+          setState((prevState) => {
+            const newArray = [...prevState.stack, prevState.currentMenu];
+            const newState = {
+              ...prevState,
+              stack: newArray,
+              currentMenu: onClickSetState,
+            };
 
-          return newState;
-        })
-      }
+            return newState;
+          });
+        }
+      }}
     >
       <p className="text-primary text-[18px] font-normal leading-[28px]">
         {title}
@@ -695,7 +752,7 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
 
 const MobileMainMenu = ({ setState }) => {
   return (
-    <div className="flex flex-col justify-between absolute bg-white top-[80px] z-[-1] w-full h-[calc(100vh-80px)]">
+    <div className="flex flex-col justify-between absolute bg-white top-[80px] z-[-1] w-full h-[calc(100dvh-80px)] overflow-auto">
       <div>
         <MobileMenuItem
           title="Solutions"
@@ -726,7 +783,7 @@ const MobileMainMenu = ({ setState }) => {
 
 const MobileSolutionsMenu = ({ setState }) => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -740,17 +797,17 @@ const MobileSolutionsMenu = ({ setState }) => {
       </p>
       <MobileMenuItem
         title="Banks"
-        onClickSetState="banks-overview"
+        onClickSetState="solutions-banks-menu"
         setState={setState}
       />
       <MobileMenuItem
         title="Businesses"
-        onClickSetState="businesses-overview"
+        onClickSetState="solutions-businesses-menu"
         setState={setState}
       />
       <MobileMenuItem
         title="Consumers"
-        onClickSetState="consumers-overview"
+        onClickSetState="solutions-consumers-menu"
         setState={setState}
       />
     </div>
@@ -759,7 +816,7 @@ const MobileSolutionsMenu = ({ setState }) => {
 
 const MobileSolutionsOverviewMenu = () => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -776,7 +833,7 @@ const MobileSolutionsOverviewMenu = () => {
 
 const MobileCompanyMenu = () => {
   return (
-    <div className="absolute bg-white z-[-1] w-full h-screen overflow-auto">
+    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
       <h4 className="text-primary text-[20px] font-normal leading-[26px] py-6 px-4 border-b border-default">
         Our company provides numerous end-to-end digital payment products,
         services and solutions to banks, businesses, and consumers.
@@ -818,14 +875,22 @@ const MobileCompanyMenu = () => {
 
 const MobileResourcesMenu = () => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-screen">
+    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Resources
       </p>
-      <MobileMenuItem title="News & Announcements" />
-      <MobileMenuItem title="ESG" />
-      <MobileMenuItem title="Certifications" />
-      <MobileMenuItem title="Legal" />
+      <Link href={"/news"}>
+        <MobileMenuItem title="News & Announcements" />
+      </Link>
+      <Link href={"/esg"}>
+        <MobileMenuItem title="ESG" />
+      </Link>
+      <Link href={"/certifications"}>
+        <MobileMenuItem title="Certifications" />
+      </Link>
+      <Link href={"/legal"}>
+        <MobileMenuItem title="Legal" />
+      </Link>
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         From the blog
       </p>
@@ -850,6 +915,158 @@ const MobileResourcesMenu = () => {
         }
         mobile={true}
       />
+    </div>
+  );
+};
+
+const MobileSolutionBanksMenu = () => {
+  return (
+    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Overview
+      </p>
+      <ImageSubMenuItem
+        image={"/assets/images/navbar/banks-overview.png"}
+        title={"Solutions for banks"}
+        description={"Revolutionize your bank financial operations."}
+        link={"/solutions/banks"}
+        mobile={true}
+      />
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Solutions for banks
+      </p>
+      <div className="pt-4 px-2 pb-6 flex flex-col gap-4">
+        <SubMenuItem
+          title={"Card issuing & proccesing"}
+          description={"Streamlined and efficient card management."}
+          link={"/solutions/banks/card-issuing-processing"}
+        />
+        <SubMenuItem
+          title={"Risk & fraud management"}
+          description={"Safeguard transactions, neutralize threats."}
+          link={"/solutions/banks/fraud-risk-management"}
+        />
+        <SubMenuItem
+          title={"Open Banking"}
+          description={"Unlock the potential of financial data sharing."}
+          link={"/solutions/banks/open-banking"}
+        />
+        <SubMenuItem
+          title={"Value added services"}
+          description={
+            "Elevate your customer experience and operational efficiency in one go."
+          }
+          link={"/solutions/banks/value-added-services"}
+        />
+      </div>
+    </div>
+  );
+};
+
+const MobileSolutionBusinessesMenu = () => {
+  return (
+    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Overview
+      </p>
+      <ImageSubMenuItem
+        image={"/assets/images/navbar/businesses-overview.png"}
+        title={"Solutions for businesses"}
+        description={"Leverage our versatile range of payment solutions."}
+        link={"/solutions/business"}
+        mobile={true}
+      />
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Solutions & services for businesses
+      </p>
+      <div className="pt-4 px-2 pb-6 flex flex-col gap-4">
+        <SubMenuItem
+          title={"Payment gateway"}
+          description={"Enhance your checkout flows."}
+          link={"/solutions/business/payment-gateway"}
+        />
+        <SubMenuItem
+          title={"POS terminals"}
+          description={"Elevate your retail experience."}
+          link={"/solutions/business/pos-terminals"}
+        />
+        <SubMenuItem
+          title={"AFS One (SoftPOS)"}
+          description={"Smart point-of-sale in your pocket."}
+          link={"/solutions/business/softpos"}
+        />
+        <SubMenuItem
+          title={"AFS Pro"}
+          description={"A unique mobile payment ecosystem."}
+          link={"/solutions/business/afs-pro"}
+        />
+        <SubMenuItem
+          title={"Open Banking"}
+          description={"Drive new payment flows."}
+          link={"/solutions/business/open-banking"}
+        />
+        <SubMenuItem
+          title={"eShop"}
+          description={"Complete eCommerce solution."}
+          link={"/solutions/business/eshop"}
+        />
+        <SubMenuItem
+          title={"Food & beverage"}
+          description={"Your restaurant-first full featured point-of-sale."}
+          link={"/solutions/business/food-beverage"}
+        />
+      </div>
+    </div>
+  );
+};
+
+const MobileSolutionConsumersMenu = () => {
+  return (
+    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Overview
+      </p>
+      <ImageSubMenuItem
+        image={"/assets/images/navbar/consumers-overview.png"}
+        title={"BPay wallet"}
+        description={
+          "Your one-stop digital wallet app for secure, instant, local and global payments."
+        }
+        link={"/solutions/consumers/bpay"}
+        mobile={true}
+      />
+      <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
+        Download BPAY
+      </p>
+      <div className="py-4 px-2">
+        <div className="p-2">
+          <p className="text-primary text-[14px] font-medium leading-[18px] mb-2">
+            Download BPay
+          </p>
+          <p className="text-secondary text-[14px] font-normal leading-[18px]">
+            Make and receive payments in an easy, fast, and secure way.
+          </p>
+        </div>
+        <div className="p-2 flex">
+          <Image
+            src={"/assets/icons/solutions/appstore.svg"}
+            width={0}
+            height={49}
+            sizes="100vw"
+            className="w-full"
+            alt=""
+          />
+
+          <Image
+            src={"/assets/icons/solutions/googleplay.svg"}
+            width={0}
+            height={49}
+            sizes="100vw"
+            className="ml-2 w-full"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
 };

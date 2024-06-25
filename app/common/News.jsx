@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import PageLayout from "./PageLayout";
 
@@ -22,13 +23,15 @@ const News = () => {
               {t("title")}
             </h3>
             <div className="mt-5 md:mt-0 flex items-center cursor-pointer border-b border-white hover:border-brand-secondary">
-              <p
-                className={`text-brand-secondary  whitespace-nowrap font-medium ${
-                  isArabic ? "ml-2" : "mr-2"
-                }`}
-              >
-                {t("see all")}
-              </p>
+              <Link href="/news">
+                <p
+                  className={`text-brand-secondary  whitespace-nowrap font-medium ${
+                    isArabic ? "ml-2" : "mr-2"
+                  }`}
+                >
+                  {t("see all")}
+                </p>
+              </Link>
               <Image
                 sizes="100vw"
                 width={0}
