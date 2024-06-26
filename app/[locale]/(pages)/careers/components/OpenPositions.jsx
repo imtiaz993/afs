@@ -9,11 +9,11 @@ const loadIsotope = () => require("isotope-layout");
 
 let Isotope;
 
-const OpenPositions = () => {
+const OpenPositions = ({ positions }) => {
+  console.log("pos", positions);
   const isotope = useRef();
   const [filterKeyLocation, setFilterKeyLocation] = useState("*");
   const [filterKeyDepartment, setFilterKeyDepartment] = useState("*");
-
   useEffect(() => {
     if (typeof window === "undefined") return;
     Isotope = loadIsotope();
@@ -53,128 +53,128 @@ const OpenPositions = () => {
     setFilterKeyDepartment(key);
   };
 
-  const positions = [
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Commercial",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Finance",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Business Analyst",
-      department: "Operations",
-      location: "UAE",
-      link: "/careers/1",
-    },
-    {
-      title: "Senior Product Designer",
-      department: "Design",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Commercial",
-      location: "Oman",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Finance",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Business Analyst",
-      department: "Operations",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Senior Product Designer",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Commercial",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Finance",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Business Analyst",
-      department: "Operations",
-      location: "UAE",
-      link: "/careers/1",
-    },
-    {
-      title: "Senior Product Designer",
-      department: "Design",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Commercial",
-      location: "Oman",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Finance",
-      location: "Bahrain",
-      link: "/careers/1",
-    },
-    {
-      title: "Business Analyst",
-      department: "Operations",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Senior Product Designer",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Sales Executive, Merchant Acquiring",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-    {
-      title: "Finance Manger & Strategy Manager",
-      department: "Technology",
-      location: "Egypt",
-      link: "/careers/1",
-    },
-  ];
+  // const positions = [
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Commercial",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Finance",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Business Analyst",
+  //     department: "Operations",
+  //     location: "UAE",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Senior Product Designer",
+  //     department: "Design",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Commercial",
+  //     location: "Oman",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Finance",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Business Analyst",
+  //     department: "Operations",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Senior Product Designer",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Commercial",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Finance",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Business Analyst",
+  //     department: "Operations",
+  //     location: "UAE",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Senior Product Designer",
+  //     department: "Design",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Commercial",
+  //     location: "Oman",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Finance",
+  //     location: "Bahrain",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Business Analyst",
+  //     department: "Operations",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Senior Product Designer",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Sales Executive, Merchant Acquiring",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  //   {
+  //     title: "Finance Manger & Strategy Manager",
+  //     department: "Technology",
+  //     location: "Egypt",
+  //     link: "/careers/1",
+  //   },
+  // ];
   return (
     <PageLayout>
       <div className="py-10 lg:py-24" id="position-table">
@@ -228,21 +228,25 @@ const OpenPositions = () => {
             {positions.map((item, index) => (
               <div
                 key={index}
-                className={`filter-item ${item.location} ${item.department} ${
+                className={`filter-item ${item.location?.country} ${
+                  item.department
+                } ${
                   index !== positions.length ? "border-b border-default" : ""
                 }  px-4 py-2 md:flex items-center justify-between w-full`}
               >
-                <h6 className="py-2 text-primary font-regular !leading-[140%]">{item.title}</h6>
+                <h6 className="py-2 text-primary font-regular !leading-[140%]">
+                  {item.jobName}
+                </h6>
                 <div className="flex justify-between md:justify-start">
                   <div className="py-2 flex items-center mr-8">
                     <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-base !leading-6">
                       {item.department}
                     </p>
                     <p className="text-primary text-sm md:text-base !leading-6">
-                      {item.location}
+                      {item.location?.city}
                     </p>
                   </div>
-                  <Link href={item.link}>
+                  <Link href={"careers/" + item.slug}>
                     <Image
                       sizes="100vw"
                       width={0}

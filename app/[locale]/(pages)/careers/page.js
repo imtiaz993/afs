@@ -8,6 +8,7 @@ import CoreValues from "./components/CoreValues";
 import Testimonials from "./components/Testimonials";
 import OpenPositions from "./components/OpenPositions";
 import JobQueryForm from "./components/JobQueryForm";
+import {careerContentData} from "./careerDetail";
 
 const Careers = () => {
   const storyContent = {
@@ -43,7 +44,7 @@ const Careers = () => {
       <Story bg={true} content={storyContent} />
       <CoreValues />
       <Testimonials />
-      <OpenPositions />
+      <OpenPositions positions={careerContentData}/>
       <JobQueryForm />
     </>
   );

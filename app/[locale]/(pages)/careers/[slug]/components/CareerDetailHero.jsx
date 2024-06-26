@@ -3,7 +3,8 @@ import { Link } from "@/i18n.config";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
 
-const CareerDetailHero = () => {
+
+const CareerDetailHero = ({data}) => {
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
       <div className="lg:max-w-[864px] mx-auto py-10 lg:py-16">
@@ -22,7 +23,7 @@ const CareerDetailHero = () => {
             <p className="ml-4 text-secondary hover:underline">Back to careers</p>
           </Link>
           <h2 className="text-primary text-left text-[32px] md:text-5xl !leading-[120%]">
-            Head of Customer Due Diligence and Screening Unit 
+            {data.jobName}
           </h2>
         </div>
       </div>
