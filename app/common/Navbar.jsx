@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { usePathname, Link } from "i18n.config";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -8,10 +8,47 @@ import Image from "next/image";
 import PageLayout from "./PageLayout";
 import LocaleSwitcher from "./LocaleSwitcher";
 
+function useScrollPosition() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrollY(window.scrollY);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return scrollY;
+}
+
+function useWindowWidth() {
+  const [resizeX, setResizeX] = useState(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setResizeX(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return resizeX;
+}
+
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("Navbar");
   const pathname = usePathname();
+  const scrollY = useScrollPosition();
+  const windowWidth = useWindowWidth();
   const [colorChange, setColorchange] = useState(false);
   const [navbarMenu, setNavbarMenu] = useState("");
   const [mobileMenu, setMobileMenu] = useState({
@@ -21,18 +58,34 @@ const Navbar = () => {
 
   const isHome = pathname === "/";
   const isArabic = locale === "ar";
+  const isAtTop = scrollY === 0;
+
+  useEffect(() => {
+    setColorchange(!isAtTop);
+    if (navbarMenu.length != 0 || mobileMenu.currentMenu.length != 0)
+      setColorchange(true);
+
+    if (mobileMenu.currentMenu != "") document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [isAtTop, navbarMenu, mobileMenu]);
+
+  useEffect(() => {
+    if (windowWidth < 1280 && navbarMenu != "") setNavbarMenu("");
+    if (windowWidth > 1280 && mobileMenu.currentMenu.length != 0)
+      setMobileMenu({ currentMenu: "", stack: [] });
+  }, [windowWidth]);
 
   return (
     <div className="sticky top-0 z-[999] ">
-      <div className="shadow-[0px_1px_3px_0px_rgba(5,36,96,0.10)] z-[1]">
+      <div className=" z-[1]">
         <div
-          className={`pt-5 pb-5 xl:pb-6 top-0 left-0 right-0 sticky transition-all duration-300  ${
+          className={`pt-5 pb-5 xl:pb-6 top-0 left-0 right-0 sticky transition-all duration-300 ${
             isHome
               ? colorChange
-                ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+                ? "bg-white shadow-[0px_1px_3px_0px_rgba(5,36,96,0.10)]"
                 : "bg-white"
               : colorChange
-              ? "bg-white shadow-[0_6px_6px_-5px_rgba(0,0,0,0.2),0_-6px_6px_-50px_rgba(0,0,0,1)]"
+              ? "bg-white shadow-[0px_1px_3px_0px_rgba(5,36,96,0.10)]"
               : "bg-subtle-neutral"
           } `}
         >
@@ -66,7 +119,7 @@ const Navbar = () => {
                           stack: newArray,
                           currentMenu: newCurrentMenu,
                         };
-                        console.log("newState >> ", newState);
+
                         return newState;
                       });
                     }}
@@ -263,17 +316,24 @@ const ImageSubMenuItem = ({ image, title, description, link, mobile }) => {
       <div
         className={`${
           mobile ? "py-6 px-4" : "p-2"
-        } hover:bg-subtle-neutral hover:cursor-pointer`}
+        } hover:bg-subtle-neutral hover:cursor-pointer `}
         onMouseEnter={() => setIsHover(!isHover)}
         onMouseLeave={() => setIsHover(!isHover)}
       >
-        <Image
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={image}
-          className="h-full w-full rounded mb-3"
-        />
+        <div className="relative">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src={image}
+            className={` ${
+              mobile
+                ? "h-[167px] sm:h-[267px] md:h-[367px] lg:h-[467px] object-cover object-top"
+                : "h-[140px] object-cover object-top"
+            } w-full rounded mb-3 `}
+          />
+          <div className="absolute rounded inset-0 menu-item-gradient"></div>
+        </div>
         <p
           className={`${
             mobile ? "text-[16px] leading-[24px]" : "text-[14px] leading-[18px]"
@@ -313,7 +373,9 @@ const SubMenuItem = ({ title, description, link }) => {
   return (
     <Link href={link}>
       <div
-        className="p-2 w-[302px] hover:bg-subtle-neutral hover:cursor-pointer"
+        className={`p-2 ${
+          window.innerWidth > 1280 ? "w-[302px]" : "w-full"
+        }  hover:bg-subtle-neutral hover:cursor-pointer`}
         onMouseEnter={() => setIsHover(!isHover)}
         onMouseLeave={() => setIsHover(!isHover)}
       >
@@ -440,7 +502,7 @@ const BusinessesOverview = () => {
           <SubMenuItem
             title={"AFS One (SoftPOS)"}
             description={"Smart point-of-sale in your pocket."}
-            link={"/solutions/business/softpos"}
+            link={"/solutions/business/afsone-softpos"}
           />
           <SubMenuItem
             title={"AFS Pro"}
@@ -621,15 +683,18 @@ const CompanyMenu = () => {
 const LatestNewsItem = ({ image, description, mobile }) => {
   return (
     <div className={`${mobile ? "w-full p-4" : "w-[301px] p-2"}`}>
-      <Image
-        sizes="100vw"
-        width={0}
-        height={0}
-        src={image}
-        className={`${
-          mobile ? "w-full min-h-[200px]" : "w-[285px] h-[160px]"
-        } rounded mb-4`}
-      />
+      <div className="relative rounded">
+        <Image
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={image}
+          className={`${
+            mobile ? "w-full min-h-[200px]" : "w-[285px] h-[160px]"
+          } rounded mb-4`}
+        />
+        <div className="rounded absolute inset-0 menu-item-gradient"></div>
+      </div>
       <p
         className={` ${
           mobile ? "text-[16px] leading-[24px]" : "text-[14px] leading-[18px]"
@@ -649,7 +714,7 @@ const LatestNews = () => {
       </p>
       <div className="grid grid-cols-3 gap-6">
         <LatestNewsItem
-          image={"/assets/images/navbar/news1.png"}
+          image={"/assets/images/navbar/news1.jpeg"}
           description={
             "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
           }
@@ -752,7 +817,7 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
 
 const MobileMainMenu = ({ setState }) => {
   return (
-    <div className="flex flex-col justify-between absolute bg-white top-[80px] z-[-1] w-full h-[calc(100dvh-80px)] overflow-auto">
+    <div className="flex flex-col justify-between absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <div>
         <MobileMenuItem
           title="Solutions"
@@ -783,7 +848,7 @@ const MobileMainMenu = ({ setState }) => {
 
 const MobileSolutionsMenu = ({ setState }) => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -816,7 +881,7 @@ const MobileSolutionsMenu = ({ setState }) => {
 
 const MobileSolutionsOverviewMenu = () => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -833,7 +898,7 @@ const MobileSolutionsOverviewMenu = () => {
 
 const MobileCompanyMenu = () => {
   return (
-    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white z-[-1] w-full pt-[80px] top-0 h-dvh overflow-auto">
       <h4 className="text-primary text-[20px] font-normal leading-[26px] py-6 px-4 border-b border-default">
         Our company provides numerous end-to-end digital payment products,
         services and solutions to banks, businesses, and consumers.
@@ -875,7 +940,7 @@ const MobileCompanyMenu = () => {
 
 const MobileResourcesMenu = () => {
   return (
-    <div className="absolute bg-white top-[80px] z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Resources
       </p>
@@ -895,7 +960,7 @@ const MobileResourcesMenu = () => {
         From the blog
       </p>
       <LatestNewsItem
-        image={"/assets/images/navbar/news1.png"}
+        image={"/assets/images/navbar/news1.jpeg"}
         description={
           "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
         }
@@ -921,7 +986,7 @@ const MobileResourcesMenu = () => {
 
 const MobileSolutionBanksMenu = () => {
   return (
-    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white z-[-1] w-full h-dvh top-0 pt-[80px] overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -965,7 +1030,7 @@ const MobileSolutionBanksMenu = () => {
 
 const MobileSolutionBusinessesMenu = () => {
   return (
-    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white z-[-1] w-full top-0 pt-[80px] h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -993,7 +1058,7 @@ const MobileSolutionBusinessesMenu = () => {
         <SubMenuItem
           title={"AFS One (SoftPOS)"}
           description={"Smart point-of-sale in your pocket."}
-          link={"/solutions/business/softpos"}
+          link={"/solutions/business/afsone-softpos"}
         />
         <SubMenuItem
           title={"AFS Pro"}
@@ -1022,7 +1087,7 @@ const MobileSolutionBusinessesMenu = () => {
 
 const MobileSolutionConsumersMenu = () => {
   return (
-    <div className="absolute bg-white z-[-1] w-full h-svh overflow-auto">
+    <div className="absolute bg-white z-[-1] w-full top-0 pt-[80px] h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
