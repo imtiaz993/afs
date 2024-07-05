@@ -47,7 +47,7 @@ const Support = () => {
                   <div className="flex items-center mb-1">
                     <p className="text-secondary ">Bahrain</p>
                     <a
-                      href="http://wa.me/+973 1729 9444"
+                      href="http://wa.me/+97317299444"
                       className="flex items-center text-brand-secondary hover:underline"
                     >
                       <p className="ml-2 text-brand-secondary   pr-2 mr-2 border-r border-default">
@@ -69,7 +69,7 @@ const Support = () => {
                       href="tel:+973 1729 9444"
                       className="text-brand-secondary hover:underline"
                     >
-                      <p className="ml-2  ">+973 1729 9444</p>
+                      <p className="ml-2  ">+968 2457 7177</p>
                     </a>
                   </div>
                   <div className="flex items-center mb-1">
@@ -121,7 +121,7 @@ const Support = () => {
                   <div className="flex items-center mb-1">
                     <p className="text-secondary ">Bahrain</p>
                     <a
-                      href="http://wa.me/+973 1729 9090"
+                      href="http://wa.me/+97317299090"
                       className="flex items-center text-brand-secondary hover:underline"
                     >
                       <p className="ml-2 text-brand-secondary   pr-2 mr-2 border-r border-default">
@@ -175,7 +175,7 @@ const Support = () => {
                   <div className="flex items-center mb-1">
                     <p className="text-secondary ">Bahrain</p>
                     <a
-                      href="http://wa.me/+973 1729 9717"
+                      href="http://wa.me/+97317299717"
                       className="flex items-center text-brand-secondary hover:underline"
                     >
                       <p className="ml-2 text-brand-secondary   pr-2 mr-2 border-r border-default">

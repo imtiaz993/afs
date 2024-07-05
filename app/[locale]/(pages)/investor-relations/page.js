@@ -12,7 +12,7 @@ const InvestorRelations = () => {
       "At AFS we empower the region’s business and banking communities, end-users and consumers with customized payments technologies and solutions.",
     ],
     secondaryContent: [
-      "Regulated by the Central Bank of Bahrain, AFS is owned by a total of 37 banks and financial institutions and serves over 60 clients in more than 20 countries across the Middle East and Africa region.",
+      "Regulated by the Central Bank of Bahrain and the Central Bank of Egypt, AFS is owned by a total of 37 banks and financial institutions and serves over 60 bank clients in more than 20 countries across the Middle East and Africa region.",
       "The company provides numerous ground-breaking end-to-end digital payment products, services and solutions to banks and businesses. These include card processing services, merchant acquiring, fintech solutions and value-added services.",
     ],
     tertiaryContent: [

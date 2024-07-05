@@ -41,7 +41,7 @@ const CardIssuingProcessing = () => {
     {
       title: "Card processing solutions",
       description:
-        "Make use of our versatile card solutions, for all requirements, ensuring convenience and security in every payment, from credit, debit, prepaid, virtual, tokenized cards, Shariah compliant and more we have them all.",
+        "Make use of our versatile card solutions, for all requirements, ensuring convenience and security in every payment, from credit, debit, prepaid, virtual, tokenized cards, Shariah compliant and more! We have them all.",
       image: "/assets/images/solutions/banks/card-processing-solutions.png",
     },
     {
@@ -95,13 +95,13 @@ const CardIssuingProcessing = () => {
       />
       <Benefits
         description={
-          "Our all-encompassing solution transforms the way banks issue and manage cards, catering to a wide range of needs with credit, debit, and prepaid card services for both consumers and businesses."
+          "Our all-encompassing solution transforms the way banks issue and manage cards, catering to a wide range of needs with credit, debit, Shariah compliant and prepaid card services for both consumers and businesses."
         }
         data={benefitsData}
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
       <UsedTrustedBy />
-      <TestimonialSlider bgColor={"bg-white"} />
+      {/* <TestimonialSlider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

@@ -7,7 +7,7 @@ import Link from "next/link";
 const ContactOption = () => {
   return (
     <PageLayout bg={"bg-subtle-neutral"}>
-      <div className="mx-auto py-10 lg:py-16">
+      <div className="mx-auto py-10 lg:pt-16 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-4">
           <div className="rounded banks-home-gradient overflow-hidden">
             <div
@@ -43,7 +43,7 @@ const ContactOption = () => {
               interviews, sponsorship opportunities, or general communications,
               our team is ready to assist you.
             </p>
-            <a href="mailto:xyz@afs.com">
+            <a href="mailto:pr@afs.com.bh">
               <button className=" text-center bg-transparent text-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:text-brand-primary hover:border-brand-primary py-[11px] w-full md:w-[185px] font-medium rounded-sm">
                 Send us an email
               </button>

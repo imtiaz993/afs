@@ -10,9 +10,9 @@ import CommonCTA from "app/common/CommonCTA";
 const POSTerminals = () => {
   const benefitsData = [
     {
-      title: "Increased transaction speed",
+      title: "Fast processing",
       description:
-        "Improved customer satisfaction and increased sales opportunities.",
+        "Save your business queue time by processing payments in less than 3 seconds.",
       icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
     },
     {
@@ -46,15 +46,8 @@ const POSTerminals = () => {
     {
       title: "Accept all major card schemes",
       description:
-        "Ensure you never miss a sale by accepting all major credit and debit cards. Our terminals are designed to support a wide range of card schemes, catering to a diverse customer base.",
+        "Ensure you never miss a sale by accepting a wide range of payment methods. Our terminals support all major credit and debit card schemes, including traditional magnetic stripe, chip cards, and contactless NFC payments. This versatility caters to a diverse customer base, making transactions convenient for every customer.",
       image: "/assets/images/solutions/business/pos-terminals/accept-major.png",
-    },
-    {
-      title: "Support multiple payment methods",
-      description:
-        "From traditional magnetic stripe and chip cards to contactless NFC payments, our terminals accommodate various payment methods, making transactions convenient for every customer.",
-      image:
-        "/assets/images/solutions/business/pos-terminals/support-multiple-payment-method1.png",
     },
     {
       title: "Secure payment experience",
@@ -66,7 +59,7 @@ const POSTerminals = () => {
     {
       title: "Dynamic currency conversion",
       description:
-        "Enhance the shopping experience for international customers by offering the convenience of paying in their home currency. This feature not only simplifies transactions but also provides transparency in currency exchange rates.",
+        "Enhance the shopping experience for international customers by accepting over 150 of their preferred currencies. This feature not only simplifies transactions but also provides transparency in currency exchange rates while offering you rebates.",
       image:
         "/assets/images/solutions/business/pos-terminals/dynamic-currency.png",
     },
@@ -78,10 +71,10 @@ const POSTerminals = () => {
       <CommonHero
         title={"POS Terminals"}
         subtext={
-          "Next-generation point-of-sale (POS) terminals for your business"
+          "Best in class point-of-sale (POS) terminals for your business"
         }
         description={
-          "Elevate your retail experience with our advanced POS terminals. Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics."
+          "Elevate your customer experience with our advanced POS terminals. Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, and comprehensive sales analytics."
         }
         image={
           "/assets/images/solutions/business/pos-terminals/pos-terminals.png"
@@ -107,8 +100,8 @@ const POSTerminals = () => {
           primaryButtonLink: "/contact-team",
         }}
       />
-      <UsedTrustedBy />
-      <TestimonialSllider bgColor={"bg-white"} />
+      {/* <UsedTrustedBy /> */}
+      {/* <TestimonialSllider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

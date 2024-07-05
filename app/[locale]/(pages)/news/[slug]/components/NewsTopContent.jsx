@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
-
+import { calculateReadingTime } from '../../utility/util';
 const NewsTopContent = ({ data }) => {
   return (
     <>
       <div className="pt-16 pb-32 md:pb-40 lg:pb-60 xl:pb-96 bg-subtle-neutral ">
         <PageLayout>
-          <div className="max-w-100  xxl:max-w-[864px] mx-auto flex flex-col space-y-6 pb-7 xl:pb-14 ">
+          <div className="max-w-100  xl:max-w-[864px] mx-auto flex flex-col space-y-6 pb-7 xl:pb-14 ">
             <Link href="/news" className="flex items-center space-x-4">
               <div className="w-6 h-6 rounded-sm grid place-content-center bg-surface-neutral">
                 <Image
@@ -36,7 +36,7 @@ const NewsTopContent = ({ data }) => {
               <div className="text-xs text-secondary space-x-2 flex items-center">
                 <span>{data?.date}</span>
                 <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
-                <span>{data?.timeToRead}</span>
+                <span>{calculateReadingTime(data.content)} min read</span>
               </div>
             </div>
           </div>

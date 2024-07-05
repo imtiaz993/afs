@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import InputField from "./form-components/InputField";
+import { useState } from "react";
 
-const NewsLetter = () => {
+const NewsLetter = ({ showStuffs}) => {
+  const [isVisible, setIsVisible] = useState(showStuffs);
   return (
     <div className="relative">
       <div className="bg-subtle-neutral flex flex-col space-y-4 md:space-y-0 md:flex-row  my-8 h-auto lg:h-[196px]">
@@ -15,15 +19,16 @@ const NewsLetter = () => {
               Get the latest AFS news, announcements and more.
             </p>
           </div>
-
-          <Image
-            sizes="100vw"
-            width={0}
-            height={0}
-            src={"/assets/images/blue-vector.png"}
-            alt="Blue Vector"
-            className="absolute inset-0 w-full h-full hidden xl:block"
-          />
+          {isVisible && (
+            <Image
+              sizes="100vw"
+              width={0}
+              height={0}
+              src={"/assets/images/blue-vector.png"}
+              alt="Blue Vector"
+              className="absolute inset-0 w-full h-full hidden xl:block"
+            />
+          )}
         </div>
 
         <div className="md:w-2/4 w-100 flex flex-col space-y-4 pb-7 md:py-7 pl-5 lg:pl-0 lg:py-14  pr-5  lg:pr-10">
@@ -46,18 +51,21 @@ const NewsLetter = () => {
               </button>
             </div>
           </form>
-          <p
-            className={`text-secondary mt-4 text-sm pb-0 md:pb-10 mb-10
-          }`}
-          >
-            By subscribing you agree to our{" "}
-            <Link
-              className="text-primary underline underline-offset-1"
-              href="/"
+
+          {isVisible && (
+            <p
+              className={`text-secondary mt-4 text-sm pb-0 md:pb-10 mb-10
+            }`}
             >
-              Privacy Policy
-            </Link>
-          </p>
+              By subscribing you agree to our{" "}
+              <Link
+                className="text-primary underline underline-offset-1"
+                href="/"
+              >
+                Privacy Policy
+              </Link>
+            </p>
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "i18n.config";
 
 const AppCTA = ({ bgColor }) => {
   return (
@@ -23,23 +24,31 @@ const AppCTA = ({ bgColor }) => {
             width: "max-content",
           }}
         >
-          <Image
-            src={"/assets/icons/solutions/appstore.svg"}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="h-full w-full"
-            alt=""
-          />
+          <Link href={"https://apps.apple.com/us/app/afs-bpay/id1629591483"}>
+            <Image
+              src={"/assets/icons/solutions/appstore.svg"}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-full w-full"
+              alt=""
+            />
+          </Link>
 
-          <Image
-            src={"/assets/icons/solutions/googleplay.svg"}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="h-full w-full sm:ml-2 mt-2 sm:mt-0"
-            alt=""
-          />
+          <Link
+            href={
+              "https://play.google.com/store/apps/details?id=com.afs.bpay&hl=en&gl=US"
+            }
+          >
+            <Image
+              src={"/assets/icons/solutions/googleplay.svg"}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-full w-full sm:ml-2 mt-2 sm:mt-0"
+              alt=""
+            />
+          </Link>
         </div>
       </div>
       <div className="absolute right-5 lg:right-5 xl:right-20 bottom-0 top-[50px] sm:top-11 opacity-30 sm:opacity-100 md:opacity-30 lg:opacity-100">

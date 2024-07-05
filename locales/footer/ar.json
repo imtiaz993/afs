@@ -41,8 +41,12 @@
           "link": "/solutions/business/pos-terminals"
         },
         {
-          "title": "AFS الدفع (softPOS)",
-          "link": "/solutions/business/softpos"
+          "title": "AFS الدفع - SoftPOS",
+          "link": "/solutions/business/afspay-softpos"
+        },
+        {
+          "title": "أفس برو",
+          "link": "/solutions/business/afs-pro"
         },
         { "title": "متجر إلكتروني", "link": "/solutions/business/eshop" },
         {
@@ -50,12 +54,8 @@
           "link": "/solutions/business/open-banking"
         },
         {
-          "title": "المأكولات والمشروبات (F&B)",
-          "link": "/solutions/business/food-beverage"
-        },
-        {
-          "title": "أفس برو",
-          "link": "/solutions/business/afs-pro"
+          "title": "AFS One - المأكولات والمشروبات",
+          "link": "/solutions/business/afsone-food-beverage"
         }
       ]
     },

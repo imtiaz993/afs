@@ -77,7 +77,7 @@ const Solutions = () => {
                   backgroundSize: "cover",
                 }}
               >
-                <h3 className="text-2xl md:text-[40px] text-white mb-5 mt-[272px]">
+                <h3 className="text-[24px] leading-[28.8px] md:text-[40px] text-white mb-5 mt-[272px]">
                   {t("banks.title")}
                 </h3>
                 <p className="text-base md:text-lg !leading-7 text-white mb-4 max-w-[420px] opacity-80">

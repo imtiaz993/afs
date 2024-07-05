@@ -151,7 +151,10 @@ const JobQueryForm = () => {
                   />
                   <p className="text-secondary text-sm ml-3">
                     By sending your information you agree to our
-                    <Link className="text-primary underline ml-1" href="/">
+                    <Link
+                      className="text-primary underline ml-1"
+                      href="/legal?section=privacy-policy"
+                    >
                       Privacy Policy
                     </Link>
                   </p>

@@ -44,7 +44,7 @@ const BPay = () => {
     {
       title: "P2P transactions",
       description:
-        "Facilitate peer-to-peer money transfers quickly and securely with BPay. Whether splitting a bill, paying a friend back, or sending a gift, BPay makes it incredibly easy to send or receive funds with just a few taps on your smartphone. This feature enhances your connectivity with others financially without needing bank details for every transaction.",
+        "Facilitate peer-to-peer money transfers quickly and securely with BPay. Whether paying a friend back, or remitting money to your family, BPay makes it incredibly easy to send or receive funds with just a few taps on your smartphone. This feature enhances your connectivity with others financially without needing bank details for every transaction",
       image: "/assets/images/solutions/bpay/p2p-transactions.png",
     },
     {
@@ -97,11 +97,12 @@ const BPay = () => {
         appCTA={true}
         appCTABgColor={"bg-surface-neutral"}
       />
-      <TestimonialSlider bgColor={"bg-white"} />
+      {/* <TestimonialSlider bgColor={"bg-white"} /> */}
       <Faq
         title={
           "Find answers to some key questions about our BPay wallet solution"
         }
+        email={"bpaysupport@afs.com.bh"}
         accordionOptions={faqContentData}
       />
     </>

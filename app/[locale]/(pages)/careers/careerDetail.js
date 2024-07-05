@@ -14,40 +14,68 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Education</h4>
-             <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Bachelor’s degree</li>
+             <ul class="text-base md:text-lg mb-4 text-medium-brand !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Bachelor’s degree</p>
+                </li>
 
                 <li>
-                    Relevant professional qualification (e.g. ACAMS – Association of Certified Anti-Money Laundering Specialists Relevant professional qualification (e.g. ACAMS – Association of Certified Anti-Money Laundering Specialists, ICA Diploma-International Compliance Association)
+                   <p class="text-primary">
+                        Relevant professional qualification (e.g. ACAMS – Association of Certified Anti-Money Laundering Specialists, ICA Diploma-International Compliance Association)
+                    </p> 
                 </li>
             </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Experience</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>5+ years’ experience in a regulatory compliance role within the payments or banking industry with a specific focus on financial crime compliance</li>
+            <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">5+ years’ experience in a regulatory compliance role within the payments or banking industry with a specific focus on financial crime compliance</p>
+                </li>
             </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Knowledge/Skills/Attributes: </h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Expertise in Regulatory compliance frameworks</li>
-                <li>Knowledge of AML/CT risks and controls</li>
-                <li>Proficiency in report writing and using various office applications.</li>
-                <li>Good knowledge of standards, laws and regulatory environment, application of an effective compliance program in the company.</li>
-                <li>Excellent verbal and written communication skills</li>
-                <li>Excellent qualitative and quantitative analytical skills to identify and solve a wide range of compliance problems.</li>
-                <li>Excellent verbal and written communication skills</li>
-                <li>Ability to manage multiple priorities and meet deadlines in a fast-paced work environment.</li>
-                <li>Attention to details and generate quality work.</li>
-                <li>Organized working and time management with short turn around abilities</li>
-                <li>Ability to handle work pressures.</li>
+            <ul class="text-base md:text-lg mb-4 class="text-medium-brand" !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Expertise in Regulatory compliance frameworks</p>
+                </li>
+                <li>
+                    <p class="text-primary">Knowledge of AML/CT risks and controls</p>
+                </li>
+                <li>
+                    <p class="text-primary">Proficiency in report writing and using various office applications.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Good knowledge of standards, laws and regulatory environment, application of an effective compliance program in the company.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Excellent verbal and written communication skills</p>
+                </li>
+                <li>
+                    <p class="text-primary">Excellent qualitative and quantitative analytical skills to identify and solve a wide range of compliance problems.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Excellent verbal and written communication skills</p>
+                </li>
+                <li>
+                    <p class="text-primary">Ability to manage multiple priorities and meet deadlines in a fast-paced work environment.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Attention to details and generate quality work.</p>
+                </li>
+                <li><p class="text-primary">
+                    <p class="text-primary">Organized working and time management with short turn around abilities</p>
+                </li>
+                <li>
+                    <p class="text-primary">Ability to handle work pressures.</p>
+                </li>
             </ul>
         </div>
         `,
-      department:"Commercial",
+      department:"Compliance",
 
       slug: "compliance-supervisor-and-regulatory-affairs-specialist-commercial-bahrain",
     },
@@ -67,36 +95,59 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Education</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Bachelor’s degree</li>
+            <ul class="text-base md:text-lg mb-4 text-medium-brand !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Bachelor’s degree</p>
+                </li>
 
                 <li>
-                   Relevant professional qualification (e.g. ACAMS – Association of Certified Anti-Money Laundering Specialists, ICA Diploma-International Compliance Association)
+                    <p class="text-primary">
+                        Relevant professional qualification (e.g. ACAMS – Association of Certified Anti-Money Laundering Specialists, ICA Diploma-International Compliance Association)
+                    </p>    
+
                 </li>
             </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Experience</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Minimum 5+ years of relevant experience in sales, customer onboarding, or compliance in the banking or payments industry within the GCC</li>
+            <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">
+                        Minimum 5+ years of relevant experience in sales, customer onboarding, or compliance in the banking or payments industry within the GCC
+                    </p>
+                </li>
              </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Knowledge/Skills/Attributes: </h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Strong knowledge of AML/CFT and sanctions regulatory requirements.</li>
-                <li>Strong knowledge of CDD/KYC account opening and periodic review procedures in regulated financial services.</li>
-                <li>Strong knowledge of name and sanctions screening risks and alert management</li>
-                <li>Strong analytical skills</li>
-                <li>Rigorous, disciplined approach ensuring procedures are effective and are followed.</li>
-                <li>Ability to manage multiple priorities and meet deadlines in a fast-paced work environment.</li>
-                <li>Strong communication skills, ensuring requirements are understood and followed by the sales teams and for securing dispensations where appropriate.</li>
+            <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Strong knowledge of AML/CFT and sanctions regulatory requirements.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong knowledge of CDD/KYC account opening and periodic review procedures in regulated financial services.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong knowledge of name and sanctions screening risks and alert management</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong analytical skills</p>
+                </li>
+                <li>
+                    <p class="text-primary">Rigorous, disciplined approach ensuring procedures are effective and are followed.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Ability to manage multiple priorities and meet deadlines in a fast-paced work environment.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong communication skills, ensuring requirements are understood and followed by the sales teams and for securing dispensations where appropriate.</p>
+                </li>
             </ul>
         </div>
         `,
-        department:"Commercial",
+        department:"Operations",
 
         slug: "head-of-customer-due-diligence-and-screening-unit-finnce-bahrain",
     },
@@ -110,25 +161,40 @@ export const careerContentData = [
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Job requirements</h4>
            <p class="text-base md:text-lg text-primary  mb-4 !leading-7">We are recruiting for an IT Auditor to support the Internal Audit’s department in providing reasonable assurance to Senior Management and the Audit Committee on the adequacy and effectiveness of internal controls, primarily related to Information Technology, Cyber and Information Security and Business Continuity processes, including:</p>
 
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
                 <li>
-                    Delivery of audit assignments in line with the annual plan and scope;
+                    <p class="text-primary">
+                        Delivery of audit assignments in line with the annual plan and scope;
+                    <p>
+                    
                 </li>
 
                 <li>
-                   Providing ongoing business monitoring, risk assessment and input to the annual audit plan;
+                    <p class="text-primary">
+                        Providing ongoing business monitoring, risk assessment and input to the annual audit plan;
+                    <p>
+                  
                 </li>
                 
                 <li>
-                   Managing relationships within the organization and external parties;
+                    <p class="text-primary">
+                        Managing relationships within the organization and external parties;
+                    <p>
+                   
                 </li>
 
                 <li>
-                    Adhering and contributing for maintenance of Audit methodology, practices and supporting tools;
+                    <p class="text-primary">
+                        Adhering and contributing for maintenance of Audit methodology, practices and supporting tools;
+                    <p>
+                    
                 </li>
 
                 <li>
-                    Supporting the Head of Internal Audit in administrative projects and ad-hoc tasks.
+                    <p class="text-primary">
+                        Supporting the Head of Internal Audit in administrative projects and ad-hoc tasks.
+                    <p>
+                    
                 </li>
                 
             </ul>
@@ -137,56 +203,78 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Education</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
                 <li>
-                A university degree preferably in Information Technology, Computer Science or related subjects.
+                    <p class="text-primary">
+                        A university degree preferably in Information Technology, Computer Science or related subjects.
+                    </p>    
                 </li>
 
-                <li>Relevant professional certification such as CISA/CIA are an added advantage.</li>
+                <li>
+                    <p class="text-primary">Relevant professional certification such as CISA/CIA are an added advantage.</p>
+                </li>
             </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Experience</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
-                <li>1-3 year experience in audits on the technology side.</li>  
-                <li>Exposure through work experience in the related industries.</li>
-                <li>Development and delivery of presentations to senior audience.</li>
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
+                <li>
+                    <p class="text-primary">1-3 year experience in audits on the technology side.</p>
+                </li>  
+                <li>
+                    <p class="text-primary">Exposure through work experience in the related industries.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Development and delivery of presentations to senior audience.</p>
+                </li>
 
             </ul>
         </div>
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Knowledge/Skills/Attributes: </h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
                 <li>
-                   Basic understanding of/ eagerness to learn card processing, merchant acquiring and Fintech products, services, processes and related risks and controls.
+                    <p class="text-primary">
+                        Basic understanding of/ eagerness to learn card processing, merchant acquiring and Fintech products, services, processes and related risks and controls.
+                    </p>    
                 </li>
 
                 <li>
-                  Basic understanding and/or experience of some areas of Information Technology, Cyber & Information Security, Business Continuity and Disaster Recovery.
+                    <p class="text-primary">
+                        Basic understanding and/or experience of some areas of Information Technology, Cyber & Information Security, Business Continuity and Disaster Recovery.
+                    </p>    
                 </li>
                 
                 <li>
-                   Basic data analysis and/or technical skills to analyze complex business data utilizing automated tools and help identify problems will also be beneficial.
+                    <p class="text-primary">
+                        Basic data analysis and/or technical skills to analyze complex business data utilizing automated tools and help identify problems will also be beneficial.
+                    </p>    
                 </li>
 
                 <li>
-                    Eagerness to learn about 'Ancillary Services' regulations, preferably the Central Bank of Bahrain.
+                    <p class="text-primary">
+                        Eagerness to learn about 'Ancillary Services' regulations, preferably the Central Bank of Bahrain.</p>
                 </li>
 
                 <li>
-                    Strong knowledge in Microsoft office tools.
+                    <p class="text-primary">
+                        Strong knowledge in Microsoft office tools.
+                    </p>
                 </li>
 
-                <li>Excellent command of the English language. </li>
+                <li>
+                    <p class="text-primary">
+                        Excellent command of the English language. </li>
+                    </p>    
                 
             </ul>
         </div>
         `,
         
         slug: "it-auditor-operations-finance-bahrain",
-        department:"Commercial",
+        department:"Internal Audit",
     },
 
     {
@@ -203,20 +291,33 @@ export const careerContentData = [
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Responibilties</h4>
            <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Payment Operations Expertise</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Demonstrate expert knowledge in all payment operations, including clearing, settlement, chargeback, and fraud management.</li>
-                    <li>Ensure efficient and accurate processing of payments, adhering to industry best practices.</li>
-                    <li>Stay updated with the latest trends, regulations, and technologies in the payments industry.</li>
+                <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4">
+                    <li>
+                         <p class="text-primary">Demonstrate expert knowledge in all payment operations, including clearing, settlement, chargeback, and fraud management.</p>
+                    </li>
+                    <li>
+                         <p class="text-primary">Ensure efficient and accurate processing of payments, adhering to industry best practices.</p>
+                    </li>
+                    <li>
+                         <p class="text-primary">Stay updated with the latest trends, regulations, and technologies in the payments industry.</p>
+                    </li>
                 </ul>
 
+                     <p class="text-primary">
             </div>  
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">POS Operations Management</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Possess a comprehensive understanding of POS machines, including hardware, software, POS applications, functionality, profiles, key injections, TMC, and inventory management.</li>
-                    <li>Ensure smooth operation and functionality of POS systems, troubleshooting any technical issues that may arise.</li>
-                    <li>Coordinate with relevant teams to conduct end-to-end testing of acquiring products and launch them successfully.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Possess a comprehensive understanding of POS machines, including hardware, software, POS applications, functionality, profiles, key injections, TMC, and inventory management.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure smooth operation and functionality of POS systems, troubleshooting any technical issues that may arise.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Coordinate with relevant teams to conduct end-to-end testing of acquiring products and launch them successfully.</p>
+                    </li>
                 </ul>
 
             </div>  
@@ -224,33 +325,63 @@ export const careerContentData = [
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Back-Office Operations</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Oversee all back-office operations related to merchant applications, documentation, and verification processes.</li>
-                    <li>Ensure compliance with underwriting guidelines, including documentation validation, scanning, CDD (Customer Due Diligence), and EDD (Enhanced Due Diligence).</li>
-                    <li>Implement efficient processes to handle merchant onboarding and ongoing support.","Acquiring Products:</li>
-                    <li>Lead the launch and management of acquiring products, considering the entire product lifecycle.</li>
-                    <li>Collaborate with cross-functional teams to ensure successful implementation and testing of acquiring products.</li>
-                    <li>Stay updated with industry standards and regulations related to acquiring products.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Oversee all back-office operations related to merchant applications, documentation, and verification processes.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure compliance with underwriting guidelines, including documentation validation, scanning, CDD (Customer Due Diligence), and EDD (Enhanced Due Diligence).</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Implement efficient processes to handle merchant onboarding and ongoing support.","Acquiring Products:</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Lead the launch and management of acquiring products, considering the entire product lifecycle.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Collaborate with cross-functional teams to ensure successful implementation and testing of acquiring products.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Stay updated with industry standards and regulations related to acquiring products.</p>
+                    </li>
                 </ul>
 
             </div>
             
              <div class="mb-5>
-                <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Regulations and Compliance</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Possess a strong understanding of international and local scheme regulations</li>
-                    <li>Ensure compliance with all relevant regulations and guidelines, including data security and privacy standards.</li>
-                    <li>Implement and maintain necessary controls to mitigate risks associated with non-compliance.</li>
+                <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Scheme Regulations and Compliance</h6>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Possess a strong understanding of international and local scheme regulations</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure compliance with all relevant regulations and guidelines, including data security and privacy standards.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Implement and maintain necessary controls to mitigate risks associated with non-compliance.</p>
+                    </li>
                 </ul>
 
             </div>
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Cards Processing and FinTech</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Demonstrate a deep understanding of cards processing, including authorization, settlement, and reconciliation processes.</li>
-                    <li>Stay informed about emerging trends and advancements in the FinTech industry.</li>
-                    <li>Identify opportunities for process improvements and innovation in cards processing.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li> 
+                        <p class="text-primary">
+                            Demonstrate a deep understanding of cards processing, including authorization, settlement, and reconciliation processes.
+                         </p>
+                    </li>
+                    <li>
+                        <p class="text-primary">
+                            Stay informed about emerging trends and advancements in the FinTech industry.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-primary">
+                            Identify opportunities for process improvements and innovation in cards processing.
+                        </p>
+                    </li>
                 </ul>
 
             </div>
@@ -258,25 +389,50 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Job Requirement</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Bachelor's degree in a relevant field (e.g., Business, Finance, or a related discipline)</li>
-                <li>Master's degree is a plus.</li>
-                <li>Proven experience in payment operations, preferably in a managerial capacity.</li>
-                <li>Extensive knowledge of clearing, settlement, chargeback, and fraud management processes and best practices.</li>
-                <li>Strong expertise in POS operations, including hardware, software, and application functionality.</li>
-                <li>Familiarity with acquiring products and their end-to-end lifecycle management.</li>
-                <li>Proficiency in back-office operations, including merchant applications, underwriting, and documentation verification.</li>
-                <li>Exceptional understanding of international and local scheme regulations.</li>
-                <li>Knowledge of cards processing and FinTech industry trends.</li>
-                <li>Strong analytical and problem-solving skills.</li>
-                <li>Excellent communication and interpersonal skills.</li>
-                <li>Ability to lead and motivate a team.</li>
-                <li>Demonstrated ability to work in a fast-paced, dynamic environment.</li>
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Bachelor's degree in a relevant field (e.g., Business, Finance, or a related discipline)</p>
+                </li>
+                <li>
+                    <p class="text-primary">Master's degree is a plus.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Proven experience in payment operations, preferably in a managerial capacity.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Extensive knowledge of clearing, settlement, chargeback, and fraud management processes and best practices.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong expertise in POS operations, including hardware, software, and application functionality.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Familiarity with acquiring products and their end-to-end lifecycle management.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Proficiency in back-office operations, including merchant applications, underwriting, and documentation verification.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Exceptional understanding of international and local scheme regulations.</li>
+                <li>
+                    <p class="text-primary">Knowledge of cards processing and FinTech industry trends.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong analytical and problem-solving skills.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Excellent communication and interpersonal skills.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Ability to lead and motivate a team.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Demonstrated ability to work in a fast-paced, dynamic environment.</p>
+                </li>
             </ul>
         </div>
         `,
     
-    department:"Commercial",
+    department:"Operations",
     slug: "operations-manager-design-oman",
         
     },
@@ -297,20 +453,32 @@ export const careerContentData = [
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Responibilties</h4>
            <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Payment Operations Expertise</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Demonstrate expert knowledge in all payment operations, including clearing, settlement, chargeback, and fraud management.</li>
-                    <li>Ensure efficient and accurate processing of payments, adhering to industry best practices.</li>
-                    <li>Stay updated with the latest trends, regulations, and technologies in the payments industry.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Demonstrate expert knowledge in all payment operations, including clearing, settlement, chargeback, and fraud management.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure efficient and accurate processing of payments, adhering to industry best practices.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Stay updated with the latest trends, regulations, and technologies in the payments industry.</p>
+                    </li>
                 </ul>
 
             </div>  
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">POS Operations Management</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Possess a comprehensive understanding of POS machines, including hardware, software, POS applications, functionality, profiles, key injections, TMC, and inventory management.</li>
-                    <li>Ensure smooth operation and functionality of POS systems, troubleshooting any technical issues that may arise.</li>
-                    <li>Coordinate with relevant teams to conduct end-to-end testing of acquiring products and launch them successfully.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Possess a comprehensive understanding of POS machines, including hardware, software, POS applications, functionality, profiles, key injections, TMC, and inventory management.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure smooth operation and functionality of POS systems, troubleshooting any technical issues that may arise.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Coordinate with relevant teams to conduct end-to-end testing of acquiring products and launch them successfully.</p>
+                    </li>
                 </ul>
 
             </div>  
@@ -318,33 +486,57 @@ export const careerContentData = [
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Back-Office Operations</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Oversee all back-office operations related to merchant applications, documentation, and verification processes.</li>
-                    <li>Ensure compliance with underwriting guidelines, including documentation validation, scanning, CDD (Customer Due Diligence), and EDD (Enhanced Due Diligence).</li>
-                    <li>Implement efficient processes to handle merchant onboarding and ongoing support.","Acquiring Products:</li>
-                    <li>Lead the launch and management of acquiring products, considering the entire product lifecycle.</li>
-                    <li>Collaborate with cross-functional teams to ensure successful implementation and testing of acquiring products.</li>
-                    <li>Stay updated with industry standards and regulations related to acquiring products.</li>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Oversee all back-office operations related to merchant applications, documentation, and verification processes.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure compliance with underwriting guidelines, including documentation validation, scanning, CDD (Customer Due Diligence), and EDD (Enhanced Due Diligence).</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Implement efficient processes to handle merchant onboarding and ongoing support.","Acquiring Products:</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Lead the launch and management of acquiring products, considering the entire product lifecycle.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Collaborate with cross-functional teams to ensure successful implementation and testing of acquiring products.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Stay updated with industry standards and regulations related to acquiring products.</p>
+                    </li>
                 </ul>
 
             </div>
             
              <div class="mb-5>
-                <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Regulations and Compliance</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7">
-                    <li>Possess a strong understanding of international and local scheme regulations</li>
-                    <li>Ensure compliance with all relevant regulations and guidelines, including data security and privacy standards.</li>
-                    <li>Implement and maintain necessary controls to mitigate risks associated with non-compliance.</li>
+                <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Scheme Regulations and Compliance</h6>
+                <ul class="text-base md:text-lg text-medium-brand mb-4 !leading-7 px-4 list-disc">
+                    <li>
+                        <p class="text-primary">Possess a strong understanding of international and local scheme regulations</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Ensure compliance with all relevant regulations and guidelines, including data security and privacy standards.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Implement and maintain necessary controls to mitigate risks associated with non-compliance.</p>
+                    </li>
                 </ul>
 
             </div>
             
             <div class="mb-5>
                 <h6 text-lg text-primary !leading-6font-medium !leading-7 mb-4">Cards Processing and FinTech</h6>
-                <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                    <li>Demonstrate a deep understanding of cards processing, including authorization, settlement, and reconciliation processes.</li>
-                    <li>Stay informed about emerging trends and advancements in the FinTech industry.</li>
-                    <li>Identify opportunities for process improvements and innovation in cards processing.</li>
+                <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4">
+                    <li>
+                        <p class="text-primary">Demonstrate a deep understanding of cards processing, including authorization, settlement, and reconciliation processes.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Stay informed about emerging trends and advancements in the FinTech industry.</p>
+                    </li>
+                    <li>
+                        <p class="text-primary">Identify opportunities for process improvements and innovation in cards processing.</p>
+                    </li>
                 </ul>
 
             </div>
@@ -352,24 +544,50 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Job Requirement</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc">
-                <li>Bachelor's degree in a relevant field (e.g., Business, Finance, or a related discipline)</li>
-                <li>Master's degree is a plus.</li>
-                <li>Proven experience in payment operations, preferably in a managerial capacity.</li>
-                <li>Extensive knowledge of clearing, settlement, chargeback, and fraud management processes and best practices.</li>
-                <li>Strong expertise in POS operations, including hardware, software, and application functionality.</li>
-                <li>Familiarity with acquiring products and their end-to-end lifecycle management.</li>
-                <li>Proficiency in back-office operations, including merchant applications, underwriting, and documentation verification.</li>
-                <li>Exceptional understanding of international and local scheme regulations.</li>
-                <li>Knowledge of cards processing and FinTech industry trends.</li>
-                <li>Strong analytical and problem-solving skills.</li>
-                <li>Excellent communication and interpersonal skills.</li>
-                <li>Ability to lead and motivate a team.</li>
-                <li>Demonstrated ability to work in a fast-paced, dynamic environment.</li>
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4">
+                <li>
+                    <p class="text-primary">Bachelor's degree in a relevant field (e.g., Business, Finance, or a related discipline)</p>
+                </li>
+                <li>
+                    <p class="text-primary">Master's degree is a plus.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Proven experience in payment operations, preferably in a managerial capacity.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Extensive knowledge of clearing, settlement, chargeback, and fraud management processes and best practices.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong expertise in POS operations, including hardware, software, and application functionality.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Familiarity with acquiring products and their end-to-end lifecycle management.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Proficiency in back-office operations, including merchant applications, underwriting, and documentation verification.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Exceptional understanding of international and local scheme regulations.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Knowledge of cards processing and FinTech industry trends.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Strong analytical and problem-solving skills.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Excellent communication and interpersonal skills.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Ability to lead and motivate a team.</p>
+                </li>
+                <li>
+                    <p class="text-primary">Demonstrated ability to work in a fast-paced, dynamic environment.</p>
+                </li>
             </ul>
         </div>
         `,
-        department:"Commercial",
+        department:"Operations",
         slug: "operations-manager-design-uae",
         
     },
@@ -390,9 +608,13 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Education</h4>
-            <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
+            <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
                 <li>
-                    Bachelor’s Degree in Business Administration or related field, PMP / PRINCE2 certification is a plus
+                    <p class="text-primary">Bachelor’s Degree in Business Administration or related field.</p> 
+                </li>
+
+                <li> 
+                    <p class="text-primary">PMP / PRINCE2 certification is a plus.</p>
                 </li>
             </ul>
         </div>
@@ -400,33 +622,37 @@ export const careerContentData = [
     
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Knowledge/Skills/Attributes: </h4>
-           <ul class="text-base md:text-lg text-primary  mb-4 !leading-7 list-disc"> 
+           <ul class="text-base md:text-lg text-medium-brand  mb-4 !leading-7 list-disc px-4"> 
                 <li>
-                   Ability to prepare and interpret flowcharts, schedules and step-by-step action plans
+                   <p class="text-primary">
+                        Ability to prepare and interpret flowcharts, schedules and step-by-step action plans
+                    </p>
                 </li>
 
                 <li>
-                 Solid organizational skills, including multitasking and time-management
+                    <p class="text-primary">Solid organizational skills, including multitasking and time-management</p>
                 </li>
                 
                 <li>
-                  Strong client-facing and teamwork skills
+                    <p class="text-primary">Strong client-facing and teamwork skills</p>
                 </li>
 
                 <li>
-                   Familiarity with risk management and quality assurance control
+                   <p class="text-primary">Familiarity with risk management and quality assurance control</p>
                 </li>
 
                 <li>
-                    Strong working knowledge of Microsoft Project and Microsoft Planner
+                    <p class="text-primary">Strong working knowledge of Microsoft Project and Microsoft Planner</p>
                 </li>
 
-                <li>Hands-on experience with project management tool</li>
+                <li>
+                    <p class="text-primary">Hands-on experience with project management tool</p>
+                </li>
                 
             </ul>
         </div>
         `,
-        department:"Commercial",
+        department:"Delivery Management",
         slug: "project-coordinator-finance-bahrain",
       },
 

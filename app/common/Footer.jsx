@@ -161,7 +161,10 @@ const Footer = () => {
                 {t("social follow")}
               </h6>
               <div className="flex justify-center md:justify-start items-center">
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a
+                  href="https://www.facebook.com/ArabFinancialServices"
+                  className={`${isArabic ? "ml-3" : "mr-3"}`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -171,7 +174,10 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a
+                  href="https://www.instagram.com/afs_bh/"
+                  className={`${isArabic ? "ml-3" : "mr-3"}`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -181,7 +187,10 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a
+                  href="https://x.com/afs_bh"
+                  className={`${isArabic ? "ml-3" : "mr-3"}`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -191,7 +200,10 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#" className={`${isArabic ? "ml-3" : "mr-3"}`}>
+                <a
+                  href="https://www.linkedin.com/company/arab-financial-services/"
+                  className={`${isArabic ? "ml-3" : "mr-3"}`}
+                >
                   <Image
                     sizes="100vw"
                     width={0}
@@ -201,7 +213,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/@arabfinancialservices">
                   <Image
                     sizes="100vw"
                     width={0}

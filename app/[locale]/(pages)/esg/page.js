@@ -20,13 +20,13 @@ const ESG = () => {
 
   const commitmentData = [
     {
-      title: "Our vision",
+      title: "Our ESG vision",
       description:
         "We are dedicated to delivering a positive Environmental, Social, and Governance impact by harnessing the power of digital transformation and innovation. Through our deep expertise, cutting-edge technology, committed human capital, and strong partnerships, we aim to create sustainable solutions that not only benefit our business but also contribute significantly to societal and environmental well-being.",
       image: "/assets/images/esg/our-vision.png",
     },
     {
-      title: "Our mission",
+      title: "Our ESG vision",
       description:
         "We aim to be a sustainable, responsible entity, encouraging our partners, clients, suppliers, vendors, and staff to adopt social, ethical, and environmental practices. Our goal is to deliver a positive, productive experience for our team and empower them through education. We commit to operating transparently and responsibly in all our activities, ensuring integrity and accountability in every aspect of our business.",
       image: "/assets/images/esg/our-mission.png",
@@ -61,7 +61,7 @@ const ESG = () => {
         title={"Environmental, Social, and Governance (ESG)"}
         subtext={"Contributing positively and responsibly to society"}
         description={
-          "Every business decision we make is driven by a focus on both our sustainable growth and on optimizing our business impact. Our ESG agenda focuses our attention on the overarching environmental, social, and governance areas where we believe we can help, through company policies, practices, and decision-making."
+          "Every business decision we make is driven by a focus on both our sustainable growth and on optimizing our business impact. Our ESG agenda focuses our attention on the environmental, social, and governance areas where we believe we can help, through company policies, practices, and decision-making."
         }
         image={"/assets/images/esg/esg-hero.png"}
       />
@@ -69,7 +69,7 @@ const ESG = () => {
       <CommitmentApproach
         title={"Our commitment"}
         subtext={
-          "Our ESG vision commits us to embedding sustainability and responsibility across all operations, ensuring enduring benefits for stakeholders and the planet."
+          "Our ESG vision commits us to embed sustainability and responsibility across all operations, ensuring enduring benefits for stakeholders and the planet."
         }
         content={commitmentData}
       />

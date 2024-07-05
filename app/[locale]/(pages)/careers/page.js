@@ -8,7 +8,7 @@ import CoreValues from "./components/CoreValues";
 import Testimonials from "./components/Testimonials";
 import OpenPositions from "./components/OpenPositions";
 import JobQueryForm from "./components/JobQueryForm";
-import {careerContentData} from "./careerDetail";
+import { careerContentData } from "./careerDetail";
 
 const Careers = () => {
   const storyContent = {
@@ -16,7 +16,7 @@ const Careers = () => {
       "At AFS we are changing the way people use and interact with technology and shaping the future of digital payments experiences.",
     ],
     secondaryContent: [
-      "Founded in 1984, AFS is owned by 37 banks and supports over 60 clients in 20+ countries across the Middle East, Africa and beyond.",
+      "Regulated by the Central Bank of Bahrain and the Central Bank of Egypt, AFS is owned by a total of 37 banks and financial institutions and serves over 60 bank clients in more than 20 countries across the Middle East and Africa region.",
       "Our digital payments products and services portfolio offers a diverse selection of issuing, processing, merchant acquiring and fintech innovation solutions.",
     ],
     tertiaryContent: [
@@ -44,7 +44,7 @@ const Careers = () => {
       <Story bg={true} content={storyContent} />
       <CoreValues />
       <Testimonials />
-      <OpenPositions positions={careerContentData}/>
+      <OpenPositions positions={careerContentData} />
       <JobQueryForm />
     </>
   );

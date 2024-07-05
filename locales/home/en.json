@@ -12,7 +12,7 @@
         {
           "count": "01",
           "title": "In-store, on-the-go and eShop payments",
-          "description": "Simplify your business operations, reach more customers, increase sales, and reduce costs with a comprehensive set of convenient and easy to use payments acceptance solutions by AFS. "
+          "description": "Simplify your business operations, reach more customers, increase sales, and reduce costs with a comprehensive set of secure and easy to use payments acceptance solutions by AFS."
         },
         {
           "count": "02",
@@ -32,7 +32,7 @@
         {
           "count": "05",
           "title": "Value added services",
-          "description": "AFS introduces the latest value-added services and state-of-the-art security features to revolutionize your payments business while driving seamless integration and cardholder engagement."
+          "description": "AFS introduces the latest value-added services and state-of-the-art security features to revolutionize your payments, stay safe and secure while driving seamless integration and cardholder engagement."
         }
       ]
     },
@@ -69,18 +69,18 @@
     },
     "About": {
       "title": "About us",
-      "headline": "Founded in 1984, AFS is owned by 37 banks and supports over 60 clients in 20+ countries, providing issuing, merchant acquiring, and various financial services.",
-      "sub title": "By the numbers",
+      "headline": "Regulated by the Central Bank of Bahrain and the Central Bank of Egypt, AFS is owned by a total of 37 banks and financial institutions and serves over 60 bank clients in more than 20 countries across the Middle East and Africa region.",
+      "sub title": "In numbers",
       "sub headline": "Leveraging the power of digital payments",
       "description": "Discover how we are revolutionizing the financial and payments sector through our relentless commitment to harnessing the potential of digital payments.",
       "statistics": {
         "volume": {
           "count": "$3.2B",
-          "text": "Acquiring volume"
+          "text": "Acquring volume in 2023"
         },
         "transactions": {
           "count": "288M",
-          "text": "Transactions completed"
+          "text": "Transactions processed in 2023"
         },
         "experience": {
           "count": "40+",

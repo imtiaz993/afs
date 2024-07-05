@@ -90,6 +90,7 @@ const OpenBanking = () => {
         title={
           "Find answers to some key questions about our Open Banking solution"
         }
+        email={"openbanking@afs.com.bh"}
         accordionOptions={faqContentData}
       />
       <PageLayout>
@@ -99,7 +100,9 @@ const OpenBanking = () => {
             text: ["revolutionize"],
             color: "text-brand-secondary",
           }}
-          secondaryContent={"Experience the power of AFS today!"}
+          secondaryContent={
+            "Embrace the future of banking with our Open Banking solutions."
+          }
           primaryButtonLabel={"Contact our team"}
           primaryButtonLink={"/contact-team"}
         />

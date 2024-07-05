@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
+import { Link } from "i18n.config";
 
 const Offices = () => {
   return (
@@ -27,8 +28,8 @@ const Offices = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
-                src="/assets/icons/contact/flag1.svg"
-                className="mb-6 w-auto"
+                src="/assets/icons/contact/flag1.png"
+                className="mb-6 w-auto border"
                 alt=""
               />
             </div>
@@ -38,23 +39,29 @@ const Offices = () => {
               </h6>
               <div className="mb-10">
                 <p className="text-primary  mb-1 !leading-6">Level 12 & 14,</p>
-                <p className="text-primary  mb-1 !leading-6">Harbour Tower East,</p>
-                <p className="text-primary  mb-1 !leading-6">Bahrain Financial Harbour</p>
+                <p className="text-primary  mb-1 !leading-6">
+                  Harbour Tower East,
+                </p>
+                <p className="text-primary  mb-1 !leading-6">
+                  Bahrain Financial Harbour
+                </p>
                 <p className="text-primary  !leading-6">Manama</p>
               </div>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  Directions
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <Link href={"https://maps.app.goo.gl/f5S1DHUTVMjxLawSA"}>
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    Directions
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div className="bg-white p-6 rounded">
@@ -73,24 +80,28 @@ const Offices = () => {
                 United Arab Emirates
               </h6>
               <div className="mb-10">
-                <p className="text-primary !leading-6 mb-1">Office C1205,Level 12,</p>
-                <p className="text-primary !leading-6 mb-1">Burj Daman,DIFC</p>
-                <p className="text-primary !leading-6 mb-1 h-6"></p>
+                <p className="text-primary !leading-6 mb-1">
+                  Dubai Supreme Court Complex,
+                </p>
+                <p className="text-primary !leading-6 mb-1">Umm Hurair 2,</p>
+                <p className="text-primary !leading-6 mb-1 h-6"> Deira,</p>
                 <p className="text-primary !leading-6">Dubai</p>
               </div>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  Directions
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <Link href={"https://maps.app.goo.gl/VmKy9GZEziBnStMr8"}>
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    Directions
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div className="bg-white p-6 rounded">
@@ -105,26 +116,36 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg font-regular !leading-[140%]">Egypt</h6>
+              <h6 className="mb-4 text-primary text-lg font-regular !leading-[140%]">
+                Egypt
+              </h6>
               <div className="mb-10">
-                <p className="text-primary !leading-6 mb-1">Plot Number: B-39,</p>
-                <p className="text-primary !leading-6 mb-1">Street 90 (North),</p>
-                <p className="text-primary !leading-7 mb-1">Fifth Settlement,</p>
+                <p className="text-primary !leading-6 mb-1">
+                  Plot Number: B-39,
+                </p>
+                <p className="text-primary !leading-6 mb-1">
+                  Street 90 (North),
+                </p>
+                <p className="text-primary !leading-7 mb-1">
+                  Fifth Settlement,
+                </p>
                 <p className="text-primary !leading-6">New Cairo</p>
               </div>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  Directions
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <Link href={"https://maps.app.goo.gl/HUyRTLUutgtnUAXq7"}>
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    Directions
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div className="bg-white p-6 rounded">
@@ -139,26 +160,34 @@ const Offices = () => {
               />
             </div>
             <div>
-              <h6 className="mb-4 text-primary text-lg font-regular !leading-[140%]">Sultanate of Oman</h6>
+              <h6 className="mb-4 text-primary text-lg font-regular !leading-[140%]">
+                Sultanate of Oman
+              </h6>
               <div className="mb-10">
-                <p className="text-primary !leading-6 mb-1">Office 425, Level 4,</p>
-                <p className="text-primary !leading-6 mb-1">Al Fardan Heights,</p>
+                <p className="text-primary !leading-6 mb-1">
+                  Office 425, Level 4,
+                </p>
+                <p className="text-primary !leading-6 mb-1">
+                  Al Fardan Heights,
+                </p>
                 <p className="text-primary !leading-6 mb-1">Ghala,</p>
                 <p className="text-primary !leading-6">Muscat</p>
               </div>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  Directions
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <Link href="https://maps.app.goo.gl/KcZdW8WTTw2Z7Qj59">
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    Directions
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>

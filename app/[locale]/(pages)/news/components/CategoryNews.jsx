@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import PageLayout from "app/common/PageLayout";
+import { calculateReadingTime } from "../utility/util";
 
 const CategoryNews = ({ posts, bg, category, setCategory }) => {
   const pathname = usePathname();
@@ -42,7 +43,7 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
           <div className="lg:w-1/2">
             <Link
               href={pathname + "/" + firstArticle.slug}
-              className="flex flex-col space-y-4"
+              className="flex flex-col space-y-4 group cursor-pointer"
             >
               <div>
                 <Image
@@ -59,11 +60,11 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
                 <div className="text-xs text-secondary space-x-2 flex items-center">
                   <span>{firstArticle.date}</span>
                   <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
-                  <span>{firstArticle.timeToRead}</span>
+                  <span>{calculateReadingTime(firstArticle.content)} min read</span>
                 </div>
               </div>
 
-              <h4 className="text-xl sm:text-2xl !leading-[120%] text-primary mb-4 max-w-full lg:max-w-md line-clamp-2">
+              <h4 className="text-xl sm:text-2xl !leading-[120%] text-primary mb-4 max-w-full lg:max-w-md line-clamp-2 group-hover:text-brand-secondary transition-all ease-in-out">
                 {firstArticle.title}
               </h4>
 
@@ -78,18 +79,18 @@ const CategoryNews = ({ posts, bg, category, setCategory }) => {
             {articles.map((article, index) => (
               <Link
                 key={article.id}
-                className="pb-8 mb-8 border-b border-default block last:border-b-0 "
+                className="pb-8 mb-8 border-b border-default block last:border-b-0 group cursor-pointer"
                 href={pathname + "/" + article.slug}
               >
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="text-xs text-secondary space-x-2 flex items-center">
                     <span>{article.date}</span>
                     <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
-                    <span>{article.timeToRead} read</span>
+                    <span>{calculateReadingTime(article.content)} min read</span>
                   </div>
                 </div>
 
-                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-1">
+                <h4 className="text-xl sm:text-2xl !leading-[120%] text-dark-neutral mb-4 max-w-full lg:max-w-md line-clamp-1 group-hover:text-brand-secondary transition-all ease-in-out">
                   {article.title}
                 </h4>
 

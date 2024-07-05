@@ -7,7 +7,7 @@ const Benefits = ({ description, data }) => {
       <div className="py-10 lg:py-24 md:flex items-start">
         <SingleNav title={"Benefits"} />
         <div className="md:w-[calc(100%-192px)]">
-          <h3 className="text-[40px] !leading-[120%] text-primary mb-16">
+          <h3 className="text-[24px] md:text-[40px] !leading-[120%] text-primary mb-16">
             {description}
           </h3>
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">

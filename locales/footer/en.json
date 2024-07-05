@@ -37,19 +37,22 @@
           "title": "POS terminals",
           "link": "/solutions/business/pos-terminals"
         },
-        { "title": "AFS Pay (softPOS)", "link": "/solutions/business/softpos" },
+        {
+          "title": "AFS Pay - SoftPOS",
+          "link": "/solutions/business/afspay-softpos"
+        },
+        {
+          "title": "AFS Pro",
+          "link": "/solutions/business/afs-pro"
+        },
         { "title": "eShop", "link": "/solutions/business/eshop" },
         {
           "title": "Open banking",
           "link": "/solutions/business/open-banking"
         },
         {
-          "title": "Food and beverage (F&B)",
-          "link": "/solutions/business/food-beverage"
-        },
-        {
-          "title": "AFS Pro",
-          "link": "/solutions/business/afs-pro"
+          "title": "AFS One - Food and beverage",
+          "link": "/solutions/business/afsone-food-beverage"
         }
       ]
     },

@@ -216,37 +216,40 @@ const OpenPositions = ({ positions }) => {
                 }
               >
                 <option value="*">Department</option>
-                <option value="Commercial">Commercial</option>
+                {/* <option value="Commercial">Commercial</option>
                 <option value="Finance">Finance</option>
                 <option value="Design">Design</option>
-                <option value="Technology">Technology</option>
+                <option value="Technology">Technology</option> */}
                 <option value="Operations">Operations</option>
+                <option value="Delivery Management">Delivery Management</option>
+                <option value="Internal Audit">Internal Audit</option>
+                <option value="Compliance">Compliance</option>
               </select>
             </div>
           </div>
           <div className="border border-default rounded lg:w-[calc(100%-200px)] filter-container">
             {positions.map((item, index) => (
-              <div
-                key={index}
-                className={`filter-item ${item.location?.country} ${
-                  item.department
-                } ${
-                  index !== positions.length ? "border-b border-default" : ""
-                }  px-4 py-2 md:flex items-center justify-between w-full`}
-              >
-                <h6 className="py-2 text-primary font-regular !leading-[140%]">
-                  {item.jobName}
-                </h6>
-                <div className="flex justify-between md:justify-start">
-                  <div className="py-2 flex items-center mr-8">
-                    <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-base !leading-6">
-                      {item.department}
-                    </p>
-                    <p className="text-primary text-sm md:text-base !leading-6">
-                      {item.location?.city}
-                    </p>
-                  </div>
-                  <Link href={"careers/" + item.slug}>
+              <Link href={"careers/" + item.slug}>
+                <div
+                  key={index}
+                  className={`filter-item ${item.location?.country} ${
+                    item.department
+                  } ${
+                    index !== positions.length ? "border-b border-default" : ""
+                  }  px-4 py-2 md:flex items-center justify-between w-full`}
+                >
+                  <h6 className="py-2 text-primary font-regular !leading-[140%] hover:text-brand-secondary">
+                    {item.jobName}
+                  </h6>
+                  <div className="flex justify-between md:justify-start">
+                    <div className="py-2 flex items-center mr-8">
+                      <p className="text-primary pr-4 mr-4 border-r border-default text-sm md:text-base !leading-6">
+                        {item.department}
+                      </p>
+                      <p className="text-primary text-sm md:text-base !leading-6">
+                        {item.location?.city}
+                      </p>
+                    </div>
                     <Image
                       sizes="100vw"
                       width={0}
@@ -255,9 +258,9 @@ const OpenPositions = ({ positions }) => {
                       src="/assets/icons/careers/arrow-right.svg"
                       alt=""
                     />
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import PageLayout from "app/common/PageLayout";
+import { calculateReadingTime } from "../utility/util";
 
 const LatestArticles = ({ data, setCategory }) => {
   const pathname = usePathname();
@@ -29,7 +30,7 @@ const LatestArticles = ({ data, setCategory }) => {
           </button>
         </div>
 
-        <div className="flex flex-column  xl:flex-row  space-y-4 xl:space-y-0 xl:space-x-8 lg:space-x-4 flex-wrap xl:flex-nowrap">
+        <div className="flex flex-column  xl:flex-row  space-y-4 xl:space-y-0 xl:space-x-8 lg:space-x-4 flex-wrap xl:flex-nowrap group cursor-pointer">
           <div className="max-w-full  xl:max-w-[864px] w-full xl:w-3/4">
             <Link
               href={pathname + "/" + data[0].slug}
@@ -53,12 +54,12 @@ const LatestArticles = ({ data, setCategory }) => {
               <div className="text-xs text-secondary space-x-2 flex items-center h-[26px]">
                 <span>{data[0].date}</span>
                 <span className="w-1 h-1 rounded-full bg-tertiary mt-px"></span>
-                <span>{data[0].timeToRead} read</span>
+                <span>{calculateReadingTime(data[0].content)} min read</span>
               </div>
             </div>
 
             <Link href={pathname + "/" + data[0].slug} className="block">
-              <h3 className="text-2xl xl:text-[40px] leading-[120%] text-dark-neutral max-w-full lg:max-w-md line-clamp-5">
+              <h3 className="text-2xl xl:text-[40px] leading-[120%] text-dark-neutral max-w-full lg:max-w-md line-clamp-5 group-hover:text-brand-secondary transition-all ease-in-out">
                 {data[0].title}
               </h3>
             </Link>
@@ -74,7 +75,7 @@ const LatestArticles = ({ data, setCategory }) => {
             <div className="flex flex-col w-full">
               <Link
                 href={pathname + "/" + article.slug}
-                className="flex flex-col space-y-4"
+                className="flex flex-col space-y-4 group cursor-pointer"
               >
                 <div key={article}>
                   <Image
@@ -95,12 +96,14 @@ const LatestArticles = ({ data, setCategory }) => {
                     <div className="text-xs text-secondary space-x-2 flex items-center">
                       <span>{article.date}</span>
                       <span className="w-1 h-1 rounded-full bg-tertiary mb-1"></span>
-                      <span>{article.timeToRead} read</span>
+                      <span>
+                        {calculateReadingTime(article.content)} min read
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                <h4 className="text-xl xl:text-2xl !leading-[120%] text-primary mb-4 max-w-full lg:max-w-md line-clamp-2">
+                <h4 className="text-xl xl:text-2xl !leading-[120%] text-primary mb-4 max-w-full lg:max-w-md line-clamp-2 group-hover:text-brand-secondary transition-all ease-in-out">
                   {article.title}
                 </h4>
 

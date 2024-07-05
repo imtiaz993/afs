@@ -173,7 +173,7 @@ const ValueAddedServices = () => {
         ctaData={servicesCTAData}
       />
       <UsedTrustedBy />
-      <TestimonialSlider bgColor={"bg-white"} />
+      {/* <TestimonialSlider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

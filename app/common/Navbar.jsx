@@ -500,9 +500,9 @@ const BusinessesOverview = () => {
             link={"/solutions/business/pos-terminals"}
           />
           <SubMenuItem
-            title={"AFS One (SoftPOS)"}
+            title={"AFS Pay - SoftPOS"}
             description={"Smart point-of-sale in your pocket."}
-            link={"/solutions/business/afsone-softpos"}
+            link={"/solutions/business/afspay-softpos"}
           />
           <SubMenuItem
             title={"AFS Pro"}
@@ -520,9 +520,9 @@ const BusinessesOverview = () => {
             link={"/solutions/business/eshop"}
           />
           <SubMenuItem
-            title={"Food & beverage"}
+            title={"AFS One - Food and Beverage"}
             description={"Your restaurant-first full featured point-of-sale."}
-            link={"/solutions/business/food-beverage"}
+            link={"/solutions/business/afsone-food-beverage"}
           />
         </div>
       </div>
@@ -556,23 +556,26 @@ const ConsumersOverview = () => {
           </p>
         </div>
         <div className="p-2 flex">
-          <Image
-            src={"/assets/icons/solutions/appstore.svg"}
-            width={113}
-            height={32}
-            sizes="100vw"
-            className=""
-            alt=""
-          />
-
-          <Image
-            src={"/assets/icons/solutions/googleplay.svg"}
-            width={113}
-            height={32}
-            sizes="100vw"
-            className="ml-2"
-            alt=""
-          />
+          <Link href="https://apps.apple.com/us/app/afs-bpay/id1629591483">
+            <Image
+              src={"/assets/icons/solutions/appstore.svg"}
+              width={113}
+              height={32}
+              sizes="100vw"
+              className=""
+              alt=""
+            />
+          </Link>
+          <Link href="https://play.google.com/store/apps/details?id=com.afs.bpay&hl=en&gl=US">
+            <Image
+              src={"/assets/icons/solutions/googleplay.svg"}
+              width={113}
+              height={32}
+              sizes="100vw"
+              className="ml-2"
+              alt=""
+            />
+          </Link>
         </div>
       </div>
     </div>
@@ -1056,9 +1059,9 @@ const MobileSolutionBusinessesMenu = () => {
           link={"/solutions/business/pos-terminals"}
         />
         <SubMenuItem
-          title={"AFS One (SoftPOS)"}
+          title={"AFS Pay - SoftPOS"}
           description={"Smart point-of-sale in your pocket."}
-          link={"/solutions/business/afsone-softpos"}
+          link={"/solutions/business/afspay-softpos"}
         />
         <SubMenuItem
           title={"AFS Pro"}
@@ -1076,9 +1079,9 @@ const MobileSolutionBusinessesMenu = () => {
           link={"/solutions/business/eshop"}
         />
         <SubMenuItem
-          title={"Food & beverage"}
+          title={"AFS One - Food and Beverage"}
           description={"Your restaurant-first full featured point-of-sale."}
-          link={"/solutions/business/food-beverage"}
+          link={"/solutions/business/afsone-food-beverage"}
         />
       </div>
     </div>

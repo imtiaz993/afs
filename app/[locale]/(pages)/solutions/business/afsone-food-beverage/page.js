@@ -3,7 +3,7 @@ import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
 
-const FoodAndBeverage = () => {
+const AFSOneFoodAndBeverage = () => {
   const benefitsData = [
     {
       title: "Operational efficiency",
@@ -79,7 +79,7 @@ const FoodAndBeverage = () => {
     <>
       <Navbar />
       <CommonHero
-        title={"Food & Beverage"}
+        title={"AFS One - Food & Beverage"}
         subtext={
           "Your restaurant-first full featured point-of-sale software solution"
         }
@@ -103,7 +103,7 @@ const FoodAndBeverage = () => {
         commonCTAData={{
           bgColor: "bg-surface-neutral",
           primaryContent:
-            "Want to learn more about AFS Go, our full featured point-of-sale solution for restaurants?",
+            "Want to learn more about AFS One, our full featured point-of-sale solution for restaurants?",
           secondaryContent:
             "Our dedicated regional managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
@@ -114,4 +114,4 @@ const FoodAndBeverage = () => {
   );
 };
 
-export default FoodAndBeverage;
+export default AFSOneFoodAndBeverage;

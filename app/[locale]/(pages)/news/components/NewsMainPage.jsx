@@ -3,7 +3,6 @@ import { useState } from "react";
 import NewsCommonBanner from "./NewsCommonBanner";
 import LatestArticles from "./LatestArticles";
 import CategoryNews from "./CategoryNews";
-import { allPostsData } from "../allPostsData";
 import { newsPostData } from "../newsPostData";
 import AllPosts from "./AllPosts";
 
@@ -12,13 +11,12 @@ const NewsMainPage = () => {
   const newsCategoriesData = [
     "All",
     "Company announcements",
-    "Case studies",
-    "Product news",
+    "Partnership",
+    "Innovative solutions",
     "eCommerce",
     "Payment acceptance",
     "Fraud",
     "Acquiring",
-    "Partnerships",
   ];
 
   return (
@@ -40,13 +38,13 @@ const NewsMainPage = () => {
           <CategoryNews
             posts={newsPostData}
             bg="bg-white"
-            category="Case studies"
+            category="Partnership"
             setCategory={setCategory}
           />
           <CategoryNews
             posts={newsPostData}
             bg="bg-subtle-neutral"
-            category="Product news"
+            category="Innovative solutions"
             setCategory={setCategory}
           />
         </>

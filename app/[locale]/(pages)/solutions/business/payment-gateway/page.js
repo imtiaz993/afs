@@ -85,7 +85,7 @@ const PaymentGateway = () => {
         title={"Payment gateway"}
         subtext={"Seamless payment gateway solutions"}
         description={
-          "Our payment gateway streamlines transactions with robust security and support for multiple payment methods, ensuring quick and reliable processing. It enhances checkout experiences and offers insights to optimize your payment strategy."
+          "Our payment gateway streamlines transactions with robust security and support for multiple digital payment methods, ensuring quick and reliable processing."
         }
         image={
           "/assets/images/solutions/business/payment-gateway/payment-gateway.png"
@@ -95,7 +95,7 @@ const PaymentGateway = () => {
       />
       <Benefits
         description={
-          "Utilizing our payment gateway solution offers substantial benefits, ensuring your customer transactions are not only secure but also efficient and user-friendly."
+          "Utilizing our payment gateway solution offers substantial benefits, ensuring your customer transactions are not only secure but also efficient."
         }
         data={benefitsData}
       />

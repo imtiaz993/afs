@@ -1,6 +1,5 @@
-import React from "react";
 import Navbar from "app/common/Navbar";
-import CommonHero from "app/common/CommonHero";
+import Hero from "./components/Hero";
 import PageLayout from "app/common/PageLayout";
 import ContactOption from "./components/ContactOption";
 import Support from "./components/Support";
@@ -12,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <CommonHero
+      <Hero
         title={"Contact us"}
         subtext={"How can we help?"}
         description={

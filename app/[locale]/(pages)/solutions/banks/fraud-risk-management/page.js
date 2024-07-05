@@ -38,7 +38,7 @@ const FraudRiskManagement = () => {
 
   const featuresData = [
     {
-      title: "On-hehalf fraud management",
+      title: "On-behalf fraud management",
       description:
         "We offer bespoke fraud & risk management services that harness advanced and cutting-edge technology to protect your financial transactions. Our services are designed to detect and prevent fraudulent activities accurately and efficiently. We equip your operations with the latest fraud monitoring and analysis tools, ensuring robust defense against emerging threats and safeguarding your business assets.",
       image:
@@ -87,7 +87,7 @@ const FraudRiskManagement = () => {
       />
       <Features data={featuresData} commonCTAData={featuresCommonCTAData} />
       <UsedTrustedBy />
-      <TestimonialSllider bgColor={"bg-white"} />
+      {/* <TestimonialSllider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

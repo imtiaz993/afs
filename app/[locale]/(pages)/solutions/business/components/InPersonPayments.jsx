@@ -24,8 +24,8 @@ const InPersonPayments = () => {
 			title: "SoftPOS",
 			description:
 				"Whether it’s for in-store purchases, home delivery, or online sales, our SoftPOS solution can transform any Android mobile phone or tablet into a smart payment terminal.",
-			learnMoreLink: "/solutions/business/softpos",
-			image: "/assets/images/solutions/business/softpos.png",
+			learnMoreLink: "/solutions/business/afspay-softpos",
+			image: "/assets/images/solutions/business/afspay-softpos.png",
 		},
 		{
 			title: "Food and beverage (F&B)",

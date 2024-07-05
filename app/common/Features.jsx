@@ -52,7 +52,12 @@ const Features = ({ data, commonCTAData, appCTA, appCTABgColor }) => {
                   </>
                 ) : null}
                 {item.googlePlayButton ? (
-                  <Link href={"https://play.google.com/"} target="_blank">
+                  <Link
+                    href={
+                      "https://play.google.com/store/apps/details?id=com.afspay.app"
+                    }
+                    target="_blank"
+                  >
                     <div className="mt-8">
                       <Image
                         sizes="100vw"

@@ -3,7 +3,7 @@ import CommonHero from "app/common/CommonHero";
 import Benefits from "app/common/Benefits";
 import Features from "app/common/Features";
 
-const AfsOneSoftPOS = () => {
+const AfsPaySoftPOS = () => {
   const benefitsData = [
     {
       title: "No new hardware",
@@ -114,9 +114,9 @@ const AfsOneSoftPOS = () => {
     <>
       <Navbar />
       <CommonHero
-        title={"SoftPOS"}
+        title={"AFS Pay - SoftPOS"}
         subtext={
-          "Transform your Android device into a smart point-of-sale terminal"
+          "Transform your Android device into a smart point-of-sale terminal with AFS Pay"
         }
         description={
           "Whether it is in-store purchases, home delivery or on the go, our AFS Pay Android application is your dedicated softPOS solution that ensures you are ready to accept digital payments for every customer scenario."
@@ -136,7 +136,9 @@ const AfsOneSoftPOS = () => {
         commonCTAData={{
           bgColor: "bg-surface-neutral",
           primaryContent:
-            "Want to learn more about AFS Pay, our softPOS solution?",
+            "Do business anywhere, anytime with our AFS Pay solution.",
+          secondaryContent:
+            "Our dedicated relationship managers are ready to help guide you on choosing your bespoke solution.",
           primaryButtonLabel: "Contact our team",
           primaryButtonLink: "/contact-team",
         }}
@@ -145,4 +147,4 @@ const AfsOneSoftPOS = () => {
   );
 };
 
-export default AfsOneSoftPOS;
+export default AfsPaySoftPOS;

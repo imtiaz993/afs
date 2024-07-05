@@ -106,6 +106,7 @@ const OpenBanking = () => {
         title={
           "Find answers to some key questions about our Open Banking solution"
         }
+        email={"openbanking@afs.com.bh"}
         accordionOptions={faqContentData}
       />
       <PageLayout>

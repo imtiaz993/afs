@@ -55,13 +55,6 @@ const Testimonials = () => {
     },
     {
       review:
-        "From navigating complex regulatory frameworks to spearheading innovative solutions, I am proud to be part of a team that pushes boundaries and sets new standards in digital payments.",
-      name: "Arwa AlSharqawi",
-      company: "Legal",
-      image: "/assets/icons/careers/testimonial8.svg",
-    },
-    {
-      review:
         "Working at AFS broadens horizons, being part of an organization that comprises many highly specialized units exposes one to a wealth of experience and many talented people.",
       name: "Wael Abdullatif",
       company: "Information Technology",

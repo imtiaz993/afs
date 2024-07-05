@@ -5,7 +5,7 @@ import PageLayout from "./PageLayout";
 import FaqAccordion from "./FaqAccordion";
 import SingleNav from "./SingleNav";
 
-const Faq = ({ title, accordionOptions }) => {
+const Faq = ({ title, accordionOptions, email }) => {
   const [activeAccordion, setActiveAccordion] = useState();
 
   return (
@@ -31,10 +31,10 @@ const Faq = ({ title, accordionOptions }) => {
           <p className="text-sm text-primary mt-4">
             For any additional questions, please reach out to 
             <a
-              href="mailto:questions@afs.com.bh"
+              href={`mailto:${email ? email : "questions@afs.com.bh"}`}
               className="text-brand-secondary hover:underline"
             >
-              questions@afs.com.bh
+              {email ? email : "questions@afs.com.bh"}
             </a>
           </p>
         </div>
