@@ -12,19 +12,19 @@ const SolutionBanks = () => {
       title: "Card processing",
       description:
         "Deliver versatile card solutions, for all requirements, ensuring convenience and security in every payment.",
-      image: "/assets/images/solutions/card-processing.png",
+      image: "/assets/images/solutions/card-processing2.png",
     },
     {
       title: "Operational support",
       description:
         "Streamline processes and optimize performance while ensuring continuous customer assistance.",
-      image: "/assets/images/solutions/operational-support.png",
+      image: "/assets/images/solutions/operational-support2.png",
     },
     {
       title: "Authentification",
       description:
         "Our proprietary advanced security measures and tools give you complete protection in stopping fraudulent activities.",
-      image: "/assets/images/solutions/authentification.png",
+      image: "/assets/images/solutions/authentification2.png",
     },
     {
       title: "Fraud management",
@@ -36,7 +36,7 @@ const SolutionBanks = () => {
       title: "Value added services",
       description:
         "Enhance your offerings with our suite of value-added services and security features to revolutionize your payments business.",
-      image: "/assets/images/solutions/value-added-services.png",
+      image: "/assets/images/solutions/value-added-services2.png",
     },
     {
       title: "Additional services",

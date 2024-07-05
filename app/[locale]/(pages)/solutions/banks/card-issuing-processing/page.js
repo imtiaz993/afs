@@ -15,25 +15,25 @@ const CardIssuingProcessing = () => {
       title: "Versatility and customization",
       description:
         "Meet the diverse needs of your customer base with a broad spectrum of card options",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility3.svg",
     },
     {
       title: "Operational efficiency",
       description:
         "Our streamlined processes and advanced technology significantly reduce the complexity and time.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational3.svg",
     },
     {
       title: "Security and compliance",
       description:
         "Benefit from a platform that prioritizes security and adherence to financial regulations.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security3.svg",
     },
     {
       title: "Market expansion opportunities",
       description:
         "With the ability to offer a variety of card types and customized solutions, your bank can attract a wider customer base.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market3.svg",
     },
   ];
 
@@ -41,32 +41,32 @@ const CardIssuingProcessing = () => {
     {
       title: "Card processing solutions",
       description:
-        "Make use of our versatile card solutions, for all requirements, ensuring convenience and security in every payment, from credit, debit, prepaid, virtual, tokenized cards, Shariah compliant and more! We have them all.",
-      image: "/assets/images/solutions/banks/card-processing-solutions.png",
+        "Make use of our versatile card solutions, for all requirements, ensuring convenience and security in every payment, from credit, debit, prepaid, virtual, tokenized cards, Shariah compliant and more we have them all.",
+      image: "/assets/images/solutions/banks/card-issuing-processing/card-processing-solutions2.png",
     },
     {
       title: "Operational support services",
       description:
         "We deliver essential operational support for your business. Our services streamline processes and optimize performance while ensuring continuous customer assistance with digital onboarding, ATM & POS driving, back-office support, and 24/7 contact center.",
-      image: "/assets/images/solutions/banks/operational-support-services.png",
+      image: "/assets/images/solutions/banks/card-issuing-processing/operational-support-services2.png",
     },
     {
       title: "Sharia compliant solutions",
       description:
         "Understanding the importance of adherence to Islamic banking principles, our Shariah-compliant solutions are meticulously designed to ensure that all financial transactions and products meet the strict standards of Islamic regulation.",
-      image: "/assets/images/solutions/banks/sharia-compliant-cards.png",
+      image: "/assets/images/solutions/banks/sharia-compliant-cards2.png",
     },
     {
       title: "Card personalization",
       description:
         "Set your financial products apart with our card personalization feature. From custom designs to enhanced security options like EMV chips and contactless technology, we empower your bank to offer personalized cards that resonate with your customers' preferences and needs. ",
-      image: "/assets/images/solutions/banks/personalized-cards.png",
+      image: "/assets/images/solutions/banks/personalized-cards2.png",
     },
     {
       title: "Instant issuance",
       description:
         "Meet customer expectations with our instant card issuance services, enabling immediate transaction capability and providing instant access to payment cards. Our efficient process offers on-the-spot card issuance, ensuring convenience and security for your customers.",
-      image: "/assets/images/solutions/banks/instant-issuance.png",
+      image: "/assets/images/solutions/banks/card-issuing-processing/instant-issuance2.png",
     },
   ];
 

@@ -27,17 +27,17 @@ const Working = () => {
 		{
 			title: accordion[2].title,
 			text: accordion[2].description,
-			image: "/assets/images/home/fraud-risk-management.png",
+			image: "/assets/images/home/fraud-risk-mgt.png",
 		},
 		{
 			title: accordion[3].title,
 			text: accordion[3].description,
-			image: "/assets/images/home/open-banking-hub.png",
+			image: "/assets/images/home/open-banking-hub2.png",
 		},
 		{
 			title: accordion[4].title,
 			text: accordion[4].description,
-			image: "/assets/images/home/value-added-service1.png",
+			image: "/assets/images/home/value-added-services2.png",
 		},
 	];
 

@@ -13,25 +13,25 @@ const OpenBanking = () => {
       title: "Increased innovation",
       description:
         "Collaborate with fintech companies to develop groundbreaking products and services.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/increased-innovation.svg",
     },
     {
       title: "Enhanced customer experience",
       description:
         "Deliver personalized services and streamline processes to provide a seamless banking experience.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/improved-trust.svg",
     },
     {
       title: "Regulatory compliance",
       description:
         "Navigate the complexities of financial regulations with confidence while meeting all regulatory requirements efficiently.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/regulatory-compliance.svg",
     },
     {
       title: "Empowered decision-making",
       description:
         "Leverage detailed insights from a broader range of financial data to make more informed decisions.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/empowered-decision-making.svg",
     },
   ];
 
@@ -54,7 +54,7 @@ const OpenBanking = () => {
       description:
         "With the integration of third-party data, banks can enhance their existing services or develop new ones that offer more personalized and efficient customer experiences. This includes everything from improved financial advice to faster loan processing.",
       image:
-        "/assets/images/solutions/banks/open-banking/enhanced-services.png",
+        "/assets/images/solutions/banks/open-banking/enhanced-services2.png",
     },
   ];
 

@@ -11,13 +11,13 @@ const RiskFraudManagement = () => {
 			title: "On behalf fraud management",
 			description:
 				"Bespoke fraud & risk management services that harness advanced and cutting-edge technology to protect your financial transactions.",
-			imgSrc: "/assets/images/solutions/banks/fraud-risk-management/on-behalf-fraud-management.png",
+			imgSrc: "/assets/images/solutions/banks/on-behalf-fraud-management2.png",
 		},
 		{
 			title: "Authentication services",
 			description:
 				"Employ proprietary advanced security measures and tools to provide complete protection against fraudulent activities.",
-			imgSrc: "/assets/images/solutions/banks/fraud-risk-management/authentication-services.png",
+			imgSrc: "/assets/images/solutions/banks/authentication-services2.png",
 		},
 	];
 	return (

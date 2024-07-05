@@ -14,25 +14,25 @@ const FraudRiskManagement = () => {
       title: "Enhanced security",
       description:
         "Provides robust protection ensuring that transactions are secure and customer data is safeguarded against fraud.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security3.svg",
     },
     {
       title: "Improved trust",
       description:
         "Maintain customer confidence by demonstrating a commitment to security and the integrity of financial transactions.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/improved-trust.svg",
     },
     {
       title: "Operational efficiency",
       description:
         "Automates and optimizes the detection and management of fraudulent activities, reducing the need for manual intervention.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/operational3.svg",
     },
     {
       title: "Strategic risk insights",
       description:
         "Offers valuable analytics and insights into fraud trends and risk patterns, enabling strategic risk mitigation approaches.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/strategic-risk.svg",
     },
   ];
 
@@ -42,14 +42,14 @@ const FraudRiskManagement = () => {
       description:
         "We offer bespoke fraud & risk management services that harness advanced and cutting-edge technology to protect your financial transactions. Our services are designed to detect and prevent fraudulent activities accurately and efficiently. We equip your operations with the latest fraud monitoring and analysis tools, ensuring robust defense against emerging threats and safeguarding your business assets.",
       image:
-        "/assets/images/solutions/banks/fraud-risk-management/on-hehalf-fraud-management.png",
+        "/assets/images/solutions/banks/fraud-risk-management/fraud-risk-management2.png",
     },
     {
       title: "Authentication services",
       description:
         "AFS Key Authentication Services employ proprietary advanced security measures and tools to provide complete protection against fraudulent activities. Our services prioritize both security and user experience by embedding vital security layers to verify user identities and ensure secure access to sensitive data and systems. Safeguard your assets and data, ensuring your business operations are secure and trustworthy.",
       image:
-        "/assets/images/solutions/banks/fraud-risk-management/authentication-services.png",
+        "/assets/images/solutions/banks/fraud-risk-management/authentication-services2.png",
     },
   ];
 

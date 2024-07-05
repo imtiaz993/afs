@@ -30,19 +30,19 @@ const About = () => {
       title: "Our vision",
       description:
         "To be the leading enabler for digital transaction transformation.",
-      image: "/assets/images/about/our-vision.png",
+      image: "/assets/images/about/our-vision2.png",
     },
     {
       title: "Our mission",
       description:
         "Offer better, faster, and more secure products and services that support our customers’ growth.",
-      image: "/assets/images/about/our-mission.png",
+      image: "/assets/images/about/our-mission2.png",
     },
     {
       title: "Our values",
       description:
         "A client centric, collaborative and consistent entity, committed to delivering superior experiences.",
-      image: "/assets/images/about/our-values.png",
+      image: "/assets/images/about/our-values2.png",
     },
   ];
 

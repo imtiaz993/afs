@@ -16,7 +16,7 @@ const Team = () => {
       {
         name: "Ghassan Mardini",
         designation: "Chief Operating Officer",
-        image: "/assets/images/team/2.png",
+        image: "/assets/images/team/2-1.png",
       },
       {
         name: "Abdelmaguid Afifi",

@@ -23,7 +23,7 @@ const ESG = () => {
       title: "Our ESG vision",
       description:
         "We are dedicated to delivering a positive Environmental, Social, and Governance impact by harnessing the power of digital transformation and innovation. Through our deep expertise, cutting-edge technology, committed human capital, and strong partnerships, we aim to create sustainable solutions that not only benefit our business but also contribute significantly to societal and environmental well-being.",
-      image: "/assets/images/esg/our-vision.png",
+      image: "/assets/images/esg/our-vision2.png",
     },
     {
       title: "Our ESG vision",
@@ -50,7 +50,7 @@ const ESG = () => {
       title: "Governance",
       description:
         "Maintain transparency across our business and operate responsible supply chains.",
-      image: "/assets/images/esg/governance.png",
+      image: "/assets/images/esg/governance2.png",
     },
   ];
 

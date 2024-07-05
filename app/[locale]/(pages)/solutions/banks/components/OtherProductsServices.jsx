@@ -13,14 +13,14 @@ const OtherProductsServices = () => {
       description:
         "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that enhance customer experiences.",
       learnMore: "/solutions/banks/open-banking",
-      imgSrc: "/assets/images/solutions/banks/open-banking.png",
+      imgSrc: "/assets/images/solutions/banks/open-banking2.png",
     },
     {
       title: "Value added services",
       description:
         "Enhance your offerings with our suite of value-added services and security features to revolutionize your payments business.",
       learnMore: "/solutions/banks/value-added-services",
-      imgSrc: "/assets/images/solutions/banks/value-added-services.png",
+      imgSrc: "/assets/images/solutions/banks/value-added-services2.png",
     },
   ];
   return (
