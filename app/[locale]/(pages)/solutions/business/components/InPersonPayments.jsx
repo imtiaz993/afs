@@ -11,28 +11,28 @@ const InPersonPayments = () => {
 			description:
 				"Designed for businesses seeking efficiency and innovation, our terminals offer swift, secure transactions, dynamic currency conversion, cash register integration and comprehensive analytics.",
 			learnMoreLink: "/solutions/business/pos-terminals",
-			image: "/assets/images/solutions/business/pos-terminals.png",
+			image: "/assets/images/solutions/business/pos-terminals2.png",
 		},
 		{
 			title: "MiniPOS terminals",
 			description:
 				"Reduce cost and expand your cashless ecosystem with pocket sized terminals - sleek, secure and portable terminals that offer your customers a frictionless and secure payment experience.",
 			learnMoreLink: "/",
-			image: "/assets/images/solutions/business/mini-pos-terminal.png",
+			image: "/assets/images/solutions/business/mini-pos-terminal2.png",
 		},
 		{
 			title: "SoftPOS",
 			description:
 				"Whether it’s for in-store purchases, home delivery, or online sales, our SoftPOS solution can transform any Android mobile phone or tablet into a smart payment terminal.",
 			learnMoreLink: "/solutions/business/afspay-softpos",
-			image: "/assets/images/solutions/business/afspay-softpos.png",
+			image: "/assets/images/solutions/business/softpos2.png",
 		},
 		{
 			title: "Food and beverage (F&B)",
 			description:
 				"Full-featured point-of-sale (POS) software engineered to streamline both front and back of house operations for any full-service restaurant, fast casual, quick serve or delivery.",
 			learnMoreLink: "/",
-      image: "/assets/images/solutions/business/food-and-beverage.png",
+      image: "/assets/images/solutions/business/food-and-beverage2.png",
       
 		},
 	];
