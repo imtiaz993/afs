@@ -6,22 +6,22 @@ import SolutionBusinesses from "./components/SolutionBusinesses";
 import SolutionConsumers from "./components/SolutionConsumers";
 
 const Solutions = () => {
-  return (
-    <>
-      <Navbar />
-      <CommonHero
-        title={"Solution overview"}
-        subtext={"Amplify your business financial opportunity"}
-        image={"/assets/images/solutions/solutions-overview.png"}
-      />
-      <div className="relative border-b border-default" id="solutions-observer">
-        <PageNav />
-        <SolutionBanks />
-        <SolutionBusinesses />
-        <SolutionConsumers />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<CommonHero
+				title={"Solution overview"}
+				subtext={"Amplify your business financial opportunity"}
+				image={"/assets/images/solutions/solutions-banner.png"}
+			/>
+			<div className="relative border-b border-default" id="solutions-observer">
+				<PageNav />
+				<SolutionBanks />
+				<SolutionBusinesses />
+				<SolutionConsumers />
+			</div>
+		</>
+	);
 };
 
 export default Solutions;

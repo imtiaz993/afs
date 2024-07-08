@@ -25,6 +25,7 @@ const ContactOurTeamComponent = () => {
               className="w-auto"
               src={`/assets/icons/partnersSlider/partner${index}.svg`}
               alt=""
+              key={index}
             />
           </div>
         ))}

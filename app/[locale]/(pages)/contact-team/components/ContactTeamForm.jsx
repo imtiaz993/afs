@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -15,8 +14,12 @@ const validationSchema = Yup.object().shape({
   phone: Yup.string().required("Phone is required"),
   email: Yup.string().required("Email is required").email("Email is incorrect"),
   businessName: Yup.string().required("Business name is required"),
-  location: Yup.string().required("Location is required"),
-  solution: Yup.string().required("Solution is required"),
+  location: Yup.array()
+    .min(1, "Atleast one location must be selected")
+    .required("Location is required"),
+  solution: Yup.array()
+    .min(1, "Atleast one solution must be selected")
+    .required("Solution is required"),
   terms: Yup.boolean().oneOf([true], "Must check"),
 });
 
@@ -30,6 +33,7 @@ const ContactTeamForm = () => {
     handleChange,
     handleBlur,
     handleSubmit,
+    isSubmitting,
   } = useFormik({
     initialValues: {
       firstname: "",
@@ -37,25 +41,28 @@ const ContactTeamForm = () => {
       phone: "",
       email: "",
       businessName: "",
-      location: "",
-      solution: "",
+      location: [],
+      solution: [],
       details: "",
       terms: false,
     },
     validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {
-      resetForm();
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      fetch("/api/contact-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application-json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setSubmitting();
+          resetForm();
+        })
+        .catch((err) => console.log(err));
     },
   });
-
-  const [locationOptions, setLocationOptions] = useState([]);
-  const [interestOptions, setInterestOptions] = useState([]);
-  const handleLocationChange = (locationOptions) => {
-    setLocationOptions(locationOptions);
-  };
-  const handleInterestChange = (interestOptions) => {
-    setInterestOptions(interestOptions);
-  };
 
   return (
     <div className="bg-white p-8">
@@ -156,8 +163,10 @@ const ContactTeamForm = () => {
                   },
                   { value: "other", label: "Other" },
                 ]}
-                value={locationOptions}
-                onChange={handleLocationChange}
+                value={values.location}
+                onChange={(e) => {
+                  setFieldValue("location", e);
+                }}
                 styles={{
                   control: (baseStyles, state) => ({
                     ...baseStyles,
@@ -209,8 +218,10 @@ const ContactTeamForm = () => {
                     label: "Digital wallets",
                   },
                 ]}
-                value={interestOptions}
-                onChange={handleInterestChange}
+                value={values.solution}
+                onChange={(e) => {
+                  setFieldValue("solution", e);
+                }}
                 styles={{
                   control: (baseStyles, state) => ({
                     ...baseStyles,
@@ -254,6 +265,7 @@ const ContactTeamForm = () => {
           <button
             className="mt-3  text-center text-white bg-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-3 px-8 w-full font-medium rounded-sm"
             type="submit"
+            disabled={isSubmitting}
           >
             Submit your request
           </button>

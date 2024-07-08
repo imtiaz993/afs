@@ -42,7 +42,19 @@ const Complaints = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      resetForm();
+      fetch("/api/complaint", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application-json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setSubmitting();
+          resetForm();
+        })
+        .catch((err) => console.log(err));
     },
   });
 
@@ -160,6 +172,7 @@ const Complaints = () => {
             <button
               className="mt-6  text-center text-white bg-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary py-3 w-full md:w-[197px] font-medium rounded-sm"
               type="submit"
+              disabled={isSubmitting}
             >
               Submit your details
             </button>

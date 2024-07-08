@@ -11,7 +11,7 @@ const OtherSolutions = () => {
       description:
         "Unlock the potential of financial innovation with our simple, integrated Open Banking APIs. Drive new payment flows and enhance your business model.",
       learnMoreLink: "/solutions/business/open-banking",
-      image: "/assets/images/solutions/business/open-banking.png",
+      image: "/assets/images/solutions/business/open-banking2.png",
     },
   ];
 

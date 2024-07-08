@@ -50,7 +50,10 @@ const Navbar = () => {
   const scrollY = useScrollPosition();
   const windowWidth = useWindowWidth();
   const [colorChange, setColorchange] = useState(false);
-  const [navbarMenu, setNavbarMenu] = useState("");
+  const [navbarMenu, setNavbarMenu] = useState({
+    timerId: 0,
+    selectedMenu: "",
+  });
   const [mobileMenu, setMobileMenu] = useState({
     currentMenu: "",
     stack: [],
@@ -59,6 +62,67 @@ const Navbar = () => {
   const isHome = pathname === "/";
   const isArabic = locale === "ar";
   const isAtTop = scrollY === 0;
+
+  function onMouseLeaveMenu() {
+    const timer = setTimeout(() => {
+      setNavbarMenu({ timerId: 0, selectedMenu: "" });
+    }, 500);
+
+    setNavbarMenu((prevState) => {
+      const newState = {
+        ...prevState,
+        timerId: timer,
+      };
+
+      return newState;
+    });
+  }
+
+  function onMouseEnterMenu(menuSelected) {
+    setNavbarMenu((prevState) => {
+      if (prevState) {
+        clearTimeout(prevState.timerId);
+      }
+
+      const newState = {
+        timerId: 0,
+        selectedMenu: menuSelected,
+      };
+
+      return newState;
+    });
+  }
+
+  function onMouseClickMenu(menuClicked) {
+    setNavbarMenu((prevState) => {
+      let newState;
+
+      prevState.selectedMenu.length == 0
+        ? (newState = {
+            ...prevState,
+            selectedMenu: menuClicked,
+          })
+        : prevState.selectedMenu == menuClicked
+        ? (newState = { ...prevState, selectedMenu: "" })
+        : (newState = {
+            ...prevState,
+            selectedMenu: menuClicked,
+          });
+      return newState;
+    });
+  }
+
+  // useEffect(() => {
+  //   const closeMenu = () => {
+  //     setNavbarMenu({ timerId: 0, selectedMenu: "" });
+  //   };
+
+  //   window.addEventListener("click", closeMenu);
+
+  //   return () => {
+  //     window.removeEventListener("click", closeMenu);
+  //   };
+  // });
 
   useEffect(() => {
     setColorchange(!isAtTop);
@@ -104,26 +168,7 @@ const Navbar = () => {
                     />
                   </Link>
                 ) : (
-                  <button
-                    className="h-[40px]"
-                    onClick={() => {
-                      setMobileMenu((prevState) => {
-                        const array = [...prevState.stack];
-                        const newArray = array.slice(0, -1);
-                        let newCurrentMenu = array[array.length - 1];
-
-                        if (!newCurrentMenu) newCurrentMenu = "";
-
-                        const newState = {
-                          ...prevState,
-                          stack: newArray,
-                          currentMenu: newCurrentMenu,
-                        };
-
-                        return newState;
-                      });
-                    }}
-                  >
+                  <button className="h-[40px]" onClick={() => {}}>
                     <div className="flex">
                       <Image
                         sizes="100vw"
@@ -140,18 +185,14 @@ const Navbar = () => {
                   </button>
                 )}
                 <div className="hidden xl:flex">
-                  <div className={`${isArabic ? "lg:mr-12" : "lg:ml-12"}`}>
+                  <div
+                    className={`${isArabic ? "lg:mr-12" : "lg:ml-12"}`}
+                    onMouseEnter={() => onMouseEnterMenu("Solutions")}
+                    onMouseLeave={onMouseLeaveMenu}
+                  >
                     <button
                       className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
-                      onClick={() => {
-                        setNavbarMenu(
-                          navbarMenu?.length == 0
-                            ? "Solutions"
-                            : navbarMenu == "Solutions"
-                            ? ""
-                            : "Solutions"
-                        );
-                      }}
+                      onClick={() => onMouseClickMenu("Solutions")}
                     >
                       Solutions
                       <Image
@@ -159,25 +200,23 @@ const Navbar = () => {
                         width={12}
                         height={6}
                         className={`transition-all duration-200 ${
-                          navbarMenu == "Solutions" ? "-rotate-180" : "rotate-0"
+                          navbarMenu.selectedMenu == "Solutions"
+                            ? "-rotate-180"
+                            : "rotate-0"
                         } ${isArabic ? "mr-2" : "ml-2"}`}
                         src="/assets/icons/navbar/chevron.svg"
                         alt=""
                       />
                     </button>
                   </div>
-                  <div className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}>
+                  <div
+                    className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}
+                    onMouseEnter={() => onMouseEnterMenu("Company")}
+                    onMouseLeave={onMouseLeaveMenu}
+                  >
                     <button
                       className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
-                      onClick={() => {
-                        setNavbarMenu(
-                          navbarMenu?.length == 0
-                            ? "Company"
-                            : navbarMenu == "Company"
-                            ? ""
-                            : "Company"
-                        );
-                      }}
+                      onClick={() => onMouseClickMenu("Company")}
                     >
                       Company
                       <Image
@@ -185,25 +224,23 @@ const Navbar = () => {
                         width={12}
                         height={6}
                         className={`transition-all duration-200 ${
-                          navbarMenu == "Company" ? "-rotate-180" : "rotate-0"
+                          navbarMenu.selectedMenu == "Company"
+                            ? "-rotate-180"
+                            : "rotate-0"
                         } ${isArabic ? "mr-2" : "ml-2"}`}
                         src="/assets/icons/navbar/chevron.svg"
                         alt=""
                       />
                     </button>
                   </div>
-                  <div className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}>
+                  <div
+                    className={`${isArabic ? "lg:mr-6" : "lg:ml-6"}`}
+                    onMouseEnter={() => onMouseEnterMenu("Resources")}
+                    onMouseLeave={onMouseLeaveMenu}
+                  >
                     <button
                       className="w-full justify-between lg:justify-center flex items-center text-primary cursor-pointer font-medium"
-                      onClick={() => {
-                        setNavbarMenu(
-                          navbarMenu?.length == 0
-                            ? "Resources"
-                            : navbarMenu == "Resources"
-                            ? ""
-                            : "Resources"
-                        );
-                      }}
+                      onClick={() => onMouseClickMenu("Resources")}
                     >
                       Resources
                       <Image
@@ -211,7 +248,9 @@ const Navbar = () => {
                         width={12}
                         height={6}
                         className={`transition-all duration-200 ${
-                          navbarMenu == "Resources" ? "-rotate-180" : "rotate-0"
+                          navbarMenu.selectedMenu == "Resources"
+                            ? "-rotate-180"
+                            : "rotate-0"
                         } ${isArabic ? "mr-2" : "ml-2"}`}
                         src="/assets/icons/navbar/chevron.svg"
                         alt=""
@@ -255,9 +294,24 @@ const Navbar = () => {
           </PageLayout>
         </div>
       </div>
-      {navbarMenu == "Solutions" && <SolutionsMenu />}
-      {navbarMenu == "Company" && <CompanyMenu />}
-      {navbarMenu == "Resources" && <ResourcesMenu />}
+      {navbarMenu.selectedMenu == "Solutions" && (
+        <SolutionsMenu
+          onMouseEnterMenu={onMouseEnterMenu}
+          onMouseLeaveMenu={onMouseLeaveMenu}
+        />
+      )}
+      {navbarMenu.selectedMenu == "Company" && (
+        <CompanyMenu
+          onMouseEnterMenu={onMouseEnterMenu}
+          onMouseLeaveMenu={onMouseLeaveMenu}
+        />
+      )}
+      {navbarMenu.selectedMenu == "Resources" && (
+        <ResourcesMenu
+          onMouseEnterMenu={onMouseEnterMenu}
+          onMouseLeaveMenu={onMouseLeaveMenu}
+        />
+      )}
       {mobileMenu?.currentMenu == "main-menu" && (
         <MobileMainMenu setState={setMobileMenu} />
       )}
@@ -582,11 +636,15 @@ const ConsumersOverview = () => {
   );
 };
 
-const SolutionsMenu = () => {
+const SolutionsMenu = ({ onMouseEnterMenu, onMouseLeaveMenu }) => {
   const [solutionsMenuSelected, setSolutionsMenuSelected] =
     useState("Overview");
   return (
-    <div className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]">
+    <div
+      className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]"
+      onMouseEnter={() => onMouseEnterMenu("Solutions")}
+      onMouseLeave={onMouseLeaveMenu}
+    >
       <div className="flex w-[1312px] bg-white ">
         <div className="w-[336px] py-8 pr-4 border-r border-default">
           <div className="mb-6">
@@ -629,9 +687,13 @@ const SolutionsMenu = () => {
   );
 };
 
-const CompanyMenu = () => {
+const CompanyMenu = ({ onMouseEnterMenu, onMouseLeaveMenu }) => {
   return (
-    <div className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]">
+    <div
+      className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]"
+      onMouseEnter={() => onMouseEnterMenu("Company")}
+      onMouseLeave={onMouseLeaveMenu}
+    >
       <div className="flex w-[1312px] bg-white ">
         <div className="w-[336px] py-8 pr-4 border-r border-default">
           <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-6 px-3">
@@ -739,10 +801,14 @@ const LatestNews = () => {
   );
 };
 
-const ResourcesMenu = () => {
+const ResourcesMenu = ({ onMouseEnterMenu, onMouseLeaveMenu }) => {
   const [resourcesMenuSelected, setResourcesMenuSelected] = useState("");
   return (
-    <div className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]">
+    <div
+      className="flex absolute bg-white top-[100px] z-[-1] w-full justify-center shadow-[1px_3px_6px_0px_rgba(5,36,96,0.10)]"
+      onMouseEnter={() => onMouseEnterMenu("Resources")}
+      onMouseLeave={onMouseLeaveMenu}
+    >
       <div className="flex w-[1312px] bg-white ">
         <div className="w-[336px] py-8 pr-4 border-r border-default">
           <p className="text-[12px] font-normal uppercase leading-[18px] text-secondary mb-4 px-3">

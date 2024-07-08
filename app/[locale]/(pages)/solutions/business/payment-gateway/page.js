@@ -14,26 +14,26 @@ const PaymentGateway = () => {
       title: "Versatile payment support",
       description:
         "Our gateway accommodates various payment methods, catering to all customer preferences.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/protection.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatile-payment-support.svg",
     },
     {
       title: "Enhanced security",
       description:
         "With advanced security protocols, we safeguard transaction data and minimize fraud risks.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security3.svg",
     },
     {
       title: "Streamlined transactions",
       description:
         "Quick, reliable processing enhances the checkout experience for your customers.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/versatility.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/streamlined-operations.svg",
     },
 
     {
       title: "Insightful analytics",
       description:
         "Access to detailed analytics helps refine payment strategies and improve operational efficiency.",
-      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/market.svg",
+      icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/empowered-decision-making.svg",
     },
   ];
 
@@ -43,21 +43,21 @@ const PaymentGateway = () => {
       description:
         "Protect sensitive customer data with encryption technology that reduces the risk of fraud, enhances customer trust and ensures secure digital payments transactions.",
       image:
-        "/assets/images/solutions/business/payment-gateway/secure-transaction.png",
+        "/assets/images/solutions/business/payment-gateway/secure-transaction2.png",
     },
     {
       title: "Multi-currency support",
       description:
         "Accept multiple digital payment methods, broadening your market reach and accessibility and allowing your customers to choose the most convenient and suitable payment option for them.",
       image:
-        "/assets/images/solutions/business/payment-gateway/multi-currency-support.png",
+        "/assets/images/solutions/business/payment-gateway/multi-currency-support2.png",
     },
     {
       title: "Real-time processing",
       description:
         "Speed up transactions with real-time processing, offering instant payment confirmations and smoother checkouts.",
       image:
-        "/assets/images/solutions/business/payment-gateway/real-time-processing.png",
+        "/assets/images/solutions/business/payment-gateway/real-time-processing2.png",
     },
     {
       title: "Customizable checkout experience",
