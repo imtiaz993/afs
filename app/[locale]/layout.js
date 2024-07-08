@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "../common/Footer";
 import "../globals.css";
 
@@ -14,7 +16,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={isArabic ? "rtl" : "ltr"}>
       <body
-        style={{ fontFamily: isArabic ? "'Noto Kufi Arabic' !important" : "PP Montreal" }}
+        style={{
+          fontFamily: isArabic
+            ? "'Noto Kufi Arabic' !important"
+            : "PP Montreal",
+        }}
       >
         <Head>
           <link
@@ -25,6 +31,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <NextIntlClientProvider messages={messages}>
           {children}
           <Footer />
+          <ToastContainer />
         </NextIntlClientProvider>
       </body>
     </html>

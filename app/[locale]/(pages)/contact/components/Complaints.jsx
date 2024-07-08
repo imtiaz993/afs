@@ -8,6 +8,7 @@ import InputField from "app/common/form-components/InputField";
 import Select from "app/common/form-components/Select";
 import TextArea from "app/common/form-components/TextArea";
 import CheckBoxField from "app/common/form-components/CheckBoxField";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required("First name is required"),
@@ -52,10 +53,13 @@ const Complaints = () => {
       })
         .then((res) => res.json())
         .then((data) => {
+          toast.success("Form submitted successfully !");
           setSubmitting();
           resetForm();
         })
-        .catch((err) => console.log(err));
+        .catch((err) =>
+          toast.error("Something went wrong. Please try again later.")
+        );
     },
   });
 

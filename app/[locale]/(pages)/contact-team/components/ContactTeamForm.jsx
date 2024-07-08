@@ -7,6 +7,7 @@ import tailwindConfig from "../../../../../tailwind.config";
 import InputField from "app/common/form-components/InputField";
 import TextArea from "app/common/form-components/TextArea";
 import CheckBoxField from "app/common/form-components/CheckBoxField";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required("First name is required"),
@@ -57,10 +58,13 @@ const ContactTeamForm = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          setSubmitting();
+          toast.success("Form submitted successfully !");
+          setSubmitting();s
           resetForm();
         })
-        .catch((err) => console.log(err));
+        .catch((err) =>
+          toast.error("Something went wrong. Please try again later.")
+        );
     },
   });
 
