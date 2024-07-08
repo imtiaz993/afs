@@ -17,11 +17,11 @@ export async function POST(request) {
   } = await data;
 
   let emailLoacations = {
-    Bahrain: "ashishprasad.personal@gmail.com",
-    Egypt: "ashishprasad.personal@gmail.com",
-    Oman: "ashishprasad.personal@gmail.com",
-    "United Arab Emirates": "ashishprasad.personal@gmail.com",
-    Other: "ashishprasad.personal@gmail.com",
+    Bahrain: "b18101044.imtiazhussain@gmail.com",
+    Egypt: "b18101044.imtiazhussain@gmail.com",
+    Oman: "b18101044.imtiazhussain@gmail.com",
+    "United Arab Emirates": "b18101044.imtiazhussain@gmail.com",
+    Other: "b18101044.imtiazhussain@gmail.com",
   };
 
   try {
