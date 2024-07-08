@@ -57,8 +57,9 @@ const Complaints = () => {
           setSubmitting();
           resetForm();
         })
-        .catch((err) =>
+        .catch((err) =>{
           toast.error("Something went wrong. Please try again later.")
+        }
         );
     },
   });

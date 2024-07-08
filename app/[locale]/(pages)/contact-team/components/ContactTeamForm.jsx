@@ -59,11 +59,12 @@ const ContactTeamForm = () => {
         .then((res) => res.json())
         .then((data) => {
           toast.success("Form submitted successfully !");
-          setSubmitting();s
+          setSubmitting();
           resetForm();
         })
-        .catch((err) =>
+        .catch((err) =>{
           toast.error("Something went wrong. Please try again later.")
+        }
         );
     },
   });
