@@ -127,7 +127,9 @@ export const CompanyEmail = async function (
                                             border-radius: 2px;
                                         "
                                       >
-                                        <p style="color: #006908"></p>
+                                        <p style="color: #006908">
+                                          {loc.label}
+                                        </p>
                                       </span>
                                     ))}
                                       
