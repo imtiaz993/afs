@@ -9,9 +9,9 @@ export async function POST(request) {
     await data;
 
   let complaintCategory = {
-    "Merchant support": "merchantcare@afs.com.bh",
-    BPay: "bpaysupport@afs.com.bh",
-    "Al Rateb support - WPS": "payroll.cards@afs.com.bh",
+    "Merchant support": "info@unitedmonks.com",
+    BPay: "info@unitedmonks.com",
+    "Al Rateb support - WPS": "info@unitedmonks.com",
   };
 
   try {
