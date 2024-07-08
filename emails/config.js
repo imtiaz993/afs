@@ -13,7 +13,7 @@ export const transporter = nodemailer.createTransport({
 export async function send_email(to='',subject='',html) {
     // send mail with defined transport object
     const info = await transporter.sendMail({
-    from: '"No Reply" <noreply@afs.com.bh>', // sender address
+    from: '"No Reply" <info@unitedmonks.com>', // sender address
     to: to, // list of receivers
     subject: subject, // Subject line
     html: await html, // html body
