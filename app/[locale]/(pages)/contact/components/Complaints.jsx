@@ -29,6 +29,7 @@ const Complaints = () => {
     handleChange,
     handleBlur,
     handleSubmit,
+    isSubmitting,
   } = useFormik({
     initialValues: {
       firstname: "",
@@ -41,7 +42,7 @@ const Complaints = () => {
       terms: false,
     },
     validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: (values, { resetForm, setSubmitting }) => {
       fetch("/api/complaint", {
         method: "POST",
         headers: {

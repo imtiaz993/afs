@@ -144,7 +144,7 @@ export const CustomerEmail = async function (
               <tr>
                 <td>
                   <h3 style="margin-bottom: 8px">
-                    Dear ${firstname} ${lastname},
+                    Dear ${firstname} ${lastname}!
                   </h3>
                 </td>
 

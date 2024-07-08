@@ -140,7 +140,7 @@ export const CustomerEmail = async function (
               <tr></tr>
               <tr>
                 <td>
-                  <h3 style="margin-bottom: 8px">Dear ${firstname} ${lastname},!</h3>
+                  <h3 style="margin-bottom: 8px">Dear ${firstname} ${lastname}!</h3>
                 </td>
 
                 <td></td>

@@ -16,8 +16,10 @@ export async function POST(request) {
 
   try {
     send_email(
-      complaintCategory[cat],
-      `New - ${cat === "Al Rateb support - WPS" ? "Payroll" : cat} complaint`,
+      complaintCategory[category],
+      `New - ${
+        category === "Al Rateb support - WPS" ? "Payroll" : category
+      } complaint`,
       CompanyEmail(
         firstname,
         lastname,
