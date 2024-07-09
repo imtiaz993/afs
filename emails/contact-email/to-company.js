@@ -9,6 +9,30 @@ export const CompanyEmail = async function (
   details = "",
   companyEmail = ""
 ) {
+  let tagLocations = "";
+  location.map(
+    (loc) =>
+      (tagLocations += `<span
+          style="
+              background-color: #ecfede;
+              padding: 0 8px;
+              margin-right: 4px;
+              display: inline-block;
+              border-radius: 2px;
+          "
+        >
+          <p style="color: #006908">
+            ${loc.label}
+          </p>
+        </span>`)
+  );
+
+  let locations = "";
+  location.map((loc) => (locations += `<p>${loc.label}</p>`));
+
+  let solutions = "";
+  solution.map((sol) => (solutions += `<p>${sol.label}</p>`));
+
   return `
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html xmlns="http://www.w3.org/1999/xhtml">
@@ -117,22 +141,7 @@ export const CompanyEmail = async function (
                                 <table>
                                     <tr>
                                     <td align="top">
-                                    ${location.map((loc) => (
-                                      <span
-                                        style="
-                                            background-color: #ecfede;
-                                            padding: 0 8px;
-                                            margin-right: 4px;
-                                            display: inline-block;
-                                            border-radius: 2px;
-                                        "
-                                      >
-                                        <p style="color: #006908">
-                                          {loc.label}
-                                        </p>
-                                      </span>
-                                    ))}
-                                      
+                                      ${tagLocations}
                                     </td>
         
                                     <td
@@ -367,9 +376,7 @@ export const CompanyEmail = async function (
                                 <table class="column last">
                                     <tr>
                                     <td style="padding: 0 24px">
-                                        <p>${location.map((loc) => (
-                                          <p>{loc.label}</p>
-                                        ))}</p>
+                                        ${locations}
                                     </td>
                                     </tr>
                                 </table>
@@ -426,9 +433,7 @@ export const CompanyEmail = async function (
                                             <table class="column last">
                                                 <tr>
                                                 <td style="padding: 0 24px">
-                                                 ${solution.map((sol) => (
-                                                   <p>{sol.label}</p>
-                                                 ))}
+                                                ${solutions}
                                                 </td>
                                                 </tr>
                                             </table>

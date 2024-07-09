@@ -8,6 +8,12 @@ export const CustomerEmail = async function (
   solution = [],
   details = ""
 ) {
+  let locations = "";
+  location.map((loc) => (locations += `<p>${loc.label}</p>`));
+
+  let solutions = "";
+  solution.map((sol) => (solutions += `<p>${sol.label}</p>`));
+
   return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -357,7 +363,7 @@ export const CustomerEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              ${location.map((loc) => <p>{loc.label}</p>)}
+                              ${locations}
                             </td>
                           </tr>
                         </table>
@@ -414,9 +420,7 @@ export const CustomerEmail = async function (
                                     <table class="column last">
                                       <tr>
                                         <td style="padding: 0 24px">
-                                        ${solution.map((sol) => (
-                                          <p>{sol.label}</p>
-                                        ))}
+                                        ${solutions}
                                         </td>
                                       </tr>
                                     </table>
