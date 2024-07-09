@@ -5,8 +5,8 @@ import JobDescription from "./JobDescription";
 import JobApplyForm from "./JobApplyForm";
 import { careerContentData } from "../../careerDetail";
 
-const CareerDetail = ({slug}) => {
-    const data = careerContentData.find((post) => post.slug == slug);
+const CareerDetail = ({ slug }) => {
+  const data = careerContentData.find((post) => post.slug == slug);
   return (
     <>
       <CareerDetailHero data={data} />
@@ -16,7 +16,7 @@ const CareerDetail = ({slug}) => {
             <JobDetails data={data} />
             <div className="md:w-[calc(100%-192px-32px)]">
               <JobDescription data={data} />
-              <JobApplyForm />
+              <JobApplyForm jobTitle={data.jobName} />
             </div>
           </div>
         </PageLayout>

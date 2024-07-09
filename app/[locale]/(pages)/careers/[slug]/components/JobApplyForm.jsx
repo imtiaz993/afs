@@ -18,7 +18,7 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required("Message is required"),
   terms: Yup.boolean().oneOf([true], "Must check"),
 });
-const JobApplyForm = () => {
+const JobApplyForm = ({ jobTitle }) => {
   const {
     values,
     touched,
@@ -27,7 +27,7 @@ const JobApplyForm = () => {
     handleChange,
     handleBlur,
     handleSubmit,
-    isSubmitting
+    isSubmitting,
   } = useFormik({
     initialValues: {
       name: "",
@@ -41,7 +41,7 @@ const JobApplyForm = () => {
     onSubmit: (values, { resetForm, setSubmitting }) => {
       fetch("/api/job-apply", {
         method: "POST",
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, jobTitle: jobTitle }),
       })
         .then((res) => res.json())
         .then((data) => {

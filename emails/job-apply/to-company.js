@@ -1,4 +1,5 @@
 export const CompanyEmail = async function (
+  jobTitle = "",
   name = "",
   email = "",
   message = ""
@@ -184,7 +185,7 @@ export const CompanyEmail = async function (
                 <td>
                   <p style="font-size: 18px; line-height: 1.5">
                     We have a new job application for
-                    <span style="color: #036fd0">[job_name]</span>.
+                    <span style="color: #036fd0">${jobTitle}</span>.
                   </p>
                 </td>
               </tr>

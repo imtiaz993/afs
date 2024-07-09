@@ -5,13 +5,13 @@ import { CustomerEmail } from "emails/job-apply/to-customer";
 
 export async function POST(request) {
   let data = await request.json();
-  let { name, email, resume, coverLetter, message } = await data;
+  let { name, email, resume, coverLetter, message, jobTitle } = await data;
 
   try {
     send_email(
-      "careers@afs.com.bh",
-      "New application for - [Job title]",
-      CompanyEmail(name, email, resume, coverLetter, message)
+      "b18101044.imtiazhussain@gmail.com",
+      `New application for - ${jobTitle}`,
+      CompanyEmail(jobTitle, name, email, resume, coverLetter, message)
     ).catch(console.error);
     send_email(
       email,

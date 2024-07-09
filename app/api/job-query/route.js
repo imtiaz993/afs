@@ -9,7 +9,7 @@ export async function POST(request) {
 
   try {
     send_email(
-      "careers@afs.com.bh",
+      "b18101044.imtiazhussain@gmail.com",
       "New prospect candidate - CV",
       CompanyEmail(name, email, headquarter, resume, message)
     ).catch(console.error);
