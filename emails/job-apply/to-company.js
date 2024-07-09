@@ -2,6 +2,8 @@ export const CompanyEmail = async function (
   jobTitle = "",
   name = "",
   email = "",
+  resume = "",
+  coverLetter = "",
   message = ""
 ) {
   return `

@@ -1,6 +1,8 @@
 export const CustomerEmail = async function (
   name = "",
   email = "",
+  resume = "",
+  coverLetter = "",
   message = ""
 ) {
   return `

@@ -2,6 +2,7 @@ export const CustomerEmail = async function (
   name = "",
   email = "",
   headquarter = "",
+  resume = "",
   message = ""
 ) {
   return `
@@ -137,7 +138,7 @@ export const CustomerEmail = async function (
               <tr></tr>
               <tr>
                 <td>
-                  <h3 style="margin-bottom: 8px">Dear [full_name],</h3>
+                  <h3 style="margin-bottom: 8px">Dear ${name},</h3>
                 </td>
 
                 <td></td>
@@ -202,7 +203,7 @@ export const CustomerEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>Gabriel Anghel</p>
+                              <p>${name}</p>
                             </td>
                           </tr>
                         </table>
@@ -232,7 +233,7 @@ export const CustomerEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>gabriel.anghel@afs.com.bh</p>
+                              <p>${email}</p>
                             </td>
                           </tr>
                         </table>
@@ -263,7 +264,7 @@ export const CustomerEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>Bahrain</p>
+                              <p>${headquarter}</p>
                             </td>
                           </tr>
                         </table>
@@ -353,7 +354,7 @@ export const CustomerEmail = async function (
 
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>This is the candidate message.</p>
+                              <p>${message}</p>
                             </td>
                           </tr>
                         </table>
