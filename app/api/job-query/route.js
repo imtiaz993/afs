@@ -4,8 +4,12 @@ import { CompanyEmail } from "emails/job-query/to-company";
 import { CustomerEmail } from "emails/job-query/to-customer";
 
 export async function POST(request) {
-  let data = await request.json();
-  let { name, headquarter, email, resume, message } = await data;
+  let data = await request.formData();
+  const name = data.get("name");
+  const email = data.get("email");
+  const headquarter = data.get("headquarter");
+  const resume = data.get("resume");
+  const message = data.get("message");
 
   try {
     send_email(

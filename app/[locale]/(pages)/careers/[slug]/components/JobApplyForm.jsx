@@ -39,9 +39,16 @@ const JobApplyForm = ({ jobTitle }) => {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm, setSubmitting }) => {
+      const formData = new FormData();
+      formData.append("name", values.name);
+      formData.append("email", values.email);
+      formData.append("resume", values.resume);
+      formData.append("coverLetter", values.coverLetter);
+      formData.append("message", values.message);
+      formData.append("jobTitle", jobTitle);
       fetch("/api/job-apply", {
         method: "POST",
-        body: JSON.stringify({ ...values, jobTitle: jobTitle }),
+        body: formData,
       })
         .then((res) => res.json())
         .then((data) => {
