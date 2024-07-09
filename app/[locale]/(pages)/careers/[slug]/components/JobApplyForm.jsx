@@ -8,6 +8,7 @@ import InputField from "app/common/form-components/InputField";
 import TextArea from "app/common/form-components/TextArea";
 import FileField from "app/common/form-components/FileField";
 import CheckBoxField from "app/common/form-components/CheckBoxField";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -26,6 +27,7 @@ const JobApplyForm = () => {
     handleChange,
     handleBlur,
     handleSubmit,
+    isSubmitting
   } = useFormik({
     initialValues: {
       name: "",
@@ -36,8 +38,20 @@ const JobApplyForm = () => {
       terms: false,
     },
     validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {
-      resetForm();
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      fetch("/api/job-apply", {
+        method: "POST",
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          toast.success("Form submitted successfully !");
+          setSubmitting();
+          resetForm();
+        })
+        .catch((err) => {
+          toast.error("Something went wrong. Please try again later.");
+        });
     },
   });
 
@@ -123,6 +137,7 @@ const JobApplyForm = () => {
             <button
               className="mt-4  text-center text-white bg-brand-secondary   border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  py-[11px] w-full md:w-[105px] font-medium rounded-sm"
               type="submit"
+              disabled={isSubmitting}
             >
               Apply
             </button>
