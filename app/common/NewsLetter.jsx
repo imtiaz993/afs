@@ -24,7 +24,7 @@ const NewsLetter = ({ showStuffs}) => {
               sizes="100vw"
               width={0}
               height={0}
-              src={"/assets/images/blue-vector.png"}
+              src={"/assets/images/news/blue-vector.png"}
               alt="Blue Vector"
               className="absolute inset-0 w-full h-full hidden xl:block"
             />
