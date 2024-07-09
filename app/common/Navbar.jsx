@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { usePathname, Link } from "i18n.config";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { usePathname, Link, useRouter } from "i18n.config";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -47,6 +48,7 @@ const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("Navbar");
   const pathname = usePathname();
+  const router = useRouter();
   const scrollY = useScrollPosition();
   const windowWidth = useWindowWidth();
   const [colorChange, setColorchange] = useState(false);
@@ -168,7 +170,25 @@ const Navbar = () => {
                     />
                   </Link>
                 ) : (
-                  <button className="h-[40px]" onClick={() => {}}>
+                  <button
+                    className="h-[40px]"
+                    onClick={() => {
+                      setMobileMenu((prevState) => {
+                        const array = [...prevState.stack];
+                        const newArray = array.slice(0, -1);
+                        let newCurrentMenu = array[array.length - 1];
+
+                        if (!newCurrentMenu) newCurrentMenu = "";
+
+                        const newState = {
+                          ...prevState,
+                          stack: newArray,
+                          currentMenu: newCurrentMenu,
+                        };
+                        return newState;
+                      });
+                    }}
+                  >
                     <div className="flex">
                       <Image
                         sizes="100vw"
@@ -313,7 +333,12 @@ const Navbar = () => {
         />
       )}
       {mobileMenu?.currentMenu == "main-menu" && (
-        <MobileMainMenu setState={setMobileMenu} />
+        <MobileMainMenu
+          setState={setMobileMenu}
+          router={router}
+          pathname={pathname}
+          locale={locale}
+        />
       )}
       {mobileMenu?.currentMenu == "solutions-menu" && (
         <MobileSolutionsMenu setState={setMobileMenu} />
@@ -884,7 +909,7 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
   );
 };
 
-const MobileMainMenu = ({ setState }) => {
+const MobileMainMenu = ({ setState, router, pathname, locale }) => {
   return (
     <div className="flex flex-col justify-between absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <div>
@@ -905,6 +930,21 @@ const MobileMainMenu = ({ setState }) => {
         />
       </div>
       <div className="px-4 pb-4 py-[22px]">
+        <div className=" border border-default  py-3 px-4 mb-4 bg-subtle-neutral">
+          <select
+            className="text-primary bg-subtle-neutral w-full"
+            onChange={(event) => {
+              router.replace(pathname, { locale: event.target.value });
+            }}
+          >
+            <option value="en" selected={locale == "en"}>
+              English
+            </option>
+            <option value="ar" selected={locale == "ar"}>
+              العربيه
+            </option>
+          </select>
+        </div>
         <Link href="/contact-team">
           <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-full font-medium rounded-sm">
             Contact our team
