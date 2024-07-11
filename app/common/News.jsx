@@ -5,15 +5,21 @@ import { useTranslations, useLocale } from "next-intl";
 import { calculateReadingTime } from "app/[locale]/(pages)/news/utility/util";
 import PageLayout from "./PageLayout";
 
-const News = () => {
+const News = ({ title, bg, category = "all" }) => {
   const locale = useLocale();
   const t = useTranslations("NewsPostData");
-  const latestNews = t.raw("latest news");
+  const allLatestNews = t.raw("latest news");
   const isArabic = locale === "ar";
+
+  // Filter the news articles based on the selected category
+  const latestNews =
+    category === "all"
+      ? allLatestNews
+      : allLatestNews.filter((news) => news.newsCategory === category);
 
   return (
     <div className="border-b border-default">
-      <PageLayout>
+      <PageLayout bg={bg}>
         <div className="py-10 lg:py-24 ">
           <div className="mb-12 md:flex justify-between items-center sm:items-end">
             <h3
@@ -21,7 +27,8 @@ const News = () => {
                 isArabic ? "ml-4" : "mr-4"
               }`}
             >
-              {t("title")}
+              {/* {t("title")} */}
+              {title}
             </h3>
             <div className="mt-5 md:mt-0 flex items-center cursor-pointer border-b border-white hover:border-brand-secondary">
               <Link href="/news">
@@ -55,14 +62,16 @@ const News = () => {
                   alt=""
                 />
                 <div className="flex mt-6">
-                  <p className=" text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center">
-                    {latestNews[0].newsCategory}
-                  </p>
-                  <div
-                    className={`flex items-center ml-4 ${
-                      isArabic ? "mr-4" : "ml-4"
-                    }`}
-                  >
+                  {category == "all" && (
+                    <p
+                      className={` text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center ${
+                        isArabic ? "ml-4" : "mr-4"
+                      }`}
+                    >
+                      {latestNews[0].newsCategory}
+                    </p>
+                  )}
+                  <div className={"flex items-center"}>
                     <p className="text-xs  text-secondary ">
                       {latestNews[0].date}
                     </p>
@@ -89,14 +98,16 @@ const News = () => {
                 >
                   <Link href={"/news/" + item.slug} className="group">
                     <div key={index} className="flex">
-                      <p className=" text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center">
-                        {item.newsCategory}
-                      </p>
-                      <div
-                        className={`flex items-center ${
-                          isArabic ? "mr-4" : "ml-4"
-                        }`}
-                      >
+                      {category == "all" && (
+                        <p
+                          className={` text-primary bg-subtle-neutral py-1 px-2 text-sm  rounded-[4px] min-w-[84px] flex justify-center ${
+                            isArabic ? "ml-4" : "mr-4"
+                          }`}
+                        >
+                          {item.newsCategory}
+                        </p>
+                      )}
+                      <div className={"flex items-center"}>
                         <p className="text-xs  text-secondary ">{item.date}</p>
                         <span className="w-1 h-1 rounded-full bg-secondary mx-2"></span>
                         <p className="text-xs  text-secondary ">

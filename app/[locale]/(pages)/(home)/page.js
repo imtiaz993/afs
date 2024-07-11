@@ -37,7 +37,7 @@ const Home = () => {
           primaryButtonLink={"/contact-team"}
         />
       </PageLayout>
-      <News />
+      <News title={"Latest news & announcements"} category={"all"} />
     </>
   );
 };

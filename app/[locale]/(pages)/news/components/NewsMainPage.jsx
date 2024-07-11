@@ -52,7 +52,7 @@ const NewsMainPage = () => {
       {category == "All" && (
         <AllPosts data={newsPostData} category={category} />
       )}
-      {category != "All" && category != "latest articles" && (
+      {category != "All" && category != "Latest articles" && (
         <AllPosts
           data={newsPostData.filter((item) => item.newsCategory == category)}
           category={category}

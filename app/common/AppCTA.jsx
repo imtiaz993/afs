@@ -51,13 +51,13 @@ const AppCTA = ({ bgColor }) => {
           </Link>
         </div>
       </div>
-      <div className="absolute right-5 lg:right-5 xl:right-20 bottom-0 top-[50px] sm:top-11 opacity-30 sm:opacity-100 md:opacity-30 lg:opacity-100">
+      <div className="absolute right-5 lg:right-5 xl:right-10 bottom-0 top-[50px] sm:top-11 opacity-30 sm:opacity-100 md:opacity-30 lg:opacity-100">
         <Image
           sizes="100vw"
           width={0}
           height={0}
           className="w-full h-full "
-          src="/assets/images/home/forConsumers.png"
+          src="/assets/images/home/appcta.png"
           alt=""
         />
       </div>

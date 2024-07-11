@@ -8,6 +8,7 @@ import Team from "./components/Team";
 import AboutCTA from "./components/AboutCTA";
 import Partners from "app/common/Partners";
 import Annnouncements from "./components/Annnouncements";
+import News from "app/common/News";
 
 const About = () => {
   const storyContent = {
@@ -69,7 +70,11 @@ const About = () => {
       <Team />
       <AboutCTA />
       <Partners subtext={"Our trusted partners"} category="bank" />
-      <Annnouncements />
+      <News
+        title={"Company announcements"}
+        bg="bg-subtle-neutral"
+        category="Announcement"
+      />
     </>
   );
 };
