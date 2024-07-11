@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import PageLayout from "./PageLayout";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { newsPostData } from "app/[locale]/(pages)/news/newsPostData";
 
 function useScrollPosition() {
   const [scrollY, setScrollY] = useState(0);
@@ -287,7 +288,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="hidden xl:flex items-center">
-                <LocaleSwitcher locale={locale} />
+                {/* <LocaleSwitcher locale={locale} /> */}
                 <Link href="/contact-team">
                   <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-[185px] font-medium rounded-sm">
                     {t("contact team")}
@@ -777,33 +778,43 @@ const CompanyMenu = ({ onMouseEnterMenu, onMouseLeaveMenu }) => {
   );
 };
 
-const LatestNewsItem = ({ image, description, mobile }) => {
+const LatestNewsItem = ({ image, description, mobile, link }) => {
+  console.log("latestnewsitem>> ", image, description);
   return (
-    <div className={`${mobile ? "w-full p-4" : "w-[301px] p-2"}`}>
-      <div className="relative rounded">
-        <Image
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={image}
-          className={`${
-            mobile ? "w-full min-h-[200px]" : "w-[285px] h-[160px]"
-          } rounded mb-4`}
-        />
-        <div className="rounded absolute inset-0 menu-item-gradient"></div>
-      </div>
-      <p
-        className={` ${
-          mobile ? "text-[16px] leading-[24px]" : "text-[14px] leading-[18px]"
-        } font-normal  text-primary line-clamp-2`}
-      >
-        {description}
-      </p>
+    <div
+      className={`${
+        mobile ? "w-full p-4" : "w-[301px] p-2"
+      } hover:bg-subtle-neutral rounded`}
+    >
+      <Link href={"/news/" + link}>
+        <div className="relative rounded">
+          <Image
+            sizes="100vw"
+            width={0}
+            height={0}
+            src={image}
+            className={`${
+              mobile ? "w-full min-h-[200px]" : "w-[285px] h-[160px]"
+            } rounded mb-4 `}
+          />
+          <div className="rounded absolute inset-0 menu-item-gradient"></div>
+        </div>
+        <p
+          className={` ${
+            mobile ? "text-[16px] leading-[24px]" : "text-[14px] leading-[18px]"
+          } font-normal  text-primary line-clamp-2`}
+        >
+          {description}
+        </p>
+      </Link>
     </div>
   );
 };
 
 const LatestNews = () => {
+  const t = useTranslations("NewsPostData");
+  const latestNews = t.raw("latest news").slice(0, 3);
+
   return (
     <div className="">
       <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
@@ -811,22 +822,19 @@ const LatestNews = () => {
       </p>
       <div className="grid grid-cols-3 gap-6">
         <LatestNewsItem
-          image={"/assets/images/navbar/news1.jpeg"}
-          description={
-            "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
-          }
+          image={latestNews[0].image}
+          description={latestNews[0].title}
+          link={latestNews[0].slug}
         />
         <LatestNewsItem
-          image={"/assets/images/navbar/news2.png"}
-          description={
-            "AFS Transaction Index: season-opening Bahrain GP delivers 66% surge in spends"
-          }
+          image={latestNews[1].image}
+          description={latestNews[1].title}
+          link={latestNews[1].slug}
         />
         <LatestNewsItem
-          image={"/assets/images/navbar/news3.png"}
-          description={
-            "AFS enter strategic alliance with Xpence to innovate SME financial management in Bahrain"
-          }
+          image={latestNews[2].image}
+          description={latestNews[2].title}
+          link={latestNews[2].slug}
         />
       </div>
     </div>
@@ -937,7 +945,8 @@ const MobileMainMenu = ({ setState, router, pathname, locale }) => {
         />
       </div>
       <div className="px-4 pb-4 py-[22px]">
-        <div className=" border border-default  py-3 px-4 mb-4 bg-subtle-neutral">
+        {/* // mobile locale switcher */}
+        {/* <div className=" border border-default  py-3 px-4 mb-4 bg-subtle-neutral">
           <select
             className="text-primary bg-subtle-neutral w-full"
             onChange={(event) => {
@@ -951,7 +960,7 @@ const MobileMainMenu = ({ setState, router, pathname, locale }) => {
               العربيه
             </option>
           </select>
-        </div>
+        </div> */}
         <Link href="/contact-team">
           <button className=" text-center text-white bg-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary  border border-brand-secondary  py-[15px] w-full font-medium rounded-sm">
             Contact our team
@@ -1055,6 +1064,9 @@ const MobileCompanyMenu = () => {
 };
 
 const MobileResourcesMenu = () => {
+  const t = useTranslations("NewsPostData");
+  const latestNews = t.raw("latest news").slice(0, 3);
+
   return (
     <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
@@ -1076,24 +1088,21 @@ const MobileResourcesMenu = () => {
         From the blog
       </p>
       <LatestNewsItem
-        image={"/assets/images/navbar/news1.jpeg"}
-        description={
-          "ACI Worldwide and AFS to drive payments modernization for banks and merchants in the Middle East"
-        }
+        image={latestNews[0].image}
+        description={latestNews[0].title}
+        link={latestNews[0].slug}
         mobile={true}
       />
       <LatestNewsItem
-        image={"/assets/images/navbar/news2.png"}
-        description={
-          "AFS Transaction Index: season-opening Bahrain GP delivers 66% surge in spends"
-        }
+        image={latestNews[1].image}
+        description={latestNews[1].title}
+        link={latestNews[1].slug}
         mobile={true}
       />
       <LatestNewsItem
-        image={"/assets/images/navbar/news3.png"}
-        description={
-          "AFS enter strategic alliance with Xpence to innovate SME financial management in Bahrain"
-        }
+        image={latestNews[2].image}
+        description={latestNews[2].title}
+        link={latestNews[2].slug}
         mobile={true}
       />
     </div>

@@ -11,6 +11,7 @@ export default getRequestConfig(async ({ locale }) => {
   }
 
   const Navbar = await import(`./locales/navbar/${locale}.json`);
+  const News = await import(`./locales/news/${locale}.json`);
   const Footer = await import(`./locales/footer/${locale}.json`);
   const Common = await import(`./locales/common/${locale}.json`);
   const Home = await import(`./locales/home/${locale}.json`);
@@ -29,6 +30,7 @@ export default getRequestConfig(async ({ locale }) => {
   return {
     messages: {
       ...Navbar.default,
+      ...News.default,
       ...Footer.default,
       ...Common.default,
       ...Home.default,
