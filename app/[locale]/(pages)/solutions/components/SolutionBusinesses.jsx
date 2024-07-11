@@ -63,6 +63,7 @@ const SolutionBusinesses = () => {
           <PartnersSlider
             gradient={false}
             gradientColor={tailwindColorsModule["subtle-neutral"]}
+            category="business"
           />
           <div className="grid my-6 md:grid-cols-2 gap-4 ">
             {businessData.map((data) => (

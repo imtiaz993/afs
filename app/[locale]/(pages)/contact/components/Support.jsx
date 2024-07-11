@@ -66,7 +66,7 @@ const Support = () => {
                   <div className="flex items-center mb-1">
                     <p className="text-secondary ">Oman</p>
                     <a
-                      href="tel:+973 1729 9444"
+                      href="tel:+96824577177"
                       className="text-brand-secondary hover:underline"
                     >
                       <p className="ml-2  ">+968 2457 7177</p>

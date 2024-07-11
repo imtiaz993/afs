@@ -60,7 +60,7 @@ const About = () => {
                 </Link>
               </div>
               <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
-                <div className="mt-12 pb-8 lg:pb-12 border-b border-default w-full flex flex-col items-start">
+                <div className="pt-8 lg:pt-0 mt-10 lg:mt-12 pb-8 lg:pb-12 border-b border-t lg:border-t-0 border-default w-full flex flex-col items-start">
                   <h1 className="stats-home-gradient text-7xl md:text-9xl mb-2">
                     <CountUp
                       enableScrollSpy
@@ -122,7 +122,7 @@ const About = () => {
                   </div>
                 </div>
                 <div
-                  className={`mt-8 lg:mt-12 pb-12 border-b grid grid-cols-2 border-default gap-10 w-full`}
+                  className={`mt-8 lg:mt-12 pb-12 lg:border-b border-b-0 grid grid-cols-2 border-default gap-10 w-full`}
                 >
                   <div className="flex flex-col items-start">
                     <h1 className="stats-home-gradient text-5xl md:text-7xl mb-2">

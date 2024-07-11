@@ -28,8 +28,8 @@ const Offices = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
-                src="/assets/icons/contact/flag1.png"
-                className="mb-6 w-auto border"
+                src="/assets/icons/contact/flag1.svg"
+                className="mb-6 w-auto"
                 alt=""
               />
             </div>

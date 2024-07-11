@@ -9,7 +9,7 @@ const Annnouncements = () => {
         <div className="py-10 lg:py-24">
           <div className="mb-12 flex justify-between items-center sm:items-end">
             <h3 className="text-2xl md:text-[40px] text-primary mr-4 !leading-[120%]">
-              Company announcements
+              Announcement
             </h3>
             <div className="flex items-center cursor-pointer border-b border-subtle-neutral hover:border-brand-secondary ">
               <p className="text-brand-secondary mr-2 whitespace-nowrap font-medium !leading-[150%]">

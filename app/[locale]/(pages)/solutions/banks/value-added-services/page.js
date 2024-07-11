@@ -172,7 +172,7 @@ const ValueAddedServices = () => {
         servicesData={servicesData}
         ctaData={servicesCTAData}
       />
-      <UsedTrustedBy />
+      <UsedTrustedBy category="bank" />
       {/* <TestimonialSlider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA

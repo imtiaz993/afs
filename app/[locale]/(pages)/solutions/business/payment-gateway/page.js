@@ -104,8 +104,8 @@ const PaymentGateway = () => {
         servicesData={servicesData}
         ctaData={servicesCTAData}
       />
-      <UsedTrustedBy />
-      <TestimonialSlider bgColor={"bg-white"} />
+      <UsedTrustedBy category="business"/>
+      {/* <TestimonialSlider bgColor={"bg-white"} /> */}
       <PageLayout>
         <CommonCTA
           primaryContent={"Ready to revolutionize your financial transactions?"}

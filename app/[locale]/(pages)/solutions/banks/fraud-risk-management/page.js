@@ -86,7 +86,7 @@ const FraudRiskManagement = () => {
 				data={benefitsData}
 			/>
 			<Features data={featuresData} commonCTAData={featuresCommonCTAData} />
-			<UsedTrustedBy />
+			<UsedTrustedBy category="bank"/>
 			{/* <TestimonialSllider bgColor={"bg-white"} /> */}
 			<PageLayout>
 				<CommonCTA

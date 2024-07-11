@@ -128,7 +128,10 @@ const Navbar = () => {
 
   useEffect(() => {
     setColorchange(!isAtTop);
-    if (navbarMenu.length != 0 || mobileMenu.currentMenu.length != 0)
+    if (
+      navbarMenu.selectedMenu.length != 0 ||
+      mobileMenu.currentMenu.length != 0
+    )
       setColorchange(true);
 
     if (mobileMenu.currentMenu != "") document.body.style.overflow = "hidden";
@@ -136,7 +139,11 @@ const Navbar = () => {
   }, [isAtTop, navbarMenu, mobileMenu]);
 
   useEffect(() => {
-    if (windowWidth < 1280 && navbarMenu != "") setNavbarMenu("");
+    if (windowWidth < 1280 && navbarMenu.selectedMenu != "")
+      setNavbarMenu({
+        timerId: 0,
+        selectedMenu: "",
+      });
     if (windowWidth > 1280 && mobileMenu.currentMenu.length != 0)
       setMobileMenu({ currentMenu: "", stack: [] });
   }, [windowWidth]);
@@ -486,7 +493,7 @@ const SubMenuItem = ({ title, description, link }) => {
 
 const SolutionsOverview = () => {
   return (
-    <div className="flex">
+    <div className="flex ">
       <div className="w-[316px]">
         <p className="uppercase text-secondary text-[12px] font-normal leading-[18px] px-2 mb-4">
           Overview
@@ -1222,23 +1229,26 @@ const MobileSolutionConsumersMenu = () => {
           </p>
         </div>
         <div className="p-2 flex">
-          <Image
-            src={"/assets/icons/solutions/appstore.svg"}
-            width={0}
-            height={49}
-            sizes="100vw"
-            className="w-full"
-            alt=""
-          />
-
-          <Image
-            src={"/assets/icons/solutions/googleplay.svg"}
-            width={0}
-            height={49}
-            sizes="100vw"
-            className="ml-2 w-full"
-            alt=""
-          />
+          <Link href="https://apps.apple.com/us/app/afs-bpay/id1629591483">
+            <Image
+              src={"/assets/icons/solutions/appstore.svg"}
+              width={0}
+              height={49}
+              sizes="100vw"
+              className="w-full"
+              alt=""
+            />
+          </Link>
+          <Link href="https://play.google.com/store/apps/details?id=com.afs.bpay&hl=en&gl=US">
+            <Image
+              src={"/assets/icons/solutions/googleplay.svg"}
+              width={0}
+              height={49}
+              sizes="100vw"
+              className="ml-2 w-full"
+              alt=""
+            />
+          </Link>
         </div>
       </div>
     </div>

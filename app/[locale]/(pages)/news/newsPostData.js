@@ -72,7 +72,7 @@ export const newsPostData = [
     ],
     date: "Apr 25, 2024",
     image: "/assets/images/news/10.png",
-    newsCategory: "Company announcements",
+    newsCategory: "Announcement",
     slug: "afs-launches-data-center-and-disaster-recovery-site-in-egypt",
   },
   {
@@ -112,7 +112,7 @@ export const newsPostData = [
     ],
     date: "Mar 05, 2024",
     image: "/assets/images/news/2.png",
-    newsCategory: "Company announcements",
+    newsCategory: "Announcement",
     slug: "afs-transaction-index-season-opening-bahrain-gp-delivers-66-percent-surge-in-spends",
   },
   {
@@ -156,7 +156,7 @@ export const newsPostData = [
     ],
     date: "Feb 06, 2024",
     image: "/assets/images/news/6.jpg",
-    newsCategory: "Company announcements",
+    newsCategory: "Announcement",
     slug: "afs-conducts-media-workshop-to-showcase-latest-cloud-based-restaurant-first-solution",
   },
   {
@@ -195,7 +195,7 @@ export const newsPostData = [
     ],
     date: "Nov 13, 2023",
     image: "/assets/images/news/4.png",
-    newsCategory: "Company announcements",
+    newsCategory: "Announcement",
     slug: "belgian-bahraini-fintech-partnership-explored",
   },
   {
@@ -261,7 +261,7 @@ export const newsPostData = [
     ],
     date: "Sep 17, 2023",
     image: "/assets/images/news/1.jpg",
-    newsCategory: "Company announcements",
+    newsCategory: "Announcement",
     slug: "arab-financial-services-successfully-concludes-2023-summer-internship-program-afs-isuites",
   },
 ];

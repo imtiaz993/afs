@@ -7,7 +7,7 @@
     },
     "Working": {
       "title": "Benefits of our products and services",
-      "headline": "Our innovative financial solutions deliver numerous benefits for banks and businesses, designed to ensure success for all partners.",
+      "headline": "Our innovative financial solutions deliver a range of benefits for banks and businesses to ensure success for all partners.",
       "accordion": [
         {
           "count": "01",
@@ -21,16 +21,21 @@
         },
         {
           "count": "03",
+          "title": "Digital wallet",
+          "description": "Our BPay wallet app is the first-choice digital payments, commerce and financial services app offering instant, global and local payment solutions that all consumers and businesses can use to serve their everyday needs."
+        },
+        {
+          "count": "04",
           "title": "Fraud and risk management services",
           "description": "Our proactive and market-leading fraud prevention technology solutions ensure your payments business stays safe and secure. "
         },
         {
-          "count": "04",
+          "count": "05",
           "title": "Open Banking hub",
           "description": "Unlock the potential of financial data sharing with secure, compliant Open Banking APIs that accelerate innovation and enhance customer experiences."
         },
         {
-          "count": "05",
+          "count": "06",
           "title": "Value added services",
           "description": "AFS introduces the latest value-added services and state-of-the-art security features to revolutionize your payments, stay safe and secure while driving seamless integration and cardholder engagement."
         }
@@ -99,14 +104,14 @@
     },
     "Reviews": [
       {
-        "quote": "Implementing AFS's card issuing and processing solution transformed how we handle payments, making transactions not just faster but also significantly more secure.",
-        "author": "Dr. Pallavi Menon",
-        "position": "Chief Financial Officer"
+        "quote": "Having met with the team at AFS we have no doubt that we made the right decision to change our service provider. Their communication and customer service are exemplary, and we look forward to growing this professional relationship moving forward.",
+        "author": "Daniel McRae",
+        "position": "Manager - British Club"
       },
       {
-        "quote": "Implementing AFS's card issuing and processing solution transformed how we handle payments, making transactions not just faster but also significantly more secure.",
-        "author": "Dr. Pallavi Menon",
-        "position": "Chief Financial Officer"
+        "quote": "Team AFS has supported us wholeheartedly and we greatly appreciate this. Their focus on customer value and business-boosting creative solutions are why we are so happy with their service. We look forward to using more AFS payment solutions going forward.",
+        "author": "Ajith Johney Mani",
+        "position": "Finance Manager - Green Bar Cafe"
       }
     ],
     "CTA": {

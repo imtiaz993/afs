@@ -70,7 +70,7 @@ const SolutionBanks = () => {
             secondaryButtonLink={"/contact-team"}
           />
           {/* <BgImageTestimonial /> */}
-          <PartnersSlider gradient={false} />
+          <PartnersSlider gradient={false} category="bank" />
           <div className="grid my-6 md:grid-cols-2 gap-4">
             {banksData.map((data) => (
               <SolutionFeatures

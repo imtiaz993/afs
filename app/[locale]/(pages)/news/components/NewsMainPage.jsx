@@ -10,13 +10,10 @@ const NewsMainPage = () => {
   const [category, setCategory] = useState("All");
   const newsCategoriesData = [
     "All",
-    "Company announcements",
+    "Announcement",
     "Partnership",
     "Innovative solutions",
-    "eCommerce",
-    "Payment acceptance",
-    "Fraud",
-    "Acquiring",
+    "Awards",
   ];
 
   return (
@@ -31,7 +28,7 @@ const NewsMainPage = () => {
           <LatestArticles data={newsPostData} setCategory={setCategory} />
           <CategoryNews
             posts={newsPostData}
-            category="Company announcements"
+            category="Announcement"
             bg="bg-subtle-neutral"
             setCategory={setCategory}
           />
@@ -55,7 +52,7 @@ const NewsMainPage = () => {
       {category == "All" && (
         <AllPosts data={newsPostData} category={category} />
       )}
-      {category != "All" && category!="latest articles" && (
+      {category != "All" && category != "latest articles" && (
         <AllPosts
           data={newsPostData.filter((item) => item.newsCategory == category)}
           category={category}
