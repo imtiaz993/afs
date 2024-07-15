@@ -50,6 +50,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.mobile-animate-menu {
+  transition: all 300ms ease-out;
+}
+
 .home-hero-gradient {
   background: linear-gradient(
     258deg,
@@ -139,5 +143,4 @@
     rgba(5, 36, 96, 0.2) 100%,
     rgba(3, 111, 208, 0.25) 100%
   );
-  
 }

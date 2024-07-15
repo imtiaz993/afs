@@ -62,6 +62,9 @@ const Navbar = () => {
     stack: [],
   });
 
+  const [toBeRemovedFromStack, setToBeRemovedFromStack] = useState();
+  console.log(toBeRemovedFromStack);
+
   const isHome = pathname === "/";
   const isArabic = locale === "ar";
   const isAtTop = scrollY === 0;
@@ -151,9 +154,9 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-[999] ">
-      <div className=" z-[1]">
+      <div className="">
         <div
-          className={`pt-5 pb-5 xl:pb-6 top-0 left-0 right-0 sticky transition-all duration-300 ${
+          className={`pt-5 pb-5 xl:pb-6 top-0 left-0 right-0 sticky z-50 transition-all duration-300 ${
             isHome
               ? colorChange
                 ? "bg-white shadow-[0px_1px_3px_0px_rgba(5,36,96,0.10)]"
@@ -181,20 +184,24 @@ const Navbar = () => {
                   <button
                     className="h-[40px]"
                     onClick={() => {
-                      setMobileMenu((prevState) => {
-                        const array = [...prevState.stack];
-                        const newArray = array.slice(0, -1);
-                        let newCurrentMenu = array[array.length - 1];
+                      setToBeRemovedFromStack(mobileMenu.currentMenu);
+                      setTimeout(() => {
+                        setToBeRemovedFromStack();
+                        setMobileMenu((prevState) => {
+                          const array = [...prevState.stack];
+                          const newArray = array.slice(0, -1);
+                          let newCurrentMenu = array[array.length - 1];
 
-                        if (!newCurrentMenu) newCurrentMenu = "";
+                          if (!newCurrentMenu) newCurrentMenu = "";
 
-                        const newState = {
-                          ...prevState,
-                          stack: newArray,
-                          currentMenu: newCurrentMenu,
-                        };
-                        return newState;
-                      });
+                          const newState = {
+                            ...prevState,
+                            stack: newArray,
+                            currentMenu: newCurrentMenu,
+                          };
+                          return newState;
+                        });
+                      }, 300);
                     }}
                   >
                     <div className="flex">
@@ -340,34 +347,64 @@ const Navbar = () => {
           onMouseLeaveMenu={onMouseLeaveMenu}
         />
       )}
-      {mobileMenu?.currentMenu == "main-menu" && (
+      {(mobileMenu?.stack.includes("main-menu") ||
+        mobileMenu?.currentMenu === "main-menu") && (
         <MobileMainMenu
+          toBeRemovedFromStack={toBeRemovedFromStack}
           setState={setMobileMenu}
           router={router}
           pathname={pathname}
           locale={locale}
         />
       )}
-      {mobileMenu?.currentMenu == "solutions-menu" && (
-        <MobileSolutionsMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("solutions-menu") ||
+        mobileMenu?.currentMenu === "solutions-menu") && (
+        <MobileSolutionsMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "solutions-overview" && (
-        <MobileSolutionsOverviewMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("solutions-overview") ||
+        mobileMenu?.currentMenu === "solutions-overview") && (
+        <MobileSolutionsOverviewMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "company-menu" && (
-        <MobileCompanyMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("company-menu") ||
+        mobileMenu?.currentMenu === "company-menu") && (
+        <MobileCompanyMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "resources-menu" && (
-        <MobileResourcesMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("resources-menu") ||
+        mobileMenu?.currentMenu === "resources-menu") && (
+        <MobileResourcesMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "solutions-banks-menu" && (
-        <MobileSolutionBanksMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("solutions-banks-menu") ||
+        mobileMenu?.currentMenu === "solutions-banks-menu") && (
+        <MobileSolutionBanksMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "solutions-businesses-menu" && (
-        <MobileSolutionBusinessesMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("solutions-businesses-menu") ||
+        mobileMenu?.currentMenu === "solutions-businesses-menu") && (
+        <MobileSolutionBusinessesMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
-      {mobileMenu?.currentMenu == "solutions-consumers-menu" && (
-        <MobileSolutionConsumersMenu setState={setMobileMenu} />
+      {(mobileMenu?.stack.includes("solutions-consumers-menu") ||
+        mobileMenu?.currentMenu === "solutions-consumers-menu") && (
+        <MobileSolutionConsumersMenu
+          setState={setMobileMenu}
+          toBeRemovedFromStack={toBeRemovedFromStack}
+        />
       )}
     </div>
   );
@@ -924,9 +961,29 @@ const MobileMenuItem = ({ title, onClickSetState, setState }) => {
   );
 };
 
-const MobileMainMenu = ({ setState, router, pathname, locale }) => {
+const MobileMainMenu = ({
+  toBeRemovedFromStack,
+  setState,
+  router,
+  pathname,
+  locale,
+}) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "main-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="flex flex-col justify-between absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      } flex flex-col justify-between absolute bg-white pt-[80px] top-0 z-10 w-full h-dvh overflow-auto`}
+    >
       <div>
         <MobileMenuItem
           title="Solutions"
@@ -971,9 +1028,25 @@ const MobileMainMenu = ({ setState, router, pathname, locale }) => {
   );
 };
 
-const MobileSolutionsMenu = ({ setState }) => {
+const MobileSolutionsMenu = ({ toBeRemovedFromStack, setState }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "solutions-menu") {
+      console.log("JJKJLKJkl");
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
+
   return (
-    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white pt-[80px] top-0 z-20 w-full h-dvh overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -1004,9 +1077,23 @@ const MobileSolutionsMenu = ({ setState }) => {
   );
 };
 
-const MobileSolutionsOverviewMenu = () => {
+const MobileSolutionsOverviewMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "solutions-overview") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white pt-[80px] top-0 z-30 w-full h-dvh overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -1021,9 +1108,23 @@ const MobileSolutionsOverviewMenu = () => {
   );
 };
 
-const MobileCompanyMenu = () => {
+const MobileCompanyMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "company-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="absolute bg-white z-[-1] w-full pt-[80px] top-0 h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white z-20 w-full pt-[80px] top-0 h-dvh overflow-auto`}
+    >
       <h4 className="text-primary text-[20px] font-normal leading-[26px] py-6 px-4 border-b border-default">
         Our company provides numerous end-to-end digital payment products,
         services and solutions to banks, businesses, and consumers.
@@ -1063,12 +1164,26 @@ const MobileCompanyMenu = () => {
   );
 };
 
-const MobileResourcesMenu = () => {
+const MobileResourcesMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "resources-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   const t = useTranslations("NewsPostData");
   const latestNews = t.raw("latest news").slice(0, 3);
 
   return (
-    <div className="absolute bg-white pt-[80px] top-0 z-[-1] w-full h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white pt-[80px] top-0 z-20 w-full h-dvh overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Resources
       </p>
@@ -1109,9 +1224,23 @@ const MobileResourcesMenu = () => {
   );
 };
 
-const MobileSolutionBanksMenu = () => {
+const MobileSolutionBanksMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "solutions-banks-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="absolute bg-white z-[-1] w-full h-dvh top-0 pt-[80px] overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white z-20 w-full h-dvh top-0 pt-[80px] overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -1153,9 +1282,23 @@ const MobileSolutionBanksMenu = () => {
   );
 };
 
-const MobileSolutionBusinessesMenu = () => {
+const MobileSolutionBusinessesMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "solutions-businesses-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="absolute bg-white z-[-1] w-full top-0 pt-[80px] h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white z-20 w-full top-0 pt-[80px] h-dvh overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
@@ -1210,9 +1353,23 @@ const MobileSolutionBusinessesMenu = () => {
   );
 };
 
-const MobileSolutionConsumersMenu = () => {
+const MobileSolutionConsumersMenu = ({ toBeRemovedFromStack }) => {
+  const [animate, setAnimate] = useState(false);
+
+  setTimeout(() => {
+    setAnimate(true);
+  }, 1);
+  useEffect(() => {
+    if (toBeRemovedFromStack == "solutions-consumers-menu") {
+      setAnimate(false);
+    }
+  }, [toBeRemovedFromStack]);
   return (
-    <div className="absolute bg-white z-[-1] w-full top-0 pt-[80px] h-dvh overflow-auto">
+    <div
+      className={`mobile-animate-menu ${
+        animate ? "right-0" : "right-[-100%]"
+      }  absolute bg-white z-20 w-full top-0 pt-[80px] h-dvh overflow-auto`}
+    >
       <p className="uppercase text-[12px] font-normal leading-[18px] text-secondary bg-subtle-neutral py-3 px-4">
         Overview
       </p>
