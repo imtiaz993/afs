@@ -31,7 +31,7 @@ const OpenBanking = () => {
 			title: "Secure and compliant",
 			description:
 				"Our solutions are designed with advanced security measures to protect customer data and reduce the risk of fraud, ensuring compliance with regulatory requirements.",
-			icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/security.svg",
+			icon: "/assets/icons/solutions/solution-banks/card-issuing-processing/secure-compliant.svg",
 		},
 	];
 

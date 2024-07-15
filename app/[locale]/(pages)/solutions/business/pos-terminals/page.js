@@ -47,7 +47,7 @@ const POSTerminals = () => {
       title: "Accept all major card schemes",
       description:
         "Ensure you never miss a sale by accepting a wide range of payment methods. Our terminals support all major credit and debit card schemes, including traditional magnetic stripe, chip cards, and contactless NFC payments. This versatility caters to a diverse customer base, making transactions convenient for every customer.",
-      image: "/assets/images/solutions/business/pos-terminals/accept-major.png",
+      image: "/assets/images/solutions/business/pos-terminals/accept-major-card-schemes.png",
     },
     {
       title: "Secure payment experience",

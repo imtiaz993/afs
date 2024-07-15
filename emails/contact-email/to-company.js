@@ -1,6 +1,7 @@
 export const CompanyEmail = async function (
   firstname = "",
   lastname = "",
+  prefix = "",
   phone = "",
   email = "",
   businessName = "",
@@ -178,7 +179,7 @@ export const CompanyEmail = async function (
                                 width="193px"
                                 align="right"
                                 >
-                                <p style="right: 0px">View in browser</p>
+                                
                                 </td>
                             </tr>
                             </table>
@@ -283,7 +284,7 @@ export const CompanyEmail = async function (
                                 <table class="column last">
                                     <tr>
                                     <td style="padding: 0 24px">
-                                        <p>${phone}</p>
+                                        <p>${prefix}-${phone}</p>
                                     </td>
                                     </tr>
                                 </table>

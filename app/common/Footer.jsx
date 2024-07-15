@@ -8,6 +8,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import PageLayout from "./PageLayout";
 import InputField from "./form-components/InputField";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is incorrect"),
@@ -24,14 +25,38 @@ const Footer = () => {
   const resourcesLinks = t.raw("resources");
   const publicLinks = t.raw("public links");
 
-  const { values, touched, errors, handleChange, handleBlur, handleSubmit } =
-    useFormik({
-      initialValues: { email: "" },
-      validationSchema: validationSchema,
-      onSubmit: (values, { resetForm }) => {
-        resetForm();
-      },
-    });
+  const {
+    values,
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+  } = useFormik({
+    initialValues: { email: "" },
+    validationSchema: validationSchema,
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application-json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          toast.success("Email submitted successfully!");
+          setSubmitting();
+          resetForm();
+        })
+        .catch((err) => {
+          console.log("Catched Error: ", err);
+          toast.error("Something went wrong. Please try again later.");
+          resetForm();
+        });
+    },
+  });
 
   return (
     <PageLayout>
@@ -134,6 +159,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   className="text-white py-[11px] w-full bg-brand-secondary border border-brand-secondary transition-colors duration-300 hover:bg-brand-primary hover:border-brand-primary font-medium mt-2 rounded-sm"
+                  disabled={isSubmitting}
                 >
                   {t("join network.button")}
                 </button>
@@ -147,7 +173,7 @@ const Footer = () => {
               {t("join network.privacy text")}{" "}
               <Link
                 className="text-primary hover:text-brand-secondary hover:underline"
-                href="/"
+                href="/legal?section=privacy-policy"
               >
                 {t("join network.privacy policy")}
               </Link>

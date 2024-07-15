@@ -38,7 +38,7 @@ export const careerContentData = [
 
         <div class="mb-7">
             <h4 class="text-xl md:text-2xl text-primary mb-4 font-regular !leading-[130%]">Knowledge/Skills/Attributes: </h4>
-            <ul class="text-base md:text-lg mb-4 class="text-medium-brand" !leading-7 list-disc px-4">
+            <ul class="text-base md:text-lg mb-4 text-medium-brand !leading-7 list-disc px-4">
                 <li>
                     <p class="text-primary">Expertise in Regulatory compliance frameworks</p>
                 </li>

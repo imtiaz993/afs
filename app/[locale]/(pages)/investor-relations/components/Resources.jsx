@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import PageLayout from "app/common/PageLayout";
+import { Link } from "i18n.config";
 
 const Resources = () => {
   return (
@@ -27,37 +28,41 @@ const Resources = () => {
               <h4 className="text-xl md:text-2xl text-secondary !leading-[130%]">
                 Shareholders’ rights to participate and vote
               </h4>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  View document
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <a href="/assets/documents/investor/afs_shareholders-rights-to-vote.pdf">
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    View document
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
             </div>
             <div className="bg-white p-8 flex flex-col justify-between w-[316px] h-[200px] md:h-[252px] rounded">
               <h4 className="text-xl md:text-2xl text-secondary !leading-[130%]">
                 Shareholder list
               </h4>
-              <div className="flex items-center cursor-pointer">
-                <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
-                  View document
-                </p>
-                <Image
-                  sizes="100vw"
-                  width={0}
-                  height={0}
-                  className="w-auto"
-                  src="/assets/icons/home/arrow-right.svg"
-                  alt=""
-                />
-              </div>
+              <a href="/assets/documents/investor/shareholder-list.pdf">
+                <div className="flex items-center cursor-pointer">
+                  <p className="font-medium text-brand-secondary mr-2 !leading-[150%]">
+                    View document
+                  </p>
+                  <Image
+                    sizes="100vw"
+                    width={0}
+                    height={0}
+                    className="w-auto"
+                    src="/assets/icons/home/arrow-right.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
             </div>
           </div>
         </div>

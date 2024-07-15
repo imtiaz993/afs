@@ -18,7 +18,8 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required("Message is required"),
   terms: Yup.boolean().oneOf([true], "Must check"),
 });
-const JobApplyForm = ({ jobTitle }) => {
+
+const JobApplyForm =  ({ jobTitle }) => {
   const {
     values,
     touched,
@@ -38,14 +39,16 @@ const JobApplyForm = ({ jobTitle }) => {
       terms: false,
     },
     validationSchema: validationSchema,
-    onSubmit: (values, { resetForm, setSubmitting }) => {
+    onSubmit: async (values, { resetForm, setSubmitting }) => {
       const formData = new FormData();
       formData.append("name", values.name);
       formData.append("email", values.email);
-      formData.append("resume", values.resume);
-      formData.append("coverLetter", values.coverLetter);
+      formData.append("resume", resume);
+      formData.append("coverLetter", coverLetter);
       formData.append("message", values.message);
       formData.append("jobTitle", jobTitle);
+
+
       fetch("/api/job-apply", {
         method: "POST",
         body: formData,
@@ -58,12 +61,13 @@ const JobApplyForm = ({ jobTitle }) => {
         })
         .catch((err) => {
           toast.error("Something went wrong. Please try again later.");
-        });
+        }
+      );
     },
   });
 
   const [resume, setResume] = useState();
-  const [coverLetter, setCoverLettr] = useState();
+  const [coverLetter, setCoverLetter] = useState();
 
   return (
     <div className="mt-16">
@@ -111,7 +115,7 @@ const JobApplyForm = ({ jobTitle }) => {
                 : ""
             }
             file={coverLetter}
-            setFile={setCoverLettr}
+            setFile={setCoverLetter}
             placeholder="Cover letter"
           />
           <TextArea

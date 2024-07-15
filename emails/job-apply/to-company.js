@@ -2,8 +2,8 @@ export const CompanyEmail = async function (
   jobTitle = "",
   name = "",
   email = "",
-  resume = "",
-  coverLetter = "",
+  resumeFile = "",
+  coverFile = "",
   message = ""
 ) {
   return `
@@ -101,7 +101,7 @@ export const CompanyEmail = async function (
                       <td style="display: inline-block; padding-right: 16px">
                         <a href="https://afs-tawny.vercel.app/en">
                           <img
-                            src="./img/afs.png"
+                            src="https://afs-email.vercel.app/complaints/merchant-support/img/afs.png"
                             alt="afs"
                             title="AFS"
                             width="73"
@@ -161,7 +161,7 @@ export const CompanyEmail = async function (
                         width="193px"
                         align="right"
                       >
-                        <p style="right: 0px">View in browser</p>
+                        
                       </td>
                     </tr>
                   </table>
@@ -308,7 +308,7 @@ export const CompanyEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>Attached to email</p>
+                              <a href="${resumeFile}"><p>Click here to view the resume</p></a>
                             </td>
                           </tr>
                         </table>
@@ -338,7 +338,7 @@ export const CompanyEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>Attached to email</p>
+                              <a href="${coverFile}"><p>Click here to view the cover Letter</p></a>
                             </td>
                           </tr>
                         </table>

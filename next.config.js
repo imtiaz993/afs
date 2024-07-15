@@ -1,12 +1,16 @@
 const path = require("path");
 const createNextIntlPlugin = require("next-intl/plugin");
 const withNextIntl = createNextIntlPlugin();
+const redirects = require("./utils/redirects");
 
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  async redirects() {
+    return redirects;
+  },
 };
 
 module.exports = withNextIntl({

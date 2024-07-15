@@ -32,7 +32,7 @@ const HomeHero = () => {
           </Link>
         </div>
         <div
-          className={`bg-black md:bg-transparent relative -top-7 md:absolute md:top-0  md:bottom-0 ${
+          className={`bg-transparent relative -top-1 md:absolute md:top-0  md:bottom-0 ${
             isArabic ? "md:left-0" : "md:right-0"
           }`}
         >
@@ -43,7 +43,7 @@ const HomeHero = () => {
             className={`w-full h-full object-cover ${
               isArabic ? "md:transform md:scale-x-[-1]" : ""
             }`}
-            src="/assets/images/home/hero.png"
+            src="/assets/images/home/hero2.png"
             alt=""
           />
         </div>

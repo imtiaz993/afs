@@ -36,7 +36,7 @@ const NewsCommonBanner = ({
           </div>
         </form>
 
-        <div className="flex flex-wrap space-x-1 5 items-center mt-6">
+        <div className="flex flex-wrap gap-1 items-center mt-6">
           {categoriesList.map((category) => (
             <button
               type="button"
@@ -44,7 +44,7 @@ const NewsCommonBanner = ({
                 selectedCategory == category
                   ? "text-white bg-medium-brand"
                   : "text-primary bg-white"
-              } leading-[18px] font-normal  border border-[surface-neutral] rounded-sm text-sm px-5 py-2.5 text-center mb-2`}
+              } leading-[18px] font-normal  border border-[surface-neutral] rounded-sm text-sm px-5 py-2.5 text-center`}
               key={category}
               onClick={() => setCategory(category)}
             >

@@ -5,13 +5,13 @@ import { send_email } from "emails/config";
 
 export async function POST(request) {
   let data = await request.json();
-  let { firstname, lastname, phone, email, businessName, category, details } =
+  let { firstname, lastname, prefix, phone, email, businessName, category, details } =
     await data;
 
   let complaintCategory = {
-    "Merchant support": "b18101044.imtiazhussain@gmail.com",
-    BPay: "b18101044.imtiazhussain@gmail.com",
-    "Al Rateb support - WPS": "b18101044.imtiazhussain@gmail.com",
+    "Merchant support": "info@unitedmonks.com",
+    "BPay support": "info@unitedmonks.com",
+    "Al Rateb support - WPS": "info@unitedmonks.com",
   };
 
   try {
@@ -23,11 +23,13 @@ export async function POST(request) {
       CompanyEmail(
         firstname,
         lastname,
+        prefix,
         phone,
         email,
         businessName,
         category,
-        details
+        details,
+        complaintCategory[category],
       )
     ).catch(console.error);
     send_email(
@@ -36,6 +38,7 @@ export async function POST(request) {
       CustomerEmail(
         firstname,
         lastname,
+        prefix,
         phone,
         email,
         businessName,

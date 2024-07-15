@@ -37,17 +37,17 @@ const JobQueryForm = () => {
       name: "",
       email: "",
       headquarter: "",
-      resume: "",
+      resume: null,
       message: "",
       terms: false,
     },
-    validationSchema: validationSchema,
+    // validationSchema: validationSchema,
     onSubmit: (values, { resetForm, setSubmitting }) => {
       const formData = new FormData();
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("headquarter", values.headquarter);
-      formData.append("resume", values.resume);
+      formData.append("resume", file);
       formData.append("message", values.message);
       fetch("/api/job-query", {
         method: "POST",

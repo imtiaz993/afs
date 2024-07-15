@@ -36,6 +36,7 @@ const FileField = ({
           id={placeholder.replace(/ /g, "")}
           className="hidden"
           name={name}
+          accept=".doc,.docx,.pdf"
           value={value}
           onBlur={onBlur}
           onChange={(e) => {

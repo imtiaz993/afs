@@ -1,8 +1,8 @@
 const nodemailer = require("nodemailer");
 export const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
-  port: 465,
-  secure: true, // Use `true` for port 465, `false` for all other ports
+  port: 587,
+  secure: false, // Use `true` for port 465, `false` for all other ports
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASSWORD,
@@ -10,11 +10,12 @@ export const transporter = nodemailer.createTransport({
 });
 
 export async function send_email(to = "", subject = "", html) {
-  // send mail with defined transport object
+  // send mail with defined transport object  
   const info = await transporter.sendMail({
     from: '"No Reply" <info@unitedmonks.com>', // sender address
     to: to, // list of receivers
     subject: subject, // Subject line
+    text: await html, // Subject line
     html: await html, // html body
   });
 

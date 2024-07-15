@@ -61,7 +61,8 @@
 
 @media screen and (max-width: 768px) {
   .home-hero-gradient {
-    background: linear-gradient(212deg, #052460 35.12%, #036fd0 120.5%), #052460;
+    border-radius: 2px;
+    background: linear-gradient(0deg, #052460 0%, #052460 100%), #052460;
   }
 }
 

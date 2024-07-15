@@ -93,7 +93,7 @@ const Solutions = () => {
                       {t("banks.button")}
                     </button>
                   </Link>
-                  <ul className="flex flex-wrap mt-4">
+                  <ul className="flex flex-wrap mt-4 gap-y-[10px]">
                     <li
                       className={`flex items-center text-sm text-white whitespace-nowrap ${
                         isArabic ? "ml-3" : "mr-3"
@@ -252,7 +252,7 @@ const Solutions = () => {
                         {t("businesses.button")}
                       </button>
                     </Link>
-                    <ul className="flex flex-wrap mt-4">
+                    <ul className="flex flex-wrap mt-4 gap-y-[10px]">
                       <li
                         className={`flex items-center text-sm text-white whitespace-nowrap ${
                           isArabic ? "ml-3" : "mr-3"

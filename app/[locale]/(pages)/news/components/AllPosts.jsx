@@ -81,7 +81,7 @@ const AllPosts = ({ data, category }) => {
         <NewsLetter showStuffs={true} />
         <div className="flex flex-col space-y-8">
           {secondPart.map((post) => (
-            <div className="flex flex-column md:flex-row md:space-y-0 space-y-4  justify-between align-center md:flex-nowrap flex-wrap space-x-0 md:space-x-5 lg:space-x-10 group cursor-pointer">
+            <div className="flex flex-column md:flex-row md:items-center md:space-y-0 space-y-4  justify-between md:flex-nowrap flex-wrap space-x-0 md:space-x-5 lg:space-x-10 group cursor-pointer">
               <div className="max-w-full md:max-w-[350px] lg:max-w-[450px] xl:max-w-[640px] flex flex-col space-y-2">
                 <div className="flex items-center space-x-2">
                   {/* Only show category if not filtered */}

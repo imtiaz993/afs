@@ -1,6 +1,7 @@
 export const CustomerEmail = async function (
   firstname = "",
   lastname = "",
+  prefix = "",
   phone = "",
   email = "",
   businessName = "",
@@ -102,7 +103,7 @@ export const CustomerEmail = async function (
                       <td style="display: inline-block; padding-right: 16px">
                         <a href="https://afs-tawny.vercel.app/en">
                           <img
-                            src="./img/afs.png"
+                            src="https://afs-email.vercel.app/complaints/merchant-support/img/afs.png"
                             alt="afs"
                             title="AFS"
                             width="73"
@@ -124,7 +125,7 @@ export const CustomerEmail = async function (
                         width="193px"
                         align="right"
                       >
-                        <p style="right: 0px">View in browser</p>
+                        
                       </td>
                     </tr>
                   </table>
@@ -161,7 +162,7 @@ export const CustomerEmail = async function (
         <!-- BANNER IMAGE -->
         <tr>
           <td style="padding: 0 16px">
-            <img src="./img/banner.png" alt="Banner" style="max-width: 100%" />
+            <img src="https://afs-email.vercel.app/complaints/merchant-support/img/banner.png" alt="Banner" style="max-width: 100%" />
           </td>
         </tr>
 
@@ -276,7 +277,7 @@ export const CustomerEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>${phone}</p>
+                              <p>${prefix}-${phone}</p>
                             </td>
                           </tr>
                         </table>
@@ -389,20 +390,20 @@ export const CustomerEmail = async function (
             <table width="100%">
               <tr>
                 <td style="padding-bottom: 16px; font-size: 0px">
-                  <a style="margin-right: 16px" href="/"
-                    ><img src="./img/facebook.svg"
+                  <a style="margin-right: 16px" href="https://www.facebook.com/ArabFinancialServices"
+                    ><img src="https://afs-email.vercel.app/assets/icons/facebook.png"
                   /></a>
-                  <a style="margin-right: 16px; margin-left: 0px"
-                    ><img src="./img/x.svg"
+                  <a style="margin-right: 16px; margin-left: 0px" href="https://x.com/afs_bh"
+                    ><img src="https://afs-email.vercel.app/assets/icons/x.png"
                   /></a>
-                  <a style="margin-right: 16px"
-                    ><img src="./img/instagram.svg"
+                  <a style="margin-right: 16px" href="https://www.instagram.com/afs_bh/"
+                    ><img src="https://afs-email.vercel.app/assets/icons/instagram.png"
                   /></a>
-                  <a style="margin-right: 16px"
-                    ><img src="./img/linkedin.svg"
+                  <a style="margin-right: 16px" href="https://www.linkedin.com/company/arab-financial-services/"
+                    ><img src="https://afs-email.vercel.app/assets/icons/linkedin.png"
                   /></a>
-                  <a>
-                    ><img style="padding-bottom: 2px" src="./img/youtube.svg"
+                  <a href="https://www.youtube.com/@arabfinancialservices">
+                    ><img style="padding-bottom: 2px" src="https://afs-email.vercel.app/assets/icons/youtube.png"
                   /></a>
                 </td>
               </tr>

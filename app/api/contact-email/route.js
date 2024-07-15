@@ -8,6 +8,7 @@ export async function POST(request) {
   let {
     firstname,
     lastname,
+    prefix,
     phone,
     email,
     businessName,
@@ -17,11 +18,11 @@ export async function POST(request) {
   } = await data;
 
   let emailLoacations = {
-    Bahrain: "b18101044.imtiazhussain@gmail.com",
-    Egypt: "b18101044.imtiazhussain@gmail.com",
-    Oman: "b18101044.imtiazhussain@gmail.com",
-    "United Arab Emirates": "b18101044.imtiazhussain@gmail.com",
-    Other: "b18101044.imtiazhussain@gmail.com",
+    "Bahrain": "info@unitedmonks.com",
+    "Egypt": "info@unitedmonks.com",
+    "Oman": "info@unitedmonks.com",
+    "United Arab Emirates": "info@unitedmonks.com",
+    "Other": "info@unitedmonks.com",
   };
 
   try {
@@ -32,6 +33,7 @@ export async function POST(request) {
         CompanyEmail(
           firstname,
           lastname,
+          prefix,
           phone,
           email,
           businessName,
@@ -48,6 +50,7 @@ export async function POST(request) {
       CustomerEmail(
         firstname,
         lastname,
+        prefix,
         phone,
         email,
         businessName,

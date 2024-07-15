@@ -57,7 +57,7 @@ const AppCTA = ({ bgColor }) => {
           width={0}
           height={0}
           className="w-full h-full "
-          src="/assets/images/home/appcta.png"
+          src="/assets/images/home/forconsumers2.png"
           alt=""
         />
       </div>

@@ -1,6 +1,7 @@
 export const CompanyEmail = async function (
   firstname = "",
   lastname = "",
+  prefix = "",
   phone = "",
   email = "",
   businessName = "",
@@ -103,7 +104,7 @@ export const CompanyEmail = async function (
                       <td style="display: inline-block; padding-right: 16px">
                         <a href="https://afs-tawny.vercel.app/en">
                           <img
-                            src="https://ik.imagekit.io/swetank/afs.png"
+                            src="https://afs-email.vercel.app/complaints/merchant-support/img/afs.png"
                             alt="afs"
                             title="AFS"
                             width="73"
@@ -160,7 +161,7 @@ export const CompanyEmail = async function (
                         width="193px"
                         align="right"
                       >
-                        <p style="right: 0px">View in browser</p>
+                        
                       </td>
                     </tr>
                   </table>
@@ -197,7 +198,7 @@ export const CompanyEmail = async function (
         <tr>
           <td style="padding: 0 16px">
             <img
-              src="https://ik.imagekit.io/swetank/banner.png"
+              src="https://afs-email.vercel.app/complaints/merchant-support/img/banner.png"
               alt="Banner"
               style="max-width: 100%"
             />
@@ -315,7 +316,7 @@ export const CompanyEmail = async function (
                         <table class="column last">
                           <tr>
                             <td style="padding: 0 24px">
-                              <p>${phone}</p>
+                              <p>${prefix}-${phone}</p>
                             </td>
                           </tr>
                         </table>

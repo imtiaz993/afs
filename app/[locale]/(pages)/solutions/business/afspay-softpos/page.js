@@ -36,7 +36,7 @@ const AfsPaySoftPOS = () => {
 			title: "Convenient and mobile",
 			description:
 				"Accept payments anywhere, any time with a secure and convenient means of payment for customers.",
-			image: "/assets/images/solutions/business/soft-pos/convineant.png",
+			image: "/assets/images/solutions/business/soft-pos/convenient-mobile.png",
 		},
 		{
 			title: "Broad payments acceptance",
