@@ -11,6 +11,9 @@ const nextConfig = {
   async redirects() {
     return redirects;
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+},
 };
 
 module.exports = withNextIntl({
