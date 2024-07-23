@@ -40,7 +40,7 @@ const Reviews = () => {
                     sizes="100vw"
                     width={0}
                     height={0}
-                    src="/assets/icons/home/webflow.svg"
+                    // src="/assets/icons/home/webflow.svg"
                     className="w-auto mb-16 hidden lg:block"
                     alt=""
                   />

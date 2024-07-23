@@ -32,6 +32,30 @@ const PartnersSlider = ({ gradient, gradientColor, category = "all" }) => {
       src: "/assets/icons/partnersSlider/bank-CBI-Mono.svg",
       hoverSrc: "/assets/icons/partnersSlider/bank-CBI-Original.svg",
     },
+    {
+      src: "/assets/icons/partnersSlider/bank-Dohar-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-Dohar-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/bank-GulfAfrican-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-GulfAfrican-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/bank-ILA-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-ILA-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/bank-SharjahIslamic-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-SharjahIslamic-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/bank-Sohar-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-Sohar-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/bank-StandardChartered-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/bank-StandardChartered-Original.svg",
+    },
 
     // Business Logos
     {
@@ -59,6 +83,18 @@ const PartnersSlider = ({ gradient, gradientColor, category = "all" }) => {
       src: "/assets/icons/partnersSlider/business-KingFahd-Mono.svg",
       hoverSrc: "/assets/icons/partnersSlider/business-KingFahd-Original.svg",
     },
+    {
+      src: "/assets/icons/partnersSlider/business-Lulu-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/business-Lulu-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/business-STC-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/business-STC-Original.svg",
+    },
+    {
+      src: "/assets/icons/partnersSlider/business-United-Mono.svg",
+      hoverSrc: "/assets/icons/partnersSlider/business-United-Original.svg",
+    },
   ];
 
   // Filter imageData based on the category prop
@@ -82,7 +118,7 @@ const PartnersSlider = ({ gradient, gradientColor, category = "all" }) => {
               sizes="100vw"
               width={0}
               height={0}
-              className="mr-2 w-full"
+              className="mr-4 w-full"
               src={hoveredImage === index ? imageData.hoverSrc : imageData.src}
               alt=""
               onMouseEnter={() => setHoveredImage(index)}

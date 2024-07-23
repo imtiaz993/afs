@@ -63,7 +63,6 @@ const Navbar = () => {
   });
 
   const [toBeRemovedFromStack, setToBeRemovedFromStack] = useState();
-  console.log(toBeRemovedFromStack);
 
   const isHome = pathname === "/";
   const isArabic = locale === "ar";
@@ -304,13 +303,18 @@ const Navbar = () => {
               </div>
               <div
                 className=" xl:hidden flex"
-                onClick={() =>
-                  setMobileMenu((prevMenu) => ({
-                    ...prevMenu,
-                    stack: [],
-                    currentMenu: prevMenu?.currentMenu == "" ? "main-menu" : "",
-                  }))
-                }
+                onClick={() => {
+                  setToBeRemovedFromStack(mobileMenu.currentMenu);
+                  setTimeout(() => {
+                    setToBeRemovedFromStack();
+                    setMobileMenu((prevMenu) => ({
+                      ...prevMenu,
+                      stack: [],
+                      currentMenu:
+                        prevMenu?.currentMenu == "" ? "main-menu" : "",
+                    }));
+                  }, 300);
+                }}
               >
                 <p className="text-[16px] font-medium leading-[24px] text-primary mr-2">
                   {mobileMenu?.currentMenu.length == 0 ? "Menu" : "Close"}
@@ -816,7 +820,6 @@ const CompanyMenu = ({ onMouseEnterMenu, onMouseLeaveMenu }) => {
 };
 
 const LatestNewsItem = ({ image, description, mobile, link }) => {
-  console.log("latestnewsitem>> ", image, description);
   return (
     <div
       className={`${
@@ -970,10 +973,8 @@ const MobileMainMenu = ({
 }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "main-menu") {
       setAnimate(false);
     }
@@ -1031,12 +1032,9 @@ const MobileMainMenu = ({
 const MobileSolutionsMenu = ({ toBeRemovedFromStack, setState }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "solutions-menu") {
-      console.log("JJKJLKJkl");
       setAnimate(false);
     }
   }, [toBeRemovedFromStack]);
@@ -1080,10 +1078,8 @@ const MobileSolutionsMenu = ({ toBeRemovedFromStack, setState }) => {
 const MobileSolutionsOverviewMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "solutions-overview") {
       setAnimate(false);
     }
@@ -1111,10 +1107,8 @@ const MobileSolutionsOverviewMenu = ({ toBeRemovedFromStack }) => {
 const MobileCompanyMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "company-menu") {
       setAnimate(false);
     }
@@ -1167,10 +1161,8 @@ const MobileCompanyMenu = ({ toBeRemovedFromStack }) => {
 const MobileResourcesMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "resources-menu") {
       setAnimate(false);
     }
@@ -1227,10 +1219,8 @@ const MobileResourcesMenu = ({ toBeRemovedFromStack }) => {
 const MobileSolutionBanksMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "solutions-banks-menu") {
       setAnimate(false);
     }
@@ -1285,10 +1275,8 @@ const MobileSolutionBanksMenu = ({ toBeRemovedFromStack }) => {
 const MobileSolutionBusinessesMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "solutions-businesses-menu") {
       setAnimate(false);
     }
@@ -1356,10 +1344,8 @@ const MobileSolutionBusinessesMenu = ({ toBeRemovedFromStack }) => {
 const MobileSolutionConsumersMenu = ({ toBeRemovedFromStack }) => {
   const [animate, setAnimate] = useState(false);
 
-  setTimeout(() => {
-    setAnimate(true);
-  }, 1);
   useEffect(() => {
+    setAnimate(true);
     if (toBeRemovedFromStack == "solutions-consumers-menu") {
       setAnimate(false);
     }

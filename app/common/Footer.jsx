@@ -46,7 +46,7 @@ const Footer = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          toast.success("Email submitted successfully!");
+          toast.success("Thank you for subscribing. We're excited to have you on board.");
           setSubmitting();
           resetForm();
         })
