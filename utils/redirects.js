@@ -245,7 +245,9 @@ destination: "/news", permanent: true },
   { source: "/news/view/", destination: "/news", permanent: true }, 
   { source: "/services/view", destination: "/solutions", permanent: true },
   { source: "/public/services", destination: "/solutions", permanent: true },
- 
+  
+  //Level 1
+  { source: "/thought_leadership", destination: "/news", permanent: true }, 
  
  // Broader AFS Redirects
   { source: "/public/news", destination: "/news", permanent: true },
